@@ -1,0 +1,39 @@
+.marca-carousel {
+    padding:25px;
+    @include box-shadow-gen(rgba(155,155,155,0.75), 5px, 0px, 5px);
+    margin-bottom: 10px;
+    background:white;
+
+    .slick-slide  {
+        margin-right:10px;
+    }
+
+    .slick-list {
+        padding: 20px;
+    }
+
+}
+
+.slick-slider {
+    position: relative;
+
+    .nav-btn {
+
+        cursor: pointer;
+        @extend %grow-icon-animation;
+
+    }
+    
+    .prev-slide {
+        position: absolute;
+        left:0px;
+        top:30%;
+    }
+
+    .next-slide {
+        position: absolute;
+        right:0px;
+        top:30%;
+    }
+}
+

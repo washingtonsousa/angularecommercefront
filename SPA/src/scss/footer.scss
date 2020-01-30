@@ -1,0 +1,63 @@
+#byVannonFooter {
+    background: $secondary-color;
+}
+
+menu {
+    margin:0;
+    padding-inline-start: 0;
+}
+
+#footerAdvices {
+    padding-top:32px;
+}
+
+#footerCopyrightArea {
+    padding:0px;
+    @include box-shadow-gen(rgba(55,55,55,1), 0px, 2px, 5px, -1px);     
+    color:$mainTextColor;
+}
+
+#content-redes {
+    img {
+
+    opacity: .6;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+        transition:all 0.3s;
+        margin-right:5px;
+    &:hover {
+        filter: grayscale(0);
+    }
+    }
+}
+
+#footerWidgets{
+
+    h4 {
+        font-size:1rem;
+        color:$title-text-color;
+    }
+
+    a {
+        color:$mainTextColor;
+        font-size:0.9rem;
+    }
+
+    .bandeiras {
+        img {
+            width:40px;
+            height: auto;
+        }
+    }
+    
+}
+
+#newsletterFormArea {
+
+    background-color: $primary-color;
+    color:white;
+
+    .input-field {
+        padding:0px;
+    }
+}

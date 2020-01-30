@@ -1,0 +1,42 @@
+<header id="mainHeader" class="container">
+    <div class="row">
+        <div class="col-xl-3">
+
+            <a [routerLink]="['/']">
+                <img src="/assets/images/logo.png" class="img-fluid"/>
+            </a>
+
+        </div>
+
+        <div id="searchBox" class="input-field col-xl-6">
+            <input placeholder="Seja bem vindo, o que você busca?" id="first_name" type="text" class="form-control ">
+            <button type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+
+        <div id="headerInteractionArea" class="col-3">
+
+            <div class="wrapper">
+            <a href="#" class="icoTopo" id="icoLogin">
+
+                <i class="fa fa-user-circle"></i>
+                <small>
+                    Entre ou
+                    Cadastre-se
+                </small>
+
+            </a>
+                
+            <a href="#" class="icoTopo" id="icoCesta" [routerLink]="['/carrinho']">
+                <i class="fa fa-shopping-basket"></i>
+                <small class="notification-badge">1</small>
+            </a>
+
+        </div>
+       </div>
+    </div>
+
+</header>
+
+<menu></menu>

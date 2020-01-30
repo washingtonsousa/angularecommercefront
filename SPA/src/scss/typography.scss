@@ -1,0 +1,21 @@
+small {
+    font-size:.3em;
+}
+
+
+a:hover {
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+p, ul, li {
+    color:#666;
+}
+
+a {
+    color: $mainLinkColor;
+
+    &:hover {
+        color: $mainLinkHoverColor;
+    }
+}

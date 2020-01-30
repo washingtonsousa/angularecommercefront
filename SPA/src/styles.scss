@@ -1,0 +1,21 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/bootstrap/scss/_functions";
+@import "node_modules/bootstrap/scss/_variables";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css";
+
+@import "scss/variables"; //alterações do bootstrap
+@import "scss/css";
+@import "scss/placeholders.scss";
+@import "scss/mixins.scss";
+
+@import "node_modules/bootstrap/scss/bootstrap";
+
+@import "scss/layout"; //alterações do bootstrap
+@import "scss/slick";
+@import "scss/typography";
+@import "scss/header";
+@import "scss/components";
+@import "scss/carrinho";
+@import "scss/forms";
+@import "scss/footer.scss";
+@import "scss/carrinho.scss";

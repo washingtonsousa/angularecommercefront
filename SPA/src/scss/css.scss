@@ -1,0 +1,14 @@
+ul li {
+    list-style: none;
+}
+
+.no-bullet {
+    padding-inline-start:0px;
+}
+
+@for $i from 1 through 100 {
+    .w-#{$i} {
+      width:#{$i}px;
+    }
+  }
+  

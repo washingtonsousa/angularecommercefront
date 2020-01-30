@@ -1,0 +1,8 @@
+@mixin box-shadow-gen($color, $x-length, $y-length, $blur, $spread: 0px) {
+
+    -webkit-box-shadow: $x-length $y-length $blur $spread $color;
+    -moz-box-shadow: $x-length $y-length $blur $spread $color;
+    box-shadow: $x-length $y-length $blur $spread $color;
+
+}
+

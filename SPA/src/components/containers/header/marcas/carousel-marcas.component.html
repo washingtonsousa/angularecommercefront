@@ -1,0 +1,9 @@
+<div class="marca-carousel container-fluid">
+    <ngx-slick-carousel class="container" 
+    #slickModal="slick-carousel" 
+    [config]="slideConfig">
+    <div ngxSlickItem *ngFor="let marca of marcas" class="slide">
+        <img [src]="marca.Arquivo | imageUrl" alt="" class="carousel-item" width="100%">
+    </div>
+    </ngx-slick-carousel>
+    </div>

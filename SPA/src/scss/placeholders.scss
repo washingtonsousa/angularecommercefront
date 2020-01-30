@@ -1,0 +1,7 @@
+%grow-icon-animation {
+    transition: all 0.3s ease-in;
+    transform: scale(1);
+    &:hover {
+        transform: scale(1.3);
+    }
+}

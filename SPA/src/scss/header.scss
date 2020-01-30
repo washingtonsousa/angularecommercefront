@@ -1,0 +1,203 @@
+#mainHeader {
+
+    padding-top:42px;
+    padding-bottom:42px;
+    background: white;
+
+    .row {
+        align-items: center;
+    }
+
+}
+
+#searchBox {
+    display:flex;
+    align-items: baseline;
+
+    button {
+        background: transparent;
+        border:none;
+        color:$secondary-color;
+
+        i {
+            font-size: 1.2em;
+            transition: 0.3s all;
+
+            &:hover {
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+
+.icoTopo {
+    color: $secondary-color;
+    margin-right: 10px;
+}
+
+#mainNav, #navMobile {
+    a {
+
+        
+        padding:15px;
+        padding-right: 2px;
+        padding-left: 2px;            
+        width: 100%;
+        font-size: 1rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+
+        i {
+            font-size: 1.5rem;
+            margin-right: 5px;
+        }
+       
+    &.nav-link:hover:not(.specialoffers), &.nav-link:active:not(.specialoffers) {
+        background: rgba(0,0,0,0.1);
+    }
+
+    &.specialoffers:hover,    &.specialoffers:active {
+        background: rgba(0,0,0,0.1);
+        background-color: #ce221f;
+    }
+    }
+
+    
+}
+
+#navMobile {
+    height:100%;
+    position: fixed;
+    top:0px;
+    left:0px;
+    width:310px;
+    z-index:999998;
+    background: white;
+    height:100%;
+    transition: all 0.3s;
+    padding:0px;
+    overflow-y: auto;
+    @include box-shadow-gen(rgba(100,100,100, 0.7), 2px, 0px, 3px, 0px);
+
+    #closeNavMobileBtn {
+        position: absolute;
+        right:0px;
+        width: auto;
+    }
+
+    #icoLoginNav {
+
+        a {
+            display: flex;
+            flex-direction: column;
+            width:100%;
+
+            i {
+              font-size:   3.250rem;
+              color: #333;
+              margin-bottom: 1rem;
+            }
+
+            color:#666;
+            font-size: 1rem;
+        }
+       
+        background:white;
+        border-bottom: 1px solid #f1f1f1;
+    }
+
+    a {
+        text-align: left;
+        justify-content: flex-start;
+        padding:20px;
+        padding-top:15px;
+        padding-bottom:15px;
+        width:100%;
+
+    }
+
+
+    .specialoffers {
+        color:#fff;
+    }
+
+    .navItems {
+        width:100%;
+
+        .nav-item {
+            border-bottom:1px solid #f1f1f1;
+        }
+    }
+
+    ul.navbar-nav {
+        
+        flex-direction: column;
+        width: 100%;
+
+    }
+}
+
+#mainNav {
+
+padding:0px;
+z-index: 99999;
+       a {
+        color:#fff;
+       }
+
+.navItems {
+    
+    ul.navbar-nav {
+        width:100%;
+        justify-content: center;
+
+    li {
+        text-align: center;
+        min-width:200px;
+    }
+
+}
+}
+        @include box-shadow-gen(rgba(0,0,0,0.75), 0px, 2px, 5px, -1px);        
+
+}
+
+#headerInteractionArea {
+    .wrapper {
+        display: flex;
+        justify-content: flex-end;
+        align-items: baseline;
+        align-content: flex-end;
+        position: relative;
+
+        #icoLogin {
+
+            i {
+                margin-right:10px;
+                font-size: 2.5rem;
+            }
+
+            font-size: 2.5rem;
+            display: flex;
+            align-items:center;
+            max-width:120px;
+
+            small {
+                font-weight: bold;
+                color:$mainTextColor;
+            }
+        }
+
+        #icoCesta {
+            font-size: 2.5rem;
+
+            small {
+                font-weight: bold;
+            }
+        }
+    }
+}

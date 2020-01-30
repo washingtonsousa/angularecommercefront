@@ -1,0 +1,27 @@
+
+
+.form-control {
+    border-radius: 0px;
+    border:none;
+    border-bottom:1px solid #ccc;
+    
+}
+
+.btn {
+    border-radius: 0px;
+}
+.form-control:focus,
+input[type=text]:focus{
+  box-shadow: none;
+  border-color:#ccc !important;
+}
+
+.input-field {
+    label {
+      font-size:0.8rem;
+    }
+
+    margin-bottom:5px;
+}
+
+
