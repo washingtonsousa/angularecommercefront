@@ -11,18 +11,6 @@ export class CarouselMarcasComponent {
         {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-unilever.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-bayer.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-unilever.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-bayer.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-unilever.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-bayer.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
-        {Arquivo: "/backoffice/uploads/Marca/logo-unilever.jpg"}
       ];
 
 
@@ -32,7 +20,7 @@ export class CarouselMarcasComponent {
       "nextArrow":"<a class='nav-btn next-slide'> <i class='fa fa-chevron-right'> </i>  </a>",
       "prevArrow":"<a class='nav-btn prev-slide'> <i class='fa fa-chevron-left'> </i> </a>",
       "autoplay": true,
-      "infinite": false,
+      "infinite": true,
       "autoplaySpeed": 2000,
     };
 }

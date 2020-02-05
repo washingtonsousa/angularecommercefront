@@ -1,0 +1,20 @@
+.tab-pane {
+background-color: white;
+padding:1.250rem;
+border-left: 1px solid #dee2e6;
+border-bottom: 1px solid #dee2e6;
+border-right: 1px solid #dee2e6;
+}
+
+tabset .nav-item.active  .nav-link {
+    background:white;
+}
+
+tabset .nav-tabs .nav-link {
+    margin-right: 4px;
+}
+
+tabset .nav-item .nav-link {
+    background:$primary-color;
+    color:white;
+}

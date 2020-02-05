@@ -1,19 +1,26 @@
-import {Component, ViewChild, ElementRef} from "@angular/core";
+import {Component, ViewChild, ElementRef, OnInit} from "@angular/core";
+import { PedidoService } from 'src/services/pedido.service';
+import { PedidoModel } from 'src/shared/models/pedido.model';
 
 
 @Component({
     selector: 'carrinho',
     templateUrl: 'carrinho.component.html'
 })
-export class CarrinhoComponent {
+export class CarrinhoComponent implements OnInit{
 
-    private CEP: String = "";
+    public CEP: String = "";
+    private Pedido?: PedidoModel;
 
-    private get cepOk(): boolean {
+    constructor(private _pedidoService: PedidoService) {
+
+    }
+
+    public get cepOk(): boolean {
         return this.CEP.length == 8;
     }
  
-    private Lojas: any[] = [{
+    public Lojas: any[] = [{
 
         Logo: "unifabra_logo.png"
 
@@ -32,6 +39,17 @@ export class CarrinhoComponent {
 
        
 
+    }
+
+    ngOnInit() {
+
+            this._pedidoService.GetCurrentPedido().subscribe((Pedido: PedidoModel) => {
+                    
+                this.Pedido = Pedido;
+
+                console.log(this.Pedido);
+
+            });
     }
 
 

@@ -10,8 +10,10 @@ import { MenuComponent } from './header/menu/menu.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { RouterModule } from '@angular/router';
 import { CarouselMarcasComponent } from './header/marcas/carousel-marcas.component';
+import { PedidoService } from 'src/services/pedido.service';
 
 @NgModule({
+    providers: [PedidoService],
     exports: [ContainerComponent, SliderComponent, CarouselMarcasComponent],
     declarations: [HeaderComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CarouselMarcasComponent],
     imports: [PipeModule, BrowserModule, CommonModule, SlickCarouselModule, RouterModule]

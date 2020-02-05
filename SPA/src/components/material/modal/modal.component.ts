@@ -13,19 +13,16 @@ export class ModalComponent {
      @Input() Icon: string = "fa fa-info";  
      @Input() ModalClass: string = "";
      @Input() TitleClass: string = "";
-     constructor(private modalService: BsModalService) {}
-
-
-     public open() {
-
-        this.modalRef = this.modalService.show(this.template,  Object.assign({}, { class: 'modal-lg ' + this.ModalClass  }));
-     
-    }
-
-
-     public close() {
-         this.modalRef.hide();
+     constructor(private modalService: BsModalService) {
+         
      }
 
+    public open() {
+        this.modalRef = this.modalService.show(this.template,  Object.assign({}, { class: 'modal-lg ' + this.ModalClass  }));
+    }
+
+    public close() {
+         this.modalRef.hide();
+    }
 
 }

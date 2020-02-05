@@ -2,19 +2,31 @@
 @import "src/scss/mixins.scss";
 
     .card {
-        width: 222px;
+        width: 210px;
         transition: all 0.3s;
-        margin-right:8px;
-        flex: 1 0 35%;
+        margin-right:4px;
+        //flex: 1 0 35%;
         
+        &:hover {
+            @include box-shadow-gen(rgba(155,155,155,0.9), 0px, 0px, 7px);
+        }
+
 
         .card-image-area {
-            max-height:230px;
+            max-height:260px;
             width:100%;
             position: relative;
             .card-img-top {
                 width: 100%;
                 height: auto;
+            }
+
+            &:hover {
+
+                .view-details-mask {
+                    opacity: 1 !important;
+                }
+    
             }
 
             .view-details-mask {
@@ -30,6 +42,8 @@
                 position: absolute;
                 top:0;
                 left:0;
+
+                
 
                 p {
                     text-align: center;
@@ -70,6 +84,10 @@
 
         .card-title {
             font-size:1rem;
+            //text-overflow: ellipsis;
+            //white-space: nowrap;
+            //overflow: hidden;
+            height:60px;
         }
 
         .card-body {
@@ -93,14 +111,7 @@
 
         @include box-shadow-gen(rgba(155,155,155,0.9), 0px, 0px, 1px);
 
-            &:hover {
-                @include box-shadow-gen(rgba(155,155,155,0.9), 0px, 0px, 7px);
-
-                .view-details-mask {
-                    opacity: 1;
-                }
-
-                }
+           
         .btn {
             
             margin-bottom:1px;

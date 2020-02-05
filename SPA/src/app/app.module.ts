@@ -2,10 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavigationModule } from 'src/navigation/navigation.module';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import * as routing from "../shared/routing";
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
-import { ModalModule } from 'ngx-bootstrap';
+import { ModalModule, TabsModule } from 'ngx-bootstrap';
+import { MaterialModule } from 'src/components/material/material.module';
 
 @NgModule({
   declarations: [
@@ -14,8 +15,10 @@ import { ModalModule } from 'ngx-bootstrap';
   imports: [
     BrowserModule,
     NavigationModule,
+    MaterialModule,
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
+    TabsModule.forRoot(),
     RouterModule.forRoot(
       routing.appRoutes,
       { enableTracing: true } // <-- debugging purposes only

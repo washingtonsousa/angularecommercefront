@@ -41,7 +41,7 @@
 
  <footer id="footerWidgets" class="container mt-3">
     <div class="row">
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
 
             <h4>
                 Institucional
@@ -51,7 +51,7 @@
 
         </div>
 
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
             <h4>
                 Central do Cliente
             </h4>
@@ -60,7 +60,7 @@
 
         </div>
 
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
             <h4>
                 Relacionamento
             </h4>
@@ -69,7 +69,7 @@
         </div>
 
 
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
             <h4>
                 Atendimento
             </h4>
@@ -77,7 +77,7 @@
             <ul class="no-bullet"><li><a href="/politica-de-troca-e-devolucao/51-08" target="_self">Política de Troca e Devolução</a></li><li><a href="/politica-de-entrega/52-08" target="_self">Política de Entrega</a></li><li><a href="/politica-de-seguranca-e-privacidade/53-08" target="_self">Política de Segurança e Privacidade</a></li><li><a href="/politica-de-pagamento/54-08" target="_self">Política de Pagamento</a></li></ul>
         </div>
 
-        <div class="col-xl-6">
+        <div class="col-xl-6 col-6">
             <h4>
                 Formas de Pagamento
             </h4>
@@ -94,7 +94,7 @@
                         </div>
         </div>
 
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
             <h4>
                 Segurança e Credibilidade
             </h4>
@@ -103,7 +103,7 @@
         </div>
 
 
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-6">
             <h4>
                 Redes Sociais
             </h4>
@@ -123,49 +123,11 @@
 
     <footer class="container mb-3" id="footerAdvices">
         <div class="row">
-            <div class="col-sm-12">
-                <div class="row first-description mb-3">
-                    <div class="col-xl-5">
-                        <h4 class="subheader"><img src="assets/images/anvisa.png" alt="anvisa"></h4>
-                    </div>
-                    <div class="col-xl-7">
-                        <span style="color:#ec2856">
-                            <strong>A xxxxxxxxxxxxxxxx segue as determinações da Anvisa.&nbsp;</strong>
-                        </span>
-                        <br>As informações contidas neste site não devem ser usadas para automedicação e não substituem,
-                        em
-                        hipótese alguma,
-                        as orientações dadas pelo profissional da área médica. Somente o médico está apto a diagnosticar
-                        qualquer problema de saúde e prescrever o tratamento adequado.
-                    </div>
-                </div>
-                <div class="row second-description">
-                    <div class="col-sm-12 text">Razão Social: xxxxxxxxxxxxxxxxxxxxx | Nome
-                        Fantasia:&nbsp;xxxxxxxxxxxxxxxx|
-                        CNPJ:&nbsp;xxxxxxxxxxxxxxxxxxx
-                        | Rua xxxxxxxxxxxxx, xxxx - xxxxxxxxxx - xxxxxxxxxxx - xx - CEP: xxxxxxxxxxx
-                        | Telefone:&nbsp;(xx) xxxx-xxxx| Horário de Funcionamento: xxxxxxxxxxxxxxxxxxxxxxx&nbsp;|
-                        Farmacêutico Responsável:&nbsp;xxxxxxxxxxxxxxxxxxxxxxxxx
-                        | CRF/xxxx: xxxxxxxx |Autorização de Funcionamento da Empresa (AFE): xxxxxxxxxxxxxxxxxxx</div>
-                    <div class="col-sm-12"><br>
-                        <div><span
-                                style="font-size:small">
-                                <span>
-                                    <span>Os preços e as promoções são válidos apenas para compras via internet. | As
-                                        fotos
-                                        contidas em nosso site são meramente ilustrativas.
-                                        | *Preços e disponibilidade sujeitos a alterações no decorrer do dia.
-
-                                    </span>
-                                </span>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+            <div class="col-sm-12" [innerHtml]="RodapeModel.Rodape">
             </div>
         </div>
 
-        </ footer>
+        </footer>
 
 
         <footer class="container-fluid d-flex justify-content-center">

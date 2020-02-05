@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { RodapeModel } from 'src/shared/models/rodape.model';
 
 
 
@@ -8,52 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-        public RodapeModel: any = {};
+        @Input() public RodapeModel: RodapeModel = new RodapeModel();
 
         ngOnInit() {
-
-            this.RodapeModel.Pagamentos = [
-
-                    {
-                        Logo: "/BACKOFFICE/Uploads/Pagamento/6.jpg"
-
-                    },
-
-                    {
-
-                        Logo: "/BACKOFFICE/Uploads/Pagamento/16.jpg"
-
-                    }
-
-
-            ];
-
-            this.RodapeModel.RedesSociais = [
-
-                {
-                    Logo: "/BACKOFFICE/Uploads/redessociais/facebook.png"
-
-                },
-
-                {
-
-                    Logo: "/BACKOFFICE/Uploads/redessociais/google.png"
-
-                },
-
-                {
-                    Logo: "/BACKOFFICE/Uploads/redessociais/twiiter.png"
-
-                },
-
-                {
-
-                    Logo: "/BACKOFFICE/Uploads/redessociais/pinterest.png"
-
-                }
-
-            ]
-
         }
 
 }

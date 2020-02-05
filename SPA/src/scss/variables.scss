@@ -1,13 +1,14 @@
 
 $primary-color: rgb(24, 75, 132) !default;
-$primary-color-darken: rgba(24, 75, 132, 0.5);
+$primary-color-darken: rgba(4, 44, 89, 1);
 $primary-color-lighten: rgb(5, 113, 235);
-$primary-gradient: linear-gradient(to bottom, $primary-color, $primary-color-lighten 120%);
+$primary-gradient: linear-gradient(to bottom, $primary-color, primary-color-darken 120%);
 $secondary-color: #E03633 !default;
+$ternary-color: #ccc !default;
 $mainTextColor: #666;
 $input-btn-focus-box-shadow: none;
 $title-text-color: #333;
-$success-color: rgb(4, 219, 44);
+$success-color: rgb(2, 196, 41);
 $mainLinkColor: #333;
 $mainLinkHoverColor:#666;
 $theme-colors: (

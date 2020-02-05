@@ -1,0 +1,62 @@
+.price-container {
+    p {
+        margin:0;
+        font-size:1.250rem;
+    }
+    
+    .price {
+        font-weight: bold;
+        font-size: 3rem;
+
+    }
+}
+
+
+.btn-comprar {
+    padding:18px;
+    background: $primary-gradient !important;
+
+    .price {
+        font-weight: bold;
+
+    }
+}
+
+#btn-ver-farmacia {
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding:18px;
+}
+
+.detalhe-produto-secondary-controls-area {
+    display: flex;
+    padding:8px;
+    justify-content: space-between;
+    a {
+        display: flex;
+        align-content: center;
+        align-items: center;
+        margin-right: 18px;
+        cursor: pointer;
+        @extend %grow-icon-animation; 
+
+        span {
+            color:$mainTextColor;
+            font-size: 0.650rem;
+            font-weight: bold;
+        }
+
+        i {
+            font-size: 1.650rem;
+            color:$primary-color;
+            margin-right:5px;
+            
+        }
+    }
+
+    margin-bottom: 1rem;
+}
+
+#dados-produto {
+    padding: 18px;
+}

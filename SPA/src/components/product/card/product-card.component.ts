@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { ProdutoModel } from 'src/shared/models/produto.model';
 
 @Component({
     selector: 'product-card',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ["product-card.scss"]
 })
 export class ProductCardComponent {
-
+       @Input() public Produto: ProdutoModel;
+       @Input() public Carrosel: boolean = true;
 }

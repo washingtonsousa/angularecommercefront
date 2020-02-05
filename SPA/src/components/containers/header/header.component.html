@@ -1,6 +1,6 @@
 <header id="mainHeader" class="container">
     <div class="row">
-        <div class="col-xl-3">
+        <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
 
             <a [routerLink]="['/']">
                 <img src="/assets/images/logo.png" class="img-fluid"/>
@@ -15,23 +15,31 @@
             </button>
         </div>
 
-        <div id="headerInteractionArea" class="col-3">
+        <div id="headerInteractionArea" class="col-xl-3 col-12 d-flex justify-content-between">
+
+            <a id="icoToggleMenuMobile" (click)="Menu.toggleMobile()" class="d-block d-xl-none">
+                <i class="fa fa-bars"></i>  
+              </a>
 
             <div class="wrapper">
+
+                
             <a href="#" class="icoTopo" id="icoLogin">
 
                 <i class="fa fa-user-circle"></i>
-                <small>
+                <!-- <small>
                     Entre ou
                     Cadastre-se
-                </small>
-
+                </small> -->
+               <small> Bem Vindo <strong> Vannon! </strong> </small> 
             </a>
                 
             <a href="#" class="icoTopo" id="icoCesta" [routerLink]="['/carrinho']">
                 <i class="fa fa-shopping-basket"></i>
-                <small class="notification-badge">1</small>
+                <small class="notification-badge">{{QuantidadeProdutoCarrrinho}}</small>
             </a>
+
+          
 
         </div>
        </div>
@@ -39,4 +47,4 @@
 
 </header>
 
-<menu></menu>
+<menu #Menu></menu>
