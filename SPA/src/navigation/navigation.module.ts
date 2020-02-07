@@ -16,13 +16,12 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ProdutoService } from 'src/services/produto.service';
 import { TabsModule } from 'ngx-bootstrap';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
+import { ConfirmacaoComponent } from './pages/confirmacao/confirmacao.component';
 
 @NgModule({
     providers: [ProdutoService],
-    declarations: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent],
-    exports: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent],
+    declarations: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent, ConfirmacaoComponent],
+    exports: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent, ConfirmacaoComponent],
     imports: [CommonModule, BrowserModule, ContainersModule, TabsModule, TooltipModule, SlickCarouselModule, PipeModule, RouterModule, ProductModule, MaterialModule, FormsModule, DirectiveModule]
 })
-export class NavigationModule {
-
-}
+export class NavigationModule {}

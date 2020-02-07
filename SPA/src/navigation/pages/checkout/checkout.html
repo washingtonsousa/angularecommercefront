@@ -1,5 +1,233 @@
-<container [RodapeModel]="RodapeModel">
+<checkout-container [RodapeModel]="RodapeModel">
 
+    <section class="container">
+        <div class="row">
+            <div class="col-xl-12 steps-area">
 
+                <div class="step-box disabled">
 
-</container>
+                    <div class="step-header">
+
+                         <h5> 1 Identifique-se <i class="fa fa-check check-icon"></i> </h5>  
+                
+                    </div>
+
+                    <div class="step-content">
+                        <p class="title-mark"> Dados Pessoais </p>
+
+                        <p class="label-mark">Nome completo:</p>
+                        <p> Vannon  </p> 
+                        <p class="label-mark">Email:</p>
+                        <p> vannon@vannon.com.br  </p> 
+
+                        <hr />
+
+                        <div class="bordered-box">
+
+                            <div class="icon-described-content">
+
+                                <i class="fa fa-map-marker-alt icon">
+
+                                </i>
+                                    <section>
+                                        <p class="title-mark"> Endereço para entrega </p>
+                                        <p> Destinatário: Vannon Ecommerce </p>
+                                        <p> Avenida Jabaquara, 2049, 6 andar Vannon, Mirandópolis, São Paulo-SP, CEP 04045003 </p>
+                                    </section>
+
+                            </div>
+                          
+                        </div>
+
+                        <div class="bordered-box mt-1">
+
+                            <div class="icon-described-content">
+
+                                <i class="fa fa-truck icon">
+
+                                </i>
+                                    <section>
+                                        <p class="title-mark"> Escolha a modalidade de entrega </p>
+                                        <label class="w-100"> <input type="radio" name="modalidade" checked class="mr-2" disabled/> <i class="fa fa-motorcycle"> </i> Motoboy {{ 5 | currency: 'BRL' }} </label>
+                                        <label class="w-100"> <input type="radio" name="modalidade" class="mr-2" disabled/> <i class="fa fa-store"> </i> Retirada em loja  {{ 0 | currency: 'BRL' }}  </label>
+                                    </section>
+
+                            </div>
+                          
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step-box">
+
+                    <div class="step-header">
+
+                         <h5> 2 Pagamento  </h5>  
+                
+                    </div>
+
+                    <div class="step-content">
+
+                        <p class="title-mark"> Escolha uma forma de pagamento </p>
+
+                          <ul class="list-group">
+                            <li  (click)="isCartao = false; isBoleto = true;"  class="list-group-item effect-on-hover {{  isBoleto ? 'active' : ''  }}">  <i class="fa fa-barcode"></i> Boleto</li>
+                            <li (click)="isCartao = true; isBoleto = false;" class="list-group-item effect-on-hover {{  isCartao ? 'active' : ''  }}"> <i class="fa fa-credit-card"></i> Cartão de Crédito</li>
+                          </ul>
+
+                          <section class="p-3">
+
+                            <form *ngIf="isCartao" (ngSubmit)="finalizarCartao($event)">
+
+                                        <div class="input-field">   
+                                            <label>Número do cartão de crédito *</label>
+                                            <input id="cardNumber" name="cartao"  type="tel" value=""  class="form-control" maxlength="19">
+                                        </div> 
+
+                                        <div class="input-field">  
+                                            <label>Nome impresso no cartão de crédito *</label>
+                                            <input id="cardholderName"  type="text" class="form-control">
+                                        </div> 
+
+                                        <div class="input-field">  
+                                            <label>CPF do titular *</label>
+                                            <input id="docNumber" value="" type="tel" class="form-control"  maxlength="14">
+                                        </div> 
+
+                                        <select id="cardExpirationMonth" class="validade mainBox-conteudo-form-validade-mes validate mr-1">
+
+                                            <option value="" class="hide">Mês</option>
+                                            <option value="01">Janeiro</option>
+                                            <option value="02">Fevereiro</option>
+                                            <option value="03">Março</option>
+                                            <option value="04">Abril</option>
+                                            <option value="05">Maio</option>
+                                            <option value="06">Junho</option>
+                                            <option value="07">Julho</option>
+                                            <option value="08">Agosto</option>
+                                            <option value="09">Setembro</option>
+                                            <option value="10">Outubro</option>
+                                            <option value="11">Novembro</option>
+                                            <option value="12">Dezembro</option>
+
+                                        </select>
+
+                                        <select id="cardExpirationYear" data-checkout="cardExpirationYear" class="validade validate">
+
+                                            <option value="" class="hide">Ano</option>
+                                            <option value="2020" >2020</option>
+                                            <option value="2021" >2021</option>
+                                            <option value="2022" >2022</option>
+                                            <option value="2023" >2023</option>
+                                            <option value="2024" >2024</option>
+                                            <option value="2025" >2025</option>
+                                            <option value="2026" >2026</option>
+                                            <option value="2027" >2027</option>
+                                            <option value="2028" >2028</option>
+                                            <option value="2029" >2029</option>
+                                            <option value="2030" >2030</option>
+
+                                        </select>
+                                      
+                                     <p> <small class="w-100">A data que o cartão expira, impressa na frente do cartão.</small> </p> 
+
+                                     <div class="input-field">  
+                                        <label>Código de segurança *</label>
+                                        <input id="securityCode" data-checkout="securityCode" type="tel" maxlength="4" class="form-control w-50" data-label="">
+                                     </div>
+
+                                     <p> <small class="mainBox-conteudo-form-cvvObs">O código "CVV" ou "CVC" impresso atrás do cartão.</small> </p> 
+                                
+                                    <div class="input-field">
+                                      <label>Parcelas *</label>
+                                      <select id="installments" name="installments" class="validate">
+                                      <option *ngFor="let parcela of Parcelas" value="1"> {{ parcela }}</option>
+                                    
+                                    </select>
+                            
+                                    </div>
+                                    
+                                    <hr/>
+
+                                      <button type="submit" name="button" class="btn btn-success w-100" >Finalizar pedido</button>
+                      
+                            </form>
+
+                            <form *ngIf="isBoleto" (ngSubmit)="finalizarBoleto($event)">
+                                <p> Boleto com vencimento para 2 dias * </p>
+                                <button type="submit" name="button" class="btn btn-success w-100" id="finalizarPedido">Finalizar pedido</button>
+                            </form>
+
+                          </section>
+
+                    </div>
+
+                </div>
+
+                <div class="step-box clean-step-box">
+
+                    <div class="step-header ">
+
+                         <h5>  Resumo do pedido  </h5>  
+                
+                    </div>
+
+                    <div class="step-content resumo-step-content">
+
+                        <div *ngFor="let produto of Pedido?.Produtos" class="product-description-area">
+
+                            <div class="product-description-item">
+
+                                <img [src]="produto.ImagemPrincipal.UrlRelativa | imageUrl" class="product-description-image" />
+
+                                <div class="product-description-text">
+
+                                        <p> Nome: {{ produto.Nome }} </p>
+                                        <p> Qtd: {{ produto.Quantidade }} </p>
+                                       
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                            <div class="price-description-step-area">
+
+                        <div class="price-description">
+
+                          <p> Sub Total : </p>  <p> {{  Pedido?.SubTotal  | currency: 'BRL' }}  </p>  
+                        
+                        
+                        </div>
+
+                        <div class="price-description">
+
+                            <p> Frete : </p>  <p> {{  5  | currency: 'BRL' }}  </p>  
+                          
+                          
+                          </div>
+                          
+                        <hr />  
+
+                        <div class="price-description total">
+
+                            <p> Total : </p>     <div class="w-30"></div> 
+                            <p> {{  (Pedido?.Total + 5) | currency: 'BRL' }}  </p>  
+                          
+                        </div>
+                       
+
+                    </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            </div>
+
+    </section>
+
+</checkout-container>

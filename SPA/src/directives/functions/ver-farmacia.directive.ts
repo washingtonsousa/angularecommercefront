@@ -49,7 +49,16 @@ export class VerFarmaciaDirective {
               Pedido.Produtos.push(this.Produto);  
 
         }
+        
+        Pedido.Total = 0;
+        Pedido.SubTotal = 0;
 
+        Pedido.Produtos.forEach((produto) => {
+
+            Pedido.Total += produto.Preco_Por * produto.Quantidade;
+            Pedido.SubTotal += produto.Preco_Por * produto.Quantidade;
+
+        })
 
         this._pedidoService.UpdatePedido(Pedido).subscribe(() => {
 

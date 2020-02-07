@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import * as jQuery from 'jquery';
 
 @Component({
     selector: 'carousel-marcas',
@@ -11,6 +12,10 @@ export class CarouselMarcasComponent {
         {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-unilever.jpg"},
+        {Arquivo: "/backoffice/uploads/Marca/ache.png"},
+        {Arquivo: "/backoffice/uploads/Marca/peg.png"},
+        {Arquivo: "/backoffice/uploads/Marca/dove.jpg"},
+        {Arquivo: "/backoffice/uploads/Marca/logo-vult.jpg"},
       ];
 
 
@@ -22,5 +27,33 @@ export class CarouselMarcasComponent {
       "autoplay": true,
       "infinite": true,
       "autoplaySpeed": 2000,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            infinite: true,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
     };
 }

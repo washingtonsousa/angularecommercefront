@@ -3,8 +3,14 @@
 .form-control {
     //border-radius: 0px;
     border:none;
-    border-bottom:1px solid #ccc;
-    
+    border-bottom:1px solid #666;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+select {
+  padding:8px;
+  border-radius: 4px;
 }
 
 .btn {
@@ -19,6 +25,7 @@ input[type=text]:focus{
 .input-field {
     label {
       font-size:0.8rem;
+      width: 100%;
     }
 
     margin-bottom:5px;

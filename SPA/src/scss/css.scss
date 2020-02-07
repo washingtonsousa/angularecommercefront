@@ -1,3 +1,19 @@
+body {
+ background: $default-bg-color !important;
+ position: relative;
+ margin: 0;
+ min-height: 100vh;
+ //padding-bottom: 25rem;
+}
+
+html {
+  height: 100%;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
 ul li {
     list-style: none;
 }
@@ -6,17 +22,18 @@ ul li {
     padding-inline-start:0px;
 }
 
+.text-primary-inverse {
+  color:white;
+}
+
+.bg-darken {
+ background-color: $primary-color-darken !important;
+}
+
 @for $i from 1 through 100 {
     .w-#{$i} {
       width:#{$i}px;
     }
-  }
+}
   
 
-  .text-primary-inverse {
-    color:white;
-  }
-
-  .bg-darken {
-   background-color: $primary-color-darken !important;
-  }

@@ -1,5 +1,7 @@
 
-<section id="newsletterFormArea" class="container-fluid">
+<footer id="footerArea"> 
+
+<section *ngIf="ShowNewsLetterForm" class="container-fluid newsletterFormArea">
 
     <div class="container pt-3 pb-3">
 
@@ -39,7 +41,7 @@
 </section>
 
 
- <footer id="footerWidgets" class="container mt-3">
+ <footer *ngIf="ShowWidgets" id="footerWidgets" class="container mt-3">
     <div class="row">
         <div class="col-xl-3 col-6">
 
@@ -119,9 +121,9 @@
 
 
 
-<footer id="footerCopyrightArea" class="container-fluid mt-3">
+<footer id="footerCopyrightArea" class="container-fluid">
 
-    <footer class="container mb-3" id="footerAdvices">
+    <footer *ngIf="RodapeModel.Rodape.length" class="container mb-3" id="footerAdvices">
         <div class="row">
             <div class="col-sm-12" [innerHtml]="RodapeModel.Rodape">
             </div>
@@ -130,11 +132,11 @@
         </footer>
 
 
-        <footer class="container-fluid d-flex justify-content-center">
-            <p>Copyright © 2019 Farmácia + Próxima - Todos os direitos reservados.</p>
+        <footer class="container-fluid d-flex justify-content-center p-0">
+            <p class="copyright-footer">Copyright © 2019 Farmácia + Próxima - Todos os direitos reservados.</p>
         </footer>
 
-        <footer id="byVannonFooter" class="container-fluid">
+        <!-- <footer id="byVannonFooter" class="container-fluid">
             <div class="d-flex justify-content-end align-items-center p-3">
                 <a href="http://www.ecommercerto.com.br/" target="_blank">
                     <img src="assets/images/vannon/byecerto.png" alt="e-Commerce Certo">
@@ -143,7 +145,10 @@
                     <img src="assets/images/vannon/byvannon.png" alt="Vannon">
                 </a>
             </div>
-        </footer>
+        </footer> -->
 
 
     </footer>
+
+
+</footer>

@@ -7,13 +7,13 @@ import { LoadingIconService } from 'src/services/emitters/loading-icon.service';
 import { CestaProdutoService } from 'src/services/emitters/cesta-produto-emitter.service';
 
 @Directive({
-   selector: "[AdicionarCesta]"
+   selector: "[RemoverCesta]"
 })
-export class AdicionarCestaDirective {
+export class RemoverCestaDirective {
 
     @Input() Produto: ProdutoModel;
-    @Input() Quantidade: number;
-    @Output() OnAdd: EventEmitter<any> = new EventEmitter<any>();
+    @Output() OnRemove: EventEmitter<any> = new EventEmitter<any>();
+    @Input() RemoverUnidade: boolean = false;
 
     constructor(private _pedidoService: PedidoService, private _router: Router) {}
 
@@ -27,32 +27,35 @@ export class AdicionarCestaDirective {
                 if(Pedido == null || Pedido == undefined)    
                 Pedido = new PedidoModel();
 
-                this.AddProdutoProcess(Pedido);
+                this.RemoverProdutoProcess(Pedido);
                 LoadingIconService.hide();
 
             });
             
     }
 
-    private AddProdutoProcess(Pedido: PedidoModel) {
+    private RemoverProdutoProcess(Pedido: PedidoModel) {
 
-        try {
-
-            let produto = Pedido.Produtos.filter((produto: ProdutoModel) => {
-
-                return (this.Produto.Codigo == produto.Codigo);
     
-            })[0];
+            let index = 0;
 
-            produto.Quantidade += this.Quantidade;
+            for(let produto of Pedido.Produtos) {
 
-        } catch(ex) {
+                if(this.Produto.Codigo == produto.Codigo) {
 
-            this.Produto.Quantidade += this.Quantidade;
-              Pedido.Produtos.push(this.Produto);  
+                        if(produto.Quantidade == 1 || !this.RemoverUnidade) {
 
-        }
+                                Pedido.Produtos.splice(index, 1);
 
+                        } else {
+                            produto.Quantidade -= 1;
+                        }
+                }
+                
+            }
+
+        Pedido.Total = 0;
+        Pedido.SubTotal = 0;
         Pedido.Produtos.forEach((produto) => {
 
             Pedido.Total += produto.Preco_Por * produto.Quantidade;
@@ -63,11 +66,9 @@ export class AdicionarCestaDirective {
         this._pedidoService.UpdatePedido(Pedido).subscribe(() => {
 
             CestaProdutoService.update(Pedido);
-            this.OnAdd.emit();
+            this.OnRemove.emit();
 
         });
-
-        console.log(Pedido);
         
     }
 

@@ -1,5 +1,9 @@
 <div class="card">
 
+    <div  class="product-card-mask-success-message text-center" [@addAnimation]="AnimationState">
+              <h3>  Adicionado com sucesso <i class="fa fa-check"></i>  </h3> 
+    </div>
+
     <a [routerLink]="['produto/nebacetin/' + Produto.Codigo]" *ngIf="Carrosel">
         <div class="card-image-area">
         
@@ -34,7 +38,7 @@
        <div class="card-aria-controls">
 
             <a href="javascript:void()" VerFarmacia [Produto]="Produto" [Quantidade]="1" tooltip="Ver Farmácias" [routerLink]="['/consulta-lojas']"> <i class="fa fa-store"></i>  </a>
-            <a href="javascript:void()" class="success" AdicionarCesta [Produto]="Produto" [Quantidade]="1"  tooltip="Adicionar a cesta"> <i class="fa fa-shopping-basket"></i>  </a>
+            <a href="javascript:void()" class="success" (OnAdd)="ShowMessage()" AdicionarCesta [Produto]="Produto" [Quantidade]="1"  tooltip="Adicionar a cesta"> <i class="fa fa-shopping-basket"></i>  </a>
 
         </div>
 

@@ -18,3 +18,44 @@ tabset .nav-item .nav-link {
     background:$primary-color;
     color:white;
 }
+
+.list-group-item.effect-on-hover {
+    cursor: pointer;
+    transition: 0.3s all;     
+    
+    &:hover,  &.active  {
+        background-color: $primary-color;
+        color:$primary-color-reverse;
+    }
+
+
+}
+
+#slider {
+    display: block;
+}
+
+#slider .carousel-item {
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+#slider .carousel-item img {
+    visibility:hidden;
+}
+
+@media (max-width: 1200px) {
+    #slider .carousel-item img {
+        visibility:visible;
+    }
+
+
+    #slider .carousel-item  {
+        background-image: none;
+    }
+}
+

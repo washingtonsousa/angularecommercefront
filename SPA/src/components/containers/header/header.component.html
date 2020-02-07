@@ -1,4 +1,5 @@
-<header id="mainHeader" class="container">
+<header id="mainHeader" [class]="'container-fluid ' + TopHeaderClass">
+    <div class="container">
     <div class="row">
         <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
 
@@ -31,7 +32,7 @@
                     Entre ou
                     Cadastre-se
                 </small> -->
-               <small> Bem Vindo <strong> Vannon! </strong> </small> 
+               <p class="user-area-text"> Bem Vindo <strong> Vannon! </strong> </p> 
             </a>
                 
             <a href="#" class="icoTopo" id="icoCesta" [routerLink]="['/carrinho']">
@@ -44,7 +45,7 @@
         </div>
        </div>
     </div>
-
+</div>
 </header>
 
 <menu #Menu></menu>

@@ -1,4 +1,4 @@
-<container>
+<checkout-container>
 
     <section *ngIf="Pedido != null  && Pedido != undefined && Pedido?.Produtos.length > 0" class="container">
         <div class="row">
@@ -11,16 +11,20 @@
 
                         <div class="grid-table-head">
                             <div class="grid-table-row">
-                                <div class="grid-table-cell  col-xl-6">
+                                <div class="grid-table-cell  col-xl-5">
                                     Produto
                                 </div>
 
-                                <div class="grid-table-cell col-xl-3">
+                                <div class="grid-table-cell col-xl-2">
+                                    Preço
+                                </div>
+
+                                <div class="grid-table-cell col-xl-2">
                                     Quantidade
                                 </div>
 
                                 <div class="grid-table-cell col-xl-3">
-                                    Valor unitário
+                                    Valor total 
                                 </div>
 
                             </div>
@@ -29,37 +33,46 @@
                         <div class="grid-table-body">
                             <div *ngFor="let produto of Pedido?.Produtos" class="grid-table-row">
 
-                                <div class="grid-table-cell align-items-center flex-column d-flex col-xl-6">
+                                <div class="grid-table-cell grid-table-product-area  col-xl-5">
 
-                                    <img class="img-fluid w-50"
+                                    <img
                                         [src]="produto.Imagem.UrlRelativa | imageUrl"
                                         alt="Card image cap" />
-
-                                    <h5> {{ produto.Nome }}  </h5>
+                                    <div class="grid-table-product-name-area">
+                                        <h5> {{ produto.Nome }}  </h5>
+                                    </div>
+                                    
 
                                 </div>
 
-                                <div class="grid-table-cell col-xl-3 d-flex  justify-content-center">
+                                <div class="grid-table-cell   col-xl-2">
+                                    <p> à partir de: </p>
+                                    <h5 class="price text-primary">  {{  produto.Preco_Por  | currency:'BRL'  }} </h5>
+                                </div>
+
+                                <div class="grid-table-cell col-xl-2 d-flex flex-column align-content-center align-items-center justify-content-center">
+
                                     <div class="d-flex m-auto amount-control-area">
 
-                                    <button class="btn btn-sm btn-primary mr-2"> 
+                                    <button [RemoverUnidade]="true" [Produto]="produto" RemoverCesta (OnRemove)="init()"  class="btn btn-sm btn-primary mr-2"> 
                                         <i class="fa fa-minus"></i> 
                                     </button>
                                     
                                     <p class="m-0"> {{ produto.Quantidade }} </p> 
                                     
-                                    <button class="btn btn-sm btn-primary ml-2"> 
+                                    <button class="btn btn-sm btn-primary ml-2" (OnAdd)="init()" AdicionarCesta [Produto]="produto" [Quantidade]="1"> 
                                         <i class="fa fa-plus"></i> 
                                     </button>
 
-                                    </div>
+                                 </div>
+                                    <a RemoverCesta class="pointer"  (OnRemove)="init()" [Produto]="produto"> Remover  </a>
                                 </div>
 
 
                                 <div class="grid-table-cell col-xl-3 d-flex  justify-content-center flex-column">
 
                                     <p> à partir de: </p>
-                                    <h3 class="price text-primary">  {{  produto.Preco_Por  | currency:'BRL'  }} </h3>
+                                    <h5 class="price text-primary"> {{  (produto.Preco_Por * produto.Quantidade)  | currency:'BRL'  }}  </h5>
 
                                 </div>
                             </div>
@@ -74,8 +87,7 @@
                         <label>
                             Digite seu CEP:
                         </label>
-                        <input class="form-control mb-1" #cepInput maxLength="8" [numberOnly]="true" [(ngModel)]="CEP"
-                            (keyup)="OnCepInputChange()" />
+                        <input class="form-control mb-1" #cepInput maxLength="8" [numberOnly]="true" [(ngModel)]="CEP" />
                         <button [disabled]="!cepOk" class="btn btn-lg btn-primary w-100"
                             (click)="modalVerFarmacias.open()">
                             Ver Farmácia mais Próxima <i class="fa fa-store"></i>
@@ -90,7 +102,7 @@
     <section *ngIf="Pedido == undefined || Pedido?.Produtos.length == 0" class="container">
         
                 <div class="row">
-                    <div class="col-xl-12 p-3">
+                    <div class="col-xl-12 p-3 content-box text-center">
 
                          <h1> <i class="fa fa-shopping-basket"></i> Cesta Vazia </h1>
                           <p>Sua cesta de compras está vazia</p>
@@ -128,7 +140,7 @@
 
             <div class="grid-table-body">
                 <div class="grid-table-row" *ngFor="let loja of Lojas">
-                    <div class="grid-table-cell col-xl-3">
+                    <div class="grid-table-cell col-xl-3 text-center">
                         <img [src]="'backoffice/uploads/loja/logo/' + loja.Logo | imageUrl" class="img-fluid" />
                     </div>
                     <div class="grid-table-cell col-xl-3">
@@ -144,7 +156,7 @@
                         <h5 class="price text-primary"> R$ 15,00 </h5>
                     </div>
                     <div class="grid-table-cell col-xl-3">
-                        <button class="btn btn-secondary w-100"> <span class="mr-1"> Visitar Farmácia </span> <i
+                        <button class="btn btn-secondary w-100" (click)="modalVerFarmacias.close()" [routerLink]="['/checkout']"> <span class="mr-1"> Visitar Farmácia </span> <i
                                 class="fa fa-chevron-right"></i> </button>
                     </div>
                 </div>
@@ -153,4 +165,4 @@
 
     </modal>
 
-</container>
+</checkout-container>

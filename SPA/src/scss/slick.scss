@@ -1,7 +1,7 @@
 .marca-carousel {
     padding:8px;
     @include box-shadow-gen(rgba(155,155,155,0.75), 5px, 0px, 5px);
-    margin-bottom: 10px;
+
     background:white;
 
     .slick-slide  {

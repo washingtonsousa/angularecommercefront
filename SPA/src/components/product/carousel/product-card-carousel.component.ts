@@ -11,8 +11,8 @@ export class ProductCardCarouselComponent implements AfterViewInit {
    @Input() public Produtos: any[] = [];
    public translateXAmount: number = 0;
    private maxNavRoller: number = 0;
-   @ViewChild("NavRoller", {read: ElementRef, static: false})   NavRoller?: ElementRef<any>;
-
+   @ViewChild("NavRoller", {read: ElementRef, static: true})   NavRoller?: ElementRef<any>;
+    @Input() public Titulo: String = "Destaques";
 
     constructor(private eRef: ElementRef){
 
@@ -33,7 +33,12 @@ export class ProductCardCarouselComponent implements AfterViewInit {
 
 
     ngAfterViewInit() {
-        $(this.eRef.nativeElement).addClass("overflow-hidden");
-        this.maxNavRoller =   0 - ($(this.NavRoller.nativeElement).width() - (120 * 3));
+
+   
+            $(this.eRef.nativeElement).addClass("overflow-hidden");
+  
+            this.maxNavRoller =   0 - ($(this.NavRoller.nativeElement).width() - (120 * 3));
+
+
     }
 }

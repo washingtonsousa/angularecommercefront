@@ -1,14 +1,10 @@
-<container>
-
-<slider></slider>
-
-<carousel-marcas></carousel-marcas>
+<container [IsHome]="true">
 
 <section class="container">
 
 
     <div class="row">
-
+<!-- 
         <aside class="side-box-filter-col col-xl-3">
 
                 <div class="side-box-menu">
@@ -36,10 +32,11 @@
 
                 </div>
 
-        </aside>
+        </aside> -->
 
-        <section class="col-xl-9" [Produtos]="Produtos" product-card-carousel>
+        <section class="col-xl-12" [Produtos]="Produtos" product-card-carousel>
         </section>
+
 
     </div>
 

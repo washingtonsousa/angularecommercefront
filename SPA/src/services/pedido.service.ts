@@ -11,12 +11,11 @@ export class PedidoService {
            return this.localStorage.get("pedido");
     }
 
-    SetPedidoOnStorage(Pedido) {
-          return   this.localStorage.set("pedido", Pedido);
-    }
 
     UpdatePedido(Pedido) {
         return  this.localStorage.set("pedido", Pedido);
     }
+
+    /// Para teste apenas
 
 }

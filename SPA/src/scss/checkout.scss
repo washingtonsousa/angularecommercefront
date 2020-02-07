@@ -1,0 +1,139 @@
+.steps-area {
+
+display: flex;
+align-content: stretch;
+align-items: flex-start;
+flex-wrap: wrap;
+
+
+.step-box {
+    border:1px solid #ccc;
+    &.disabled {
+ 
+            .step-header {
+                color:$disabled-secondary-color;
+                background-color: $disabled-bg-secondary-color;
+
+                .check-icon {
+                    opacity: 1;
+                    color:lightgreen;
+                }
+            }
+            @include box-shadow-gen(rgba(155,155,155,0.9), 0px, 0px, 0px);
+    }
+
+    &.clean-step-box {
+        background-color: #fff;
+        color:$title-text-color;
+        .step-header {
+            color: $title-text-color;
+            background-color: #fff;
+        }
+
+        @include box-shadow-gen(rgba(0,0,0,0.5), 0px, 0px, 0px);
+    }
+
+    border-radius:$boxRadius;
+    flex: 1 0 32.33%;
+
+    @media(max-width: 993px){
+        flex: 1 0 100%;
+    }
+
+    background-color:#fff;
+    margin-right:8px;
+    //min-height:350px;
+    @include box-shadow-gen(rgba(0,0,0,0.5), 0px, 0px, 5px);
+    
+    .step-header {
+        width:100%;
+        display: block;
+        text-align: center;
+        background-color: $secondary-color;
+        padding:8px;
+        color:#fff;
+        border-top-left-radius:$boxRadius;
+        border-top-right-radius:$boxRadius;
+
+        .check-icon {
+            opacity: 0;
+            
+        }
+    }
+
+    .step-content {
+        padding:16px;
+        position: relative;
+    }
+}
+
+}
+
+
+.resumo-step-content {
+    position: absolute;
+    bottom:0;
+    margin:8px;
+}
+
+.price-description-step-area {
+
+    padding:4px;
+
+.price-description {
+    display:flex;
+    justify-content: space-between;
+    font-size: 1rem;
+
+    p {
+          color:#333;
+    }
+
+}
+
+.price-description.total {
+        font-size: 1.1rem;
+        font-weight: bold;
+}
+
+}
+
+.product-description-area {
+    background:#f1f1f1;
+    //padding:8px;
+    width: 100%;
+    margin-bottom: 8px;
+    padding:8px;
+
+    .product-description-item {
+        display: flex;
+        border: 1px solid #f1f1f1;
+        padding:4px;
+        background:#fff;
+        img {
+            width:25%;
+            margin-right: 8px;
+        }
+
+        .product-description-text { 
+            
+            font-size: 0.9rem;
+            p {
+            color:#333;
+            }
+        }
+    }
+}
+
+#confirmacaoArea {
+    min-height:420px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+
+    .iconOk  {
+        color:$success-color;
+    }
+}

@@ -11,6 +11,7 @@ export class PedidoModel {
 
     public Produtos: ProdutoModel[] = [];
     public Numero: String = "";
-
+    public Total: number = 0;
+    public SubTotal:number = 0;
 
 }

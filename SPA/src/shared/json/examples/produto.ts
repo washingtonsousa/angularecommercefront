@@ -106,7 +106,59 @@ export const Produtos =  [{
                     Nome: "" },
           
                
-            ]}];
+            ]},
+        
+            {
+
+                Nome: "Advil 200mg 20 Comprimidos",
+                Codigo: "65929",
+                Preco_Por: 10.00,
+                Quantidade: 0,
+                Marca: {
+            
+                    Nome: "PFizer"
+            
+                },
+            
+                Imagem: { 
+                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                    Nome: "" },
+                ImagemPrincipal: { 
+                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                    Nome: "" },
+                Imagens: [
+                    { 
+                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                        Nome: "" },
+              
+                   
+                ]},
+                {
+
+                    Nome: "Advil 200mg 20 Comprimidos",
+                    Codigo: "65929",
+                    Preco_Por: 10.00,
+                    Quantidade: 0,
+                    Marca: {
+                
+                        Nome: "PFizer"
+                
+                    },
+                
+                    Imagem: { 
+                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                        Nome: "" },
+                    ImagemPrincipal: { 
+                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                        Nome: "" },
+                    Imagens: [
+                        { 
+                            UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                            Nome: "" },
+                  
+                       
+                    ]}
+        ];
 
 
 export const ProdutoDetalhes = [ 

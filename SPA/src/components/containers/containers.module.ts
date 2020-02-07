@@ -11,11 +11,14 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { RouterModule } from '@angular/router';
 import { CarouselMarcasComponent } from './header/marcas/carousel-marcas.component';
 import { PedidoService } from 'src/services/pedido.service';
+import { CheckoutContainerComponent } from './checkout-container.component';
+import { CheckoutHeaderComponent } from './header/checkout-header/checkout-header.component';
+import { ImageUrlPipe } from 'src/pipes/env/image-url.pipe';
 
 @NgModule({
-    providers: [PedidoService],
-    exports: [ContainerComponent, SliderComponent, CarouselMarcasComponent],
-    declarations: [HeaderComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CarouselMarcasComponent],
+    providers: [PedidoService, ImageUrlPipe],
+    exports: [ContainerComponent, SliderComponent, CarouselMarcasComponent, CheckoutContainerComponent],
+    declarations: [HeaderComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CheckoutHeaderComponent, CheckoutContainerComponent, CarouselMarcasComponent],
     imports: [PipeModule, BrowserModule, CommonModule, SlickCarouselModule, RouterModule]
 })
 export class ContainersModule {

@@ -1,4 +1,4 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit, HostListener } from '@angular/core';
 import { MenuComponent } from './menu/menu.component';
 import { PedidoService } from 'src/services/pedido.service';
 import { PedidoModel } from 'src/shared/models/pedido.model';
@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
             
     @ViewChild("Menu", {static: false}) MenuComp?: MenuComponent;
     public Pedido: PedidoModel;
+    private TopHeaderClass: String = "";
 
     get QuantidadeProdutoCarrrinho() : number {
 
@@ -30,6 +31,19 @@ export class HeaderComponent implements OnInit {
     }
 
     constructor(private _pedidoService: PedidoService) {
+    }
+
+
+    @HostListener("window:scroll", ["$event"])
+    @HostListener("window:resize", ["$event"])
+    Scroll(event) {
+
+        if(window.pageYOffset > 200) {
+                this.TopHeaderClass = "fixed";
+        } else {
+                this.TopHeaderClass = "";
+        }
+              
     }
 
     ngOnInit() {

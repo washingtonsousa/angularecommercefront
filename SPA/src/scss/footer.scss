@@ -11,10 +11,32 @@ menu {
     padding-top:32px;
 }
 
+#footerArea {
+    background: white;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-end;
+    flex-direction: column;
+
+}
+
 #footerCopyrightArea {
-    padding:0px;
-    @include box-shadow-gen(rgba(55,55,55,1), 0px, 2px, 5px, -1px);     
+    
+    padding:0px; 
     color:$mainTextColor;
+    margin:0px;
+    background: #fff;
+    margin-top: 4px;
+    padding:0px !important;
+    .copyright-footer {
+        font-size: 0.9rem;
+        font-weight: bold;
+        padding:4px;
+        background: #f0f0f0;
+        width: 100%;
+    }
+
 }
 
 #content-redes {
@@ -52,10 +74,11 @@ menu {
     
 }
 
-#newsletterFormArea {
+.newsletterFormArea {
 
-    background-color: $primary-color;
-    color:white;
+    background-color: $darken-gray;
+    color:$primary-color;
+    position: relative;
 
     .input-field {
         padding:0px;

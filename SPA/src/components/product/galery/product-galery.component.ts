@@ -15,11 +15,7 @@ export class ProductGaleryComponent implements OnInit, AfterViewInit {
        private maxNavRoller: number = 0;
        @ViewChild("galeryNavRoller", {read: ElementRef, static: false})   galeryNavRoller?: ElementRef<any>;
        @Input() public Imagens: ProdutoImagemModel[] = [];
-
-       setCurrentImage(index:number) {
-           this.currentImageInBox = this.Imagens[index];
-       }
-
+ 
        productNavLeft() {
         if(this.translateXAmount < 0) {
         this.translateXAmount += 120;

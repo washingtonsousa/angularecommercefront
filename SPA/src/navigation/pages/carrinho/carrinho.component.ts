@@ -1,6 +1,7 @@
 import {Component, ViewChild, ElementRef, OnInit} from "@angular/core";
 import { PedidoService } from 'src/services/pedido.service';
 import { PedidoModel } from 'src/shared/models/pedido.model';
+import { RemoverCestaDirective } from 'src/directives/functions/remover-cesta.directive';
 
 
 @Component({
@@ -34,22 +35,14 @@ export class CarrinhoComponent implements OnInit{
 
     }];
 
-
-    public  OnCepInputChange() {
-
-       
-
+    ngOnInit() {
+          this.init();
     }
 
-    ngOnInit() {
-
-            this._pedidoService.GetCurrentPedido().subscribe((Pedido: PedidoModel) => {
-                    
-                this.Pedido = Pedido;
-
-                console.log(this.Pedido);
-
-            });
+    init() {
+        this._pedidoService.GetCurrentPedido().subscribe((Pedido: PedidoModel) => {
+            this.Pedido = Pedido;
+        });
     }
 
 
