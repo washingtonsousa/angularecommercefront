@@ -13,12 +13,8 @@ menu {
 
 #footerArea {
     background: white;
-    display: flex;
-    align-items: center;
-    align-content: center;
     justify-content: flex-end;
-    flex-direction: column;
-
+    @extend %flex-column-center;
 }
 
 #footerCopyrightArea {

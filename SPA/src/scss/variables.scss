@@ -19,8 +19,10 @@ $disabled-bg-secondary-color: rgba(224, 54, 51, 0.7);
 $primary-color-reverse: #fff;
 $default-bg-color:#f0f0f0;
 $darken-gray:#3d3d3d3d;
-$theme-colors: (
-  primary: $primary-color,
-  secondary: $secondary-color,
-  success:$success-color
-);
+$shadow-color: rgba(100,100,100, 0.7);
+$dark-transparent-color: rgba(0,0,0,0.1);
+$top-right-icons-size: 2.5rem;
+
+
+
+

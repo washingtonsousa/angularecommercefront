@@ -1,6 +1,6 @@
 .marca-carousel {
     padding:8px;
-    @include box-shadow-gen(rgba(155,155,155,0.75), 5px, 0px, 5px);
+    @include box-shadow-gen($shadow-color, 5px, 0px, 5px);
 
     background:white;
 

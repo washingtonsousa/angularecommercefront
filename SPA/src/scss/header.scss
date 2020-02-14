@@ -2,7 +2,7 @@
 
 #checkoutHeader {
     padding:32px;
-    @include box-shadow-gen(rgba(100,100,100, 0.7), 2px, 0px, 3px, 0px);
+    @include box-shadow-gen($shadow-color, 2px, 0px, 3px, 0px);
     background: white;
 }
 
@@ -30,7 +30,7 @@
             z-index:999999;
             padding-top:10px;
             padding-bottom:10px;
-            @include box-shadow-gen(rgba(100,100,100, 0.7), 2px, 0px, 3px, 0px);
+            @include box-shadow-gen($shadow-color, 2px, 0px, 3px, 0px);
         }
     }
 
@@ -79,10 +79,7 @@
         width: 100%;
         font-size: 1rem;
         text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
+        @extend %flex-all-center;
 
         i {
             font-size: 1.5rem;
@@ -90,12 +87,11 @@
         }
        
     &.nav-link:hover:not(.specialoffers), &.nav-link:active:not(.specialoffers) {
-        background: rgba(0,0,0,0.1);
+        background: $dark-transparent-color;
     }
 
     &.specialoffers:hover,    &.specialoffers:active {
-        background: rgba(0,0,0,0.1);
-        background-color: #ce221f;
+        background-color: $secondary-color;
     }
     }
 
@@ -115,7 +111,7 @@
     transition: all 0.3s;
     padding:0px;
     overflow-y: auto;
-    @include box-shadow-gen(rgba(100,100,100, 0.7), 2px, 0px, 3px, 0px);
+    @include box-shadow-gen($shadow-color, 2px, 0px, 3px, 0px);
 
     transform: translateX(0px);
 
@@ -143,7 +139,7 @@
               margin-bottom: 1rem;
             }
 
-            color:#666;
+            color:$mainTextColor;
             font-size: 1rem;
         }
        
@@ -203,7 +199,7 @@ z-index: 99999;
 
 }
 }
-        @include box-shadow-gen(rgba(0,0,0,0.75), 0px, 2px, 5px, -1px);        
+        @include box-shadow-gen($dark-transparent-color, 0px, 2px, 5px, -1px);        
 
 }
 
@@ -230,10 +226,10 @@ z-index: 99999;
 
             i {
                 margin-right:10px;
-                font-size: 2.5rem;
+                font-size: $top-right-icons-size;
             }
 
-            font-size: 2.5rem;
+            font-size: $top-right-icons-size;
             display: flex;
             align-items:center;
             max-width:120px;
@@ -242,14 +238,15 @@ z-index: 99999;
                 font-weight: bold;
                 color:$mainTextColor;
             }
+
+            @media(max-width:768px) {
+                display: none;
+            }
         }
 
         #icoCesta {
-            font-size: 2.5rem;
-            display:flex;
-
-            align-items: center;
-            align-content: center;
+            font-size: $top-right-icons-size;
+            @extend %flex-center;
 
             position: relative;
 
@@ -327,16 +324,13 @@ z-index: 99999;
 
 
 .product-description-area {
-    //background:#f1f1f1;
-    //padding:8px;
     width: 100%;
     margin-bottom: 8px;
 
     .product-description-item {
-        display: flex;
+        @extend %flex-center;
+
         background:#fff;
-        align-items: center;
-        align-content: center;
         position: relative;
         padding:8px;
         margin:4px;
