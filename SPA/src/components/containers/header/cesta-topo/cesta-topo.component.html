@@ -15,7 +15,7 @@
                 <p class="product-description-text w-40 p-1"> {{ produto.Nome }} </p>
                 <p class="product-description-text w-20 p-1"> <b> Qtd: </b>  {{ produto.Quantidade }} </p>
                 <h4 class="product-description-text price w-10"> {{ produto.Preco_Por | currency: "BRL" }} </h4>
-                <a class="produto-remover" RemoverCesta [Produto]="produto"> <i class="fa fa-times"></i> </a>
+                <a class="produto-remover" RemoverCesta  [Produto]="produto"> <i class="fa fa-times"></i> </a>
 
             </div> 
     </section>

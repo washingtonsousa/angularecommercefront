@@ -48,7 +48,7 @@ export class AdicionarCestaDirective {
 
         } catch(ex) {
 
-            this.Produto.Quantidade += this.Quantidade;
+            this.Produto.Quantidade = this.Quantidade;
             Pedido.Produtos.push(this.Produto);  
 
         }
@@ -61,7 +61,7 @@ export class AdicionarCestaDirective {
             Pedido.Total += produto.Preco_Por * produto.Quantidade;
             Pedido.SubTotal += produto.Preco_Por * produto.Quantidade;
 
-        })
+        });
 
         this._pedidoService.UpdatePedido(Pedido).subscribe(() => {
 

@@ -36,7 +36,7 @@ export class RemoverCestaDirective {
 
     private RemoverProdutoProcess(Pedido: PedidoModel) {
 
-    
+
             let index = 0;
 
             for(let produto of Pedido.Produtos) {
@@ -45,7 +45,8 @@ export class RemoverCestaDirective {
 
                         if(produto.Quantidade == 1 || !this.RemoverUnidade) {
 
-                                Pedido.Produtos.splice(index, 1);
+                            Pedido.Produtos[index] = null; //Reset do Objeto
+                            Pedido.Produtos.splice(index, 1);
 
                         } else {
 
@@ -66,6 +67,8 @@ export class RemoverCestaDirective {
 
         })
 
+        console.log(Pedido);
+        console.log(this.Produto);
         this._pedidoService.UpdatePedido(Pedido).subscribe(() => {
 
             CestaProdutoService.update(Pedido);
