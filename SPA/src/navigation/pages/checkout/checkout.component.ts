@@ -3,6 +3,8 @@ import { RodapeModel } from 'src/shared/models/rodape.model';
 import { PedidoService } from 'src/services/pedido.service';
 import { PedidoModel } from 'src/shared/models/pedido.model';
 import { Router } from '@angular/router';
+import { PracaModel } from 'src/shared/models/praca.model';
+import { PracaService } from 'src/services/praca.service';
 
 @Component({
     selector: 'checkout',
@@ -17,7 +19,7 @@ export class CheckoutComponent implements OnInit, OnChanges {
     isCartao: boolean = false;
     isBoleto: boolean = true;
 
-    constructor(private cdRef:ChangeDetectorRef, private _pedidoService: PedidoService, private _router: Router) {}
+    constructor(private cdRef:ChangeDetectorRef, private _pedidoService: PedidoService, private _router: Router, private _lojaService: PracaService) {}
 
     public finalizarCartao(event:MouseEvent) {
         event.preventDefault();
@@ -41,6 +43,13 @@ export class CheckoutComponent implements OnInit, OnChanges {
     }
 
     ngOnInit() {
+
+        let Loja = new PracaModel();
+        Loja.ArquivoLogo = "backoffice/uploads/loja/logo/unifabra_logo.png";
+
+        this._lojaService.SetLoja(Loja).subscribe(() => {
+
+        });
 
         this._pedidoService.GetCurrentPedido().subscribe((Pedido: PedidoModel) => {
             this.Pedido = Pedido;
@@ -112,5 +121,23 @@ export class CheckoutComponent implements OnInit, OnChanges {
             {
                 Logo: "/BACKOFFICE/Uploads/redessociais/pinterest.png"
             }];
+    }
+
+
+    VoltarParaHome() {
+            this._router.navigate(['/']);
+    }
+
+
+    LimparEVoltarParaHome() {
+
+        this._pedidoService.UpdatePedido(null).subscribe(() => {
+           
+            this._lojaService.SetLoja(null).subscribe(() => {
+                this.VoltarParaHome();
+            })
+
+        })
+        
     }
 }

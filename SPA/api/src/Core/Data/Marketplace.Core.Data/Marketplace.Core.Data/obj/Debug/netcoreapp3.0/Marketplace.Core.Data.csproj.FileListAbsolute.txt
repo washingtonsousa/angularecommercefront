@@ -1,0 +1,7 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\bin\Debug\netcoreapp3.0\Marketplace.Core.Data.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\bin\Debug\netcoreapp3.0\Marketplace.Core.Data.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\obj\Debug\netcoreapp3.0\Marketplace.Core.Data.csprojAssemblyReference.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\obj\Debug\netcoreapp3.0\Marketplace.Core.Data.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\obj\Debug\netcoreapp3.0\Marketplace.Core.Data.AssemblyInfo.cs
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\bin\Debug\netcoreapp3.0\Marketplace.Core.Data.runtimeconfig.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Data\Marketplace.Core.Data\Marketplace.Core.Data\bin\Debug\netcoreapp3.0\Marketplace.Core.Data.runtimeconfig.dev.json

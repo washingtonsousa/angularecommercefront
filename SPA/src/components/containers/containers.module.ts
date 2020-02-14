@@ -14,12 +14,15 @@ import { PedidoService } from 'src/services/pedido.service';
 import { CheckoutContainerComponent } from './checkout-container.component';
 import { CheckoutHeaderComponent } from './header/checkout-header/checkout-header.component';
 import { ImageUrlPipe } from 'src/pipes/env/image-url.pipe';
+import { PracaService } from 'src/services/praca.service';
+import { CestaTopoComponent } from './header/cesta-topo/cesta-topo.component';
+import { DirectiveModule } from 'src/directives/directive.module';
 
 @NgModule({
-    providers: [PedidoService, ImageUrlPipe],
+    providers: [PedidoService, ImageUrlPipe, PracaService],
     exports: [ContainerComponent, SliderComponent, CarouselMarcasComponent, CheckoutContainerComponent],
-    declarations: [HeaderComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CheckoutHeaderComponent, CheckoutContainerComponent, CarouselMarcasComponent],
-    imports: [PipeModule, BrowserModule, CommonModule, SlickCarouselModule, RouterModule]
+    declarations: [HeaderComponent, CestaTopoComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CheckoutHeaderComponent, CheckoutContainerComponent, CarouselMarcasComponent],
+    imports: [PipeModule, BrowserModule, CommonModule, SlickCarouselModule, RouterModule, DirectiveModule]
 })
 export class ContainersModule {
 

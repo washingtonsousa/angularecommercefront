@@ -216,6 +216,9 @@ z-index: 99999;
 
 
 #headerInteractionArea {
+
+    position: relative;
+
     .wrapper {
         display: flex;
         justify-content: flex-end;
@@ -243,12 +246,115 @@ z-index: 99999;
 
         #icoCesta {
             font-size: 2.5rem;
+            display:flex;
+
+            align-items: center;
+            align-content: center;
+
+            position: relative;
+
+            .notification-badge {
+                position: relative;
+                top:-10px;
+            }
+
+            .cart-price {
+                font-size: 1.1rem;
+                font-weight: 400;
+                position: relative;
+                top: 9px;
+            }
 
             small {
                 font-weight: bold;
             }
         }
 
+        #cestaItemsBox {
+            position: absolute !important;
+            display: flex;
+            width:430px;
+            min-height:100px;
+            right:0px;
+            top:25px;
+            z-index: 999999;
+            transition: 0.3s all;
+            transform: scale(0);
+            transform-origin: top right;
+            padding:12px;
+            
+
+            &.open {
+                transform: scale(1);
+            }
+
+            .cesta-submit {
+                margin-top:8px;
+            }
+
+            .cesta-footer {
+                padding:18px;
+            }
+    
+        }
+
+        #cestaCarrinhosLista {
+            max-height:180px;
+            overflow-y: auto;
+            overflow-x: hidden;
+            margin-bottom: 16px;
+            position: relative;
+
+            .produto-remover {
+                cursor: pointer;
+                position: absolute;
+                top:2px;
+                right:0;
+                font-size: 0.8em;
+                color:#ccc;
+
+                &:hover {
+                    color:#666;
+                }
+            }
+        }
+
+      
        
+    }
+}
+
+
+
+.product-description-area {
+    //background:#f1f1f1;
+    //padding:8px;
+    width: 100%;
+    margin-bottom: 8px;
+
+    .product-description-item {
+        display: flex;
+        background:#fff;
+        align-items: center;
+        align-content: center;
+        position: relative;
+        padding:8px;
+        margin:4px;
+        img {
+            width:20%;
+            margin-right: 8px;
+        }
+
+        .product-description-text { 
+            
+            font-size: 0.9rem;
+            p {
+            color:#333;
+            }
+
+            &.price {
+                font-size: 1.150rem;
+            }
+        }
     }
 }

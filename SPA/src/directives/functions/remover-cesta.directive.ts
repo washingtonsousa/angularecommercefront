@@ -48,7 +48,9 @@ export class RemoverCestaDirective {
                                 Pedido.Produtos.splice(index, 1);
 
                         } else {
+
                             produto.Quantidade -= 1;
+                            
                         }
                 }
                 
@@ -56,6 +58,7 @@ export class RemoverCestaDirective {
 
         Pedido.Total = 0;
         Pedido.SubTotal = 0;
+
         Pedido.Produtos.forEach((produto) => {
 
             Pedido.Total += produto.Preco_Por * produto.Quantidade;

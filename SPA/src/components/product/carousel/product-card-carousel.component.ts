@@ -1,4 +1,4 @@
-import { Component, Input, ElementRef, AfterViewInit, ViewChild } from '@angular/core';
+import { Component, Input, ElementRef, AfterViewInit, ViewChild, OnChanges, ChangeDetectorRef } from '@angular/core';
 import * as $ from "jquery";
 
 @Component({
@@ -6,7 +6,7 @@ import * as $ from "jquery";
     templateUrl: 'product-card-carousel.component.html',
     styleUrls: ["product-card-carousel.scss"]
 })
-export class ProductCardCarouselComponent implements AfterViewInit {
+export class ProductCardCarouselComponent implements AfterViewInit, OnChanges {
 
    @Input() public Produtos: any[] = [];
    public translateXAmount: number = 0;
@@ -14,8 +14,11 @@ export class ProductCardCarouselComponent implements AfterViewInit {
    @ViewChild("NavRoller", {read: ElementRef, static: true})   NavRoller?: ElementRef<any>;
     @Input() public Titulo: String = "Destaques";
 
-    constructor(private eRef: ElementRef){
+    constructor(private eRef: ElementRef, private cdRef: ChangeDetectorRef){
+    }
 
+    ngOnChanges() {
+        this.cdRef.detectChanges();
     }
 
    productNavLeft() {

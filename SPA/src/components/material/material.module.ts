@@ -5,12 +5,13 @@ import { ModalComponent } from './modal/modal.component';
 import { TabsModule } from 'ngx-bootstrap';
 import { LoadingIconComponent } from './loaders/loading-icon.component';
 import { PedidoService } from 'src/services/pedido.service';
+import { ModalConfirmComponent } from './modal/modal-confirm/modal-confirm.component';
 
 
 @NgModule({
     providers: [PedidoService],
-    exports: [ModalComponent, LoadingIconComponent],
-    declarations: [ModalComponent, LoadingIconComponent],
+    exports: [ModalComponent, LoadingIconComponent, ModalConfirmComponent],
+    declarations: [ModalComponent, LoadingIconComponent, ModalConfirmComponent],
     imports: [ModalModule, CommonModule, TabsModule]
 })
 export class MaterialModule {

@@ -4,7 +4,7 @@
         <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
 
             <a [routerLink]="['/']">
-                <img src="/assets/images/logo.png" class="img-fluid"/>
+                <img [src]="Loja?.ArquivoLogo != undefined ? (Loja?.ArquivoLogo | imageUrl) : '/assets/images/logo.png'" class="img-fluid"/>
             </a>
 
         </div>
@@ -35,12 +35,7 @@
                <p class="user-area-text"> Bem Vindo <strong> Vannon! </strong> </p> 
             </a>
                 
-            <a href="#" class="icoTopo" id="icoCesta" [routerLink]="['/carrinho']">
-                <i class="fa fa-shopping-basket"></i>
-                <small class="notification-badge">{{QuantidadeProdutoCarrrinho}}</small>
-            </a>
-
-          
+            <cesta-topo [Pedido]="Pedido" [Loja]="Loja" ></cesta-topo>
 
         </div>
        </div>

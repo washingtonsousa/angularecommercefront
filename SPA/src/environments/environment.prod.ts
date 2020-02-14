@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
-  imagesServerUrl: "http://farmaciamaisproxima.com.br/"
+  imagesServerUrl: "marketplaceprot.vannonecommerce.com.br/"
 };
 

@@ -49,10 +49,13 @@ export class AdicionarCestaDirective {
         } catch(ex) {
 
             this.Produto.Quantidade += this.Quantidade;
-              Pedido.Produtos.push(this.Produto);  
+            Pedido.Produtos.push(this.Produto);  
 
         }
 
+        Pedido.Total = 0;
+        Pedido.SubTotal = 0;
+        
         Pedido.Produtos.forEach((produto) => {
 
             Pedido.Total += produto.Preco_Por * produto.Quantidade;
@@ -66,9 +69,7 @@ export class AdicionarCestaDirective {
             this.OnAdd.emit();
 
         });
-
-        console.log(Pedido);
-        
+                
     }
 
 }

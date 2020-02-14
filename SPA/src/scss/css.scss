@@ -32,8 +32,11 @@ ul li {
 
 @for $i from 1 through 100 {
     .w-#{$i} {
-      width:#{$i}px;
+      width:#{$i} + '%';
     }
 }
   
 
+.bg-gray {
+  background:#ededed !important;
+}
