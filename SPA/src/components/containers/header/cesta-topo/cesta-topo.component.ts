@@ -7,13 +7,12 @@ import { PracaModel } from 'src/shared/models/praca.model';
  templateUrl: "cesta-topo.component.html"
 })
 export class CestaTopoComponent implements OnChanges {
+    
     @Input() Pedido: PedidoModel;
     @Input() Loja: PracaModel = null;
-
     @ViewChild("cestaItemsBox", {static: false}) cestaItemsBox: ElementRef;
 
-    constructor(private cdRef: ChangeDetectorRef) {
-
+    constructor(private cdRef: ChangeDetectorRef, private eRef: ElementRef) {
     }
 
     @HostListener("mouseover")
@@ -22,6 +21,15 @@ export class CestaTopoComponent implements OnChanges {
         $(this.cestaItemsBox.nativeElement).addClass("open");
 
     }
+
+    @HostListener("window:click", ["$event"])
+    clickOutside(event: any) {
+
+            if(!this.eRef.nativeElement.contains(event.target))
+            this.closeCesta();
+
+    }
+
     @HostListener("mouseout")
     closeCesta() {
 

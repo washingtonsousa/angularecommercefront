@@ -13,9 +13,9 @@ import { PracaService } from 'src/services/praca.service';
 export class HeaderComponent implements OnInit {
             
     @ViewChild("Menu", {static: false}) MenuComp?: MenuComponent;
-    public Pedido: PedidoModel;
-    private TopHeaderClass: String = "";
-    private Loja: PracaModel = null;
+    Pedido: PedidoModel;
+    TopHeaderClass: String = "";
+    Loja: PracaModel = null;
 
     get QuantidadeProdutoCarrrinho() : number {
 
@@ -33,10 +33,9 @@ export class HeaderComponent implements OnInit {
     constructor(private _pedidoService: PedidoService, private _lojaService:PracaService) {
     }
 
-
     @HostListener("window:scroll", ["$event"])
     @HostListener("window:resize", ["$event"])
-    Scroll(event) {
+    Scroll() {
 
         if(window.pageYOffset > 200) {
                 this.TopHeaderClass = "fixed";
@@ -64,6 +63,5 @@ export class HeaderComponent implements OnInit {
             });
 
     }
-
 
 }

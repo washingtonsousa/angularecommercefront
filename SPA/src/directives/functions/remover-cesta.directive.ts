@@ -67,8 +67,7 @@ export class RemoverCestaDirective {
 
         })
 
-        console.log(Pedido);
-        console.log(this.Produto);
+
         this._pedidoService.UpdatePedido(Pedido).subscribe(() => {
 
             CestaProdutoService.update(Pedido);

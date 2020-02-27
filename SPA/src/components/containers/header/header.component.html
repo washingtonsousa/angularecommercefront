@@ -1,10 +1,27 @@
+<section class="container-fluid">
+
+    <div class="container">
+        <div class="row">
+            <section id="topo-superior" class="col">
+
+                <a> <i class="fa fa-list"></i>  Meus Pedidos </a>
+                <a> <i class="fa fa-headphones"></i>  Atendimento </a>
+                <a> <i class="fa fa-question"></i>  Ajuda </a>
+
+            </section>
+        </div>
+    </div>
+
+</section>
+
 <header id="mainHeader" [class]="'container-fluid ' + TopHeaderClass">
+  
     <div class="container">
     <div class="row">
         <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
 
             <a [routerLink]="['/']">
-                <img [src]="Loja?.ArquivoLogo != undefined ? (Loja?.ArquivoLogo | imageUrl) : '/assets/images/logo.png'" class="img-fluid"/>
+                <img [src]="Loja?.ArquivoLogo != undefined ? (Loja?.ArquivoLogo | imageUrl) : 'assets/images/logo.png'" class="img-fluid"/>
             </a>
 
         </div>
@@ -18,9 +35,9 @@
 
         <div id="headerInteractionArea" class="col-xl-3 col-12 d-flex justify-content-between">
 
-            <a id="icoToggleMenuMobile" (click)="Menu.toggleMobile()" class="d-block d-xl-none">
-                <i class="fa fa-bars"></i>  
-              </a>
+            <a id="icoToggleMenuMobile"  (click)="Menu.toggleMobile()" class="d-block d-xl-none">
+                <i class="fa fa-bars" data-role="nav-mobile-toggle"></i>  
+            </a>
 
             <div class="wrapper">
 

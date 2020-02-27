@@ -1,11 +1,19 @@
 @import "src/scss/placeholders";
 
+#topo-superior {
+
+}
+
 #checkoutHeader {
     padding:32px;
     @include box-shadow-gen($shadow-color, 2px, 0px, 3px, 0px);
     background: white;
 }
 
+menu {
+    margin:0;
+    padding-inline-start: 0;
+}
 
 .user-area-text {
     font-size:0.3em;
@@ -93,6 +101,7 @@
     &.specialoffers:hover,    &.specialoffers:active {
         background-color: $secondary-color;
     }
+    
     }
 
     
@@ -302,6 +311,15 @@ z-index: 99999;
             margin-bottom: 16px;
             position: relative;
 
+            &::-webkit-scrollbar {
+                width: 0.3em;  
+                background: lightgrey; 
+            }
+            
+            &::-webkit-scrollbar-thumb {
+                background: darkgrey;
+            }
+
             .produto-remover {
                 cursor: pointer;
                 position: absolute;
@@ -351,4 +369,49 @@ z-index: 99999;
             }
         }
     }
+}
+
+
+.navItems .nav-item {
+    position: relative;
+}
+
+
+.nav-topo-dropdown {
+
+    position:absolute;
+    left:10;
+    overflow: hidden;
+    height:0px;
+    background:#f1f1f1;
+    max-height:500px;
+    min-width: 400px;
+    transition: 0.2s all;
+
+    @include box-shadow-gen($light-box-shadow-color, 0px, 0px, 3px);
+
+    .nav-topo-dropdown-inner {
+        padding:16px;
+        margin:8px;
+        min-width:100%;
+        width:auto;
+        height:100%;
+        position: relative;
+
+        ul {
+            max-height: 100%;
+            column-count:4;
+
+            li {
+                width:100px;
+            }
+        }
+    }
+
+}
+
+.navItems .nav-item:hover .nav-topo-dropdown {
+
+    height:auto;
+
 }

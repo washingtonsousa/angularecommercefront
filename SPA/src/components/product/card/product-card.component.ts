@@ -21,11 +21,11 @@ import { trigger, state, transition, animate, style } from '@angular/animations'
             visibility: "hidden"
           })),
           transition('show <=> inprocess', [
-            animate('.4s')
+            animate('.2s')
           ]),
 
           transition('hidden <=> inprocess', [
-            animate('.4s')
+            animate('.2s')
           ]),
   
 
@@ -38,8 +38,8 @@ export class ProductCardComponent {
        public AnimationState: String = "hidden";
        private timeOut = null;
 
-
        ShowMessage() {
+
         this.timeOut = null;
         this.AnimationState = "hidden";
         this.AnimationState = "inprocess";
@@ -55,9 +55,9 @@ export class ProductCardComponent {
                 
                 400);
 
-            }, 1000);
+            }, 500);
   
-        }, 1000);
+        }, 500);
 
        }
 

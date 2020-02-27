@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit } from '@angular/core';
 import * as jQuery from 'jquery';
 
 @Component({
@@ -6,8 +6,11 @@ import * as jQuery from 'jquery';
     templateUrl: 'carousel-marcas.component.html',
     styleUrls: ["carousel-marca.scss"]
 })
-export class CarouselMarcasComponent {
-    marcas = [
+export class CarouselMarcasComponent implements AfterViewInit {
+
+    @ViewChildren("carouselItem") carouselItems : QueryList<ElementRef>;
+
+    Marcas = [
         {Arquivo: "/backoffice/uploads/Marca/logo-bayer.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-johson-&-johson-.jpg"},
         {Arquivo: "/backoffice/uploads/Marca/logo-nivea.jpg"},
@@ -18,42 +21,44 @@ export class CarouselMarcasComponent {
         {Arquivo: "/backoffice/uploads/Marca/logo-vult.jpg"},
       ];
 
+    CarouselItemsGroup : any[] = [];
+    ThumbNumber: number = 6;
 
-      slideConfig = {
-      "slidesToShow": 12, 
-      "slidesToScroll": 1, 
-      "nextArrow":"<a class='nav-btn next-slide'> <i class='fa fa-chevron-right'> </i>  </a>",
-      "prevArrow":"<a class='nav-btn prev-slide'> <i class='fa fa-chevron-left'> </i> </a>",
-      "autoplay": true,
-      "infinite": true,
-      "autoplaySpeed": 2000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1,
-            infinite: true,
-            dots: true
-          }
-        },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 480,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
-    };
+    buildCarousel() {
+
+      let GroupIndex = 0;
+      let GroupLength =  Math.ceil(this.Marcas.length / this.ThumbNumber) == 1 ? 1 : (Math.ceil(this.Marcas.length / this.ThumbNumber) - 1);
+      let GroupCount = 0;
+      
+      for(let i = 0; i <= GroupLength; i++) {
+        this.CarouselItemsGroup.push([]);
+      }
+
+      for(let i =0; i < this.Marcas.length; i++) {
+
+                this.CarouselItemsGroup[GroupIndex].push(this.Marcas[i]);
+                GroupCount ++;
+
+                if(GroupCount == this.ThumbNumber) {
+                    GroupIndex++;
+                    GroupCount = 0;
+                }
+
+      }
+
+      this.carouselItems.changes.subscribe(data => {
+
+        data._results.forEach(item => {
+
+          let Percentage = 100 / this.ThumbNumber;
+          jQuery(item.nativeElement).css("width", Percentage+"%");
+
+        });
+      })
+
+    }
+
+    ngAfterViewInit() {
+          this.buildCarousel();
+    }
 }

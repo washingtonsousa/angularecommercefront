@@ -19,8 +19,6 @@ export class ProdutoService {
     }
 
     Get() : ProdutoModel[] {
-        console.log(produtoJsons.Produtos);
         return produtoJsons.Produtos;
-
     }
 }

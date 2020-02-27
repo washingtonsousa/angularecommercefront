@@ -8,7 +8,6 @@ function getProdutoByCodigo(Codigo) : ProdutoModel {
         return produto;
 }
 
-
 export const Produtos =  [{
 
     Nome: "Nebacetin Pomada 50g",
@@ -110,54 +109,29 @@ export const Produtos =  [{
         
             {
 
-                Nome: "Advil 200mg 20 Comprimidos",
-                Codigo: "65929",
-                Preco_Por: 10.00,
+                Nome: "Nestlé NUTREN ACTIVE Morango Complemento Alimentar Lata 400g",
+                Codigo: "77749",
+                Preco_Por: 500.00,
                 Quantidade: 0,
                 Marca: {
             
-                    Nome: "PFizer"
+                    Nome: "NESTLE"
             
                 },
             
                 Imagem: { 
-                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891000234204.jpg",
                     Nome: "" },
                 ImagemPrincipal: { 
-                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                    UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891000234204.jpg",
                     Nome: "" },
                 Imagens: [
                     { 
-                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
+                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891000234204.jpg",
                         Nome: "" },
               
                    
-                ]},
-                {
-
-                    Nome: "Advil 200mg 20 Comprimidos",
-                    Codigo: "65929",
-                    Preco_Por: 10.00,
-                    Quantidade: 0,
-                    Marca: {
-                
-                        Nome: "PFizer"
-                
-                    },
-                
-                    Imagem: { 
-                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
-                        Nome: "" },
-                    ImagemPrincipal: { 
-                        UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
-                        Nome: "" },
-                    Imagens: [
-                        { 
-                            UrlRelativa: "/BACKOFFICE/Uploads/Produto/Super/7891045038386.jpg",
-                            Nome: "" },
-                  
-                       
-                    ]}
+                ]}
         ];
 
 
@@ -174,7 +148,11 @@ Descricoes : [{ Texto: '<p style="text-align:justify">INDICAÇÃO:&nbsp;No trata
   Tipo: "Informações"} ] }, 
 { Produto :  getProdutoByCodigo("65929"),
 Descricoes : [{ Texto: '<p style="text-align:justify">INDICAÇÃO:&nbsp;No tratamento de infecções bacterianas da pele e de mucosas, causadas por microorganismos sensíveis: piodermites, impetigo, eczemas infectados, otite externa, infecções da mucosa nasal, furúnculos, antraz, ectima, abscessos, acne infectada, intertrigo, úlceras cutâneas e queimaduras infectadas. Na profilaxia de infecções cutâneo-mucosas decorrentes de ferimentos cortantes (inclusive cirúrgicos), abrasões, queimaduras pouco extensas, dentre outros. CONTRA INDICAÇÃO:&nbsp;Não deve ser usado nos casos de hipersensibilidade à neomicina ou a outros antibióticos aminoglicosídeos, na insuficiência renal grave, em lesões preexistentes no aparelho auditivo ou no sistema labiríntico; durante a gravidez ou a amamentação. Não deve ser utilizado em bebês prematuros e em recém-nascidos, pela função renal pouco desenvolvida, o que leva ao prolongamento da meia-vida do produto e, também, pela potencial ototoxicidade e nefrotoxicidade deste medicamento. Este medicamento está contraindicado para uso por bebês prematuros, recém-nascidos e lactantes.</p>',
+  Tipo: "Informações"}]},
+  { Produto :  getProdutoByCodigo("77749"),
+Descricoes : [{ Texto: '<p style="text-align:justify">INDICAÇÃO:&nbsp;No tratamento de infecções bacterianas da pele e de mucosas, causadas por microorganismos sensíveis: piodermites, impetigo, eczemas infectados, otite externa, infecções da mucosa nasal, furúnculos, antraz, ectima, abscessos, acne infectada, intertrigo, úlceras cutâneas e queimaduras infectadas. Na profilaxia de infecções cutâneo-mucosas decorrentes de ferimentos cortantes (inclusive cirúrgicos), abrasões, queimaduras pouco extensas, dentre outros. CONTRA INDICAÇÃO:&nbsp;Não deve ser usado nos casos de hipersensibilidade à neomicina ou a outros antibióticos aminoglicosídeos, na insuficiência renal grave, em lesões preexistentes no aparelho auditivo ou no sistema labiríntico; durante a gravidez ou a amamentação. Não deve ser utilizado em bebês prematuros e em recém-nascidos, pela função renal pouco desenvolvida, o que leva ao prolongamento da meia-vida do produto e, também, pela potencial ototoxicidade e nefrotoxicidade deste medicamento. Este medicamento está contraindicado para uso por bebês prematuros, recém-nascidos e lactantes.</p>',
   Tipo: "Informações"}]}
+
 
 ];
 
