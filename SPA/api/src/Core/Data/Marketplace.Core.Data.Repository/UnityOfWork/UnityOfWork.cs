@@ -1,4 +1,4 @@
-using Marketplace.Core.Domain.EF.Entities.Context;
+using Marketplace.Core.Data.EF.Context;
 using Marketplace.Core.Domain.Repository.Interfaces;
 using System;
 using System.Threading.Tasks;
