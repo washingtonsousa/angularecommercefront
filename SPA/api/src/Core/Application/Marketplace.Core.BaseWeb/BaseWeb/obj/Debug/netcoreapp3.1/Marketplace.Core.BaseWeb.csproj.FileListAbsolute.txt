@@ -1,0 +1,4 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\bin\Debug\netcoreapp3.1\Marketplace.Core.BaseWeb.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\bin\Debug\netcoreapp3.1\Marketplace.Core.BaseWeb.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\obj\Debug\netcoreapp3.1\Marketplace.Core.BaseWeb.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\obj\Debug\netcoreapp3.1\Marketplace.Core.BaseWeb.AssemblyInfo.cs

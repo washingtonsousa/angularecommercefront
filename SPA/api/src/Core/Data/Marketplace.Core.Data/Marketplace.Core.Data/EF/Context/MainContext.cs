@@ -1,9 +1,8 @@
-using System;
+using Marketplace.Core.Domain.EF.Entities;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.Extensions.Configuration;
 
-namespace Marketplace.Core.Data.EF.Entities.Context
+namespace Marketplace.Core.Data.EF.Context
 {
         public partial class MainContext : DbContext
         {
@@ -41,7 +40,7 @@ namespace Marketplace.Core.Data.EF.Entities.Context
         public virtual DbSet<TbBannerVitrine> TbBannerVitrine { get; set; }
         public virtual DbSet<TbBusca> TbBusca { get; set; }
         public virtual DbSet<TbCartaoClientePbm> TbCartaoClientePbm { get; set; }
-        public virtual DbSet<TbCategoria> TbCategoria { get; set; }
+        public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<TbCategoriaSeo> TbCategoriaSeo { get; set; }
         public virtual DbSet<TbCliente> TbCliente { get; set; }
         public virtual DbSet<TbClienteEndereco> TbClienteEndereco { get; set; }
@@ -730,7 +729,7 @@ namespace Marketplace.Core.Data.EF.Entities.Context
                 entity.Property(e => e.NmCartao).HasColumnName("nm_cartao");
             });
 
-            modelBuilder.Entity<TbCategoria>(entity =>
+            modelBuilder.Entity<Categoria>(entity =>
             {
                 entity.HasKey(e => e.IdCategoria);
 

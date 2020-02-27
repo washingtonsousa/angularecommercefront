@@ -127,3 +127,4 @@ C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Web\bin\Deb
 C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Web\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Web\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Web\obj\Debug\netcoreapp3.1\MarketplaceWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Web\bin\Debug\netcoreapp3.1\Marketplace.Core.Infrastructure.dll

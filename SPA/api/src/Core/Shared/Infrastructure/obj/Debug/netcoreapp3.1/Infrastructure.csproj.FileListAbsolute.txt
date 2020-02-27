@@ -1,0 +1,5 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Shared\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Shared\Infrastructure\bin\Debug\netcoreapp3.1\Infrastructure.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Shared\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.csprojAssemblyReference.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Shared\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\SPA\api\src\Core\Shared\Infrastructure\obj\Debug\netcoreapp3.1\Infrastructure.AssemblyInfo.cs

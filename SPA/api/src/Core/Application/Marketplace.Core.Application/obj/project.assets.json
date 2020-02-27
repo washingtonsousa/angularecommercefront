@@ -1257,6 +1257,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Marketplace.Core.Domain": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.2",
           "Microsoft.EntityFrameworkCore.Abstractions": "3.1.2",
           "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
@@ -1280,6 +1281,16 @@
         },
         "runtime": {
           "bin/placeholder/Marketplace.Core.Data.Repository.dll": {}
+        }
+      },
+      "Marketplace.Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Marketplace.Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Marketplace.Core.Domain.dll": {}
         }
       }
     }
@@ -4956,6 +4967,11 @@
       "type": "project",
       "path": "../../Data/Marketplace.Core.Data.Repository/Marketplace.Core.Data.Repository.csproj",
       "msbuildProject": "../../Data/Marketplace.Core.Data.Repository/Marketplace.Core.Data.Repository.csproj"
+    },
+    "Marketplace.Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj",
+      "msbuildProject": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
