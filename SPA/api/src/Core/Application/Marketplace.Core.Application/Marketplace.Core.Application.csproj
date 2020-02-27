@@ -8,4 +8,8 @@
     <ProjectReference Include="..\..\Data\Marketplace.Core.Data.Repository\Marketplace.Core.Data.Repository.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
 </Project>
