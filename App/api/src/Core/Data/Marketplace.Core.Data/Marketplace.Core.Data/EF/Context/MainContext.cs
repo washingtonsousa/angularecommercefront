@@ -1,6 +1,8 @@
 using Marketplace.Core.Domain.EF.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Marketplace.Core.Data.EF.Context
 {
@@ -11,7 +13,7 @@ namespace Marketplace.Core.Data.EF.Context
 
         public MainContext(IConfiguration config)
         {
-          ConnectionString = config.GetValue<string>("BaseSistema");
+          ConnectionString = config.GetValue<string>("ConnectionStrings:BaseSistema");
         }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -783,6 +785,13 @@ namespace Marketplace.Core.Data.EF.Context
                     .HasForeignKey(d => d.IdProdutoSkuDestaque)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_categoria_tb_produto_sku");
+
+
+               entity.HasMany(d => d.SessoesNavigation)
+              .WithOne(p => p.DepartamentoNavigation)
+              .HasForeignKey(d => d.IdCategoria)
+              .OnDelete(DeleteBehavior.NoAction)
+              .HasConstraintName("FK_tb_categoria_tb_categoria");
             });
 
             modelBuilder.Entity<TbCategoriaSeo>(entity =>

@@ -21,6 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\Marketplace.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Shared\Data\Marketplace.Core.Shared.Data\Marketplace.Core.Shared.Data.csproj" />
   </ItemGroup>
 
 </Project>

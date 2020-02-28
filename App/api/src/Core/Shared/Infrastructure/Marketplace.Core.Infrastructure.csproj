@@ -9,6 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\Application\Marketplace.Core.Application\Marketplace.Core.Application.csproj" />
     <ProjectReference Include="..\..\Data\Marketplace.Core.Data.Repository\Marketplace.Core.Data.Repository.csproj" />
     <ProjectReference Include="..\..\Data\Marketplace.Core.Data\Marketplace.Core.Data\Marketplace.Core.Data.csproj" />
   </ItemGroup>

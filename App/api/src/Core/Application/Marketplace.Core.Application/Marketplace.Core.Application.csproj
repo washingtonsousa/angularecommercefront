@@ -6,10 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Data\Marketplace.Core.Data.Repository\Marketplace.Core.Data.Repository.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\Marketplace.Core.BaseWeb\BaseWeb\Marketplace.Core.BaseWeb.csproj" />
   </ItemGroup>
 
 </Project>

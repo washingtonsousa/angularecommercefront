@@ -15,14 +15,15 @@ namespace Marketplace.Core.Domain.Repository
     {
     }
 
-    public async Task<Categoria> Get(int Id)
+    public async Task<Categoria> GetCategoriaDepartamento(int Id)
     {
-      return await Context.Categoria.Where(c => c.IdCategoriaPai == null).Include(c => c.TbProdutoCategoriaIdSecaoNavigation).FirstOrDefaultAsync(c => c.IdCategoria == Id);
+      return await Context.Categoria.Include(c => c.TbProdutoCategoriaIdCategoriaNavigation).Where(c => c.FlStatus == true && c.IdCategoriaPai == null).FirstOrDefaultAsync(c => c.IdCategoria == Id);
     }
 
-    public async Task<IList<Categoria>> Get()
+    public async Task<IList<Categoria>> GetCategoriaDepartamentos()
     {
-      return await Context.Categoria.Include(c => c.TbProdutoCategoriaIdSecaoNavigation).Where(c => c.IdCategoriaPai == null).OrderByDescending(c => c.NuOrdem).ToListAsync();
+      return await Context.Categoria.Include(p => p.SessoesNavigation)
+        .Where(c => c.FlStatus == true && c.IdCategoriaPai == null).OrderByDescending(c => c.NuOrdem).ToListAsync();
     }
 
 

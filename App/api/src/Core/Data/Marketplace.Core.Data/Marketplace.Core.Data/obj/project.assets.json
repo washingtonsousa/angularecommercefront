@@ -1290,6 +1290,16 @@
         "runtime": {
           "bin/placeholder/Marketplace.Core.Domain.dll": {}
         }
+      },
+      "Marketplace.Core.Shared.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Marketplace.Core.Shared.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Marketplace.Core.Shared.Data.dll": {}
+        }
       }
     }
   },
@@ -5001,11 +5011,17 @@
       "type": "project",
       "path": "../../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj",
       "msbuildProject": "../../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj"
+    },
+    "Marketplace.Core.Shared.Data/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/Data/Marketplace.Core.Shared.Data/Marketplace.Core.Shared.Data.csproj",
+      "msbuildProject": "../../../Shared/Data/Marketplace.Core.Shared.Data/Marketplace.Core.Shared.Data.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
       "Marketplace.Core.Domain >= 1.0.0",
+      "Marketplace.Core.Shared.Data >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Abstractions >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Design >= 3.1.2",
@@ -5020,11 +5036,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj",
+      "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj",
       "projectName": "Marketplace.Core.Data",
-      "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj",
+      "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj",
       "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\obj\\",
+      "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -5041,8 +5057,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj"
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj"
+            },
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Marketplace.Core.Shared.Data\\Marketplace.Core.Shared.Data.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Marketplace.Core.Shared.Data\\Marketplace.Core.Shared.Data.csproj"
             }
           }
         }

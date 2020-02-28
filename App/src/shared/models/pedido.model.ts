@@ -1,7 +1,4 @@
 import { ProdutoModel } from './produto.model';
-import { ProdutoDescricaoModel } from './produto-descricao.model';
-
-
 
 export class PedidoModel {
 

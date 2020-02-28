@@ -1,0 +1,8 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\bin\Debug\netcoreapp3.1\Marketplace.Core.Domain.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\bin\Debug\netcoreapp3.1\Marketplace.Core.Domain.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\bin\Debug\netcoreapp3.1\Marketplace.Core.Domain.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\obj\Debug\netcoreapp3.1\Marketplace.Core.Domain.csprojAssemblyReference.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\obj\Debug\netcoreapp3.1\Marketplace.Core.Domain.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\obj\Debug\netcoreapp3.1\Marketplace.Core.Domain.AssemblyInfo.cs
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\obj\Debug\netcoreapp3.1\Marketplace.Core.Domain.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\obj\Debug\netcoreapp3.1\Marketplace.Core.Domain.pdb

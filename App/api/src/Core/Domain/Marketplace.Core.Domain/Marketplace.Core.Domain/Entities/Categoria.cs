@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Marketplace.Core.Domain.EF.Entities
@@ -37,7 +37,11 @@ namespace Marketplace.Core.Domain.EF.Entities
         public virtual ICollection<TbBannerCategoria> TbBannerCategoria { get; set; }
         public virtual ICollection<TbCategoriaSeo> TbCategoriaSeo { get; set; }
         public virtual ICollection<TbMensagemCategoria> TbMensagemCategoria { get; set; }
+
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdCategoriaNavigation { get; set; }
+        public virtual ICollection<Categoria> SessoesNavigation { get; set; }
+
+        public virtual Categoria DepartamentoNavigation { get; set; }
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdDepartamentoNavigation { get; set; }
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdSecaoNavigation { get; set; }
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdSubcategoriaNavigation { get; set; }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {}
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj",
         "projectName": "Marketplace.Core.Domain",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj",
+        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj",
         "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\SPA\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\obj\\",
+        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",

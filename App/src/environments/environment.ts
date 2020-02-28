@@ -4,9 +4,8 @@
 
 export const environment = {
   production: false,
-  //imagesServerUrl: "http://127.0.0.1:8080/"
-  imagesServerUrl: "http://marketplace.vannon.local"
-
+  imagesServerUrl: "http://127.0.0.1:8080/"
+  //imagesServerUrl: "http://marketplace.vannon.local"
 };
 
 /*

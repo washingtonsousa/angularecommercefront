@@ -15,8 +15,8 @@ export class CestaTopoComponent implements OnChanges {
     constructor(private cdRef: ChangeDetectorRef, private eRef: ElementRef) {
     }
 
-    @HostListener("mouseover", ["$event"])
-    openCesta(event) {
+    @HostListener("mouseover", [])
+    openCesta() {
 
         $(this.cestaItemsBox.nativeElement).addClass("open");
 
@@ -26,12 +26,12 @@ export class CestaTopoComponent implements OnChanges {
     clickOutside(event: any) {
 
             if(!this.eRef.nativeElement.contains(event.target))
-            this.closeCesta(null);
+            this.closeCesta();
 
     }
 
-    @HostListener("mouseout", ["$event"])
-    closeCesta(event) {
+    @HostListener("mouseout", [])
+    closeCesta() {
 
         $(this.cestaItemsBox.nativeElement).removeClass("open");
 

@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Core.Data", "sr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Core.Data.Repository", "src\Core\Data\Marketplace.Core.Data.Repository\Marketplace.Core.Data.Repository.csproj", "{6974A259-660E-4BC5-B51E-AB568B03BA9D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Core.Infrastructure", "src\Core\Shared\Infrastructure\Marketplace.Core.Infrastructure.csproj", "{CE4D1DEF-FBFB-4F5C-B3DC-B514A9C2B7F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Core.Infrastructure", "src\Core\Shared\Infrastructure\Marketplace.Core.Infrastructure.csproj", "{CE4D1DEF-FBFB-4F5C-B3DC-B514A9C2B7F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Core.BaseWeb", "src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\Marketplace.Core.BaseWeb.csproj", "{1447EBC8-FE8B-48B9-9A12-215585AF989C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Core.BaseWeb", "src\Core\Application\Marketplace.Core.BaseWeb\BaseWeb\Marketplace.Core.BaseWeb.csproj", "{1447EBC8-FE8B-48B9-9A12-215585AF989C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Core.Domain", "src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\Marketplace.Core.Domain.csproj", "{2EF5CC98-23BF-441B-845E-BA7227C7A60A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Marketplace.Core.Domain", "src\Core\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\Marketplace.Core.Domain.csproj", "{2EF5CC98-23BF-441B-845E-BA7227C7A60A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Marketplace.Core.Shared.Data", "src\Core\Shared\Data\Marketplace.Core.Shared.Data\Marketplace.Core.Shared.Data.csproj", "{AE66D3ED-1F26-4F90-9924-289B5FAEEA30}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +57,10 @@ Global
 		{2EF5CC98-23BF-441B-845E-BA7227C7A60A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EF5CC98-23BF-441B-845E-BA7227C7A60A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EF5CC98-23BF-441B-845E-BA7227C7A60A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE66D3ED-1F26-4F90-9924-289B5FAEEA30}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE66D3ED-1F26-4F90-9924-289B5FAEEA30}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE66D3ED-1F26-4F90-9924-289B5FAEEA30}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE66D3ED-1F26-4F90-9924-289B5FAEEA30}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +73,7 @@ Global
 		{CE4D1DEF-FBFB-4F5C-B3DC-B514A9C2B7F8} = {2B4FE6F7-BF07-4A99-91E6-7F6188821CAF}
 		{1447EBC8-FE8B-48B9-9A12-215585AF989C} = {2B4FE6F7-BF07-4A99-91E6-7F6188821CAF}
 		{2EF5CC98-23BF-441B-845E-BA7227C7A60A} = {2B4FE6F7-BF07-4A99-91E6-7F6188821CAF}
+		{AE66D3ED-1F26-4F90-9924-289B5FAEEA30} = {2B4FE6F7-BF07-4A99-91E6-7F6188821CAF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {DF5B9E36-3DB0-4352-90C2-69F4C474C260}

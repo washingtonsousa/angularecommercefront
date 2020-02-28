@@ -1,3 +1,5 @@
+using Marketplace.Core.Application;
+using Marketplace.Core.Application.Interfaces;
 using Marketplace.Core.Data.EF.Context;
 using Marketplace.Core.Domain.Repository;
 using Marketplace.Core.Domain.Repository.Interfaces;
@@ -19,6 +21,12 @@ namespace Infrastructure
     public static void InjectDataRepositories(IServiceCollection services)
     {
       services.AddTransient<ICategoriaRepository, CategoriaRepository>();
+    }
+
+
+    public static void InjectApplicationServices(IServiceCollection services)
+    {
+      services.AddTransient<IDepartamentoAppService, DepartamentoAppService>();
     }
 
   }

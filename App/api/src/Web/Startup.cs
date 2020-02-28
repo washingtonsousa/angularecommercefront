@@ -1,5 +1,6 @@
 using AutoMapper;
 using Infrastructure;
+using Marketplace.Core.BaseWeb.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -27,11 +28,20 @@ namespace FarmaciaMaisProxima
             //DI Configuration  
             services.AddSingleton(Configuration);
             services.AddAutoMapper(typeof(Startup));
+            var mappingConfig = new MapperConfiguration(mc =>
+            {
+              mc.AddProfile(new DomainToViewModel());
+            });
+
+            IMapper mapper = mappingConfig.CreateMapper();
+            services.AddSingleton(mapper);
 
             IoCContainer.InjectDataClasses(services);
+            IoCContainer.InjectDataRepositories(services);
+            IoCContainer.InjectApplicationServices(services);
 
 
-     }
+    }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -47,10 +57,13 @@ namespace FarmaciaMaisProxima
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
+            app.UseEndpoints(end =>
             {
-                endpoints.MapControllers();
+
+              end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
+
             });
-        }
+
     }
+  }
 }
