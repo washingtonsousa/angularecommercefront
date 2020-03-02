@@ -28,7 +28,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public bool? FlEstoqueDisponivel { get; set; }
 
         public virtual TbPedido IdPedidoNavigation { get; set; }
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
         public virtual ICollection<TbPedidoProdutoKit> TbPedidoProdutoKit { get; set; }
     }
 }

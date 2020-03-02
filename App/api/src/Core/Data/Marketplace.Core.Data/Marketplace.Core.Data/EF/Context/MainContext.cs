@@ -163,7 +163,7 @@ namespace Marketplace.Core.Data.EF.Context
         public virtual DbSet<TbProdutoPrincipioAtivo> TbProdutoPrincipioAtivo { get; set; }
         public virtual DbSet<TbProdutoPrincipioAtivoBkp20191018> TbProdutoPrincipioAtivoBkp20191018 { get; set; }
         public virtual DbSet<TbProdutoSeo> TbProdutoSeo { get; set; }
-        public virtual DbSet<TbProdutoSku> TbProdutoSku { get; set; }
+        public virtual DbSet<ProdutoSku> TbProdutoSku { get; set; }
         public virtual DbSet<TbProdutoSkuAviseMe> TbProdutoSkuAviseMe { get; set; }
         public virtual DbSet<TbProdutoSkuEspecificacao> TbProdutoSkuEspecificacao { get; set; }
         public virtual DbSet<TbProdutoSkuFiltro> TbProdutoSkuFiltro { get; set; }
@@ -5283,7 +5283,7 @@ namespace Marketplace.Core.Data.EF.Context
                     .HasConstraintName("FK_tb_produto_seo_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutoSku>(entity =>
+            modelBuilder.Entity<ProdutoSku>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSku);
 

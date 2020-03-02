@@ -13,6 +13,6 @@ namespace Marketplace.Core.Domain.EF.Entities
         public string DsImagem { get; set; }
         public string AltImg { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
     }
 }

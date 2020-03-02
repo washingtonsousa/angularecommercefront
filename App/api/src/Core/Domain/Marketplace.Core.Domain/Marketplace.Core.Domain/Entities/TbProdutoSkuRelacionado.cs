@@ -9,7 +9,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public int IdProdutoSku { get; set; }
         public int IdProdutoSkuRelacao { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
-        public virtual TbProdutoSku IdProdutoSkuRelacaoNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuRelacaoNavigation { get; set; }
     }
 }

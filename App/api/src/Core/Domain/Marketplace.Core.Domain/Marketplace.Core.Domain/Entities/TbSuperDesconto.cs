@@ -11,6 +11,6 @@ namespace Marketplace.Core.Domain.EF.Entities
         public DateTime DtValidadeInicial { get; set; }
         public DateTime DtValidadeFinal { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
     }
 }

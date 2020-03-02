@@ -10,6 +10,6 @@ namespace Marketplace.Core.Domain.EF.Entities
         public int IdFiltro { get; set; }
 
         public virtual TbFiltro IdFiltroNavigation { get; set; }
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
     }
 }

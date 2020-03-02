@@ -9,7 +9,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public int IdMedicamento { get; set; }
         public int IdGenerico { get; set; }
 
-        public virtual TbProdutoSku IdGenericoNavigation { get; set; }
-        public virtual TbProdutoSku IdMedicamentoNavigation { get; set; }
+        public virtual ProdutoSku IdGenericoNavigation { get; set; }
+        public virtual ProdutoSku IdMedicamentoNavigation { get; set; }
     }
 }

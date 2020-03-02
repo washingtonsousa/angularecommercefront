@@ -1,11 +1,11 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Marketplace.Core.Domain.EF.Entities
 {
-    public partial class TbProdutoSku
+    public partial class ProdutoSku
     {
-        public TbProdutoSku()
+        public ProdutoSku()
         {
             TbCategoria = new HashSet<Categoria>();
             TbGondolaProdutoSku = new HashSet<TbGondolaProdutoSku>();

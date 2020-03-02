@@ -13,7 +13,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public DateTime DtInicio { get; set; }
         public DateTime DtFim { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuCasadoNavigation { get; set; }
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuCasadoNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
     }
 }

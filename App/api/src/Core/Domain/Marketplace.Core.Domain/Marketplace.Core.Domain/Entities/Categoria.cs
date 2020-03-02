@@ -22,7 +22,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         }
 
     public virtual ICollection<Categoria> SessoesNavigation { get; set; }
-    public virtual TbProdutoSku IdProdutoSkuDestaqueNavigation { get; set; }
+    public virtual ProdutoSku IdProdutoSkuDestaqueNavigation { get; set; }
     public string NmCategoria { get; set; }
 
     public int IdCategoria { get; set; }

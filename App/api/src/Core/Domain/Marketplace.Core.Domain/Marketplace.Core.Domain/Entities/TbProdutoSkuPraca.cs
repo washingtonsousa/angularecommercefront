@@ -23,7 +23,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public decimal? VlEmbalagemPresente { get; set; }
 
         public virtual TbPraca IdPracaNavigation { get; set; }
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
         public virtual TbSkuPracaMovimentacao TbSkuPracaMovimentacao { get; set; }
     }
 }

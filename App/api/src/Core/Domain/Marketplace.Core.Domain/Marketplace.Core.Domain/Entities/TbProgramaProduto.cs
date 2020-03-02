@@ -11,7 +11,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public string DsPromocao { get; set; }
         public DateTime DtAtualizacao { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuNavigation { get; set; }
+        public virtual ProdutoSku IdProdutoSkuNavigation { get; set; }
         public virtual TbPrograma IdProgramaNavigation { get; set; }
     }
 }

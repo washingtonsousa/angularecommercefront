@@ -20,7 +20,7 @@ namespace Marketplace.Core.Domain.EF.Entities
             TbProdutoLog = new HashSet<TbProdutoLog>();
             TbProdutoPrincipioAtivo = new HashSet<TbProdutoPrincipioAtivo>();
             TbProdutoSeo = new HashSet<TbProdutoSeo>();
-            TbProdutoSku = new HashSet<TbProdutoSku>();
+            TbProdutoSku = new HashSet<ProdutoSku>();
             TbProdutoVideo = new HashSet<TbProdutoVideo>();
             TbPromocaoProduto = new HashSet<TbPromocaoProduto>();
         }
@@ -66,7 +66,7 @@ namespace Marketplace.Core.Domain.EF.Entities
         public virtual ICollection<TbProdutoLog> TbProdutoLog { get; set; }
         public virtual ICollection<TbProdutoPrincipioAtivo> TbProdutoPrincipioAtivo { get; set; }
         public virtual ICollection<TbProdutoSeo> TbProdutoSeo { get; set; }
-        public virtual ICollection<TbProdutoSku> TbProdutoSku { get; set; }
+        public virtual ICollection<ProdutoSku> TbProdutoSku { get; set; }
         public virtual ICollection<TbProdutoVideo> TbProdutoVideo { get; set; }
         public virtual ICollection<TbPromocaoProduto> TbPromocaoProduto { get; set; }
     }
