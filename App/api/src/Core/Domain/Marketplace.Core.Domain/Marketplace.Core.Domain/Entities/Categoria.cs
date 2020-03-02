@@ -21,25 +21,27 @@ namespace Marketplace.Core.Domain.EF.Entities
             TbVitrineCategoria = new HashSet<TbVitrineCategoria>();
         }
 
-        public int IdCategoria { get; set; }
+    public virtual ICollection<Categoria> SessoesNavigation { get; set; }
+    public virtual TbProdutoSku IdProdutoSkuDestaqueNavigation { get; set; }
+    public string NmCategoria { get; set; }
+
+    public int IdCategoria { get; set; }
         public int? IdCategoriaPai { get; set; }
         public int? IdProdutoSkuDestaque { get; set; }
         public bool FlStatus { get; set; }
         public string CdExterno { get; set; }
         public int NuOrdem { get; set; }
         public DateTime DtCadastro { get; set; }
-        public string NmCategoria { get; set; }
         public string DsHexadecimal { get; set; }
         public string DsImagemDestaque { get; set; }
         public int? IdCategoriaVannon { get; set; }
 
-        public virtual TbProdutoSku IdProdutoSkuDestaqueNavigation { get; set; }
         public virtual ICollection<TbBannerCategoria> TbBannerCategoria { get; set; }
         public virtual ICollection<TbCategoriaSeo> TbCategoriaSeo { get; set; }
         public virtual ICollection<TbMensagemCategoria> TbMensagemCategoria { get; set; }
 
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdCategoriaNavigation { get; set; }
-        public virtual ICollection<Categoria> SessoesNavigation { get; set; }
+
 
         public virtual Categoria DepartamentoNavigation { get; set; }
         public virtual ICollection<TbProdutoCategoria> TbProdutoCategoriaIdDepartamentoNavigation { get; set; }

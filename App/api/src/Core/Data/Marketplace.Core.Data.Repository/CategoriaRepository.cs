@@ -22,8 +22,8 @@ namespace Marketplace.Core.Domain.Repository
 
     public async Task<IList<Categoria>> GetCategoriaDepartamentos()
     {
-      return await Context.Categoria.Include(p => p.SessoesNavigation)
-        .Where(c => c.FlStatus == true && c.IdCategoriaPai == null).OrderByDescending(c => c.NuOrdem).ToListAsync();
+      return await Context.Categoria.Include(p => p.SessoesNavigation).Include(c => c.IdProdutoSkuDestaqueNavigation)
+        .Where(c => c.FlStatus == true && c.IdCategoriaPai == null).OrderBy(c => c.NuOrdem).ToListAsync();
     }
 
 

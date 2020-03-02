@@ -12,13 +12,10 @@ namespace MarketplaceWeb.Controllers
  
     public class DepartamentoController : Controller
     {
-
-        public IMapper _mapper;
         public IDepartamentoAppService _departamentoService { get; }
 
-        public DepartamentoController(IMapper mapper, IDepartamentoAppService departamentoService)
+        public DepartamentoController(IDepartamentoAppService departamentoService)
         {
-          _mapper = mapper;
           _departamentoService = departamentoService;
         }
 
@@ -26,10 +23,9 @@ namespace MarketplaceWeb.Controllers
         public async Task<IActionResult> GetMenuDepartamentos()
         {
 
-              IList<DepartamentoViewModel> departamentos = _mapper.Map<IList<DepartamentoViewModel>>(await _departamentoService.ObterMenuPrincipalDepartamentos());
+              IList<DepartamentoViewModel> departamentos = await _departamentoService.ObterMenuPrincipalDepartamentos();
               return Ok(departamentos); 
 
-           
         }
     }
 }

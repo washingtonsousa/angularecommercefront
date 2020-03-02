@@ -13,8 +13,12 @@ namespace Marketplace.Core.BaseWeb.AutoMapper
  
       public DomainToViewModel()
       {
-          CreateMap<Categoria, DepartamentoViewModel>();
-      }
+          CreateMap<Categoria, DepartamentoViewModel>()
+        .ForMember(dst => dst.Sessoes, opt => opt.MapFrom(src => src.SessoesNavigation))
+        .ForMember(dst => dst.ProdutoDestaque, opt => opt.MapFrom(src => src.IdProdutoSkuDestaqueNavigation));
+      CreateMap<Categoria, SessaoViewModel>();
+      CreateMap<TbProdutoSku, ProdutoSkuViewModel>();
+    }
 
     
   }

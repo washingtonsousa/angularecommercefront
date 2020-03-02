@@ -789,7 +789,7 @@ namespace Marketplace.Core.Data.EF.Context
 
                entity.HasMany(d => d.SessoesNavigation)
               .WithOne(p => p.DepartamentoNavigation)
-              .HasForeignKey(d => d.IdCategoria)
+              .HasForeignKey(d => d.IdCategoriaPai)
               .OnDelete(DeleteBehavior.NoAction)
               .HasConstraintName("FK_tb_categoria_tb_categoria");
             });
