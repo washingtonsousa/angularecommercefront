@@ -1,0 +1,22 @@
+@import "src/scss/variables.scss";
+@import "src/scss/mixins.scss";
+@import "src/scss/placeholders.scss";
+
+.marca-carousel {
+    padding:8px;
+    @include box-shadow-gen($shadow-color, 5px, 0px, 5px);
+    background:white;
+}
+
+.control-icon {
+
+        cursor: pointer;
+        @extend %grow-icon-animation;
+        color:#333;
+
+}
+.carousel-control-prev, .carousel-control-next {
+    width:5%;
+}
+    
+

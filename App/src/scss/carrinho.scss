@@ -1,0 +1,25 @@
+.amount-control-area {
+    .btn {
+        font-size:0.450rem;
+        padding:0.3rem !important;
+    }
+}
+
+
+
+.grid-table-product-area {
+    display:flex;
+    align-items: center;
+
+    img {
+        width:30%;
+    }
+
+    .grid-table-product-name-area {
+        width: 70%;
+        padding-left: 5px;
+        h5 {
+            font-size: 1rem;
+        }
+    }
+}

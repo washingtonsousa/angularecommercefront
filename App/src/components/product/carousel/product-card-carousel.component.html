@@ -1,0 +1,15 @@
+<h1>
+
+    {{Titulo}}
+
+</h1>
+
+<hr />
+
+<section #NavRoller class="card-carousel product-card-carousel">
+
+    <product-card *ngFor="let produto of Produtos" [Produto]="produto">
+
+    </product-card>
+
+</section>

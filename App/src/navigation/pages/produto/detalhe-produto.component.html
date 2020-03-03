@@ -1,0 +1,102 @@
+<container>
+    
+    <section class="container" id="detalhe-produto">
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-7">
+
+               <product-galery [Imagens]="DetalheProduto.Produto.Imagens" [currentImageInBox]="DetalheProduto.Produto.ImagemPrincipal">
+               </product-galery>
+
+            </div>
+
+            <div class="col-xl-6 col-lg-5" id="dados-produto">
+
+                <h1> {{ DetalheProduto.Produto.Nome}}</h1>
+
+                <p>  Código do Produto: <strong> {{ DetalheProduto.Produto.Codigo}}  </strong> / Marca:  <strong> {{ DetalheProduto.Produto.Marca.Nome}}   </strong>  </p>
+
+                <div class="detalhe-produto-secondary-controls-area mb-3">
+
+                    <a>
+                        <i class="fa fa-comments"></i>
+                       <span>  Deixe seu comentário </span> 
+                    </a>
+                    <a>
+                        <i class="fa fa-star"></i>  
+                        <span>  Faça uma avaliação </span>   
+                        
+                    </a>
+                    <a>
+                        <i class="fa fa-users"></i>
+                        <span>  Indique a um amigo </span>   
+                        
+                    </a>
+                    <a>
+                        <i class="fa fa-money-bill-wave"></i>
+                        <span>  Formas de Pagamento </span>  
+                    </a>
+
+                </div>
+
+                <hr />
+
+                <div class="price-container mb-3 mt-3">
+
+                    <p> à partir de </p> <h1 class="price text-primary">{{DetalheProduto.Produto.Preco_Por | currency:'BRL'}}  </h1>
+
+                </div>
+
+                <div class="">
+
+                    <button id="btn-ver-farmacia" class="btn btn-primary btn-lg mb-1" VerFarmacia [Produto]="DetalheProduto.Produto" [Quantidade]="1"> Ver Farmácia Mais Próxima <i class="fa fa-store"></i> </button>
+                    <br />
+                    <button class="btn btn-success mr-1" AdicionarCesta [Produto]="DetalheProduto.Produto" [Quantidade]="1">Adicionar a cesta <i class="fa fa-shopping-basket"></i> </button>
+                    <button class="btn btn-warning"> <i class="fab fa-gofore"></i> Ver genérico  </button>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <section class="container mt-3">
+        <div class="row">
+        <div class="col-xl-12 p-0">
+            <tabset>
+
+
+              <tab *ngFor="let descricao of DetalheProduto.Descricoes" index="0"> <ng-template tabHeading>
+                <i class="fa fa-info-circle" aria-hidden="true"></i> {{ descricao.Tipo }}
+              </ng-template>
+                 <article [innerHtml]="descricao.Texto" ></article>
+              </tab>
+
+
+
+               <tab index="1"> 
+                <ng-template tabHeading>
+                <i class="fab fa-product-hunt" aria-hidden="true"></i> Detalhes
+              </ng-template>
+
+                <div class="others-advertising panel callout"><h4 class="title">Outras Informações</h4><div class="register-ms"><p>Registro MS:1063902520052</p><p>Princípio ativo: SULFATO DE NEOMICINA;BACITRACINA ZINCICA</p><p>Nome do Fabricante: Farmacêutica Takeda.</p></div></div>
+                <button class="btn btn-warning"> <i class="fa fa-list"></i> BULA </button>
+               </tab>
+            </tabset>
+            
+            <div class="content-box p-3 text-center">
+                <h3>ADVERTÊNCIA DO MINISTÉRIO DA SAÚDE</h3>
+                <p>  Se persistirem os sintomas, o médico deverá ser consultado. Procure um médico e o farmacêutico. Leia a bula.</p>
+            </div>
+            </div>
+
+            <!-- <div class="col-xl-3">
+                <product-card [Produto]="DetalheProduto.Produto" [Carrosel]="false">
+                </product-card>
+            </div> -->
+
+            </div>
+        </section>
+
+
+</container>

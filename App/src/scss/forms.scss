@@ -1,0 +1,35 @@
+
+
+.form-control, input[type=text]:focus {
+    //border-radius: 0px;
+    border:none;
+    border-bottom:2px solid #666;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    transition: 0.3s all;
+
+    &:focus {
+      border-bottom:2px solid $primary-color;
+    }
+}
+
+select {
+  padding:8px;
+  border-radius: 4px;
+}
+
+.form-control:focus,
+input[type=text]:focus{
+  box-shadow: none;
+}
+
+.input-field {
+    label {
+      font-size:0.8rem;
+      width: 100%;
+    }
+
+    margin-bottom:5px;
+}
+
+

@@ -1,0 +1,29 @@
+
+$primary-color: rgb(24, 75, 132) !default;
+$primary-color-darken: rgba(4, 44, 89, 1);
+$primary-color-lighten: rgba(5, 113, 235, 0.7);
+$primary-gradient: linear-gradient(to bottom, $primary-color, primary-color-darken 120%);
+$secondary-color: #E03633 !default;
+$ternary-color: #ccc !default;
+$mainTextColor: #666;
+$input-btn-focus-box-shadow: none;
+$boxRadius: 4px;
+$title-text-color: #333;
+$success-color: rgb(2, 196, 41);
+$mainLinkColor: #333;
+$mainLinkHoverColor:#666;
+$disabled-bg-color:#ededed;
+$disabled-color:#7877;
+$disabled-secondary-color:#ededed;
+$disabled-bg-secondary-color: rgba(224, 54, 51, 0.7);
+$primary-color-reverse: #fff;
+$default-bg-color:#f0f0f0;
+$darken-gray:#3d3d3d3d;
+$shadow-color: rgba(100,100,100, 0.7);
+$dark-transparent-color: rgba(0,0,0,0.1);
+$top-right-icons-size: 2.5rem;
+$light-box-shadow-color: rgba(155,155,155,0.9);
+
+
+
+

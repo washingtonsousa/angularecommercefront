@@ -1,0 +1,39 @@
+small {
+    font-size:.7em;
+    color:#666;
+}
+
+
+a:hover {
+    text-decoration: none;
+    transition: 0.3s all;
+}
+
+p, ul, li {
+    color:#666;
+}
+
+p {
+    margin-bottom:4px;
+}
+
+.title-mark {
+    margin-bottom:16px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+
+.label-mark {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom:2px;
+}
+
+a {
+    color: $mainLinkColor;
+
+    &:hover {
+        color: $mainLinkHoverColor;
+    }
+}

@@ -1,0 +1,50 @@
+<a href="javascript:void()" class="icoTopo" id="icoCesta" [routerLink]="['/carrinho']">
+
+    <i class="fa fa-shopping-basket"></i>
+    <small class="notification-badge">{{Pedido?.Produtos.length}}</small>
+    <p class="cart-price" *ngIf="Pedido?.Produtos.length"> {{ Pedido?.Total | currency: "BRL" }}  </p>
+
+</a>
+
+<div #cestaItemsBox id="cestaItemsBox" class="content-box d-flex flex-column">
+
+    <section id="cestaCarrinhosLista" class="d-flex flex-column product-description-area">
+            <div *ngFor="let produto of Pedido?.Produtos"  class="d-flex product-description-item "> 
+                
+                <img [src]="produto.ImagemPrincipal.UrlRelativa | imageUrl" class="w-30" />
+                <p class="product-description-text w-40 p-1"> {{ produto.Nome }} </p>
+                <p class="product-description-text w-20 p-1"> <b> Qtd: </b>  {{ produto.Quantidade }} </p>
+                <h4 class="product-description-text price w-10"> {{ produto.Preco_Por | currency: "BRL" }} </h4>
+                <a class="produto-remover" RemoverCesta  [Produto]="produto"> <i class="fa fa-times"></i> </a>
+
+            </div> 
+    </section>
+
+    <h4 *ngIf="!Pedido?.Produtos.length" class="text-center w-100"> Sua cesta de compras está vazia </h4>
+
+    <section *ngIf="Pedido?.Produtos.length" class="w-100 cesta-footer">
+        
+        <div class="price-description">
+            
+            <span> SubTotal:  </span> 
+            <span>  {{ Pedido?.SubTotal | currency: "BRL" }} </span> 
+
+        </div>
+
+        <hr />
+
+        <div class="price-description total">
+            
+            <span> Total:  </span> 
+            <span>  {{ Pedido?.Total | currency: "BRL" }} </span> 
+
+        </div>
+
+        <button [routerLink]="['/checkout']" *ngIf="Loja != null && Loja != undefined" class="cesta-submit btn btn-success w-100"> Finalizar Compra  </button>
+        <button [routerLink]="['/carrinho']" *ngIf="Loja == null && Loja == undefined" class="cesta-submit btn btn-primary w-100"> Ver Farmacia mais próxima <i class="fa fa-store"></i>   </button>
+    
+    </section>
+    
+</div>
+
+
