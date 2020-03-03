@@ -12,13 +12,22 @@
 [Dd]ebugPublic/
 [Rr]elease/
 [Rr]eleases/
-*/**/obj/Debug/
-*/**/obj/Release/
-v16/
-*.exe
-*.pdb
-*.manifest
-*.cache
+[Xx]64/
+[Xx]86/
+[Bb]uild/
+bld/
+[Bb]in/
+[Oo]bj/
+App/api/src/Core/Application/Core.Application/obj/
+App/api/src/Core/Application/Core.BaseWeb/BaseWeb/
+App/api/src/Core/Data/Core.Data.Repository/obj/
+App/api/src/Core/Data/Core.Data/Core.Data/obj/
+App/api/src/Core/Domain/Core.Domain/Core.Domain/obj/
+App/api/src/Core/Shared/Data/Core.Shared.Data/obj/
+App/api/src/Core/Shared/Infrastructure/obj/
+App/api/src/Core/Shared/SharedKernel/Shared.Kernel/obj/
+App/api/src/Web/obj/
+
 
 # dependencies
 /node_modules
