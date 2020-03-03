@@ -1,8 +1,0 @@
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\bin\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.deps.json
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\bin\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.dll
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\bin\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.pdb
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\obj\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.AssemblyInfoInputs.cache
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\obj\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.AssemblyInfo.cs
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\obj\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.dll
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\obj\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.pdb
-C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Marketplace.Core.Shared.Data\obj\Debug\netcoreapp3.1\Marketplace.Core.Shared.Data.csprojAssemblyReference.cache
