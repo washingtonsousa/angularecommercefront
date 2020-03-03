@@ -1,0 +1,8 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\bin\Debug\netcoreapp3.1\Core.Shared.Data.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\bin\Debug\netcoreapp3.1\Core.Shared.Data.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\bin\Debug\netcoreapp3.1\Core.Shared.Data.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\obj\Debug\netcoreapp3.1\Core.Shared.Data.csprojAssemblyReference.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\obj\Debug\netcoreapp3.1\Core.Shared.Data.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\obj\Debug\netcoreapp3.1\Core.Shared.Data.AssemblyInfo.cs
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\obj\Debug\netcoreapp3.1\Core.Shared.Data.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Shared\Data\Core.Shared.Data\obj\Debug\netcoreapp3.1\Core.Shared.Data.pdb

@@ -4,12 +4,12 @@
     "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Marketplace.Core.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj": {
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj",
-        "projectName": "Marketplace.Core.Application",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj",
+        "projectName": "Core.Application",
+        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj",
         "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\obj\\",
         "projectStyle": "PackageReference",
@@ -28,8 +28,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Marketplace.Core.BaseWeb.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Marketplace.Core.BaseWeb.csproj"
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj"
               },
               "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj": {
                 "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj"
@@ -64,12 +64,12 @@
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Marketplace.Core.BaseWeb.csproj": {
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Marketplace.Core.BaseWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
         "projectName": "Marketplace.Core.BaseWeb",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Marketplace.Core.BaseWeb.csproj",
+        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
         "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.BaseWeb\\BaseWeb\\obj\\",
         "projectStyle": "PackageReference",
@@ -127,6 +127,63 @@
         }
       }
     },
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj",
+        "projectName": "Core.Data.Repository",
+        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj",
+        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.0.101:9987/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -165,6 +222,96 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj",
+        "projectName": "Core.Data",
+        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj",
+        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "http://192.168.0.101:9987/Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain.csproj"
+              },
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Marketplace.Core.Shared.Data\\Marketplace.Core.Shared.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Marketplace.Core.Shared.Data\\Marketplace.Core.Shared.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Abstractions": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -404,14 +551,14 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj"
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj"
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj"
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj"
               }
             }
           }

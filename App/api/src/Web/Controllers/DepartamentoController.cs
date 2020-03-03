@@ -1,10 +1,7 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using Marketplace.Core.Application.Interfaces;
-using Marketplace.Core.BaseWeb.ViewModel;
+using Core.Application.Interfaces;
+using Core.BaseWeb.ViewModel;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MarketplaceWeb.Controllers

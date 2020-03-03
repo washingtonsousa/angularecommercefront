@@ -1,74 +1,68 @@
 using AutoMapper;
 using Infrastructure;
-using Marketplace.Core.BaseWeb.AutoMapper;
+using Core.BaseWeb.AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json.Serialization;
 
 namespace FarmaciaMaisProxima
 {
-    public class Startup
+  public class Startup
+  {
+    public Startup(IConfiguration configuration)
     {
-        public Startup(IConfiguration configuration)
-        {
-            Configuration = configuration;
-        }
+      Configuration = configuration;
+    }
 
-        public IConfiguration Configuration { get; }
+    public IConfiguration Configuration { get; }
 
-
-    // This method gets called by the runtime. Use this method to add services to the container.
     public void ConfigureServices(IServiceCollection services)
     {
-            services.AddControllers().AddJsonOptions(jsonOptions =>
-            {
-              jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
-            })
-                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0); 
 
+      services.AddControllers().AddJsonOptions(jsonOptions =>
+      {
+        jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
+      }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
       //DI Configuration  
       services.AddSingleton(Configuration);
-            services.AddAutoMapper(typeof(Startup));
-            var mappingConfig = new MapperConfiguration(mc =>
-            {
-              mc.AddProfile(new DomainToViewModel());
-            });
+      services.AddAutoMapper(typeof(Startup));
 
-            IMapper mapper = mappingConfig.CreateMapper();
-            services.AddSingleton(mapper);
+      var mappingConfig = new MapperConfiguration(mc =>
+      {
+        mc.AddProfile(new DomainToViewModel());
+        mc.AddProfile(new ViewModelToDomain());
+      });
 
-            IoCContainer.InjectDataClasses(services);
-            IoCContainer.InjectDataRepositories(services);
-            IoCContainer.InjectApplicationServices(services);
+      IMapper mapper = mappingConfig.CreateMapper();
+      services.AddSingleton(mapper);
 
+      IoCContainer.InjectScoped(services);
+      IoCContainer.InjectDataRepositories(services);
+      IoCContainer.InjectApplicationServices(services);
 
     }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-            if (env.IsDevelopment())
-            {
-                app.UseDeveloperExceptionPage();
-            }
+    // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+    public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+    {
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+      }
 
-            app.UseHttpsRedirection();
+      app.UseHttpsRedirection();
+      app.UseRouting();
+      app.UseAuthorization();
+      app.UseEndpoints(end =>
+      {
 
-            app.UseRouting();
+        end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
 
-            app.UseAuthorization();
-
-            app.UseEndpoints(end =>
-            {
-
-              end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
-
-            });
+      });
 
     }
   }

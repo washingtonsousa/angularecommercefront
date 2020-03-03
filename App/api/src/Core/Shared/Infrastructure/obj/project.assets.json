@@ -1279,18 +1279,69 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Marketplace.Core.Application/1.0.0": {
+      "Core.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
-          "Marketplace.Core.BaseWeb": "1.0.0",
-          "Marketplace.Core.Data.Repository": "1.0.0"
+          "Core.Data.Repository": "1.0.0",
+          "Marketplace.Core.BaseWeb": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Marketplace.Core.Application.dll": {}
+          "bin/placeholder/Core.Application.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Marketplace.Core.Application.dll": {}
+          "bin/placeholder/Core.Application.dll": {}
+        }
+      },
+      "Core.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Core.Domain": "1.0.0",
+          "Core.Shared.Data": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.2",
+          "Microsoft.EntityFrameworkCore.Abstractions": "3.1.2",
+          "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Data.dll": {}
+        }
+      },
+      "Core.Data.Repository/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Core.Data": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Core.Data.Repository.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Data.Repository.dll": {}
+        }
+      },
+      "Core.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Core.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Domain.dll": {}
+        }
+      },
+      "Core.Shared.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/Core.Shared.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Shared.Data.dll": {}
         }
       },
       "Marketplace.Core.BaseWeb/1.0.0": {
@@ -1298,64 +1349,13 @@
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "7.0.0",
-          "Marketplace.Core.Domain": "1.0.0"
+          "Core.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Marketplace.Core.BaseWeb.dll": {}
         },
         "runtime": {
           "bin/placeholder/Marketplace.Core.BaseWeb.dll": {}
-        }
-      },
-      "Marketplace.Core.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Marketplace.Core.Domain": "1.0.0",
-          "Marketplace.Core.Shared.Data": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "3.1.2",
-          "Microsoft.EntityFrameworkCore.Abstractions": "3.1.2",
-          "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2"
-        },
-        "compile": {
-          "bin/placeholder/Marketplace.Core.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Marketplace.Core.Data.dll": {}
-        }
-      },
-      "Marketplace.Core.Data.Repository/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "dependencies": {
-          "Marketplace.Core.Data": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Marketplace.Core.Data.Repository.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Marketplace.Core.Data.Repository.dll": {}
-        }
-      },
-      "Marketplace.Core.Domain/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Marketplace.Core.Domain.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Marketplace.Core.Domain.dll": {}
-        }
-      },
-      "Marketplace.Core.Shared.Data/1.0.0": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v3.1",
-        "compile": {
-          "bin/placeholder/Marketplace.Core.Shared.Data.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Marketplace.Core.Shared.Data.dll": {}
         }
       }
     }
@@ -5053,42 +5053,42 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Marketplace.Core.Application/1.0.0": {
+    "Core.Application/1.0.0": {
       "type": "project",
-      "path": "../../Application/Marketplace.Core.Application/Marketplace.Core.Application.csproj",
-      "msbuildProject": "../../Application/Marketplace.Core.Application/Marketplace.Core.Application.csproj"
+      "path": "../../Application/Marketplace.Core.Application/Core.Application.csproj",
+      "msbuildProject": "../../Application/Marketplace.Core.Application/Core.Application.csproj"
+    },
+    "Core.Data/1.0.0": {
+      "type": "project",
+      "path": "../../Data/Marketplace.Core.Data/Marketplace.Core.Data/Core.Data.csproj",
+      "msbuildProject": "../../Data/Marketplace.Core.Data/Marketplace.Core.Data/Core.Data.csproj"
+    },
+    "Core.Data.Repository/1.0.0": {
+      "type": "project",
+      "path": "../../Data/Marketplace.Core.Data.Repository/Core.Data.Repository.csproj",
+      "msbuildProject": "../../Data/Marketplace.Core.Data.Repository/Core.Data.Repository.csproj"
+    },
+    "Core.Domain/1.0.0": {
+      "type": "project",
+      "path": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Core.Domain.csproj",
+      "msbuildProject": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Core.Domain.csproj"
+    },
+    "Core.Shared.Data/1.0.0": {
+      "type": "project",
+      "path": "../Data/Marketplace.Core.Shared.Data/Core.Shared.Data.csproj",
+      "msbuildProject": "../Data/Marketplace.Core.Shared.Data/Core.Shared.Data.csproj"
     },
     "Marketplace.Core.BaseWeb/1.0.0": {
       "type": "project",
-      "path": "../../Application/Marketplace.Core.BaseWeb/BaseWeb/Marketplace.Core.BaseWeb.csproj",
-      "msbuildProject": "../../Application/Marketplace.Core.BaseWeb/BaseWeb/Marketplace.Core.BaseWeb.csproj"
-    },
-    "Marketplace.Core.Data/1.0.0": {
-      "type": "project",
-      "path": "../../Data/Marketplace.Core.Data/Marketplace.Core.Data/Marketplace.Core.Data.csproj",
-      "msbuildProject": "../../Data/Marketplace.Core.Data/Marketplace.Core.Data/Marketplace.Core.Data.csproj"
-    },
-    "Marketplace.Core.Data.Repository/1.0.0": {
-      "type": "project",
-      "path": "../../Data/Marketplace.Core.Data.Repository/Marketplace.Core.Data.Repository.csproj",
-      "msbuildProject": "../../Data/Marketplace.Core.Data.Repository/Marketplace.Core.Data.Repository.csproj"
-    },
-    "Marketplace.Core.Domain/1.0.0": {
-      "type": "project",
-      "path": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj",
-      "msbuildProject": "../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Marketplace.Core.Domain.csproj"
-    },
-    "Marketplace.Core.Shared.Data/1.0.0": {
-      "type": "project",
-      "path": "../Data/Marketplace.Core.Shared.Data/Marketplace.Core.Shared.Data.csproj",
-      "msbuildProject": "../Data/Marketplace.Core.Shared.Data/Marketplace.Core.Shared.Data.csproj"
+      "path": "../../Application/Marketplace.Core.BaseWeb/BaseWeb/Core.BaseWeb.csproj",
+      "msbuildProject": "../../Application/Marketplace.Core.BaseWeb/BaseWeb/Core.BaseWeb.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
-      "Marketplace.Core.Application >= 1.0.0",
-      "Marketplace.Core.Data >= 1.0.0",
-      "Marketplace.Core.Data.Repository >= 1.0.0",
+      "Core.Application >= 1.0.0",
+      "Core.Data >= 1.0.0",
+      "Core.Data.Repository >= 1.0.0",
       "Microsoft.Extensions.DependencyInjection.Abstractions >= 3.1.2"
     ]
   },
@@ -5098,9 +5098,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Marketplace.Core.Infrastructure.csproj",
-      "projectName": "Marketplace.Core.Infrastructure",
-      "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Marketplace.Core.Infrastructure.csproj",
+      "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
+      "projectName": "Core.Infrastructure",
+      "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
@@ -5119,14 +5119,23 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Marketplace.Core.Application.csproj"
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj"
             },
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Marketplace.Core.Data.Repository.csproj"
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Marketplace.Core.Application\\Core.Application.csproj"
             },
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Marketplace.Core.Data.csproj"
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj"
+            },
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj"
+            },
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data.Repository\\Core.Data.Repository.csproj"
+            },
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Marketplace.Core.Data\\Marketplace.Core.Data\\Core.Data.csproj"
             }
           }
         }

@@ -1,0 +1,15 @@
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.csprojAssemblyReference.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.AssemblyInfoInputs.cache
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.AssemblyInfo.cs
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Data.Repository.deps.json
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Data.Repository.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Data.Repository.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Data.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Domain.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Shared.Data.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Domain.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Data.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\bin\Debug\netcoreapp3.1\Core.Shared.Data.pdb
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.csproj.CopyComplete
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.dll
+C:\Users\Washington de Sousa\Desktop\FarmaciaMaisProxima\App\api\src\Core\Data\Core.Data.Repository\obj\Debug\netcoreapp3.1\Core.Data.Repository.pdb

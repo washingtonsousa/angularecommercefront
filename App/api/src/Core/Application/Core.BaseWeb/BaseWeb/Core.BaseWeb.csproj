@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <AssemblyName>Core.BaseWeb</AssemblyName>
+    <RootNamespace>Core.BaseWeb</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Domain\Core.Domain\Core.Domain\Core.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Domain\Marketplace.Core.Domain\Marketplace.Core.Domain\Core.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

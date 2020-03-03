@@ -453,7 +453,7 @@
       "version": "1.0.0",
       "restore": {
         "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Web\\MarketplaceWeb.csproj",
-        "projectName": "MarketplaceWeb",
+        "projectName": "ApiWeb",
         "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Web\\MarketplaceWeb.csproj",
         "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Web\\obj\\",
