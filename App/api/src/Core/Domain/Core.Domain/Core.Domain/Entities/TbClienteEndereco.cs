@@ -21,6 +21,6 @@ namespace Core.Domain.EF.Entities
         public bool? FlRemovido { get; set; }
 
         public virtual TbClienteEnderecoTipo IdClienteEnderecoTipoNavigation { get; set; }
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
     }
 }

@@ -847,8 +847,8 @@
     },
     "Core.Domain/1.0.0": {
       "type": "project",
-      "path": "../../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Core.Domain.csproj",
-      "msbuildProject": "../../../Domain/Marketplace.Core.Domain/Marketplace.Core.Domain/Core.Domain.csproj"
+      "path": "../../../Domain/Core.Domain/Core.Domain/Core.Domain.csproj",
+      "msbuildProject": "../../../Domain/Core.Domain/Core.Domain/Core.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -886,9 +886,6 @@
           "projectReferences": {
             "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
               "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
-            },
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Core.Domain.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Marketplace.Core.Domain\\Marketplace.Core.Domain\\Core.Domain.csproj"
             }
           }
         }

@@ -8,6 +8,11 @@
 /bazel-out
 /.vs/
 
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+
 # dependencies
 /node_modules
 backoffice/

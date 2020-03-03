@@ -9,7 +9,7 @@ namespace Core.Domain.EF.Entities
         public int IdPromocao { get; set; }
         public int IdCliente { get; set; }
 
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
         public virtual TbPromocao IdPromocaoNavigation { get; set; }
     }
 }

@@ -11,7 +11,7 @@ namespace Core.Domain.EF.Entities
         public DateTime DtUtilizado { get; set; }
         public int IdPedido { get; set; }
 
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
         public virtual Pedido IdPedidoNavigation { get; set; }
         public virtual TbPromocaoCupom IdPromocaoCupomNavigation { get; set; }
     }

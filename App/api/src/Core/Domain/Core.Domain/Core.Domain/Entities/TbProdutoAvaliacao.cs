@@ -15,7 +15,7 @@ namespace Core.Domain.EF.Entities
         public string DsComentario { get; set; }
         public string DsTitulo { get; set; }
 
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
         public virtual TbProduto IdProdutoNavigation { get; set; }
     }
 }

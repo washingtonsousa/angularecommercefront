@@ -11,7 +11,7 @@ namespace Core.Domain.EF.Entities
         public DateTime DtCadastro { get; set; }
         public string DsObservacao { get; set; }
 
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
         public virtual TbUsuario IdUsuarioNavigation { get; set; }
     }
 }

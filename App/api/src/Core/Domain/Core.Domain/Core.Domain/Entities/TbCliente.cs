@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
 {
-    public partial class TbCliente
+    public partial class Cliente
     {
-        public TbCliente()
+        public Cliente()
         {
             TbClienteEndereco = new HashSet<TbClienteEndereco>();
             TbClienteObservacao = new HashSet<TbClienteObservacao>();

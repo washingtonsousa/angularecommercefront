@@ -16,7 +16,7 @@ namespace Core.Domain.EF.Entities
         public bool FlStatus { get; set; }
         public string NmListaDesejo { get; set; }
 
-        public virtual TbCliente IdClienteNavigation { get; set; }
+        public virtual Cliente IdClienteNavigation { get; set; }
         public virtual TbListaDesejoPeriodo IdListaDesejoPeriodoNavigation { get; set; }
         public virtual ICollection<TbListaDesejoProdutoSku> TbListaDesejoProdutoSku { get; set; }
     }

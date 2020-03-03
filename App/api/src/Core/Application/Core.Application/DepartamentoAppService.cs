@@ -25,7 +25,6 @@ namespace Core.Application
     {
 
       IList<DepartamentoViewModel> departamentos = _mapper.Map<IList<DepartamentoViewModel>>(await _categoriaRepository.GetCategoriaDepartamentos());
-
       return departamentos;
 
     }

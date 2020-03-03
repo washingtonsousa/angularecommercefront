@@ -44,7 +44,7 @@ namespace Core.Data.EF.Context
         public virtual DbSet<TbCartaoClientePbm> TbCartaoClientePbm { get; set; }
         public virtual DbSet<Categoria> Categoria { get; set; }
         public virtual DbSet<TbCategoriaSeo> TbCategoriaSeo { get; set; }
-        public virtual DbSet<TbCliente> TbCliente { get; set; }
+        public virtual DbSet<Cliente> Cliente { get; set; }
         public virtual DbSet<TbClienteEndereco> TbClienteEndereco { get; set; }
         public virtual DbSet<TbClienteEnderecoTipo> TbClienteEnderecoTipo { get; set; }
         public virtual DbSet<TbClienteObservacao> TbClienteObservacao { get; set; }
@@ -825,7 +825,7 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_categoria_seo_tb_categoria");
             });
 
-            modelBuilder.Entity<TbCliente>(entity =>
+            modelBuilder.Entity<Cliente>(entity =>
             {
                 entity.HasKey(e => e.IdCliente);
 

@@ -17,7 +17,7 @@ namespace Core.BaseWeb.AutoMapper
       CreateMap<Categoria, SessaoViewModel>();
       CreateMap<ProdutoSku, ProdutoSkuViewModel>();
       CreateMap<DadosLoja, DadosLojaviewModel>();
+      CreateMap<Cliente, ClienteViewModel>()/* AutoMapper Ignora, pois serve apenas para retorno da autenticação*/.ForMember(m => m.Token, opt => opt.Ignore());
     }
-
   }
 }

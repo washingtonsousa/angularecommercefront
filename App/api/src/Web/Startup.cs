@@ -1,12 +1,16 @@
 using AutoMapper;
-using Infrastructure;
-using Core.BaseWeb.AutoMapper;
+using Core.Infrastructure;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using Core.Shared.Data.Models;
+using Newtonsoft.Json;
 
 namespace FarmaciaMaisProxima
 {
@@ -22,27 +26,40 @@ namespace FarmaciaMaisProxima
     public void ConfigureServices(IServiceCollection services)
     {
 
-      services.AddControllers().AddJsonOptions(jsonOptions =>
-      {
-        jsonOptions.JsonSerializerOptions.PropertyNamingPolicy = null;
-      }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+      services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore)
+        .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
+      var appSettingsSection = Configuration.GetSection("AppSettings");
+      services.Configure<AppSettings>(appSettingsSection);
+      var appSettings = appSettingsSection.Get<AppSettings>();
+      var key = Encoding.ASCII.GetBytes(appSettings.AppSecret);
+
+      services.AddAuthentication(x =>
+      {
+        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+      })
+           .AddJwtBearer(x =>
+           {
+             x.RequireHttpsMetadata = false;
+             x.SaveToken = true;
+             x.TokenValidationParameters = new TokenValidationParameters
+             {
+               ValidateIssuerSigningKey = true,
+               IssuerSigningKey = new SymmetricSecurityKey(key),
+               ValidateIssuer = false,
+               ValidateAudience = false
+             };
+           });
+
+   
       //DI Configuration  
       services.AddSingleton(Configuration);
       services.AddAutoMapper(typeof(Startup));
-
-      var mappingConfig = new MapperConfiguration(mc =>
-      {
-        mc.AddProfile(new DomainToViewModel());
-        mc.AddProfile(new ViewModelToDomain());
-      });
-
-      IMapper mapper = mappingConfig.CreateMapper();
-      services.AddSingleton(mapper);
-
       IoCContainer.InjectScoped(services);
       IoCContainer.InjectDataRepositories(services);
       IoCContainer.InjectApplicationServices(services);
+      IoCContainer.InjectServiceProviders(services);
 
     }
 
@@ -54,9 +71,19 @@ namespace FarmaciaMaisProxima
         app.UseDeveloperExceptionPage();
       }
 
+      app.UseCors(x => x
+               .AllowAnyOrigin()
+               .AllowAnyMethod()
+               .AllowAnyHeader());
+
+      
+
       app.UseHttpsRedirection();
       app.UseRouting();
+      app.UseAuthentication();
       app.UseAuthorization();
+
+
       app.UseEndpoints(end =>
       {
 

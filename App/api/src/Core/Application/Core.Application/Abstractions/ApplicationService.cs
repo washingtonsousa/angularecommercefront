@@ -1,8 +1,5 @@
 using AutoMapper;
 using Core.Domain.Repository.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Application.Abstractions
 {
