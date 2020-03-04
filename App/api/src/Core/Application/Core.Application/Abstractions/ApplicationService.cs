@@ -21,14 +21,11 @@ namespace Core.Application.Abstractions
 
     public ApplicationService(IMapper mapper)
     {
-   
       _mapper = mapper;
-
     }
 
     public ApplicationService()
     {
-
     }
   }
 }
