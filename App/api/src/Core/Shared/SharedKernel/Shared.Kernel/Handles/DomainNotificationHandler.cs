@@ -1,9 +1,7 @@
 using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Core.Shared.Kernel.Handles
 {
@@ -26,7 +24,6 @@ namespace Core.Shared.Kernel.Handles
       return _notifications;
     }
 
-
     public bool HasNotifications()
     {
       return GetValue().Count > 0;
@@ -45,5 +42,7 @@ namespace Core.Shared.Kernel.Handles
 
       return string.Empty;
     }
+
+
   }
 }

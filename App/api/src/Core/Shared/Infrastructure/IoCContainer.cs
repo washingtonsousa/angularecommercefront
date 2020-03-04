@@ -11,8 +11,10 @@ using Core.Domain.Repository.Interfaces;
 using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.Repository.UnityOfWork;
 using Core.Shared.Kernel.Events;
+using Core.Shared.Kernel.Handles;
 using Core.Shared.Kernel.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
+using System;
 
 namespace Core.Infrastructure
 {
@@ -24,6 +26,8 @@ namespace Core.Infrastructure
       services.AddScoped<MainContext, MainContext>();
       services.AddScoped<IUnityOfWork, UnityOfWork>();
       services.AddScoped<IApplicationContextManager, ApplicationContextManager>();
+      services.AddScoped<IAssertionConcern, AssertionConcern>();
+      services.AddScoped<IDomainNotificationHandler<DomainNotification>, DomainNotificationHandler>();
     }
 
     public static void InjectDataRepositories(IServiceCollection services)
@@ -53,6 +57,9 @@ namespace Core.Infrastructure
       services.AddSingleton(mapper);
 
       services.AddScoped<IDomainServiceContainerManager, DomainServiceContainerManager>();
+
+      services.AddSingleton(services.BuildServiceProvider());
+
     }
 
   }

@@ -1,8 +1,6 @@
 using Core.Domain.EF.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Core.Data.EF.Context
 {
@@ -11,12 +9,17 @@ namespace Core.Data.EF.Context
 
         private string ConnectionString;
 
-        public MainContext(IConfiguration config)
+        public MainContext(IConfiguration config, DbContextOptions<MainContext> options) : base(options)
         {
           ConnectionString = config.GetValue<string>("ConnectionStrings:BaseSistema");
         }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public MainContext(IConfiguration config)
+    {
+      ConnectionString = config.GetValue<string>("ConnectionStrings:BaseSistema");
+    }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
           if (!optionsBuilder.IsConfigured)
           {
@@ -24,8 +27,7 @@ namespace Core.Data.EF.Context
           }
         }
 
-
-    public virtual DbSet<ScLog> ScLog { get; set; }
+        public virtual DbSet<ScLog> ScLog { get; set; }
         public virtual DbSet<TbAcesso> TbAcesso { get; set; }
         public virtual DbSet<TbAcessoAplicativo> TbAcessoAplicativo { get; set; }
         public virtual DbSet<TbAplicativo> TbAplicativo { get; set; }

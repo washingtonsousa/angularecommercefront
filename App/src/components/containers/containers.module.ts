@@ -17,12 +17,34 @@ import { ImageUrlPipe } from 'src/pipes/env/image-url.pipe';
 import { PracaService } from 'src/services/praca.service';
 import { CestaTopoComponent } from './header/cesta-topo/cesta-topo.component';
 import { DirectiveModule } from 'src/directives/directive.module';
+import { DepartamentoService } from 'src/services/departamento.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
-    providers: [PedidoService, ImageUrlPipe, PracaService],
-    exports: [ContainerComponent, SliderComponent, CarouselMarcasComponent, CheckoutContainerComponent],
-    declarations: [HeaderComponent, CestaTopoComponent, ContainerComponent, MenuComponent, SliderComponent, FooterComponent, CheckoutHeaderComponent, CheckoutContainerComponent, CarouselMarcasComponent],
-    imports: [PipeModule, BrowserModule, CommonModule, SlickCarouselModule, RouterModule, DirectiveModule]
+    providers: [PedidoService, 
+        ImageUrlPipe, 
+        PracaService, 
+        DepartamentoService],
+    exports: [ContainerComponent, 
+        SliderComponent, 
+        CarouselMarcasComponent, 
+        CheckoutContainerComponent],
+    declarations: [HeaderComponent, 
+        CestaTopoComponent, 
+        ContainerComponent, 
+        MenuComponent, 
+        SliderComponent, 
+        FooterComponent, 
+        CheckoutHeaderComponent, 
+        CheckoutContainerComponent, 
+        CarouselMarcasComponent],
+    imports: [PipeModule, 
+        BrowserModule, 
+        HttpClientModule,
+        CommonModule, 
+        SlickCarouselModule, 
+        RouterModule, 
+        DirectiveModule]
 })
 export class ContainersModule {
 

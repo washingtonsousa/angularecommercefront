@@ -3,8 +3,11 @@ using Core.Application.Abstractions;
 using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
 using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Interfaces;
 using Core.Shared.Data.Models;
+using Core.Shared.Kernel.Events;
+using Core.Shared.Kernel.Interfaces;
 using Encryption;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
@@ -21,7 +24,12 @@ namespace Core.Application
     private readonly AppSettings _appSettings;
     private IClienteRepository _clienteRepository;
 
-    public AuthenticationAppService(IOptions<AppSettings> appSettings, IClienteRepository clienteRepository, IMapper mapper, IUnityOfWork unityOfWork) : base(mapper, unityOfWork)
+    public AuthenticationAppService(IOptions<AppSettings> appSettings,
+    IClienteRepository clienteRepository,
+    IMapper mapper,
+    IUnityOfWork unityOfWork,
+    IAssertionConcern assertionConcern)
+    : base(mapper, unityOfWork, assertionConcern)
     {
       _appSettings = appSettings.Value;
       _clienteRepository = clienteRepository;
@@ -30,10 +38,13 @@ namespace Core.Application
     public async Task<ClienteViewModel> Authenticate(string userName, string password)
     {
   
-      ClienteViewModel cliente =  _mapper.Map<ClienteViewModel>(await _clienteRepository.GetForAuthentication(userName, Crypto.ActionEncrypt(password)));
+      Cliente clienteFromDomain =  await _clienteRepository.GetForAuthentication(userName, Crypto.ActionEncrypt(password));
 
-      if (cliente == null)
-        return null;
+      ///Valida se autenticação funcionou e gera notificação
+      if(!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(clienteFromDomain, "Usuário ou senha inválidos")))
+      return null;
+
+      ClienteViewModel cliente = _mapper.Map<ClienteViewModel>(clienteFromDomain);
 
       // gera o Token JWT já que a autenticação funcionou
       var tokenHandler = new JwtSecurityTokenHandler();

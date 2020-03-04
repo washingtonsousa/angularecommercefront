@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  imagesServerUrl: "http://127.0.0.1:8080/"
+  imagesServerUrl: "http://127.0.0.1:8080/",
+  apiUrl: "https://localhost:44313/v1/"
   //imagesServerUrl: "http://marketplace.vannon.local"
 };
 

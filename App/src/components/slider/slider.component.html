@@ -4,7 +4,7 @@
     </ol>
     <div class="carousel-inner">
 
-      <div *ngFor="let banner of Banners; let i = index" [class]="'carousel-item ' + ((i == 1) ? 'active' : '')" [ngStyle]="{'background-image': 'url(' + ( banner.Fundo | imageUrl: 'none') +')' } ">
+      <div *ngFor="let banner of Banners; let i = index" [class]="'carousel-item ' + ((i == 1) ? 'active' : '')" [ngStyle]="{'background-image': 'url(' + ( banner.Fundo | imageUrl) +')' } ">
           <img class="d-block" [src]="banner.Arquivo | imageUrl" alt="Primeiro slide"> 
       </div>
 

@@ -10,23 +10,7 @@
                     <div class="nav-topo-dropdown-inner">
         
                         <ul class="no-bullet">
-                            
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-                            <li>teste</li>
-
+                            <li *ngFor="let departamento of Departamentos">{{departamento.NmCategoria}}</li>
                         </ul>
         
                     </div>
@@ -34,11 +18,24 @@
                 </div>
             
             </li>
-            <li class="nav-item"><a  class="nav-link"> <i class="fa fa-pills"></i> <span> Medicamentos </span> </a></li>
+
+
+
+            <li *ngFor="let departamento of DepartamentosMenu" class="nav-item"><a  class="nav-link"> 
+                <img [src]="departamento.DsImagemDestaque | imageUrl : ImageTypesPaths.IMAGEMDEPARTAMENTOPATH" /> 
+                <span> {{departamento.NmCategoria}} </span> 
+            </a></li>
+            
+            <!-- <li class="nav-item"><a  class="nav-link"> <i class="fa fa-pills"></i> <span> Medicamentos </span> </a></li>
             <li class="nav-item"><a  class="nav-link"> <i class="fa fa-heartbeat"></i> <span> Saúde e Bem Estar </span> </a></li>
             <li class="nav-item"><a  class="nav-link"> <i class="fa fa-first-aid"></i> <span> Primeiros Socorros </span> </a></li>
-            <li class="nav-item"><a  class="nav-link"> <i class="fa fa-shower"></i> <span> Higiene </span> </a></li>
+            <li class="nav-item"><a  class="nav-link"> <i class="fa fa-shower"></i> <span> Higiene </span> </a></li> -->
+
+
+
             <li class="nav-item "><a  class="nav-link btn btn-secondary specialoffers"> <i class="fa fa-ticket-alt"></i> <span> Ofertas especiais </span> </a></li>
+        
+        
         </ul>
 
     </div>

@@ -1,16 +1,19 @@
+using ApiWeb.Controllers.Abstractions;
 using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
+using Core.Shared.Kernel.Events;
+using Core.Shared.Kernel.Interfaces;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace ApiWeb.Controllers
 {
-    public class LoginController : Controller
-    {
+    public class LoginController : BaseController
+  {
     private readonly IAuthenticationService _authenticationService;
 
-    public LoginController(IAuthenticationService authenticationService)
+    public LoginController(IAuthenticationService authenticationService, IDomainNotificationHandler<DomainNotification> domainNotificationHandler) : base(domainNotificationHandler)
     {
       _authenticationService = authenticationService;
     }
@@ -23,11 +26,8 @@ namespace ApiWeb.Controllers
         return Forbid();
 
       var cliente = await _authenticationService.Authenticate(model.UserName, model.Password);
+      return ResponseWithFirstNotification(cliente, "Autenticado com sucesso!");
 
-      if (cliente == null)
-        return BadRequest(new { message = "Usuário ou senha incorreta" });
-
-      return Ok(cliente);
     }
 
   }

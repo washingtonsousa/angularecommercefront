@@ -5,6 +5,8 @@ using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
 using Core.Domain.Repository.Interfaces;
 using Core.Domain.Repository.Interfaces.Concrete;
+using Core.Shared.Kernel.Events;
+using Core.Shared.Kernel.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -16,7 +18,7 @@ namespace Core.Application
     public ICategoriaRepository _categoriaRepository;
 
 
-    public DepartamentoAppService(IMapper mapper, IUnityOfWork unityOfWork, ICategoriaRepository categoriaRepository) : base(mapper, unityOfWork)
+    public DepartamentoAppService(IMapper mapper, ICategoriaRepository categoriaRepository) : base(mapper)
     {
       _categoriaRepository = categoriaRepository;
     }

@@ -11,5 +11,6 @@ namespace Core.Shared.Kernel.Interfaces
     bool HasNotifications();
 
     string GetFirstNotification();
+
   }
 }

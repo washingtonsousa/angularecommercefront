@@ -181,7 +181,6 @@ menu {
 
     ul.navbar-nav {
         
-        flex-direction: column;
         width: 100%;
 
     }
@@ -201,8 +200,7 @@ z-index: 99999;
         width:100%;
         justify-content: center;
 
-    li {
-        text-align: center;
+     > li {
         min-width:200px;
     }
 
@@ -383,9 +381,7 @@ z-index: 99999;
     left:10;
     overflow: hidden;
     height:0px;
-    background:#f1f1f1;
-    max-height:500px;
-    min-width: 400px;
+    background:#fff;
     transition: 0.2s all;
 
     @include box-shadow-gen($light-box-shadow-color, 0px, 0px, 3px);
@@ -400,11 +396,6 @@ z-index: 99999;
 
         ul {
             max-height: 100%;
-            column-count:4;
-
-            li {
-                width:100px;
-            }
         }
     }
 

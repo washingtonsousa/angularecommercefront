@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Core.Shared.Data.Models;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 
 namespace FarmaciaMaisProxima
 {
@@ -26,7 +27,11 @@ namespace FarmaciaMaisProxima
     public void ConfigureServices(IServiceCollection services)
     {
 
-      services.AddControllers().AddNewtonsoftJson(opt => opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore)
+      services.AddControllers().AddNewtonsoftJson(opt => {
+
+        opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+        opt.SerializerSettings.ContractResolver = new DefaultContractResolver();
+        })
         .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
       var appSettingsSection = Configuration.GetSection("AppSettings");
@@ -52,7 +57,8 @@ namespace FarmaciaMaisProxima
              };
            });
 
-   
+
+    
       //DI Configuration  
       services.AddSingleton(Configuration);
       services.AddAutoMapper(typeof(Startup));
