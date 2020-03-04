@@ -18,6 +18,10 @@ namespace Core.Application.Abstractions
       _assertionConcern = assertionConcern;
     }
 
+    public ApplicationService(IMapper mapper, IUnityOfWork unityOfWork)
+    {
+      _mapper = mapper;
+    }
 
     public ApplicationService(IMapper mapper)
     {

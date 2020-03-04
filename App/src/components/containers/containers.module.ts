@@ -19,6 +19,7 @@ import { CestaTopoComponent } from './header/cesta-topo/cesta-topo.component';
 import { DirectiveModule } from 'src/directives/directive.module';
 import { DepartamentoService } from 'src/services/departamento.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ContextService } from 'src/services/storage/context.service';
 
 @NgModule({
     providers: [PedidoService, 

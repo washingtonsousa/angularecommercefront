@@ -13,7 +13,8 @@ namespace ApiWeb.Controllers
   {
     private readonly IAuthenticationService _authenticationService;
 
-    public LoginController(IAuthenticationService authenticationService, IDomainNotificationHandler<DomainNotification> domainNotificationHandler) : base(domainNotificationHandler)
+    public LoginController(IAuthenticationService authenticationService,
+      IDomainNotificationHandler<DomainNotification> domainNotificationHandler) : base(domainNotificationHandler)
     {
       _authenticationService = authenticationService;
     }
@@ -26,6 +27,7 @@ namespace ApiWeb.Controllers
         return Forbid();
 
       var cliente = await _authenticationService.Authenticate(model.UserName, model.Password);
+
       return ResponseWithFirstNotification(cliente, "Autenticado com sucesso!");
 
     }

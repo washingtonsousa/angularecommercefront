@@ -13,6 +13,7 @@ using Core.Domain.Repository.UnityOfWork;
 using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Handles;
 using Core.Shared.Kernel.Interfaces;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 
@@ -28,6 +29,7 @@ namespace Core.Infrastructure
       services.AddScoped<IApplicationContextManager, ApplicationContextManager>();
       services.AddScoped<IAssertionConcern, AssertionConcern>();
       services.AddScoped<IDomainNotificationHandler<DomainNotification>, DomainNotificationHandler>();
+      services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
     }
 
     public static void InjectDataRepositories(IServiceCollection services)
@@ -35,6 +37,7 @@ namespace Core.Infrastructure
       services.AddTransient<ICategoriaRepository, CategoriaRepository>();
       services.AddTransient<IDadosLojaRepository, DadosLojaRepository>();
       services.AddTransient<IClienteRepository, ClienteRepository>();
+      services.AddTransient<IPracaRepository, PracaRepository>();
     }
 
     public static void InjectApplicationServices(IServiceCollection services)

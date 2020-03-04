@@ -1,5 +1,6 @@
 
 using Core.Domain.EF.Entities;
+using System.Security.Claims;
 
 namespace Core.Application.Singleton
 {
@@ -7,6 +8,9 @@ namespace Core.Application.Singleton
   {
     public DadosLoja LojaInContext { get; set; }
     public Praca PracaAtual { get; set; }
+    public  ClaimsPrincipal UserInContext { get; set; }
+    public int PedidoIdSessao { get; set; }
+
   }
 
 }

@@ -7,6 +7,7 @@ import * as routing from "../shared/routing";
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule, TabsModule } from 'ngx-bootstrap';
 import { MaterialModule } from 'src/components/material/material.module';
+import { ContextService } from 'src/services/storage/context.service';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { MaterialModule } from 'src/components/material/material.module';
 ),
     NavigationModule
   ],
-  providers: [],
+  providers: [ContextService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

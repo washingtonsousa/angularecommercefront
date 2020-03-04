@@ -16,6 +16,6 @@ export class PedidoService {
         return  this.localStorage.set("pedido", Pedido);
     }
 
-    /// Para teste apenas
+
 
 }
