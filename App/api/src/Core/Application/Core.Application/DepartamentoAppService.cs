@@ -3,10 +3,8 @@ using AutoMapper;
 using Core.Application.Abstractions;
 using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
-using Core.Domain.Repository.Interfaces;
+using Core.Domain.Interfaces;
 using Core.Domain.Repository.Interfaces.Concrete;
-using Core.Shared.Kernel.Events;
-using Core.Shared.Kernel.Interfaces;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -18,7 +16,7 @@ namespace Core.Application
     public ICategoriaRepository _categoriaRepository;
 
 
-    public DepartamentoAppService(IMapper mapper, ICategoriaRepository categoriaRepository) : base(mapper)
+    public DepartamentoAppService(IMapper mapper, ICategoriaRepository categoriaRepository, IApplicationContextManager applicationContextManager) : base(mapper, applicationContextManager)
     {
       _categoriaRepository = categoriaRepository;
     }

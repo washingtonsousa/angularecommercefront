@@ -131,15 +131,15 @@ namespace Core.Data.EF.Context
         public virtual DbSet<TbParceiro> TbParceiro { get; set; }
         public virtual DbSet<TbParceiroXmlProduto> TbParceiroXmlProduto { get; set; }
         public virtual DbSet<Pedido> Pedido { get; set; }
-        public virtual DbSet<TbPedidoEntrega> TbPedidoEntrega { get; set; }
+        public virtual DbSet<PedidoEntrega> TbPedidoEntrega { get; set; }
         public virtual DbSet<TbPedidoGestaoRisco> TbPedidoGestaoRisco { get; set; }
         public virtual DbSet<TbPedidoHistorico> TbPedidoHistorico { get; set; }
         public virtual DbSet<TbPedidoLog> TbPedidoLog { get; set; }
         public virtual DbSet<TbPedidoOrigem> TbPedidoOrigem { get; set; }
-        public virtual DbSet<TbPedidoPagamento> TbPedidoPagamento { get; set; }
+        public virtual DbSet<PedidoPagamento> TbPedidoPagamento { get; set; }
         public virtual DbSet<TbPedidoPagamentoLog> TbPedidoPagamentoLog { get; set; }
         public virtual DbSet<TbPedidoProdutoKit> TbPedidoProdutoKit { get; set; }
-        public virtual DbSet<TbPedidoProdutoSku> TbPedidoProdutoSku { get; set; }
+        public virtual DbSet<PedidoProdutoSku> TbPedidoProdutoSku { get; set; }
         public virtual DbSet<TbPedidoSevenpdv> TbPedidoSevenpdv { get; set; }
         public virtual DbSet<TbPedidoStatus> TbPedidoStatus { get; set; }
         public virtual DbSet<TbPedidoStatusPbm> TbPedidoStatusPbm { get; set; }
@@ -3875,7 +3875,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
             });
 
-            modelBuilder.Entity<TbPedidoEntrega>(entity =>
+            modelBuilder.Entity<PedidoEntrega>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoEntrega);
 
@@ -4115,7 +4115,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbPedidoPagamento>(entity =>
+            modelBuilder.Entity<PedidoPagamento>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoPagamento);
 
@@ -4252,7 +4252,7 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_pedido_pagamento_tb_pagamento");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoPagamento)
+                    .WithMany(p => p.PedidoPagamento)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_pagamento_tb_pedido");
@@ -4319,7 +4319,7 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_pedido_produto_kit_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbPedidoProdutoSku>(entity =>
+            modelBuilder.Entity<PedidoProdutoSku>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoProdutoSku);
 
@@ -4386,7 +4386,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoProdutoSku)
+                    .WithMany(p => p.PedidoProdutosSku)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_produto_sku_tb_pedido");

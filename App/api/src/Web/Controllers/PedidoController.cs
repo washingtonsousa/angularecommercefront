@@ -1,12 +1,18 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiWeb.Controllers
 {
     public class PedidoController : Controller
     {
-        public IActionResult Index()
+
+
+        [AllowAnonymous]
+        [HttpPost]
+        public IActionResult AdicionarProduto()
         {
             return View();
         }
-    }
+
+  }
 }

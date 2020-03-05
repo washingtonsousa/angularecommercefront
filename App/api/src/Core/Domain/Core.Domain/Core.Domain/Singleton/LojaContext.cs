@@ -2,7 +2,7 @@
 using Core.Domain.EF.Entities;
 using System.Security.Claims;
 
-namespace Core.Application.Singleton
+namespace Core.Domain.Singleton
 {
   public class ApplicationContext
   {

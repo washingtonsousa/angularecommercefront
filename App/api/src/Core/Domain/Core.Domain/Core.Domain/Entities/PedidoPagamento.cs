@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
 {
-    public partial class TbPedidoPagamento
+    public partial class PedidoPagamento
     {
         public int IdPedidoPagamento { get; set; }
         public int IdPedido { get; set; }

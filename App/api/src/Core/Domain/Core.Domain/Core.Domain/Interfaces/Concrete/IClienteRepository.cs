@@ -2,7 +2,7 @@ using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Interfaces;
 using System.Threading.Tasks;
 
-namespace Core.Data.Repository.Interfaces.Concrete
+namespace Core.Domain.Repository.Interfaces.Concrete
 {
   public interface IClienteRepository : IRepositoryCRUD<Cliente>
   {

@@ -4,7 +4,7 @@ using Core.Shared.Kernel.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace ApiWeb.Controllers.Abstractions
+namespace Core.BaseWeb.Controllers.Abstractions
 {
   public abstract class BaseController : Controller
   {

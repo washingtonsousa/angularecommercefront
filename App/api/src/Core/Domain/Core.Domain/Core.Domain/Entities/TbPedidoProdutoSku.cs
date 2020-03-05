@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
 {
-    public partial class TbPedidoProdutoSku
+    public partial class PedidoProdutoSku
     {
-        public TbPedidoProdutoSku()
+        public PedidoProdutoSku()
         {
             TbPedidoProdutoKit = new HashSet<TbPedidoProdutoKit>();
         }

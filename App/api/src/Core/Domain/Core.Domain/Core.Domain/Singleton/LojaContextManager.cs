@@ -1,18 +1,16 @@
 
-using Core.Application.Interfaces;
-using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.Interfaces;
+using Core.Domain.Repository.Interfaces.Concrete;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
-using System.Linq;
 using Microsoft.Extensions.Primitives;
 
-namespace Core.Application.Singleton
+namespace Core.Domain.Singleton
 {
   public class ApplicationContextManager : IApplicationContextManager
   {
 
-    public  ApplicationContext _context;
+    private  ApplicationContext _context;
     private readonly IDadosLojaRepository _dadosLojaRepository;
     private readonly IPracaRepository _pracaRepository;
     private readonly IHttpContextAccessor _httpContextAccessor;

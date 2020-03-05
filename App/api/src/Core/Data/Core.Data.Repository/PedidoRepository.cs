@@ -1,4 +1,4 @@
-using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.EF.Entities;
 using System;
 using System.Collections.Generic;

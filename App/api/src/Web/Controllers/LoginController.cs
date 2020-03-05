@@ -1,5 +1,5 @@
-using ApiWeb.Controllers.Abstractions;
 using Core.Application.Interfaces;
+using Core.BaseWeb.Controllers.Abstractions;
 using Core.BaseWeb.ViewModel;
 using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
@@ -27,7 +27,6 @@ namespace ApiWeb.Controllers
         return Forbid();
 
       var cliente = await _authenticationService.Authenticate(model.UserName, model.Password);
-
       return ResponseWithFirstNotification(cliente, "Autenticado com sucesso!");
 
     }

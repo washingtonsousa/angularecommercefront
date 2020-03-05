@@ -2,11 +2,10 @@ using AutoMapper;
 using Core.Application.Abstractions;
 using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
-using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Interfaces;
 using Core.Shared.Data.Models;
-using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
 using Encryption;
 using Microsoft.Extensions.Options;
@@ -16,6 +15,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Domain.Interfaces;
 
 namespace Core.Application
 {
@@ -28,8 +28,9 @@ namespace Core.Application
     IClienteRepository clienteRepository,
     IMapper mapper,
     IUnityOfWork unityOfWork,
+    IApplicationContextManager applicationContextManager,
     IAssertionConcern assertionConcern)
-    : base(mapper, unityOfWork, assertionConcern)
+    : base(mapper, unityOfWork, assertionConcern, applicationContextManager)
     {
       _appSettings = appSettings.Value;
       _clienteRepository = clienteRepository;

@@ -12,7 +12,7 @@ namespace Core.Domain.EF.Entities
             TbListaDesejoProdutoSku = new HashSet<TbListaDesejoProdutoSku>();
             TbParceiroXmlProduto = new HashSet<TbParceiroXmlProduto>();
             TbPedidoProdutoKit = new HashSet<TbPedidoProdutoKit>();
-            TbPedidoProdutoSku = new HashSet<TbPedidoProdutoSku>();
+            TbPedidoProdutoSku = new HashSet<PedidoProdutoSku>();
             TbProdutoKit = new HashSet<TbProdutoKit>();
             TbProdutoSkuAviseMe = new HashSet<TbProdutoSkuAviseMe>();
             TbProdutoSkuEspecificacao = new HashSet<TbProdutoSkuEspecificacao>();
@@ -57,7 +57,7 @@ namespace Core.Domain.EF.Entities
         public virtual ICollection<TbListaDesejoProdutoSku> TbListaDesejoProdutoSku { get; set; }
         public virtual ICollection<TbParceiroXmlProduto> TbParceiroXmlProduto { get; set; }
         public virtual ICollection<TbPedidoProdutoKit> TbPedidoProdutoKit { get; set; }
-        public virtual ICollection<TbPedidoProdutoSku> TbPedidoProdutoSku { get; set; }
+        public virtual ICollection<PedidoProdutoSku> TbPedidoProdutoSku { get; set; }
         public virtual ICollection<TbProdutoKit> TbProdutoKit { get; set; }
         public virtual ICollection<TbProdutoSkuAviseMe> TbProdutoSkuAviseMe { get; set; }
         public virtual ICollection<TbProdutoSkuEspecificacao> TbProdutoSkuEspecificacao { get; set; }

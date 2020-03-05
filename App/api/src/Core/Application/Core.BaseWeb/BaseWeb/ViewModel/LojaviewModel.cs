@@ -1,7 +1,7 @@
 
 namespace Core.BaseWeb.ViewModel
 {
-  public class DadosLojaviewModel
+  public class LojaviewModel
   {
 
     public int IdDadosLoja { get; set; }

@@ -1,4 +1,5 @@
 using Core.Application.Interfaces;
+using Core.Domain.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 

@@ -1,14 +1,14 @@
 using AutoMapper;
 using Core.Application;
 using Core.Application.Interfaces;
-using Core.Application.Singleton;
+using Core.Domain.Singleton;
 using Core.BaseWeb.AutoMapper;
 using Core.Data.EF.Context;
 using Core.Data.Repository;
-using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.Repository.Interfaces.Concrete;
+using Core.Domain.Interfaces;
 using Core.Domain.Repository;
 using Core.Domain.Repository.Interfaces;
-using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.Repository.UnityOfWork;
 using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Handles;
@@ -29,7 +29,7 @@ namespace Core.Infrastructure
       services.AddScoped<IApplicationContextManager, ApplicationContextManager>();
       services.AddScoped<IAssertionConcern, AssertionConcern>();
       services.AddScoped<IDomainNotificationHandler<DomainNotification>, DomainNotificationHandler>();
-      services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
+      
     }
 
     public static void InjectDataRepositories(IServiceCollection services)
@@ -44,7 +44,9 @@ namespace Core.Infrastructure
     {
       services.AddTransient<IDepartamentoAppService, DepartamentoAppService>();
       services.AddTransient<IAuthenticationService, AuthenticationAppService>();
-   
+      services.AddTransient<IPracaAppService, PracaAppService>();
+      services.AddTransient<ILojaAppService, LojaAppService>();
+      services.AddTransient<IPedidoAppService, PedidoAppService>();
     }
 
     public static void InjectServiceProviders(IServiceCollection services)
@@ -62,6 +64,7 @@ namespace Core.Infrastructure
       services.AddScoped<IDomainServiceContainerManager, DomainServiceContainerManager>();
 
       services.AddSingleton(services.BuildServiceProvider());
+      services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 
     }
 

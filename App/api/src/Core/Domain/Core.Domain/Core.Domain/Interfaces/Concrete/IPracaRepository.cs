@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Data.Repository.Interfaces.Concrete
+namespace Core.Domain.Repository.Interfaces.Concrete
 {
   public interface IPracaRepository : IRepositoryRead<Praca>
   {

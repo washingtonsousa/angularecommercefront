@@ -8,10 +8,12 @@
 
   <ItemGroup>
     <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\Domain\Core.Domain\Core.Domain\Core.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Shared\SharedKernel\Shared.Kernel\Core.Shared.Kernel.csproj" />
   </ItemGroup>
 
 </Project>

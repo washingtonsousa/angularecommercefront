@@ -6,10 +6,7 @@ namespace Core.Domain.Repository.Interfaces.Concrete
 {
   public interface ICategoriaRepository 
   {
-
       Task<Categoria> GetCategoriaDepartamento(int Id);
-
-      Task<IList<Categoria>> GetCategoriaDepartamentos();
-
+    Task<IList<Categoria>> GetCategoriaDepartamentos();
   }
 }

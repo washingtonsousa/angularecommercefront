@@ -1,9 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
 {
-    public partial class TbPedidoEntrega
+    public partial class PedidoEntrega
     {
         public int IdPedidoEntrega { get; set; }
         public int IdPedido { get; set; }

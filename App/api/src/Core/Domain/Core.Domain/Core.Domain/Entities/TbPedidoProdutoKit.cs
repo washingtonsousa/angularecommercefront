@@ -10,7 +10,7 @@ namespace Core.Domain.EF.Entities
         public int IdProdutoItem { get; set; }
         public int NuQuantidade { get; set; }
 
-        public virtual TbPedidoProdutoSku IdPedidoProdutoSkuNavigation { get; set; }
+        public virtual PedidoProdutoSku IdPedidoProdutoSkuNavigation { get; set; }
         public virtual ProdutoSku IdProdutoItemNavigation { get; set; }
     }
 }

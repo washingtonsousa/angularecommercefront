@@ -9,7 +9,7 @@ namespace Core.Domain.EF.Entities
         {
             TbPagamentoGateway = new HashSet<TbPagamentoGateway>();
             TbPagamentoParcela = new HashSet<TbPagamentoParcela>();
-            TbPedidoPagamento = new HashSet<TbPedidoPagamento>();
+            TbPedidoPagamento = new HashSet<PedidoPagamento>();
         }
 
         public int IdPagamento { get; set; }
@@ -23,6 +23,6 @@ namespace Core.Domain.EF.Entities
         public virtual TbFormaPagamento IdFormaPagamentoNavigation { get; set; }
         public virtual ICollection<TbPagamentoGateway> TbPagamentoGateway { get; set; }
         public virtual ICollection<TbPagamentoParcela> TbPagamentoParcela { get; set; }
-        public virtual ICollection<TbPedidoPagamento> TbPedidoPagamento { get; set; }
+        public virtual ICollection<PedidoPagamento> TbPedidoPagamento { get; set; }
     }
 }

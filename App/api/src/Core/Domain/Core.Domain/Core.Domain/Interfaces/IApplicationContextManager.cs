@@ -1,11 +1,10 @@
-using Core.Application.Singleton;
+using Core.Domain.Singleton;
 using System.Threading.Tasks;
 
-namespace Core.Application.Interfaces
+namespace Core.Domain.Interfaces
 {
   public interface IApplicationContextManager
   {
     Task<ApplicationContext> getContext();
-
   }
 }

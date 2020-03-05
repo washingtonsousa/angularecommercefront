@@ -1,5 +1,5 @@
 using Core.Data.EF.Context;
-using Core.Data.Repository.Interfaces.Concrete;
+using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Abstractions;
 using Microsoft.EntityFrameworkCore;

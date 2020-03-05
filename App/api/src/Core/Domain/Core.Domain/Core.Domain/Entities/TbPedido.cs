@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
@@ -7,12 +7,12 @@ namespace Core.Domain.EF.Entities
     {
         public Pedido()
         {
-            TbPedidoEntrega = new HashSet<TbPedidoEntrega>();
+            TbPedidoEntrega = new HashSet<PedidoEntrega>();
             TbPedidoHistorico = new HashSet<TbPedidoHistorico>();
             TbPedidoLog = new HashSet<TbPedidoLog>();
-            TbPedidoPagamento = new HashSet<TbPedidoPagamento>();
+            PedidoPagamento = new HashSet<PedidoPagamento>();
             TbPedidoPagamentoLog = new HashSet<TbPedidoPagamentoLog>();
-            TbPedidoProdutoSku = new HashSet<TbPedidoProdutoSku>();
+            PedidoProdutosSku = new HashSet<PedidoProdutoSku>();
             TbPedidoSevenpdv = new HashSet<TbPedidoSevenpdv>();
             TbPromocaoCupomUtilizado = new HashSet<TbPromocaoCupomUtilizado>();
         }
@@ -62,12 +62,12 @@ namespace Core.Domain.EF.Entities
         public bool? FlMarketingCarrinhoVerificado { get; set; }
         public bool? FlImpresso { get; set; }
 
-        public virtual ICollection<TbPedidoEntrega> TbPedidoEntrega { get; set; }
+        public virtual ICollection<PedidoEntrega> TbPedidoEntrega { get; set; }
         public virtual ICollection<TbPedidoHistorico> TbPedidoHistorico { get; set; }
         public virtual ICollection<TbPedidoLog> TbPedidoLog { get; set; }
-        public virtual ICollection<TbPedidoPagamento> TbPedidoPagamento { get; set; }
+        public virtual ICollection<PedidoPagamento> PedidoPagamento { get; set; }
         public virtual ICollection<TbPedidoPagamentoLog> TbPedidoPagamentoLog { get; set; }
-        public virtual ICollection<TbPedidoProdutoSku> TbPedidoProdutoSku { get; set; }
+        public virtual ICollection<PedidoProdutoSku> PedidoProdutosSku { get; set; }
         public virtual ICollection<TbPedidoSevenpdv> TbPedidoSevenpdv { get; set; }
         public virtual ICollection<TbPromocaoCupomUtilizado> TbPromocaoCupomUtilizado { get; set; }
     }
