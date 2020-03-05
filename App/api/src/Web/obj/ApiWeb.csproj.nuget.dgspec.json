@@ -339,7 +339,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

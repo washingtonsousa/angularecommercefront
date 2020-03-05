@@ -22,6 +22,19 @@ namespace Core.Infrastructure
   public static class IoCContainer
   {
 
+
+    public static void InjectAll(IServiceCollection services)
+    {
+      InjectScoped(services);
+      InjectDataRepositories( services);
+      InjectApplicationServices( services);
+      InjectScoped( services);
+      InjectDataRepositories(services);
+      InjectServiceProviders(services);
+    }
+
+
+
     public static void InjectScoped(IServiceCollection services)
     {
       services.AddScoped<MainContext, MainContext>();
@@ -54,7 +67,7 @@ namespace Core.Infrastructure
 
       var mappingConfig = new MapperConfiguration(mc =>
       {
-        mc.AddProfile(new DomainToViewModel());
+        mc.AddProfile(new DefaultMappingProfile());
         mc.AddProfile(new ViewModelToDomain());
       });
 

@@ -34,41 +34,12 @@ namespace FarmaciaMaisProxima
         })
         .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-      var appSettingsSection = Configuration.GetSection("AppSettings");
-      services.Configure<AppSettings>(appSettingsSection);
-      var appSettings = appSettingsSection.Get<AppSettings>();
-      var key = Encoding.ASCII.GetBytes(appSettings.AppSecret);
+      ConfigureAuthentication(services);
 
-      services.AddAuthentication(x =>
-      {
-        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
-        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
-      })
-           .AddJwtBearer(x =>
-           {
-             x.RequireHttpsMetadata = false;
-             x.SaveToken = true;
-             x.TokenValidationParameters = new TokenValidationParameters
-             {
-               ValidateIssuerSigningKey = true,
-               IssuerSigningKey = new SymmetricSecurityKey(key),
-               ValidateIssuer = false,
-               ValidateAudience = false
-             };
-           });
-
-
-    
       //DI Configuration  
       services.AddSingleton(Configuration);
       services.AddAutoMapper(typeof(Startup));
-      IoCContainer.InjectScoped(services);
-      IoCContainer.InjectDataRepositories(services);
-      IoCContainer.InjectApplicationServices(services);
-      IoCContainer.InjectServiceProviders(services);
-
-
-
+      IoCContainer.InjectAll(services);
 
     }
 
@@ -99,6 +70,34 @@ namespace FarmaciaMaisProxima
         end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
 
       });
+
+    }
+
+
+    private void ConfigureAuthentication(IServiceCollection services)
+    {
+      var appSettingsSection = Configuration.GetSection("AppSettings");
+      services.Configure<AppSettings>(appSettingsSection);
+      var appSettings = appSettingsSection.Get<AppSettings>();
+      var key = Encoding.ASCII.GetBytes(appSettings.AppSecret);
+
+      services.AddAuthentication(x =>
+      {
+        x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+      })
+           .AddJwtBearer(x =>
+           {
+             x.RequireHttpsMetadata = false;
+             x.SaveToken = true;
+             x.TokenValidationParameters = new TokenValidationParameters
+             {
+               ValidateIssuerSigningKey = true,
+               IssuerSigningKey = new SymmetricSecurityKey(key),
+               ValidateIssuer = false,
+               ValidateAudience = false
+             };
+           });
 
     }
   }

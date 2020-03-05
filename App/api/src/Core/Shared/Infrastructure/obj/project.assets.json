@@ -3125,6 +3125,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Core.Shared.Kernel": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.Extensions.Primitives": "3.1.2"
         },

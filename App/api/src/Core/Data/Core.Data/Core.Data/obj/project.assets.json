@@ -1439,6 +1439,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "Core.Shared.Kernel": "1.0.0",
           "Microsoft.AspNetCore.Http": "2.2.2",
           "Microsoft.Extensions.Primitives": "3.1.2"
         },
@@ -1457,6 +1458,20 @@
         },
         "runtime": {
           "bin/placeholder/Core.Shared.Data.dll": {}
+        }
+      },
+      "Core.Shared.Kernel/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "3.1.2",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.Shared.Kernel.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.Shared.Kernel.dll": {}
         }
       }
     }
@@ -5378,6 +5393,11 @@
       "type": "project",
       "path": "../../../Shared/Data/Core.Shared.Data/Core.Shared.Data.csproj",
       "msbuildProject": "../../../Shared/Data/Core.Shared.Data/Core.Shared.Data.csproj"
+    },
+    "Core.Shared.Kernel/1.0.0": {
+      "type": "project",
+      "path": "../../../Shared/SharedKernel/Shared.Kernel/Core.Shared.Kernel.csproj",
+      "msbuildProject": "../../../Shared/SharedKernel/Shared.Kernel/Core.Shared.Kernel.csproj"
     }
   },
   "projectFileDependencyGroups": {

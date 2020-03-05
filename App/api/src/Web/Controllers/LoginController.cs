@@ -31,5 +31,17 @@ namespace ApiWeb.Controllers
 
     }
 
+
+    [HttpPost]
+    public async Task<IActionResult> Subscribe([FromBody] ClienteViewModel model)
+    {
+
+
+
+   
+      return ResponseWithFirstNotification(model, "Cadastrado com sucesso!");
+
+    }
+
   }
 }

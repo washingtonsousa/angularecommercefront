@@ -52,6 +52,11 @@ namespace Core.Data.Repository
       return await Context.Cliente.Where(u => u.DsEmail == UserName || u.DsCpfCnpj == UserName).FirstOrDefaultAsync();
     }
 
+    public async Task<bool> CheckIfExists(string UserName)
+    {
+      return await Context.Cliente.Where(u => u.DsEmail == UserName || u.DsCpfCnpj == UserName).AnyAsync();
+    }
+
     public Task Remove(Cliente item)
     {
       throw new NotImplementedException();
