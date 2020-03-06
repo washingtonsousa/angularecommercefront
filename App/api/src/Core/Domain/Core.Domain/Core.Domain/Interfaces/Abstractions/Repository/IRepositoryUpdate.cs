@@ -7,9 +7,9 @@ namespace Core.Domain.Repository.Interfaces
   public interface IRepositoryUpdate<T> where T : new()
   {
 
-    Task Update(T item);
+    void Update(T item);
 
-    Task Update(IList<T> item);
+    void Update(IList<T> item);
 
   }
 }

@@ -26,7 +26,6 @@ namespace Core.Data.EF.Context
     public MainContext CreateDbContext(string[] args)
     {
       var optionsBuilder = new DbContextOptionsBuilder<MainContext>();
-
       return new MainContext(_configuration, optionsBuilder.Options);
     }
   }

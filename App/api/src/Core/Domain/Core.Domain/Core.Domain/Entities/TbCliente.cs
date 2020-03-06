@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Core.Domain.EF.Entities
@@ -51,5 +51,7 @@ namespace Core.Domain.EF.Entities
         public virtual ICollection<TbProdutoAvaliacao> TbProdutoAvaliacao { get; set; }
         public virtual ICollection<TbPromocaoCliente> TbPromocaoCliente { get; set; }
         public virtual ICollection<TbPromocaoCupomUtilizado> TbPromocaoCupomUtilizado { get; set; }
+
+
     }
 }

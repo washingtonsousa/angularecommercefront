@@ -17,29 +17,29 @@ namespace Core.Data.Repository
     {
     }
 
-    public void Add(Cliente item)
+    public async Task Add(Cliente item)
     {
-      throw new NotImplementedException();
+      await Context.Cliente.AddAsync(item);
     }
 
-    public void Add(IList<Cliente> item)
+    public async Task Add(IList<Cliente> item)
     {
-      throw new NotImplementedException();
+     await  Context.Cliente.AddRangeAsync(item);
     }
 
-    public Task<Cliente> Get(int Id)
+    public async Task<Cliente> Get(int Id)
     {
-      throw new NotImplementedException();
+      return await Context.Cliente.FirstOrDefaultAsync(c => c.IdCliente == Id);
     }
 
-    public Task<IList<Cliente>> Get()
+    public async Task<IList<Cliente>> Get()
     {
-      throw new NotImplementedException();
+      return await Context.Cliente.ToListAsync();
     }
 
-    public Task<Cliente> GetFirstRecord()
+    public async Task<Cliente> GetFirstRecord()
     {
-      throw new NotImplementedException();
+      return await Context.Cliente.FirstOrDefaultAsync();
     }
 
     public async Task<Cliente> GetForAuthentication(string UserName, string Password)
@@ -52,29 +52,34 @@ namespace Core.Data.Repository
       return await Context.Cliente.Where(u => u.DsEmail == UserName || u.DsCpfCnpj == UserName).FirstOrDefaultAsync();
     }
 
-    public async Task<bool> CheckIfExists(string UserName)
+    public async Task<Cliente> GetByEmailOrDocument(string DsEmail, string DsCpfCnpj)
     {
-      return await Context.Cliente.Where(u => u.DsEmail == UserName || u.DsCpfCnpj == UserName).AnyAsync();
+      return await Context.Cliente.FirstOrDefaultAsync(u => u.DsEmail == DsEmail || u.DsCpfCnpj == DsCpfCnpj);
     }
 
-    public Task Remove(Cliente item)
+    public async Task<bool> CheckIfExists(string DsEmail, string DsCpfCnpj)
     {
-      throw new NotImplementedException();
+      return await Context.Cliente.Where(u => u.DsEmail == DsEmail || u.DsCpfCnpj == DsCpfCnpj).AnyAsync();
     }
 
-    public Task Remove(IList<Cliente> item)
+    public void Remove(Cliente item)
     {
-      throw new NotImplementedException();
+      Context.Remove(item);
     }
 
-    public Task Update(Cliente item)
+    public void Remove(IList<Cliente> item)
     {
-      throw new NotImplementedException();
+      Context.RemoveRange(item);
     }
 
-    public Task Update(IList<Cliente> item)
+    public void Update(Cliente item)
     {
-      throw new NotImplementedException();
+      Context.Update(item);
+    }
+
+    public void Update(IList<Cliente> item)
+    {
+      Context.UpdateRange(item);
     }
   }
 }

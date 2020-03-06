@@ -13,12 +13,12 @@ namespace Core.Data.Repository
     {
     }
 
-    public void Add(PedidoProdutoSku item)
+    public Task Add(PedidoProdutoSku item)
     {
       throw new System.NotImplementedException();
     }
 
-    public void Add(IList<PedidoProdutoSku> item)
+    public Task Add(IList<PedidoProdutoSku> item)
     {
       throw new System.NotImplementedException();
     }
@@ -38,22 +38,22 @@ namespace Core.Data.Repository
       throw new System.NotImplementedException();
     }
 
-    public Task Remove(PedidoProdutoSku item)
+    public void Remove(PedidoProdutoSku item)
     {
       throw new System.NotImplementedException();
     }
 
-    public Task Remove(IList<PedidoProdutoSku> item)
+    public void Remove(IList<PedidoProdutoSku> item)
     {
       throw new System.NotImplementedException();
     }
 
-    public Task Update(PedidoProdutoSku item)
+    public void Update(PedidoProdutoSku item)
     {
       throw new System.NotImplementedException();
     }
 
-    public Task Update(IList<PedidoProdutoSku> item)
+    public void Update(IList<PedidoProdutoSku> item)
     {
       throw new System.NotImplementedException();
     }

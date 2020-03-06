@@ -8,12 +8,12 @@ namespace Core.Data.Repository
 {
   public class PedidoRepository : IPedidoRepository
   {
-    public void Add(Pedido item)
+    public Task Add(Pedido item)
     {
       throw new NotImplementedException();
     }
 
-    public void Add(IList<Pedido> item)
+    public Task Add(IList<Pedido> item)
     {
       throw new NotImplementedException();
     }
@@ -33,22 +33,22 @@ namespace Core.Data.Repository
       throw new NotImplementedException();
     }
 
-    public Task Remove(Pedido item)
+    public void Remove(Pedido item)
     {
       throw new NotImplementedException();
     }
 
-    public Task Remove(IList<Pedido> item)
+    public void Remove(IList<Pedido> item)
     {
       throw new NotImplementedException();
     }
 
-    public Task Update(Pedido item)
+    public void Update(Pedido item)
     {
       throw new NotImplementedException();
     }
 
-    public Task Update(IList<Pedido> item)
+    public void Update(IList<Pedido> item)
     {
       throw new NotImplementedException();
     }

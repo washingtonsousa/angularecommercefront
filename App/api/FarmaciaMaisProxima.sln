@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Extensions", "Extensions", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Modules", "Modules", "{71FF658D-4161-4037-B946-17860DDB576D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions.Modules.Marketplace", "src\Extensions\Modules\Extensions.Modules.Marketplace\Extensions.Modules.Marletplace\Extensions.Modules.Marketplace.csproj", "{B9CEAB86-1B80-4B1D-AFF2-5A78C5105B97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Extensions.Modules.Marketplace", "src\Extensions\Modules\Extensions.Modules.Marketplace\Extensions.Modules.Marletplace\Extensions.Modules.Marketplace.csproj", "{B9CEAB86-1B80-4B1D-AFF2-5A78C5105B97}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

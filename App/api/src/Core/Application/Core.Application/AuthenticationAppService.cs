@@ -7,7 +7,6 @@ using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Interfaces;
 using Core.Shared.Data.Models;
 using Core.Shared.Kernel.Interfaces;
-using Encryption;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -16,6 +15,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Core.Domain.Interfaces;
+using Core.Domain.Interfaces.Concrete.Services;
 
 namespace Core.Application
 {
@@ -23,9 +23,10 @@ namespace Core.Application
   {
     private readonly AppSettings _appSettings;
     private IClienteRepository _clienteRepository;
+    IClienteService _clienteService;
 
     public AuthenticationAppService(IOptions<AppSettings> appSettings,
-    IClienteRepository clienteRepository,
+    IClienteService clienteService,
     IMapper mapper,
     IUnityOfWork unityOfWork,
     IApplicationContextManager applicationContextManager,
@@ -33,16 +34,16 @@ namespace Core.Application
     : base(mapper, unityOfWork, assertionConcern, applicationContextManager)
     {
       _appSettings = appSettings.Value;
-      _clienteRepository = clienteRepository;
+      _clienteService = clienteService;
     }
 
     public async Task<ClienteViewModel> Authenticate(string userName, string password)
     {
   
-      Cliente clienteFromDomain =  await _clienteRepository.GetForAuthentication(userName, Crypto.ActionEncrypt(password));
+      Cliente clienteFromDomain = await _clienteService.Authenticate(userName, password);
 
       ///Valida se autenticação funcionou e gera notificação
-      if(!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(clienteFromDomain, "Usuário ou senha inválidos")))
+      if(clienteFromDomain == null)
       return null;
 
       ClienteViewModel cliente = _mapper.Map<ClienteViewModel>(clienteFromDomain);

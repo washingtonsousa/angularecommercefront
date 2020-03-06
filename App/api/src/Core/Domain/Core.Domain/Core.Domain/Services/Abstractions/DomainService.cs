@@ -1,8 +1,4 @@
-using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Domain.Services.Abstractions
 {

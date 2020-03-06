@@ -7,9 +7,9 @@ namespace Core.Domain.Repository.Interfaces
   public interface IRepositoryCreate<T> where T : new()
   {
 
-    void Add(T item);
+    Task Add(T item);
 
-    void Add(IList<T> item);
+    Task Add(IList<T> item);
 
   }
 }

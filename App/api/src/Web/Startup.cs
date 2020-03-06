@@ -12,6 +12,9 @@ using System.Text;
 using Core.Shared.Data.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System.Linq;
+using Core.Shared.Kernel.Interfaces;
+using System;
 
 namespace FarmaciaMaisProxima
 {
@@ -27,12 +30,21 @@ namespace FarmaciaMaisProxima
     public void ConfigureServices(IServiceCollection services)
     {
 
+      services.AddCors(options =>
+      {
+        options.AddPolicy("DefinedOrigins", builder =>
+                                        {
+                                          builder.AllowAnyHeader()
+                                                       .AllowAnyMethod()
+                                                       .WithOrigins("http://marketplace.vannon.local")
+                                                       .AllowCredentials();
+       }); });
+
       services.AddControllers().AddNewtonsoftJson(opt => {
 
-        opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
-        opt.SerializerSettings.ContractResolver = new DefaultContractResolver();
-        })
-        .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+      opt.SerializerSettings.ReferenceLoopHandling = ReferenceLoopHandling.Ignore;
+      opt.SerializerSettings.ContractResolver = new DefaultContractResolver();
+      }).SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
       ConfigureAuthentication(services);
 
@@ -40,6 +52,7 @@ namespace FarmaciaMaisProxima
       services.AddSingleton(Configuration);
       services.AddAutoMapper(typeof(Startup));
       IoCContainer.InjectAll(services);
+      InjectServiceModules(services);
 
     }
 
@@ -47,28 +60,29 @@ namespace FarmaciaMaisProxima
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
       if (env.IsDevelopment())
-      {
         app.UseDeveloperExceptionPage();
-      }
 
-      app.UseCors(x => x
+      if (env.IsDevelopment())
+      {
+        app.UseCors(x => x
                .AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader());
 
-      
+      } else
+      {
+        app.UseCors("DefinedOrigins");
+      }
 
+      
       app.UseHttpsRedirection();
       app.UseRouting();
       app.UseAuthentication();
       app.UseAuthorization();
 
-
       app.UseEndpoints(end =>
       {
-
         end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
-
       });
 
     }
@@ -98,6 +112,33 @@ namespace FarmaciaMaisProxima
                ValidateAudience = false
              };
            });
+
+    }
+
+    /// <summary>
+    /// Responsável por incluir nos serviços os containers de todos os módulos referenciados na aplicação
+    /// </summary>
+    /// <param name="services"></param>
+    private  void InjectServiceModules(IServiceCollection services)
+    {
+
+      //Tipo da interface obrigatoriamente herdada pelos módulos da aplicação
+      var type = typeof(IoCModuleInject);
+
+      ///Tipos encontrados dentro dos assemblies referenciados na aplicação web
+      var types = AppDomain.CurrentDomain.GetAssemblies()
+          .SelectMany(s => s.GetTypes())
+          .Where(p => type.IsAssignableFrom(p));
+
+      //Removidos tipos abstratos da lista
+      types = types.Where(t => t.IsClass == true).ToList();
+
+      ///Containers instanciados e dependencias incluidas no container principal da aplicação
+      foreach (var container in types)
+      {
+        IoCModuleInject instance = (IoCModuleInject)Activator.CreateInstance(container);
+        instance.InjectAll(services);
+      }
 
     }
   }

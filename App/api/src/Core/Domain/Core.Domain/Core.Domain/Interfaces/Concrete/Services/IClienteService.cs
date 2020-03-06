@@ -8,9 +8,12 @@ namespace Core.Domain.Interfaces.Concrete.Services
 {
   public interface IClienteService
   {
+    Task<bool> CheckIfExists(string dsEmail, string dsCpfCnpj);
+    Task<Cliente> Authenticate(string userName, string password);
+    void AddCliente(Cliente cliente);
+    void UpdateCliente(Cliente clienteForUpdate, Cliente cliente);
 
-    Task<bool> VerifyIfAlreadyExists(string UserName);
-
+    Task<Cliente> CheckIfNotExists(string dsEmail, string dsCpfCnpj);
 
   }
 }

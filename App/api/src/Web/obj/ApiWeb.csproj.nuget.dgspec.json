@@ -597,6 +597,9 @@
             "projectReferences": {
               "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
                 "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj"
+              },
+              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }

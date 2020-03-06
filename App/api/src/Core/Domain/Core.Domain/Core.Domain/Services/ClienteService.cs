@@ -1,9 +1,11 @@
-using System.Threading.Tasks;
 using Core.Domain.EF.Entities;
 using Core.Domain.Interfaces.Concrete.Services;
+using Core.Domain.Interfaces.Concrete.Specification;
 using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.Services.Abstractions;
 using Core.Shared.Kernel.Interfaces;
+using Encryption;
+using System.Threading.Tasks;
 
 namespace Core.Domain.Services
 {
@@ -12,16 +14,17 @@ namespace Core.Domain.Services
 
     IClienteRepository _clienteRepository;
 
-    public ClienteService(IClienteRepository clienteRepository, IAssertionConcern assertionConcern, IDomainServiceContainerManager domainServiceContainerManager)
+    public ClienteService(IClienteRepository clienteRepository,
+      IAssertionConcern assertionConcern,
+      IDomainServiceContainerManager domainServiceContainerManager)
       : base(assertionConcern, domainServiceContainerManager)
     {
       _clienteRepository = clienteRepository;
     }
 
-
-    public async Task<bool> VerifyIfAlreadyExists(string UserName)
+    public async Task<bool> CheckIfExists(string dsEmail, string dsCpfCnpj)
     {
-      bool exists = await _clienteRepository.CheckIfExists(UserName);
+      bool exists = await _clienteRepository.CheckIfExists(dsEmail, dsCpfCnpj);
 
       if (exists)
         _domainServiceContainerManager.DomainNotify(_assertionConcern.AssertFalse(exists, "Cliente já possui Email e/ou CPF já cadastrado"));
@@ -29,5 +32,39 @@ namespace Core.Domain.Services
       return exists;
 
     }
+
+    public async Task<Cliente> CheckIfNotExists(string dsEmail, string dsCpfCnpj)
+    {
+      Cliente cliente = await _clienteRepository.GetByEmailOrDocument(dsEmail, dsCpfCnpj);
+
+      if (!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(cliente, "Cliente não encontrado")))
+        return null;
+
+      return cliente;
+
+    }
+
+    public async Task<Cliente> Authenticate(string userName, string password)
+    {
+      Cliente cliente = await _clienteRepository.GetForAuthentication(userName, Crypto.ActionEncrypt(password));
+
+      ///Valida se autenticação funcionou e gera notificação
+      if (!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(cliente, "Usuário ou senha inválidos")))
+        return null;
+
+      return cliente;
+    }
+
+    public void AddCliente(Cliente cliente)
+    {
+      _clienteRepository.Add(cliente);
+    }
+
+
+    public void UpdateCliente(Cliente clienteForUpdate, Cliente cliente)
+    {
+      _clienteRepository.Update(clienteForUpdate);
+    }
+
   }
 }
