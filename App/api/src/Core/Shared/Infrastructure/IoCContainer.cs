@@ -17,15 +17,16 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Core.Domain.Interfaces.Concrete.Services;
 using Core.Domain.Services;
-using Core.Domain.Interfaces.Concrete.Specification;
 using Core.Domain.Specification;
+using Core.Domain.Interfaces.Concrete.Repository;
+using System;
 
 namespace Core.Infrastructure
 {
   public static class IoCContainer
   {
 
-    public static void InjectAll(IServiceCollection services)
+    public static void InjectAll(this IServiceCollection services)
     {
       InjectScoped(services);
       InjectDataRepositories( services);
@@ -34,32 +35,31 @@ namespace Core.Infrastructure
       InjectDomainSpecifications(services);
       InjectScoped( services);
       InjectDataRepositories(services);
-      InjectServiceProviders(services);
+      InjectExtensions(services);
     }
 
-    public static void InjectScoped(IServiceCollection services)
+    public static void InjectScoped(this IServiceCollection services)
     {
       services.AddScoped<MainContext, MainContext>();
       services.AddScoped<IUnityOfWork, UnityOfWork>();
       services.AddScoped<IApplicationContextManager, ApplicationContextManager>();
-      services.AddScoped<IAssertionConcern, AssertionConcern>();
       services.AddScoped<IDomainNotificationHandler<DomainNotification>, DomainNotificationHandler>();
     }
 
-    public static void InjectDataRepositories(IServiceCollection services)
+    public static void InjectDataRepositories(this IServiceCollection services)
     {
       services.AddTransient<ICategoriaRepository, CategoriaRepository>();
       services.AddTransient<IDadosLojaRepository, DadosLojaRepository>();
       services.AddTransient<IClienteRepository, ClienteRepository>();
       services.AddTransient<IPracaRepository, PracaRepository>();
+      services.AddTransient<IApplicationModuleRepository, ApplicationModuleRepository>();
     }
 
-    public static void InjectDomainSpecifications(IServiceCollection services)
+    public static void InjectDomainSpecifications(this IServiceCollection services)
     {
-         services.AddTransient<IClienteSpecification, ClienteSpecification>();
     }
 
-    public static void InjectApplicationServices(IServiceCollection services)
+    public static void InjectApplicationServices(this IServiceCollection services)
     {
       services.AddTransient<IDepartamentoAppService, DepartamentoAppService>();
       services.AddTransient<IAuthenticationService, AuthenticationAppService>();
@@ -69,12 +69,12 @@ namespace Core.Infrastructure
       services.AddTransient<IClienteAppService, ClienteAppService>();
     }
 
-    public static void InjectDomainServices(IServiceCollection services)
+    public static void InjectDomainServices(this IServiceCollection services)
     {
       services.AddTransient<IClienteService, ClienteService>();
     }
 
-    public static void InjectServiceProviders(IServiceCollection services)
+    public static void InjectExtensions(this IServiceCollection services)
     {
 
       services.AddSingleton(new MapperConfiguration(mc =>
@@ -82,10 +82,22 @@ namespace Core.Infrastructure
         mc.AddProfile(new DefaultMappingProfile());
       }).CreateMapper());
 
-      services.AddScoped<IDomainServiceContainerManager, DomainServiceContainerManager>();
+      services.AddScoped<IDomainEventContainer, DomainEvent>();
       services.AddSingleton(services.BuildServiceProvider());
       services.AddTransient<IHttpContextAccessor, HttpContextAccessor>();
 
     }
+
+    public static IServiceProvider BuildAppServiceProvider(this IServiceCollection services)
+    {
+
+      IServiceProvider provider = services.BuildServiceProvider();
+
+      services.AddSingleton(provider);
+
+      return provider;
+
+    }
+
   }
 }

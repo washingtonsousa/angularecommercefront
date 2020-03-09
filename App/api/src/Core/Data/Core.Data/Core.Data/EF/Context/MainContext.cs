@@ -1,4 +1,5 @@
 using Core.Domain.EF.Entities;
+using Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 
@@ -231,12 +232,38 @@ namespace Core.Data.EF.Context
         public virtual DbSet<TbVitrineProdutoSku> TbVitrineProdutoSku { get; set; }
         public virtual DbSet<TbVitrineTipo> TbVitrineTipo { get; set; }
         public virtual DbSet<Vannonline> Vannonline { get; set; }
- 
+        public virtual DbSet<ApplicationModule> ApplicationModule { get; set; }
 
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<ScLog>(entity =>
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+
+      modelBuilder.Entity<ApplicationModule>(entity =>
+      {
+        entity.ToTable("tb_module");
+
+        entity.Property(e => e.IdModule).HasColumnName("id_module");
+
+        entity.Property(e => e.Name)
+            .IsRequired()
+            .HasColumnName("name")
+            .IsUnicode(false);
+
+        entity.Property(e => e.Description)
+            .IsRequired()
+            .HasColumnName("description")
+            .IsUnicode(false);
+
+        entity.Property(e => e.IsActivated)
+            .IsRequired()
+            .HasColumnName("fl_activated")
+            .HasMaxLength(30)
+            .IsUnicode(false);
+      });
+
+
+
+      modelBuilder.Entity<ScLog>(entity =>
             {
                 entity.ToTable("sc_log");
 

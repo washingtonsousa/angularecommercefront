@@ -3,6 +3,7 @@ using Core.Application.Interfaces;
 using Core.Domain.Interfaces;
 using Core.Domain.Repository.Interfaces;
 using Core.Shared.Kernel.Interfaces;
+using System;
 
 namespace Core.Application.Abstractions
 {
@@ -11,22 +12,23 @@ namespace Core.Application.Abstractions
 
     protected IMapper _mapper;
     protected IUnityOfWork _unityOfWork;
-    protected IAssertionConcern _assertionConcern;
     protected IApplicationContextManager _applicationContextManager;
+    protected IServiceProvider _serviceProvider;
 
-    public ApplicationService(IMapper mapper, IUnityOfWork unityOfWork, IAssertionConcern assertionConcern, IApplicationContextManager applicationContextManager)
+
+    public ApplicationService(IMapper mapper, IUnityOfWork unityOfWork, IApplicationContextManager applicationContextManager, IServiceProvider serviceProvider)
     {
       _mapper = mapper;
       _unityOfWork = unityOfWork;
-      _assertionConcern = assertionConcern;
-      _applicationContextManager= applicationContextManager;
+      _applicationContextManager = applicationContextManager;
+      _serviceProvider = serviceProvider;
     }
 
     public ApplicationService(IMapper mapper, IUnityOfWork unityOfWork, IApplicationContextManager applicationContextManager)
     {
       _mapper = mapper;
       _unityOfWork = unityOfWork;
-      _applicationContextManager = applicationContextManager;
+      _applicationContextManager= applicationContextManager;
     }
 
     public ApplicationService(IMapper mapper, IApplicationContextManager applicationContextManager)

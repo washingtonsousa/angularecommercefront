@@ -13,13 +13,20 @@ using Core.Shared.Data.Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Linq;
-using Core.Shared.Kernel.Interfaces;
 using System;
+using Core.Shared.Kernel.Abstractions;
+using System.Reflection;
+using System.Collections.Generic;
+using System.IO;
+using Core.Domain.Interfaces;
+using System.Threading.Tasks;
+using ApiWeb;
 
 namespace FarmaciaMaisProxima
 {
   public class Startup
   {
+
     public Startup(IConfiguration configuration)
     {
       Configuration = configuration;
@@ -51,8 +58,8 @@ namespace FarmaciaMaisProxima
       //DI Configuration  
       services.AddSingleton(Configuration);
       services.AddAutoMapper(typeof(Startup));
-      IoCContainer.InjectAll(services);
-      InjectServiceModules(services);
+      services.InjectAll();
+      services.InjectServiceModules(services.BuildAppServiceProvider());
 
     }
 
@@ -112,34 +119,8 @@ namespace FarmaciaMaisProxima
                ValidateAudience = false
              };
            });
-
     }
 
-    /// <summary>
-    /// Responsável por incluir nos serviços os containers de todos os módulos referenciados na aplicação
-    /// </summary>
-    /// <param name="services"></param>
-    private  void InjectServiceModules(IServiceCollection services)
-    {
 
-      //Tipo da interface obrigatoriamente herdada pelos módulos da aplicação
-      var type = typeof(IoCModuleInject);
-
-      ///Tipos encontrados dentro dos assemblies referenciados na aplicação web
-      var types = AppDomain.CurrentDomain.GetAssemblies()
-          .SelectMany(s => s.GetTypes())
-          .Where(p => type.IsAssignableFrom(p));
-
-      //Removidos tipos abstratos da lista
-      types = types.Where(t => t.IsClass == true).ToList();
-
-      ///Containers instanciados e dependencias incluidas no container principal da aplicação
-      foreach (var container in types)
-      {
-        IoCModuleInject instance = (IoCModuleInject)Activator.CreateInstance(container);
-        instance.InjectAll(services);
-      }
-
-    }
   }
 }

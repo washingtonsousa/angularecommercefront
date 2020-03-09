@@ -1,8 +1,8 @@
 using Core.Domain.EF.Entities;
 using Core.Domain.Interfaces.Concrete.Services;
-using Core.Domain.Interfaces.Concrete.Specification;
 using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.Services.Abstractions;
+using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
 using Encryption;
 using System.Threading.Tasks;
@@ -15,9 +15,8 @@ namespace Core.Domain.Services
     IClienteRepository _clienteRepository;
 
     public ClienteService(IClienteRepository clienteRepository,
-      IAssertionConcern assertionConcern,
-      IDomainServiceContainerManager domainServiceContainerManager)
-      : base(assertionConcern, domainServiceContainerManager)
+      IDomainEventContainer domainServiceContainerManager)
+      : base(domainServiceContainerManager)
     {
       _clienteRepository = clienteRepository;
     }
@@ -27,7 +26,7 @@ namespace Core.Domain.Services
       bool exists = await _clienteRepository.CheckIfExists(dsEmail, dsCpfCnpj);
 
       if (exists)
-        _domainServiceContainerManager.DomainNotify(_assertionConcern.AssertFalse(exists, "Cliente já possui Email e/ou CPF já cadastrado"));
+        DomainEvent.DomainNotify(AssertionConcern.AssertFalse(exists, "Cliente já possui Email e/ou CPF já cadastrado"));
 
       return exists;
 
@@ -37,7 +36,7 @@ namespace Core.Domain.Services
     {
       Cliente cliente = await _clienteRepository.GetByEmailOrDocument(dsEmail, dsCpfCnpj);
 
-      if (!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(cliente, "Cliente não encontrado")))
+      if (!AssertionConcern.IsSatisfiedBy(AssertionConcern.AssertNotNull(cliente, "Cliente não encontrado")))
         return null;
 
       return cliente;
@@ -49,7 +48,7 @@ namespace Core.Domain.Services
       Cliente cliente = await _clienteRepository.GetForAuthentication(userName, Crypto.ActionEncrypt(password));
 
       ///Valida se autenticação funcionou e gera notificação
-      if (!_assertionConcern.IsSatisfiedBy(_assertionConcern.AssertNotNull(cliente, "Usuário ou senha inválidos")))
+      if (!AssertionConcern.IsSatisfiedBy(AssertionConcern.AssertNotNull(cliente, "Usuário ou senha inválidos")))
         return null;
 
       return cliente;
@@ -63,6 +62,10 @@ namespace Core.Domain.Services
 
     public void UpdateCliente(Cliente clienteForUpdate, Cliente cliente)
     {
+
+
+
+
       _clienteRepository.Update(clienteForUpdate);
     }
 

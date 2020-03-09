@@ -3546,19 +3546,33 @@
           "bin/placeholder/Core.Shared.Kernel.dll": {}
         }
       },
-      "Extensions.Modules.Marketplace/1.0.0": {
+      "Module.Marketplace/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
           "Core.BaseWeb": "1.0.0",
-          "Core.Shared.Kernel": "1.0.0",
-          "Microsoft.AspNetCore.Mvc": "2.2.0"
+          "Core.Domain": "1.0.0",
+          "Core.Shared.Kernel": "1.0.0"
         },
         "compile": {
-          "bin/placeholder/Extensions.Modules.Marketplace.dll": {}
+          "bin/placeholder/Module.Marketplace.dll": {}
         },
         "runtime": {
-          "bin/placeholder/Extensions.Modules.Marketplace.dll": {}
+          "bin/placeholder/Module.Marketplace.dll": {}
+        }
+      },
+      "Module.SapMarketing/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Core.Domain": "1.0.0",
+          "Core.Shared.Kernel": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Module.SapMarketing.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Module.SapMarketing.dll": {}
         }
       }
     }
@@ -10425,10 +10439,15 @@
       "path": "../Core/Shared/SharedKernel/Shared.Kernel/Core.Shared.Kernel.csproj",
       "msbuildProject": "../Core/Shared/SharedKernel/Shared.Kernel/Core.Shared.Kernel.csproj"
     },
-    "Extensions.Modules.Marketplace/1.0.0": {
+    "Module.Marketplace/1.0.0": {
       "type": "project",
-      "path": "../Extensions/Modules/Extensions.Modules.Marketplace/Extensions.Modules.Marletplace/Extensions.Modules.Marketplace.csproj",
-      "msbuildProject": "../Extensions/Modules/Extensions.Modules.Marketplace/Extensions.Modules.Marletplace/Extensions.Modules.Marketplace.csproj"
+      "path": "../Extensions/Modules/Marketplace/Module.Marketplace.csproj",
+      "msbuildProject": "../Extensions/Modules/Marketplace/Module.Marketplace.csproj"
+    },
+    "Module.SapMarketing/1.0.0": {
+      "type": "project",
+      "path": "../Extensions/Modules/SapMarketing/Module.SapMarketing.csproj",
+      "msbuildProject": "../Extensions/Modules/SapMarketing/Module.SapMarketing.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -10438,13 +10457,14 @@
       "Core.BaseWeb >= 1.0.0",
       "Core.Domain >= 1.0.0",
       "Core.Infrastructure >= 1.0.0",
-      "Extensions.Modules.Marketplace >= 1.0.0",
       "Microsoft.ApplicationInsights >= 2.13.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.2",
       "Microsoft.AspNetCore.Mvc.NewtonsoftJson >= 3.1.2",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.0-preview1.19506.2",
       "Microsoft.Extensions.Logging.Debug >= 3.1.0-preview1.19506.1",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.0-preview1-19509-03",
+      "Module.Marketplace >= 1.0.0",
+      "Module.SapMarketing >= 1.0.0",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
@@ -10487,8 +10507,11 @@
             "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj": {
               "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj"
             },
-            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\Extensions.Modules.Marketplace\\Extensions.Modules.Marletplace\\Extensions.Modules.Marketplace.csproj": {
-              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\Extensions.Modules.Marketplace\\Extensions.Modules.Marletplace\\Extensions.Modules.Marketplace.csproj"
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\Marketplace\\Module.Marketplace.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\Marketplace\\Module.Marketplace.csproj"
+            },
+            "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\SapMarketing\\Module.SapMarketing.csproj": {
+              "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Extensions\\Modules\\SapMarketing\\Module.SapMarketing.csproj"
             }
           }
         }

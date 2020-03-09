@@ -16,25 +16,28 @@ using System.Text;
 using System.Threading.Tasks;
 using Core.Domain.Interfaces;
 using Core.Domain.Interfaces.Concrete.Services;
+using Core.Domain.ActionHooks;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Core.Application
 {
   public class AuthenticationAppService : ApplicationService, IAuthenticationService
   {
     private readonly AppSettings _appSettings;
-    private IClienteRepository _clienteRepository;
     IClienteService _clienteService;
+    IServiceProvider _serviceProvider;
 
     public AuthenticationAppService(IOptions<AppSettings> appSettings,
     IClienteService clienteService,
     IMapper mapper,
     IUnityOfWork unityOfWork,
     IApplicationContextManager applicationContextManager,
-    IAssertionConcern assertionConcern)
-    : base(mapper, unityOfWork, assertionConcern, applicationContextManager)
+    IServiceProvider serviceProvider)
+    : base(mapper, unityOfWork,  applicationContextManager)
     {
       _appSettings = appSettings.Value;
       _clienteService = clienteService;
+      _serviceProvider = serviceProvider;
     }
 
     public async Task<ClienteViewModel> Authenticate(string userName, string password)
@@ -62,8 +65,16 @@ namespace Core.Application
         Expires = DateTime.UtcNow.AddDays(1),
         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
       };
+
       var token = tokenHandler.CreateToken(tokenDescriptor);
       cliente.Token = tokenHandler.WriteToken(token);
+
+      var services = _serviceProvider.GetServices<IClienteAoLogar>();
+
+      foreach(var service in services)
+      {
+        service.hookClienteAoLogar(clienteFromDomain);
+      }
 
       return cliente.GetWithoutPassWord;
     }

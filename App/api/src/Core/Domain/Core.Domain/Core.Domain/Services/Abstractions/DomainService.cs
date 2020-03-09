@@ -4,15 +4,13 @@ namespace Core.Domain.Services.Abstractions
 {
   public abstract class DomainService
   {
-    protected IAssertionConcern _assertionConcern;
-    protected IDomainServiceContainerManager _domainServiceContainerManager;
+    protected IDomainEventContainer _domainServiceContainerManager;
 
     public DomainService()
     {}
 
-    public DomainService(IAssertionConcern assertionConcern, IDomainServiceContainerManager domainServiceContainerManager)
+    public DomainService(IDomainEventContainer domainServiceContainerManager)
     {
-      _assertionConcern = assertionConcern;
       _domainServiceContainerManager = domainServiceContainerManager;
     }
 
