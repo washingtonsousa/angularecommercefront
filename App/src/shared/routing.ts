@@ -24,5 +24,9 @@ export const appRoutes = [
 
 {
     path: 'login', component: CadastroComponent
+},
+
+{
+    path: 'central', component: CadastroComponent
 }
 ];

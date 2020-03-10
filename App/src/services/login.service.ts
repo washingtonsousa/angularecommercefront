@@ -18,4 +18,13 @@ export class LoginService extends HttpBasedService {
                 return this._http.post<ResponseModelWithResult<Cliente>>(this.env.apiUrl + "login/auth", model);
             }
 
+
+            Subscribe(model: Cliente): Observable<ResponseModelWithResult<any>> {
+                return this._http.post<ResponseModelWithResult<any>>(this.env.apiUrl + "login/Subscribe", model);
+            }
+
+            Update(model: Cliente): Observable<ResponseModelWithResult<any>> {
+                return this._http.post<ResponseModelWithResult<any>>(this.env.apiUrl + "login/Update", model);
+            }
+
 }
