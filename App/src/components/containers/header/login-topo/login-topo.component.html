@@ -1,0 +1,23 @@
+<a href="#" *ngIf="!Cliente" class="icoTopo" id="icoLogin">
+
+    <i class="fa fa-user-circle"></i>
+
+    <a  [routerLink]="['/login']"> 
+    <small>
+        Entre ou
+        Cadastre-se
+    </small> 
+    </a>
+</a>
+
+
+<a href="#" *ngIf="Cliente" class="icoTopo" id="icoLogin">
+
+    <i class="fa fa-user-circle"></i>
+
+    <a  [routerLink]="['/central-cliente']"> 
+    <small>
+            Bem vindo! {{Cliente?.NmCliente}}
+    </small> 
+    </a>
+</a>

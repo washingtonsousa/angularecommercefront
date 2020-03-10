@@ -259,6 +259,12 @@ namespace Core.Data.EF.Context
             .HasColumnName("fl_activated")
             .HasMaxLength(30)
             .IsUnicode(false);
+
+
+        entity.Property(e => e.PackageName)
+         .IsRequired()
+         .HasColumnName("package_name");
+
       });
 
 

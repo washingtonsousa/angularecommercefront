@@ -1,9 +1,5 @@
 using Core.Domain.EF.Entities;
 using Core.Shared.Kernel.Events;
-using Core.Shared.Kernel.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Core.Domain.Specification
 {
@@ -49,6 +45,34 @@ namespace Core.Domain.Specification
         AssertionConcern.AssertNotEmpty(cliente.FlSexo, "Sexo é obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.FlTipoPessoa, "Tipo de pessoa é obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.DsRazaoSocial, "Razão social obrigatória")
+
+        );
+    }
+
+
+    public static bool ValidateForUpdate(this Cliente cliente)
+    {
+      return AssertionConcern.IsSatisfiedBy(
+        AssertionConcern.AssertNotEmpty(cliente.DsCelular, "Celular obrigatório"),
+        AssertionConcern.AssertNotEmpty(cliente.DsCelularDdd, "DDD Celular é obrigatório"),
+        AssertionConcern.AssertNotNull(cliente.DtNascimento, "Data de nascimento é obrigatória"),
+        AssertionConcern.AssertNotNull(cliente.FlSexo, "Sexo é obrigatório")
+        );
+    }
+
+    /// <summary>
+    /// Validação de usuário para cadastramento de pessoa jurídica
+    /// </summary>
+    /// <param name="cliente"></param>
+    /// <returns></returns>
+    public static bool ValidateEnterpriseForUpdate(this Cliente cliente)
+    {
+      return AssertionConcern.IsSatisfiedBy(
+
+        AssertionConcern.AssertNotEmpty(cliente.DsCelular, "Celular obrigatório"),
+        AssertionConcern.AssertNotEmpty(cliente.DsCelularDdd, "DDD Celular é obrigatório"),
+        AssertionConcern.AssertNotNull(cliente.DtNascimento, "Data de nascimento é obrigatória"),
+        AssertionConcern.AssertNotEmpty(cliente.FlSexo, "Sexo é obrigatório")
 
         );
     }

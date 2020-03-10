@@ -18,15 +18,36 @@ import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ConfirmacaoComponent } from './pages/confirmacao/confirmacao.component';
 import { FormComponentsModule } from 'src/components/forms/form-components.module';
 import { FormsModule } from '@angular/forms';
+import { ViewsModule } from './views/views.module';
+import { CadastroComponent } from './pages/cadastro/cadastro.component';
 
 @NgModule({
     providers: [ProdutoService],
-    declarations: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent, ConfirmacaoComponent],
-    exports: [HomeComponent, DetalheProdutoComponent, CarrinhoComponent, CheckoutComponent, ConfirmacaoComponent],
-    imports: [CommonModule, BrowserModule, FormComponentsModule, FormsModule,
+    declarations: [HomeComponent, 
+        DetalheProdutoComponent, 
+        CarrinhoComponent, 
+        CheckoutComponent, 
+        CadastroComponent,
+        ConfirmacaoComponent],
+    exports: [HomeComponent, 
+        DetalheProdutoComponent, 
+        CarrinhoComponent,
+        CadastroComponent, 
+        CheckoutComponent, 
+        ConfirmacaoComponent],
+    imports: [CommonModule, 
+        BrowserModule, 
+        FormComponentsModule, 
+        FormsModule,
         ContainersModule, 
-        TabsModule, TooltipModule, SlickCarouselModule, PipeModule, 
-        RouterModule, ProductModule, MaterialModule, 
+        TabsModule,
+        TooltipModule, 
+        SlickCarouselModule, 
+        PipeModule, 
+        RouterModule, 
+        ProductModule, 
+        MaterialModule,
+        ViewsModule, 
         DirectiveModule]
 })
 export class NavigationModule {}

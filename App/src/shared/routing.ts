@@ -3,6 +3,7 @@ import { DetalheProdutoComponent } from 'src/navigation/pages/produto/detalhe-pr
 import { CarrinhoComponent } from 'src/navigation/pages/carrinho/carrinho.component';
 import { CheckoutComponent } from 'src/navigation/pages/checkout/checkout.component';
 import { ConfirmacaoComponent } from 'src/navigation/pages/confirmacao/confirmacao.component';
+import { CadastroComponent } from 'src/navigation/pages/cadastro/cadastro.component';
 
 export const appRoutes = [
 {
@@ -19,5 +20,9 @@ export const appRoutes = [
 },
 {
     path: 'confirmacao', component: ConfirmacaoComponent
+},
+
+{
+    path: 'login', component: CadastroComponent
 }
 ];

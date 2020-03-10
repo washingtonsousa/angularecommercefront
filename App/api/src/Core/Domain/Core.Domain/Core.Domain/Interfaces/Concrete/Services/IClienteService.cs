@@ -10,8 +10,6 @@ namespace Core.Domain.Interfaces.Concrete.Services
   {
     Task<bool> CheckIfExists(string dsEmail, string dsCpfCnpj);
     Task<Cliente> Authenticate(string userName, string password);
-    void AddCliente(Cliente cliente);
-    void UpdateCliente(Cliente clienteForUpdate, Cliente cliente);
 
     Task<Cliente> CheckIfNotExists(string dsEmail, string dsCpfCnpj);
 

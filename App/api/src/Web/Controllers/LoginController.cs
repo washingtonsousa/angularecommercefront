@@ -30,7 +30,7 @@ namespace ApiWeb.Controllers
         return Forbid();
 
       var cliente = await _authenticationService.Authenticate(model.UserName, model.Password);
-      return ResponseWithFirstNotification(cliente, "Autenticado com sucesso!");
+      return ResponseWithAllNotifications(cliente, "Autenticado com sucesso!");
 
     }
 
@@ -58,7 +58,7 @@ namespace ApiWeb.Controllers
     {
 
       await _clienteAppService.UpdateCliente(model);
-      return ResponseWithAllNotifications(model, "Cadastrado com sucesso!");
+      return ResponseWithAllNotifications(model, "Atualizado com sucesso!");
 
     }
 

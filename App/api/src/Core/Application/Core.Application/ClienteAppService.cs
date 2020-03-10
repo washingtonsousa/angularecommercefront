@@ -47,9 +47,7 @@ namespace Core.Application
 
       await _unityOfWork.CommitAsync();
 
-      var services =  _serviceProvider.GetServices<IClienteAoCadastrar>();
-
-      foreach (var service in services)
+      foreach (var service in _serviceProvider.GetServices<IClienteAoCadastrar>())
       {
         service.hookAoCadastrarExecute(clienteDomain);
       }
@@ -63,11 +61,13 @@ namespace Core.Application
 
       if (clienteForUpdate == null)
         return;
-
-      if (!((clienteForUpdate.FlTipoPessoa != "J") ? clienteFromModel.ValidateForSubscription() : clienteFromModel.ValidateEnterpriseForSubscription()))
+      //Se PJ valida dados de PJ se PF valida dados de PF
+      if (!((clienteForUpdate.FlTipoPessoa != "J") ? clienteFromModel.ValidateForUpdate() : clienteFromModel.ValidateEnterpriseForUpdate()))
         return;
 
-      _clienteService.UpdateCliente(clienteForUpdate, _mapper.Map<Cliente>(cliente));
+      clienteForUpdate.Update(clienteFromModel);
+
+      _clienteRepository.Update(clienteForUpdate);
 
       await _unityOfWork.CommitAsync();
 

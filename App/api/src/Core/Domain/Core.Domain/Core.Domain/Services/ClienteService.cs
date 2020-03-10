@@ -54,20 +54,5 @@ namespace Core.Domain.Services
       return cliente;
     }
 
-    public void AddCliente(Cliente cliente)
-    {
-      _clienteRepository.Add(cliente);
-    }
-
-
-    public void UpdateCliente(Cliente clienteForUpdate, Cliente cliente)
-    {
-
-
-
-
-      _clienteRepository.Update(clienteForUpdate);
-    }
-
   }
 }

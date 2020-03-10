@@ -21,21 +21,26 @@ using System.IO;
 using Core.Domain.Interfaces;
 using System.Threading.Tasks;
 using ApiWeb;
+using Core.Shared.Data;
 
 namespace FarmaciaMaisProxima
 {
   public class Startup
   {
-
-    public Startup(IConfiguration configuration)
+    public IWebHostEnvironment _environment { get; }
+    public Startup(IConfiguration configuration, IWebHostEnvironment env)
     {
       Configuration = configuration;
+      _environment = env;
     }
 
     public IConfiguration Configuration { get; }
 
     public void ConfigureServices(IServiceCollection services)
     {
+
+      if(_environment.IsDevelopment())
+        Constants.IsDebug = true;
 
       services.AddCors(options =>
       {
@@ -66,8 +71,7 @@ namespace FarmaciaMaisProxima
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-      if (env.IsDevelopment())
-        app.UseDeveloperExceptionPage();
+     
 
       if (env.IsDevelopment())
       {
@@ -75,6 +79,8 @@ namespace FarmaciaMaisProxima
                .AllowAnyOrigin()
                .AllowAnyMethod()
                .AllowAnyHeader());
+
+        app.UseDeveloperExceptionPage();
 
       } else
       {

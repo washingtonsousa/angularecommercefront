@@ -2,6 +2,7 @@ using Core.Domain.Entities;
 using Core.Domain.Interfaces;
 using Core.Domain.Interfaces.Concrete.Repository;
 using Core.Domain.Repository.Interfaces;
+using Core.Shared.Data;
 using Core.Shared.Kernel.Abstractions;
 using Core.Shared.Kernel.Extensions;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,27 +24,23 @@ namespace ApiWeb
     /// <param name="services"></param>
     public static void InjectServiceModules(this IServiceCollection services, IServiceProvider provider)
     {
-
+      /// Get services from container
       var contextManager = provider.GetService<IApplicationContextManager>();
       var unityOfWork = provider.GetService<IUnityOfWork>();
       var moduleRepository = provider.GetService<IApplicationModuleRepository>();
 
-      var netCoreBinFolder = "netcoreapp" + System.Environment.Version.ToString().Substring(0, 3);
+      //Get dlls from bin folder which ones are considered modules
+      IList<string> fileList = Constants.ModuleDllList;
 
-      string binFolder = Directory.GetCurrentDirectory() + $@"\bin\Debug\{netCoreBinFolder}";
-
-      IList<string> fileList = Directory.GetFiles(binFolder).ToList().Select(f => f.Split(@"\".ToCharArray()).Last()).ToList();
-
-      fileList = fileList.Where(p => p.IsModuleDll()).ToList();
-
+      //Get Module registrations From App Context Table
       IList<ApplicationModule> Modules = contextManager.getContext().GetAwaiter().GetResult().Modules;
 
+      //For each file verifiy which one are installed and inject their services while loading its assemblies
       foreach (string fileName in fileList)
       {
 
-        ApplicationModule moduleFromDatabase = Modules.Where(m => m.Name == fileName.GetModuleRealName()).FirstOrDefault();
-
-        var ass = Assembly.LoadFrom(binFolder + @"\" + fileName);
+        ApplicationModule moduleFromDatabase = Modules.Where(m => m.PackageName == fileName.GetModuleRealName()).FirstOrDefault();
+        var ass = Assembly.LoadFrom(Constants.BinFolder + @"\" + fileName);
 
         IEnumerable<Type> types = ass.GetTypes().Where(a => a.IsSubclassOf(typeof(ApplicationModule)));
 
@@ -57,10 +54,13 @@ namespace ApiWeb
 
           if (moduleFromDatabase == null)
           {
-
+            instance.PackageName = fileName.GetModuleRealName();
             instance.execInstall();
             moduleRepository.Add(instance).GetAwaiter().GetResult();
-            unityOfWork.Commit();
+            unityOfWork.CommitAsync().GetAwaiter().GetResult();
+
+            if(instance.IsActivated)
+              instance.InjectAll(services);
 
           }
           else
@@ -71,7 +71,7 @@ namespace ApiWeb
         }
       }
 
-      services.AddSingleton(services.BuildServiceProvider());
+      services.AddSingleton(provider);
 
     }
 

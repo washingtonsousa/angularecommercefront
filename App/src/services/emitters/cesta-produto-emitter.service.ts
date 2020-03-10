@@ -1,8 +1,6 @@
 import { PedidoModel } from 'src/shared/models/pedido.model';
 import { GlobalEventEmittersService } from './global-event-emitters.service';
 
-
-
 export class CestaProdutoService {
 
        static update(Pedido: PedidoModel) {

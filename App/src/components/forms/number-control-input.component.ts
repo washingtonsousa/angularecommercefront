@@ -8,9 +8,9 @@ import { ControlValueAccessor } from '@angular/forms';
 export class NumberControlInputComponent implements ControlValueAccessor {
 
     Quantidade: number = 0;
-    @Output() OnChange: EventEmitter<any> = new EventEmitter<any>();
-    @Output() OnIncrement: EventEmitter<any> = new EventEmitter<any>();
-    @Output() OnDecrement: EventEmitter<any> = new EventEmitter<any>();
+    @Output() OnChange: EventEmitter<number> = new EventEmitter<number>();
+    @Output() OnIncrement: EventEmitter<number> = new EventEmitter<number>();
+    @Output() OnDecrement: EventEmitter<number> = new EventEmitter<number>();
     propagateChange = (_: any) => {};
 
     writeValue(obj: any): void {

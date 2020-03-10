@@ -10,7 +10,7 @@ namespace Core.Shared.Kernel.Extensions
 
     public static bool IsModuleDll(this string DllName) { 
     
-      bool isModuleDll = (DllName.Substring(0, 6) == "Module" && DllName.Split(".".ToCharArray()).Last() == "dll");
+      bool isModuleDll = (DllName.Substring(0, 6) == "Module" && DllName.IsDll());
       return isModuleDll;
 
     }

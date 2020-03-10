@@ -52,6 +52,20 @@ namespace Core.Domain.EF.Entities
         public virtual ICollection<TbPromocaoCliente> TbPromocaoCliente { get; set; }
         public virtual ICollection<TbPromocaoCupomUtilizado> TbPromocaoCupomUtilizado { get; set; }
 
-
+    /// <summary>
+    /// Método de Domínio - Atualização
+    /// </summary>
+    /// <param name="cliente"></param>
+    public void Update(Cliente cliente)
+    {
+      DsCelularDdd = cliente.DsCelularDdd;
+      DsCelular = cliente.DsCelular;
+      DsTelefone = cliente.DsTelefone;
+      DsTelefoneDdd = cliente.DsCelularDdd;
+      DsRg = cliente.DsRg;
+      NomeSocial = cliente.NomeSocial;
+      DtNascimento = cliente.DtNascimento;
+      FlAceitaMailing = cliente.FlAceitaMailing;
     }
+  }
 }

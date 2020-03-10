@@ -3120,6 +3120,10 @@
       "Core.Shared.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Core.Shared.Kernel": "1.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.2"
+        },
         "compile": {
           "bin/placeholder/Core.Shared.Data.dll": {}
         },

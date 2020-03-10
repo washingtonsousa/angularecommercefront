@@ -25,7 +25,6 @@ namespace Core.Application
   {
     private readonly AppSettings _appSettings;
     IClienteService _clienteService;
-    IServiceProvider _serviceProvider;
 
     public AuthenticationAppService(IOptions<AppSettings> appSettings,
     IClienteService clienteService,
@@ -33,11 +32,10 @@ namespace Core.Application
     IUnityOfWork unityOfWork,
     IApplicationContextManager applicationContextManager,
     IServiceProvider serviceProvider)
-    : base(mapper, unityOfWork,  applicationContextManager)
+    : base(mapper, unityOfWork,  applicationContextManager, serviceProvider)
     {
       _appSettings = appSettings.Value;
       _clienteService = clienteService;
-      _serviceProvider = serviceProvider;
     }
 
     public async Task<ClienteViewModel> Authenticate(string userName, string password)
@@ -69,9 +67,7 @@ namespace Core.Application
       var token = tokenHandler.CreateToken(tokenDescriptor);
       cliente.Token = tokenHandler.WriteToken(token);
 
-      var services = _serviceProvider.GetServices<IClienteAoLogar>();
-
-      foreach(var service in services)
+      foreach(var service in _serviceProvider.GetServices<IClienteAoLogar>())
       {
         service.hookClienteAoLogar(clienteFromDomain);
       }

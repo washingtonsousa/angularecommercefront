@@ -12,7 +12,7 @@ namespace SapMarketing
 
     protected override void Install()
     {
-      Name = "SapMarketing";
+      Name = "Sap Marketing Integração";
       Description = "Módulo de Marketing Originalmente designado pela Clamed";
     }
 

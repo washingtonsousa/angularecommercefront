@@ -1,0 +1,17 @@
+<form [formGroup]="formGroup" (ngSubmit)="Submit($event)">
+
+    <label>
+        Email/Cpf:
+    </label>
+
+    <input class="form-control mb-1" formControlName="UserName" />
+
+    <label> Senha </label>
+
+    <input class="form-control mb-1" formControlName="Password" />
+
+    <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary btn-lg w-100">
+            Login <i class="fa fa-sign-in-alt"></i>
+    </button>
+
+</form>

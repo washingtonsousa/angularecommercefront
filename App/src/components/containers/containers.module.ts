@@ -20,6 +20,7 @@ import { DirectiveModule } from 'src/directives/directive.module';
 import { DepartamentoService } from 'src/services/departamento.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContextService } from 'src/services/storage/context.service';
+import { LoginTopoComponent } from './header/login-topo/login-topo.component';
 
 @NgModule({
     providers: [PedidoService, 
@@ -35,7 +36,8 @@ import { ContextService } from 'src/services/storage/context.service';
         ContainerComponent, 
         MenuComponent, 
         SliderComponent, 
-        FooterComponent, 
+        FooterComponent,
+        LoginTopoComponent, 
         CheckoutHeaderComponent, 
         CheckoutContainerComponent, 
         CarouselMarcasComponent],

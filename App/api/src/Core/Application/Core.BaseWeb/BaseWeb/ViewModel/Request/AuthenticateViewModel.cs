@@ -7,6 +7,7 @@ namespace Core.BaseWeb.ViewModel
 {
   public class AuthenticateViewModel
   {
+
     [Required]
     public string UserName { get; set; }
     [Required]

@@ -8614,10 +8614,6 @@ namespace Core.Data.Migrations
                         .HasMaxLength(30)
                         .IsUnicode(false);
 
-                    b.Property<bool>("IsInstalled")
-                        .HasColumnName("fl_installed")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnName("name")
@@ -8625,6 +8621,8 @@ namespace Core.Data.Migrations
                         .IsUnicode(false);
 
                     b.Property<string>("PackageName")
+                        .IsRequired()
+                        .HasColumnName("package_name")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("IdModule");

@@ -4,9 +4,9 @@
         <div class="row">
             <section id="topo-superior" class="col">
 
-                <a> <i class="fa fa-list"></i>  Meus Pedidos </a>
-                <a> <i class="fa fa-headphones"></i>  Atendimento </a>
-                <a> <i class="fa fa-question"></i>  Ajuda </a>
+                <a> <i class="fa fa-list"></i> Meus Pedidos </a>
+                <a> <i class="fa fa-headphones"></i> Atendimento </a>
+                <a> <i class="fa fa-question"></i> Ajuda </a>
 
             </section>
         </div>
@@ -15,49 +15,42 @@
 </section>
 
 <header id="mainHeader" [class]="'container-fluid ' + TopHeaderClass">
-  
+
     <div class="container">
-    <div class="row">
-        <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
+        <div class="row">
+            <div class="col-xl-3 col-12 d-flex flex-column align-items-center">
 
-            <a [routerLink]="['/']">
-                <img [src]="Loja?.ArquivoLogo != undefined ? (Loja?.ArquivoLogo | imageUrl) : 'assets/images/logo.png'" class="img-fluid"/>
-            </a>
+                <a [routerLink]="['/']">
+                    <img [src]="Loja?.ArquivoLogo != undefined ? (Loja?.ArquivoLogo | imageUrl) : 'assets/images/logo.png'"
+                        class="img-fluid" />
+                </a>
 
+            </div>
+
+            <div id="searchBox" class="input-field col-xl-6">
+                <input placeholder="Seja bem vindo, o que você busca?" id="first_name" type="text"
+                    class="form-control ">
+                <button type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </div>
+
+            <div id="headerInteractionArea" class="col-xl-3 col-12 d-flex justify-content-between">
+
+                <a id="icoToggleMenuMobile" (click)="Menu.toggleMobile()" class="d-block d-xl-none">
+                    <i class="fa fa-bars" data-role="nav-mobile-toggle"></i>
+                </a>
+
+                <div class="wrapper">
+
+                    <login-topo> </login-topo>
+
+                    <cesta-topo [Pedido]="Pedido" [Loja]="Loja"></cesta-topo>
+
+                </div>
+            </div>
         </div>
-
-        <div id="searchBox" class="input-field col-xl-6">
-            <input placeholder="Seja bem vindo, o que você busca?" id="first_name" type="text" class="form-control ">
-            <button type="submit">
-                <i class="fa fa-search"></i>
-            </button>
-        </div>
-
-        <div id="headerInteractionArea" class="col-xl-3 col-12 d-flex justify-content-between">
-
-            <a id="icoToggleMenuMobile"  (click)="Menu.toggleMobile()" class="d-block d-xl-none">
-                <i class="fa fa-bars" data-role="nav-mobile-toggle"></i>  
-            </a>
-
-            <div class="wrapper">
-
-                
-            <a href="#" class="icoTopo" id="icoLogin">
-
-                <i class="fa fa-user-circle"></i>
-                <!-- <small>
-                    Entre ou
-                    Cadastre-se
-                </small> -->
-               <p class="user-area-text"> Bem Vindo <strong> Vannon! </strong> </p> 
-            </a>
-                
-            <cesta-topo [Pedido]="Pedido" [Loja]="Loja" ></cesta-topo>
-
-        </div>
-       </div>
     </div>
-</div>
 </header>
 
 <menu #Menu></menu>
