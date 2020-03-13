@@ -1,3 +1,4 @@
+using System.Threading.Tasks;
 using Core.Domain.EF.Entities;
 using Core.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
@@ -29,208 +30,208 @@ namespace Core.Data.EF.Context
         }
 
         public virtual DbSet<ScLog> ScLog { get; set; }
-        public virtual DbSet<TbAcesso> TbAcesso { get; set; }
-        public virtual DbSet<TbAcessoAplicativo> TbAcessoAplicativo { get; set; }
-        public virtual DbSet<TbAplicativo> TbAplicativo { get; set; }
-        public virtual DbSet<TbAuditFrete> TbAuditFrete { get; set; }
-        public virtual DbSet<TbAuditPedido> TbAuditPedido { get; set; }
-        public virtual DbSet<TbAutorizador> TbAutorizador { get; set; }
-        public virtual DbSet<TbBackofficeSessao> TbBackofficeSessao { get; set; }
-        public virtual DbSet<TbBanner> TbBanner { get; set; }
-        public virtual DbSet<TbBannerBusca> TbBannerBusca { get; set; }
-        public virtual DbSet<TbBannerCategoria> TbBannerCategoria { get; set; }
-        public virtual DbSet<TbBannerPraca> TbBannerPraca { get; set; }
-        public virtual DbSet<TbBannerProduto> TbBannerProduto { get; set; }
-        public virtual DbSet<TbBannerTarget> TbBannerTarget { get; set; }
-        public virtual DbSet<TbBannerVitrine> TbBannerVitrine { get; set; }
-        public virtual DbSet<TbBusca> TbBusca { get; set; }
-        public virtual DbSet<TbCartaoClientePbm> TbCartaoClientePbm { get; set; }
+        public virtual DbSet<Acesso> Acesso { get; set; }
+        public virtual DbSet<AcessoAplicativo> AcessoAplicativo { get; set; }
+        public virtual DbSet<Aplicativo> Aplicativo { get; set; }
+        public virtual DbSet<AuditFrete> AuditFrete { get; set; }
+        public virtual DbSet<AuditPedido> AuditPedido { get; set; }
+        public virtual DbSet<Autorizador> Autorizador { get; set; }
+        public virtual DbSet<BackofficeSessao> BackofficeSessao { get; set; }
+        public virtual DbSet<Banner> Banner { get; set; }
+        public virtual DbSet<BannerBusca> BannerBusca { get; set; }
+        public virtual DbSet<BannerCategoria> BannerCategoria { get; set; }
+        public virtual DbSet<BannerPraca> BannerPraca { get; set; }
+        public virtual DbSet<BannerProduto> BannerProduto { get; set; }
+        public virtual DbSet<BannerTarget> BannerTarget { get; set; }
+        public virtual DbSet<BannerVitrine> BannerVitrine { get; set; }
+        public virtual DbSet<Busca> Busca { get; set; }
+        public virtual DbSet<CartaoClientePbm> CartaoClientePbm { get; set; }
         public virtual DbSet<Categoria> Categoria { get; set; }
-        public virtual DbSet<TbCategoriaSeo> TbCategoriaSeo { get; set; }
+        public virtual DbSet<CategoriaSeo> CategoriaSeo { get; set; }
         public virtual DbSet<Cliente> Cliente { get; set; }
-        public virtual DbSet<TbClienteEndereco> TbClienteEndereco { get; set; }
-        public virtual DbSet<TbClienteEnderecoTipo> TbClienteEnderecoTipo { get; set; }
-        public virtual DbSet<TbClienteObservacao> TbClienteObservacao { get; set; }
-        public virtual DbSet<TbClienteToken> TbClienteToken { get; set; }
-        public virtual DbSet<TbConexao> TbConexao { get; set; }
-        public virtual DbSet<TbConexaoPraca> TbConexaoPraca { get; set; }
-        public virtual DbSet<TbConteudo> TbConteudo { get; set; }
-        public virtual DbSet<TbConteudoCategoria> TbConteudoCategoria { get; set; }
-        public virtual DbSet<TbConteudoConteudoLocal> TbConteudoConteudoLocal { get; set; }
-        public virtual DbSet<TbConteudoLocal> TbConteudoLocal { get; set; }
-        public virtual DbSet<TbConteudoSeo> TbConteudoSeo { get; set; }
-        public virtual DbSet<TbConteudoTarget> TbConteudoTarget { get; set; }
-        public virtual DbSet<TbConteudoTipo> TbConteudoTipo { get; set; }
+        public virtual DbSet<ClienteEndereco> ClienteEndereco { get; set; }
+        public virtual DbSet<ClienteEnderecoTipo> ClienteEnderecoTipo { get; set; }
+        public virtual DbSet<ClienteObservacao> ClienteObservacao { get; set; }
+        public virtual DbSet<ClienteToken> ClienteToken { get; set; }
+        public virtual DbSet<Conexao> Conexao { get; set; }
+        public virtual DbSet<ConexaoPraca> ConexaoPraca { get; set; }
+        public virtual DbSet<Conteudo> Conteudo { get; set; }
+        public virtual DbSet<ConteudoCategoria> ConteudoCategoria { get; set; }
+        public virtual DbSet<ConteudoConteudoLocal> ConteudoConteudoLocal { get; set; }
+        public virtual DbSet<ConteudoLocal> ConteudoLocal { get; set; }
+        public virtual DbSet<ConteudoSeo> ConteudoSeo { get; set; }
+        public virtual DbSet<ConteudoTarget> ConteudoTarget { get; set; }
+        public virtual DbSet<ConteudoTipo> ConteudoTipo { get; set; }
         public virtual DbSet<DadosLoja> DadosLoja { get; set; }
-        public virtual DbSet<TbDeparaClientesVfarma> TbDeparaClientesVfarma { get; set; }
-        public virtual DbSet<TbDeparaFmp> TbDeparaFmp { get; set; }
-        public virtual DbSet<TbDiaSemana> TbDiaSemana { get; set; }
-        public virtual DbSet<TbEanListaTmp> TbEanListaTmp { get; set; }
-        public virtual DbSet<TbEbit> TbEbit { get; set; }
-        public virtual DbSet<TbEmail> TbEmail { get; set; }
-        public virtual DbSet<TbEmailTag> TbEmailTag { get; set; }
-        public virtual DbSet<TbEmailTipo> TbEmailTipo { get; set; }
-        public virtual DbSet<TbEspecificacao> TbEspecificacao { get; set; }
-        public virtual DbSet<TbEspecificacaoTipo> TbEspecificacaoTipo { get; set; }
-        public virtual DbSet<TbEtiqueta> TbEtiqueta { get; set; }
-        public virtual DbSet<TbEtiquetaTipo> TbEtiquetaTipo { get; set; }
-        public virtual DbSet<TbFaq> TbFaq { get; set; }
-        public virtual DbSet<TbFaqCategoria> TbFaqCategoria { get; set; }
-        public virtual DbSet<TbFiltro> TbFiltro { get; set; }
-        public virtual DbSet<TbFiltroTipo> TbFiltroTipo { get; set; }
-        public virtual DbSet<TbFiltroTipoCategoria> TbFiltroTipoCategoria { get; set; }
-        public virtual DbSet<TbFormaPagamento> TbFormaPagamento { get; set; }
-        public virtual DbSet<TbFormaPagamentoTipo> TbFormaPagamentoTipo { get; set; }
-        public virtual DbSet<TbGateway> TbGateway { get; set; }
-        public virtual DbSet<TbGatewayPraca> TbGatewayPraca { get; set; }
-        public virtual DbSet<TbGatewayTipo> TbGatewayTipo { get; set; }
-        public virtual DbSet<TbGatewayTipoFormaPagamento> TbGatewayTipoFormaPagamento { get; set; }
-        public virtual DbSet<TbGondola> TbGondola { get; set; }
-        public virtual DbSet<TbGondolaProdutoSku> TbGondolaProdutoSku { get; set; }
-        public virtual DbSet<TbGraficoCockpit> TbGraficoCockpit { get; set; }
-        public virtual DbSet<TbImpAtualizaEstoquePreco> TbImpAtualizaEstoquePreco { get; set; }
-        public virtual DbSet<TbImpAtualizaTitleMeta> TbImpAtualizaTitleMeta { get; set; }
-        public virtual DbSet<TbLayout> TbLayout { get; set; }
-        public virtual DbSet<TbLayoutPosicao> TbLayoutPosicao { get; set; }
-        public virtual DbSet<TbListaDesejo> TbListaDesejo { get; set; }
-        public virtual DbSet<TbListaDesejoPeriodo> TbListaDesejoPeriodo { get; set; }
-        public virtual DbSet<TbListaDesejoProdutoSku> TbListaDesejoProdutoSku { get; set; }
-        public virtual DbSet<TbLog> TbLog { get; set; }
-        public virtual DbSet<TbLogProcedure> TbLogProcedure { get; set; }
-        public virtual DbSet<TbLogTelevendas> TbLogTelevendas { get; set; }
-        public virtual DbSet<TbLojaEspecial> TbLojaEspecial { get; set; }
-        public virtual DbSet<TbLojaEspecialBanner> TbLojaEspecialBanner { get; set; }
-        public virtual DbSet<TbLojaEspecialCategoria> TbLojaEspecialCategoria { get; set; }
-        public virtual DbSet<TbLojaEspecialDepartamento> TbLojaEspecialDepartamento { get; set; }
-        public virtual DbSet<TbLojaEspecialMarca> TbLojaEspecialMarca { get; set; }
-        public virtual DbSet<TbLojaEspecialPosicao> TbLojaEspecialPosicao { get; set; }
-        public virtual DbSet<TbLojaEspecialProduto> TbLojaEspecialProduto { get; set; }
-        public virtual DbSet<TbLojaEspecialSecao> TbLojaEspecialSecao { get; set; }
-        public virtual DbSet<TbLojaEspecialVitrine> TbLojaEspecialVitrine { get; set; }
-        public virtual DbSet<TbLojaEspecialVitrineProduto> TbLojaEspecialVitrineProduto { get; set; }
-        public virtual DbSet<TbLojaFisica> TbLojaFisica { get; set; }
-        public virtual DbSet<TbMapeamentoUrl> TbMapeamentoUrl { get; set; }
-        public virtual DbSet<TbMarca> TbMarca { get; set; }
-        public virtual DbSet<TbMensagem> TbMensagem { get; set; }
-        public virtual DbSet<TbMensagemCategoria> TbMensagemCategoria { get; set; }
-        public virtual DbSet<TbMensagemMarca> TbMensagemMarca { get; set; }
-        public virtual DbSet<TbMensagemPrincipioAtivo> TbMensagemPrincipioAtivo { get; set; }
-        public virtual DbSet<TbMensagemProdutoControle> TbMensagemProdutoControle { get; set; }
-        public virtual DbSet<TbMensagemProdutoFamilia> TbMensagemProdutoFamilia { get; set; }
-        public virtual DbSet<TbMensagemProdutoTipo> TbMensagemProdutoTipo { get; set; }
-        public virtual DbSet<TbModalidadeEntrega> TbModalidadeEntrega { get; set; }
-        public virtual DbSet<TbModalidadeEntregaAgenda> TbModalidadeEntregaAgenda { get; set; }
-        public virtual DbSet<TbModalidadeEntregaCep> TbModalidadeEntregaCep { get; set; }
-        public virtual DbSet<TbModalidadeEntregaLoja> TbModalidadeEntregaLoja { get; set; }
-        public virtual DbSet<TbModalidadeEntregaRestricao> TbModalidadeEntregaRestricao { get; set; }
-        public virtual DbSet<TbModalidadeEntregaTipo> TbModalidadeEntregaTipo { get; set; }
-        public virtual DbSet<TbNewsletter> TbNewsletter { get; set; }
-        public virtual DbSet<TbOfertaEspecial> TbOfertaEspecial { get; set; }
-        public virtual DbSet<TbPagamento> TbPagamento { get; set; }
-        public virtual DbSet<TbPagamentoGateway> TbPagamentoGateway { get; set; }
-        public virtual DbSet<TbPagamentoParcela> TbPagamentoParcela { get; set; }
-        public virtual DbSet<TbParceiro> TbParceiro { get; set; }
-        public virtual DbSet<TbParceiroXmlProduto> TbParceiroXmlProduto { get; set; }
+        public virtual DbSet<DeparaClientesVfarma> DeparaClientesVfarma { get; set; }
+        public virtual DbSet<DeparaFmp> DeparaFmp { get; set; }
+        public virtual DbSet<DiaSemana> DiaSemana { get; set; }
+        public virtual DbSet<EanListaTmp> EanListaTmp { get; set; }
+        public virtual DbSet<Ebit> Ebit { get; set; }
+        public virtual DbSet<Email> Email { get; set; }
+        public virtual DbSet<EmailTag> EmailTag { get; set; }
+        public virtual DbSet<EmailTipo> EmailTipo { get; set; }
+        public virtual DbSet<Especificacao> Especificacao { get; set; }
+        public virtual DbSet<EspecificacaoTipo> EspecificacaoTipo { get; set; }
+        public virtual DbSet<Etiqueta> Etiqueta { get; set; }
+        public virtual DbSet<EtiquetaTipo> EtiquetaTipo { get; set; }
+        public virtual DbSet<Faq> Faq { get; set; }
+        public virtual DbSet<FaqCategoria> FaqCategoria { get; set; }
+        public virtual DbSet<Filtro> Filtro { get; set; }
+        public virtual DbSet<FiltroTipo> FiltroTipo { get; set; }
+        public virtual DbSet<FiltroTipoCategoria> FiltroTipoCategoria { get; set; }
+        public virtual DbSet<FormaPagamento> FormaPagamento { get; set; }
+        public virtual DbSet<FormaPagamentoTipo> FormaPagamentoTipo { get; set; }
+        public virtual DbSet<Gateway> Gateway { get; set; }
+        public virtual DbSet<GatewayPraca> GatewayPraca { get; set; }
+        public virtual DbSet<GatewayTipo> GatewayTipo { get; set; }
+        public virtual DbSet<GatewayTipoFormaPagamento> GatewayTipoFormaPagamento { get; set; }
+        public virtual DbSet<Gondola> Gondola { get; set; }
+        public virtual DbSet<GondolaProdutoSku> GondolaProdutoSku { get; set; }
+        public virtual DbSet<GraficoCockpit> GraficoCockpit { get; set; }
+        public virtual DbSet<ImpAtualizaEstoquePreco> ImpAtualizaEstoquePreco { get; set; }
+        public virtual DbSet<ImpAtualizaTitleMeta> ImpAtualizaTitleMeta { get; set; }
+        public virtual DbSet<Layout> Layout { get; set; }
+        public virtual DbSet<LayoutPosicao> LayoutPosicao { get; set; }
+        public virtual DbSet<ListaDesejo> ListaDesejo { get; set; }
+        public virtual DbSet<ListaDesejoPeriodo> ListaDesejoPeriodo { get; set; }
+        public virtual DbSet<ListaDesejoProdutoSku> ListaDesejoProdutoSku { get; set; }
+        public virtual DbSet<Log> Log { get; set; }
+        public virtual DbSet<LogProcedure> LogProcedure { get; set; }
+        public virtual DbSet<LogTelevendas> LogTelevendas { get; set; }
+        public virtual DbSet<LojaEspecial> LojaEspecial { get; set; }
+        public virtual DbSet<LojaEspecialBanner> LojaEspecialBanner { get; set; }
+        public virtual DbSet<LojaEspecialCategoria> LojaEspecialCategoria { get; set; }
+        public virtual DbSet<LojaEspecialDepartamento> LojaEspecialDepartamento { get; set; }
+        public virtual DbSet<LojaEspecialMarca> LojaEspecialMarca { get; set; }
+        public virtual DbSet<LojaEspecialPosicao> LojaEspecialPosicao { get; set; }
+        public virtual DbSet<LojaEspecialProduto> LojaEspecialProduto { get; set; }
+        public virtual DbSet<LojaEspecialSecao> LojaEspecialSecao { get; set; }
+        public virtual DbSet<LojaEspecialVitrine> LojaEspecialVitrine { get; set; }
+        public virtual DbSet<LojaEspecialVitrineProduto> LojaEspecialVitrineProduto { get; set; }
+        public virtual DbSet<LojaFisica> LojaFisica { get; set; }
+        public virtual DbSet<MapeamentoUrl> MapeamentoUrl { get; set; }
+        public virtual DbSet<Marca> Marca { get; set; }
+        public virtual DbSet<Mensagem> Mensagem { get; set; }
+        public virtual DbSet<MensagemCategoria> MensagemCategoria { get; set; }
+        public virtual DbSet<MensagemMarca> MensagemMarca { get; set; }
+        public virtual DbSet<MensagemPrincipioAtivo> MensagemPrincipioAtivo { get; set; }
+        public virtual DbSet<MensagemProdutoControle> MensagemProdutoControle { get; set; }
+        public virtual DbSet<MensagemProdutoFamilia> MensagemProdutoFamilia { get; set; }
+        public virtual DbSet<MensagemProdutoTipo> MensagemProdutoTipo { get; set; }
+        public virtual DbSet<ModalidadeEntrega> ModalidadeEntrega { get; set; }
+        public virtual DbSet<ModalidadeEntregaAgenda> ModalidadeEntregaAgenda { get; set; }
+        public virtual DbSet<ModalidadeEntregaCep> ModalidadeEntregaCep { get; set; }
+        public virtual DbSet<ModalidadeEntregaLoja> ModalidadeEntregaLoja { get; set; }
+        public virtual DbSet<ModalidadeEntregaRestricao> ModalidadeEntregaRestricao { get; set; }
+        public virtual DbSet<ModalidadeEntregaTipo> ModalidadeEntregaTipo { get; set; }
+        public virtual DbSet<Newsletter> Newsletter { get; set; }
+        public virtual DbSet<OfertaEspecial> OfertaEspecial { get; set; }
+        public virtual DbSet<Pagamento> Pagamento { get; set; }
+        public virtual DbSet<PagamentoGateway> PagamentoGateway { get; set; }
+        public virtual DbSet<PagamentoParcela> PagamentoParcela { get; set; }
+        public virtual DbSet<Parceiro> Parceiro { get; set; }
+        public virtual DbSet<ParceiroXmlProduto> ParceiroXmlProduto { get; set; }
         public virtual DbSet<Pedido> Pedido { get; set; }
-        public virtual DbSet<PedidoEntrega> TbPedidoEntrega { get; set; }
-        public virtual DbSet<TbPedidoGestaoRisco> TbPedidoGestaoRisco { get; set; }
-        public virtual DbSet<TbPedidoHistorico> TbPedidoHistorico { get; set; }
-        public virtual DbSet<TbPedidoLog> TbPedidoLog { get; set; }
-        public virtual DbSet<TbPedidoOrigem> TbPedidoOrigem { get; set; }
-        public virtual DbSet<PedidoPagamento> TbPedidoPagamento { get; set; }
-        public virtual DbSet<TbPedidoPagamentoLog> TbPedidoPagamentoLog { get; set; }
-        public virtual DbSet<TbPedidoProdutoKit> TbPedidoProdutoKit { get; set; }
-        public virtual DbSet<PedidoProdutoSku> TbPedidoProdutoSku { get; set; }
-        public virtual DbSet<TbPedidoSevenpdv> TbPedidoSevenpdv { get; set; }
-        public virtual DbSet<TbPedidoStatus> TbPedidoStatus { get; set; }
-        public virtual DbSet<TbPedidoStatusPbm> TbPedidoStatusPbm { get; set; }
-        public virtual DbSet<TbPosicao> TbPosicao { get; set; }
+        public virtual DbSet<PedidoEntrega> PedidoEntrega { get; set; }
+        public virtual DbSet<PedidoGestaoRisco> PedidoGestaoRisco { get; set; }
+        public virtual DbSet<PedidoHistorico> PedidoHistorico { get; set; }
+        public virtual DbSet<PedidoLog> PedidoLog { get; set; }
+        public virtual DbSet<PedidoOrigem> PedidoOrigem { get; set; }
+        public virtual DbSet<PedidoPagamento> PedidoPagamento { get; set; }
+        public virtual DbSet<PedidoPagamentoLog> PedidoPagamentoLog { get; set; }
+        public virtual DbSet<PedidoProdutoKit> PedidoProdutoKit { get; set; }
+        public virtual DbSet<PedidoProdutoSku> PedidoProdutoSku { get; set; }
+        public virtual DbSet<PedidoSevenpdv> PedidoSevenpdv { get; set; }
+        public virtual DbSet<PedidoStatus> PedidoStatus { get; set; }
+        public virtual DbSet<PedidoStatusPbm> PedidoStatusPbm { get; set; }
+        public virtual DbSet<Posicao> Posicao { get; set; }
         public virtual DbSet<Praca> Praca { get; set; }
-        public virtual DbSet<TbPracaCep> TbPracaCep { get; set; }
-        public virtual DbSet<TbPrincipioAtivo> TbPrincipioAtivo { get; set; }
-        public virtual DbSet<TbProduto> TbProduto { get; set; }
-        public virtual DbSet<TbProdutoAtrStagging> TbProdutoAtrStagging { get; set; }
-        public virtual DbSet<TbProdutoAvaliacao> TbProdutoAvaliacao { get; set; }
-        public virtual DbSet<TbProdutoCategoria> TbProdutoCategoria { get; set; }
-        public virtual DbSet<TbProdutoControle> TbProdutoControle { get; set; }
-        public virtual DbSet<TbProdutoControleStagging> TbProdutoControleStagging { get; set; }
-        public virtual DbSet<TbProdutoDescricao> TbProdutoDescricao { get; set; }
-        public virtual DbSet<TbProdutoDescricaoTipo> TbProdutoDescricaoTipo { get; set; }
-        public virtual DbSet<TbProdutoEtiqueta> TbProdutoEtiqueta { get; set; }
-        public virtual DbSet<TbProdutoFamilia> TbProdutoFamilia { get; set; }
-        public virtual DbSet<TbProdutoFamiliaModalidade> TbProdutoFamiliaModalidade { get; set; }
-        public virtual DbSet<TbProdutoFamiliaStagging> TbProdutoFamiliaStagging { get; set; }
-        public virtual DbSet<TbProdutoKit> TbProdutoKit { get; set; }
-        public virtual DbSet<TbProdutoLancamento> TbProdutoLancamento { get; set; }
-        public virtual DbSet<TbProdutoLog> TbProdutoLog { get; set; }
-        public virtual DbSet<TbProdutoPrincipioAtivo> TbProdutoPrincipioAtivo { get; set; }
-        public virtual DbSet<TbProdutoPrincipioAtivoBkp20191018> TbProdutoPrincipioAtivoBkp20191018 { get; set; }
-        public virtual DbSet<TbProdutoSeo> TbProdutoSeo { get; set; }
-        public virtual DbSet<ProdutoSku> TbProdutoSku { get; set; }
-        public virtual DbSet<TbProdutoSkuAviseMe> TbProdutoSkuAviseMe { get; set; }
-        public virtual DbSet<TbProdutoSkuEspecificacao> TbProdutoSkuEspecificacao { get; set; }
-        public virtual DbSet<TbProdutoSkuFiltro> TbProdutoSkuFiltro { get; set; }
-        public virtual DbSet<TbProdutoSkuGenerico> TbProdutoSkuGenerico { get; set; }
-        public virtual DbSet<TbProdutoSkuImagem> TbProdutoSkuImagem { get; set; }
-        public virtual DbSet<TbProdutoSkuOutrasOrigens> TbProdutoSkuOutrasOrigens { get; set; }
-        public virtual DbSet<TbProdutoSkuPraca> TbProdutoSkuPraca { get; set; }
-        public virtual DbSet<TbProdutoSkuRelacionado> TbProdutoSkuRelacionado { get; set; }
-        public virtual DbSet<TbProdutoSkuSemImagens> TbProdutoSkuSemImagens { get; set; }
-        public virtual DbSet<TbProdutoSkuVendaCasada> TbProdutoSkuVendaCasada { get; set; }
-        public virtual DbSet<TbProdutoTipo> TbProdutoTipo { get; set; }
-        public virtual DbSet<TbProdutoTipoStagging> TbProdutoTipoStagging { get; set; }
-        public virtual DbSet<TbProdutoVideo> TbProdutoVideo { get; set; }
-        public virtual DbSet<TbProdutosAtualizados> TbProdutosAtualizados { get; set; }
-        public virtual DbSet<TbPrograma> TbPrograma { get; set; }
-        public virtual DbSet<TbProgramaProduto> TbProgramaProduto { get; set; }
-        public virtual DbSet<TbPromocao> TbPromocao { get; set; }
-        public virtual DbSet<TbPromocaoAcao> TbPromocaoAcao { get; set; }
-        public virtual DbSet<TbPromocaoBeneficio> TbPromocaoBeneficio { get; set; }
-        public virtual DbSet<TbPromocaoCategoria> TbPromocaoCategoria { get; set; }
-        public virtual DbSet<TbPromocaoCep> TbPromocaoCep { get; set; }
-        public virtual DbSet<TbPromocaoCliente> TbPromocaoCliente { get; set; }
-        public virtual DbSet<TbPromocaoCupom> TbPromocaoCupom { get; set; }
-        public virtual DbSet<TbPromocaoCupomUtilizado> TbPromocaoCupomUtilizado { get; set; }
-        public virtual DbSet<TbPromocaoMarca> TbPromocaoMarca { get; set; }
-        public virtual DbSet<TbPromocaoModalidade> TbPromocaoModalidade { get; set; }
-        public virtual DbSet<TbPromocaoPagamento> TbPromocaoPagamento { get; set; }
-        public virtual DbSet<TbPromocaoPraca> TbPromocaoPraca { get; set; }
-        public virtual DbSet<TbPromocaoProduto> TbPromocaoProduto { get; set; }
-        public virtual DbSet<TbPromocaoTipo> TbPromocaoTipo { get; set; }
-        public virtual DbSet<TbPromocaoTipoAcao> TbPromocaoTipoAcao { get; set; }
-        public virtual DbSet<TbPromocaoTipoBeneficio> TbPromocaoTipoBeneficio { get; set; }
-        public virtual DbSet<TbQuemComprouComprouTambem> TbQuemComprouComprouTambem { get; set; }
-        public virtual DbSet<TbQuemViuComprou> TbQuemViuComprou { get; set; }
-        public virtual DbSet<TbQuemViuViuTambem> TbQuemViuViuTambem { get; set; }
-        public virtual DbSet<TbRedeSocial> TbRedeSocial { get; set; }
-        public virtual DbSet<TbRodape> TbRodape { get; set; }
-        public virtual DbSet<TbSecApps> TbSecApps { get; set; }
-        public virtual DbSet<TbSecGroups> TbSecGroups { get; set; }
-        public virtual DbSet<TbSecGroupsApps> TbSecGroupsApps { get; set; }
-        public virtual DbSet<TbSecLogged> TbSecLogged { get; set; }
-        public virtual DbSet<TbSecUsers> TbSecUsers { get; set; }
-        public virtual DbSet<TbSecUsersGroups> TbSecUsersGroups { get; set; }
-        public virtual DbSet<TbServicoCorreios> TbServicoCorreios { get; set; }
-        public virtual DbSet<TbServicoTotalexpress> TbServicoTotalexpress { get; set; }
-        public virtual DbSet<TbSevenpdvLogon> TbSevenpdvLogon { get; set; }
-        public virtual DbSet<TbSevenpdvSessao> TbSevenpdvSessao { get; set; }
-        public virtual DbSet<TbSkuPracaMovimentacao> TbSkuPracaMovimentacao { get; set; }
-        public virtual DbSet<TbSli> TbSli { get; set; }
-        public virtual DbSet<TbSuperDesconto> TbSuperDesconto { get; set; }
-        public virtual DbSet<TbUploadImagem> TbUploadImagem { get; set; }
-        public virtual DbSet<TbUsuario> TbUsuario { get; set; }
-        public virtual DbSet<TbUsuarioGrupo> TbUsuarioGrupo { get; set; }
-        public virtual DbSet<TbUsuarioGrupoAcesso> TbUsuarioGrupoAcesso { get; set; }
-        public virtual DbSet<TbUsuarioGrupoTelevendas> TbUsuarioGrupoTelevendas { get; set; }
-        public virtual DbSet<TbUsuarioIp> TbUsuarioIp { get; set; }
-        public virtual DbSet<TbUsuarioPraca> TbUsuarioPraca { get; set; }
-        public virtual DbSet<TbUsuarioRecuperacao> TbUsuarioRecuperacao { get; set; }
-        public virtual DbSet<TbUsuarioTelevendas> TbUsuarioTelevendas { get; set; }
-        public virtual DbSet<TbVitrine> TbVitrine { get; set; }
-        public virtual DbSet<TbVitrineCategoria> TbVitrineCategoria { get; set; }
-        public virtual DbSet<TbVitrinePraca> TbVitrinePraca { get; set; }
-        public virtual DbSet<TbVitrineProdutoSku> TbVitrineProdutoSku { get; set; }
-        public virtual DbSet<TbVitrineTipo> TbVitrineTipo { get; set; }
+        public virtual DbSet<PracaCep> PracaCep { get; set; }
+        public virtual DbSet<PrincipioAtivo> PrincipioAtivo { get; set; }
+        public virtual DbSet<Produto> Produto { get; set; }
+        public virtual DbSet<ProdutoAtrStagging> ProdutoAtrStagging { get; set; }
+        public virtual DbSet<ProdutoAvaliacao> ProdutoAvaliacao { get; set; }
+        public virtual DbSet<ProdutoCategoria> ProdutoCategoria { get; set; }
+        public virtual DbSet<ProdutoControle> ProdutoControle { get; set; }
+        public virtual DbSet<ProdutoControleStagging> ProdutoControleStagging { get; set; }
+        public virtual DbSet<ProdutoDescricao> ProdutoDescricao { get; set; }
+        public virtual DbSet<ProdutoDescricaoTipo> ProdutoDescricaoTipo { get; set; }
+        public virtual DbSet<ProdutoEtiqueta> ProdutoEtiqueta { get; set; }
+        public virtual DbSet<ProdutoFamilia> ProdutoFamilia { get; set; }
+        public virtual DbSet<ProdutoFamiliaModalidade> ProdutoFamiliaModalidade { get; set; }
+        public virtual DbSet<ProdutoFamiliaStagging> ProdutoFamiliaStagging { get; set; }
+        public virtual DbSet<ProdutoKit> ProdutoKit { get; set; }
+        public virtual DbSet<ProdutoLancamento> ProdutoLancamento { get; set; }
+        public virtual DbSet<ProdutoLog> ProdutoLog { get; set; }
+        public virtual DbSet<ProdutoPrincipioAtivo> ProdutoPrincipioAtivo { get; set; }
+        public virtual DbSet<ProdutoPrincipioAtivoBkp20191018> ProdutoPrincipioAtivoBkp20191018 { get; set; }
+        public virtual DbSet<ProdutoSeo> ProdutoSeo { get; set; }
+        public virtual DbSet<ProdutoSku> ProdutoSku { get; set; }
+        public virtual DbSet<ProdutoSkuAviseMe> ProdutoSkuAviseMe { get; set; }
+        public virtual DbSet<ProdutoSkuEspecificacao> ProdutoSkuEspecificacao { get; set; }
+        public virtual DbSet<ProdutoSkuFiltro> ProdutoSkuFiltro { get; set; }
+        public virtual DbSet<ProdutoSkuGenerico> ProdutoSkuGenerico { get; set; }
+        public virtual DbSet<ProdutoSkuImagem> ProdutoSkuImagem { get; set; }
+        public virtual DbSet<ProdutoSkuOutrasOrigens> ProdutoSkuOutrasOrigens { get; set; }
+        public virtual DbSet<ProdutoSkuPraca> ProdutoSkuPraca { get; set; }
+        public virtual DbSet<ProdutoSkuRelacionado> ProdutoSkuRelacionado { get; set; }
+        public virtual DbSet<ProdutoSkuSemImagens> ProdutoSkuSemImagens { get; set; }
+        public virtual DbSet<ProdutoSkuVendaCasada> ProdutoSkuVendaCasada { get; set; }
+        public virtual DbSet<ProdutoTipo> ProdutoTipo { get; set; }
+        public virtual DbSet<ProdutoTipoStagging> ProdutoTipoStagging { get; set; }
+        public virtual DbSet<ProdutoVideo> ProdutoVideo { get; set; }
+        public virtual DbSet<ProdutosAtualizados> ProdutosAtualizados { get; set; }
+        public virtual DbSet<Programa> Programa { get; set; }
+        public virtual DbSet<ProgramaProduto> ProgramaProduto { get; set; }
+        public virtual DbSet<Promocao> Promocao { get; set; }
+        public virtual DbSet<PromocaoAcao> PromocaoAcao { get; set; }
+        public virtual DbSet<PromocaoBeneficio> PromocaoBeneficio { get; set; }
+        public virtual DbSet<PromocaoCategoria> PromocaoCategoria { get; set; }
+        public virtual DbSet<PromocaoCep> PromocaoCep { get; set; }
+        public virtual DbSet<PromocaoCliente> PromocaoCliente { get; set; }
+        public virtual DbSet<PromocaoCupom> PromocaoCupom { get; set; }
+        public virtual DbSet<PromocaoCupomUtilizado> PromocaoCupomUtilizado { get; set; }
+        public virtual DbSet<PromocaoMarca> PromocaoMarca { get; set; }
+        public virtual DbSet<PromocaoModalidade> PromocaoModalidade { get; set; }
+        public virtual DbSet<PromocaoPagamento> PromocaoPagamento { get; set; }
+        public virtual DbSet<PromocaoPraca> PromocaoPraca { get; set; }
+        public virtual DbSet<PromocaoProduto> PromocaoProduto { get; set; }
+        public virtual DbSet<PromocaoTipo> PromocaoTipo { get; set; }
+        public virtual DbSet<PromocaoTipoAcao> PromocaoTipoAcao { get; set; }
+        public virtual DbSet<PromocaoTipoBeneficio> PromocaoTipoBeneficio { get; set; }
+        public virtual DbSet<QuemComprouComprouTambem> QuemComprouComprouTambem { get; set; }
+        public virtual DbSet<QuemViuComprou> QuemViuComprou { get; set; }
+        public virtual DbSet<QuemViuViuTambem> QuemViuViuTambem { get; set; }
+        public virtual DbSet<RedeSocial> RedeSocial { get; set; }
+        public virtual DbSet<Rodape> Rodape { get; set; }
+        public virtual DbSet<SecApps> SecApps { get; set; }
+        public virtual DbSet<SecGroups> SecGroups { get; set; }
+        public virtual DbSet<SecGroupsApps> SecGroupsApps { get; set; }
+        public virtual DbSet<SecLogged> SecLogged { get; set; }
+        public virtual DbSet<SecUsers> SecUsers { get; set; }
+        public virtual DbSet<SecUsersGroups> SecUsersGroups { get; set; }
+        public virtual DbSet<ServicoCorreios> ServicoCorreios { get; set; }
+        public virtual DbSet<ServicoTotalexpress> ServicoTotalexpress { get; set; }
+        public virtual DbSet<SevenpdvLogon> SevenpdvLogon { get; set; }
+        public virtual DbSet<SevenpdvSessao> SevenpdvSessao { get; set; }
+        public virtual DbSet<SkuPracaMovimentacao> SkuPracaMovimentacao { get; set; }
+        public virtual DbSet<Sli> Sli { get; set; }
+        public virtual DbSet<SuperDesconto> SuperDesconto { get; set; }
+        public virtual DbSet<UploadImagem> UploadImagem { get; set; }
+        public virtual DbSet<Usuario> Usuario { get; set; }
+        public virtual DbSet<UsuarioGrupo> UsuarioGrupo { get; set; }
+        public virtual DbSet<UsuarioGrupoAcesso> UsuarioGrupoAcesso { get; set; }
+        public virtual DbSet<UsuarioGrupoTelevendas> UsuarioGrupoTelevendas { get; set; }
+        public virtual DbSet<UsuarioIp> UsuarioIp { get; set; }
+        public virtual DbSet<UsuarioPraca> UsuarioPraca { get; set; }
+        public virtual DbSet<UsuarioRecuperacao> UsuarioRecuperacao { get; set; }
+        public virtual DbSet<UsuarioTelevendas> UsuarioTelevendas { get; set; }
+        public virtual DbSet<Vitrine> Vitrine { get; set; }
+        public virtual DbSet<VitrineCategoria> VitrineCategoria { get; set; }
+        public virtual DbSet<VitrinePraca> VitrinePraca { get; set; }
+        public virtual DbSet<VitrineProdutoSku> VitrineProdutoSku { get; set; }
+        public virtual DbSet<VitrineTipo> VitrineTipo { get; set; }
         public virtual DbSet<Vannonline> Vannonline { get; set; }
         public virtual DbSet<ApplicationModule> ApplicationModule { get; set; }
 
@@ -314,7 +315,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbAcesso>(entity =>
+            modelBuilder.Entity<Acesso>(entity =>
             {
                 entity.HasKey(e => e.IdAcesso);
 
@@ -329,7 +330,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbAcessoAplicativo>(entity =>
+            modelBuilder.Entity<AcessoAplicativo>(entity =>
             {
                 entity.HasKey(e => e.IdAcessoAplicativo);
 
@@ -342,13 +343,13 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdAplicativo).HasColumnName("id_aplicativo");
 
                 entity.HasOne(d => d.IdAplicativoNavigation)
-                    .WithMany(p => p.TbAcessoAplicativo)
+                    .WithMany(p => p.AcessoAplicativo)
                     .HasForeignKey(d => d.IdAplicativo)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_acesso_aplicativo_tb_aplicativo");
             });
 
-            modelBuilder.Entity<TbAplicativo>(entity =>
+            modelBuilder.Entity<Aplicativo>(entity =>
             {
                 entity.HasKey(e => e.IdAplicativo);
 
@@ -373,7 +374,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbAuditFrete>(entity =>
+            modelBuilder.Entity<AuditFrete>(entity =>
             {
                 entity.HasKey(e => e.IdAuditFrete);
 
@@ -408,7 +409,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
             });
 
-            modelBuilder.Entity<TbAuditPedido>(entity =>
+            modelBuilder.Entity<AuditPedido>(entity =>
             {
                 entity.HasKey(e => e.IdAuditPedido);
 
@@ -453,7 +454,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
             });
 
-            modelBuilder.Entity<TbAutorizador>(entity =>
+            modelBuilder.Entity<Autorizador>(entity =>
             {
                 entity.HasKey(e => e.IdAutorizador);
 
@@ -481,7 +482,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("datetime");
             });
 
-            modelBuilder.Entity<TbBackofficeSessao>(entity =>
+            modelBuilder.Entity<BackofficeSessao>(entity =>
             {
                 entity.HasKey(e => e.IdSessao);
 
@@ -499,13 +500,13 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbBackofficeSessao)
+                    .WithMany(p => p.BackofficeSessao)
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_backoffice_sessao_tb_usuario");
             });
 
-            modelBuilder.Entity<TbBanner>(entity =>
+            modelBuilder.Entity<Banner>(entity =>
             {
                 entity.HasKey(e => e.IdBanner);
 
@@ -582,17 +583,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdBannerTargetNavigation)
-                    .WithMany(p => p.TbBanner)
+                    .WithMany(p => p.Banner)
                     .HasForeignKey(d => d.IdBannerTarget)
                     .HasConstraintName("FK_tb_banner_tb_banner_target");
 
                 entity.HasOne(d => d.IdLayoutPosicaoNavigation)
-                    .WithMany(p => p.TbBanner)
+                    .WithMany(p => p.Banner)
                     .HasForeignKey(d => d.IdLayoutPosicao)
                     .HasConstraintName("FK_tb_banner_tb_layout_posicao");
             });
 
-            modelBuilder.Entity<TbBannerBusca>(entity =>
+            modelBuilder.Entity<BannerBusca>(entity =>
             {
                 entity.HasKey(e => e.IdBannerBusca);
 
@@ -609,12 +610,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdBanner).HasColumnName("id_banner");
 
                 entity.HasOne(d => d.IdBannerNavigation)
-                    .WithMany(p => p.TbBannerBusca)
+                    .WithMany(p => p.BannerBusca)
                     .HasForeignKey(d => d.IdBanner)
                     .HasConstraintName("FK_tb_banner_busca_tb_banner");
             });
 
-            modelBuilder.Entity<TbBannerCategoria>(entity =>
+            modelBuilder.Entity<BannerCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdBannerCategoria);
 
@@ -627,17 +628,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdCategoria).HasColumnName("id_categoria");
 
                 entity.HasOne(d => d.IdBannerNavigation)
-                    .WithMany(p => p.TbBannerCategoria)
+                    .WithMany(p => p.BannerCategoria)
                     .HasForeignKey(d => d.IdBanner)
                     .HasConstraintName("FK_tb_banner_categoria_tb_banner");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbBannerCategoria)
+                    .WithMany(p => p.BannerCategoria)
                     .HasForeignKey(d => d.IdCategoria)
                     .HasConstraintName("FK_tb_banner_categoria_tb_categoria");
             });
 
-            modelBuilder.Entity<TbBannerPraca>(entity =>
+            modelBuilder.Entity<BannerPraca>(entity =>
             {
                 entity.HasKey(e => e.IdBannerPraca);
 
@@ -650,17 +651,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPraca).HasColumnName("id_praca");
 
                 entity.HasOne(d => d.IdBannerNavigation)
-                    .WithMany(p => p.TbBannerPraca)
+                    .WithMany(p => p.BannerPraca)
                     .HasForeignKey(d => d.IdBanner)
                     .HasConstraintName("FK_tb_banner_praca_tb_banner");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbBannerPraca)
+                    .WithMany(p => p.BannerPraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_banner_praca_tb_praca");
             });
 
-            modelBuilder.Entity<TbBannerProduto>(entity =>
+            modelBuilder.Entity<BannerProduto>(entity =>
             {
                 entity.HasKey(e => e.IdBannerProduto);
 
@@ -673,17 +674,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
 
                 entity.HasOne(d => d.IdBannerNavigation)
-                    .WithMany(p => p.TbBannerProduto)
+                    .WithMany(p => p.BannerProduto)
                     .HasForeignKey(d => d.IdBanner)
                     .HasConstraintName("FK_tb_banner_produto_tb_banner");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbBannerProduto)
+                    .WithMany(p => p.BannerProduto)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_banner_produto_tb_produto");
             });
 
-            modelBuilder.Entity<TbBannerTarget>(entity =>
+            modelBuilder.Entity<BannerTarget>(entity =>
             {
                 entity.HasKey(e => e.IdBannerTarget);
 
@@ -698,7 +699,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbBannerVitrine>(entity =>
+            modelBuilder.Entity<BannerVitrine>(entity =>
             {
                 entity.HasKey(e => e.IdBannerVitrine);
 
@@ -711,17 +712,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdVitrine).HasColumnName("id_vitrine");
 
                 entity.HasOne(d => d.IdBannerNavigation)
-                    .WithMany(p => p.TbBannerVitrine)
+                    .WithMany(p => p.BannerVitrine)
                     .HasForeignKey(d => d.IdBanner)
                     .HasConstraintName("FK_tb_banner_vitrine_tb_banner");
 
                 entity.HasOne(d => d.IdVitrineNavigation)
-                    .WithMany(p => p.TbBannerVitrine)
+                    .WithMany(p => p.BannerVitrine)
                     .HasForeignKey(d => d.IdVitrine)
                     .HasConstraintName("FK_tb_banner_vitrine_tb_vitrine");
             });
 
-            modelBuilder.Entity<TbBusca>(entity =>
+            modelBuilder.Entity<Busca>(entity =>
             {
                 entity.HasKey(e => e.IdBusca);
 
@@ -742,7 +743,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQtdBusca).HasColumnName("nu_qtd_busca");
             });
 
-            modelBuilder.Entity<TbCartaoClientePbm>(entity =>
+            modelBuilder.Entity<CartaoClientePbm>(entity =>
             {
                 entity.HasKey(e => e.IdCartaoClientePbm);
 
@@ -816,7 +817,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdProdutoSkuDestaqueNavigation)
-                    .WithMany(p => p.TbCategoria)
+                    .WithMany(p => p.Categoria)
                     .HasForeignKey(d => d.IdProdutoSkuDestaque)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_categoria_tb_produto_sku");
@@ -829,7 +830,7 @@ namespace Core.Data.EF.Context
               .HasConstraintName("FK_tb_categoria_tb_categoria");
             });
 
-            modelBuilder.Entity<TbCategoriaSeo>(entity =>
+            modelBuilder.Entity<CategoriaSeo>(entity =>
             {
                 entity.HasKey(e => e.IdCategoriaSeo);
 
@@ -855,7 +856,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdCategoria).HasColumnName("id_categoria");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbCategoriaSeo)
+                    .WithMany(p => p.CategoriaSeo)
                     .HasForeignKey(d => d.IdCategoria)
                     .HasConstraintName("FK_tb_categoria_seo_tb_categoria");
             });
@@ -1002,7 +1003,7 @@ namespace Core.Data.EF.Context
                     .HasComment("Para SAP Marketing Apenas");
             });
 
-            modelBuilder.Entity<TbClienteEndereco>(entity =>
+            modelBuilder.Entity<ClienteEndereco>(entity =>
             {
                 entity.HasKey(e => e.IdClienteEndereco);
 
@@ -1075,18 +1076,18 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbClienteEndereco)
+                    .WithMany(p => p.ClienteEndereco)
                     .HasForeignKey(d => d.IdCliente)
                     .HasConstraintName("FK_tb_cliente_endereco_tb_cliente");
 
                 entity.HasOne(d => d.IdClienteEnderecoTipoNavigation)
-                    .WithMany(p => p.TbClienteEndereco)
+                    .WithMany(p => p.ClienteEndereco)
                     .HasForeignKey(d => d.IdClienteEnderecoTipo)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_cliente_endereco_tb_cliente_endereco_tipo");
             });
 
-            modelBuilder.Entity<TbClienteEnderecoTipo>(entity =>
+            modelBuilder.Entity<ClienteEnderecoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdClienteEnderecoTipo);
 
@@ -1101,7 +1102,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbClienteObservacao>(entity =>
+            modelBuilder.Entity<ClienteObservacao>(entity =>
             {
                 entity.HasKey(e => e.IdClienteObservacao);
 
@@ -1125,17 +1126,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbClienteObservacao)
+                    .WithMany(p => p.ClienteObservacao)
                     .HasForeignKey(d => d.IdCliente)
                     .HasConstraintName("FK_tb_cliente_observacao_tb_cliente");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbClienteObservacao)
+                    .WithMany(p => p.ClienteObservacao)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_cliente_observacao_tb_usuario");
             });
 
-            modelBuilder.Entity<TbClienteToken>(entity =>
+            modelBuilder.Entity<ClienteToken>(entity =>
             {
                 entity.HasKey(e => e.IdClienteToken)
                     .HasName("PK__tb_clien__8E60392D78765AAD");
@@ -1162,7 +1163,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdCliente).HasColumnName("id_cliente");
             });
 
-            modelBuilder.Entity<TbConexao>(entity =>
+            modelBuilder.Entity<Conexao>(entity =>
             {
                 entity.HasKey(e => e.IdConexao);
 
@@ -1183,7 +1184,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbConexaoPraca>(entity =>
+            modelBuilder.Entity<ConexaoPraca>(entity =>
             {
                 entity.HasKey(e => e.IdConexaoPraca);
 
@@ -1196,7 +1197,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPraca).HasColumnName("id_praca");
             });
 
-            modelBuilder.Entity<TbConteudo>(entity =>
+            modelBuilder.Entity<Conteudo>(entity =>
             {
                 entity.HasKey(e => e.IdConteudo);
 
@@ -1254,22 +1255,22 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdConteudoCategoriaNavigation)
-                    .WithMany(p => p.TbConteudo)
+                    .WithMany(p => p.Conteudo)
                     .HasForeignKey(d => d.IdConteudoCategoria)
                     .HasConstraintName("FK_tb_conteudo_tb_conteudo_categoria");
 
                 entity.HasOne(d => d.IdConteudoTargetNavigation)
-                    .WithMany(p => p.TbConteudo)
+                    .WithMany(p => p.Conteudo)
                     .HasForeignKey(d => d.IdConteudoTarget)
                     .HasConstraintName("FK_tb_conteudo_tb_conteudo_target");
 
                 entity.HasOne(d => d.IdConteudoTipoNavigation)
-                    .WithMany(p => p.TbConteudo)
+                    .WithMany(p => p.Conteudo)
                     .HasForeignKey(d => d.IdConteudoTipo)
                     .HasConstraintName("FK_tb_conteudo_tb_conteudo_tipo");
             });
 
-            modelBuilder.Entity<TbConteudoCategoria>(entity =>
+            modelBuilder.Entity<ConteudoCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoCategoria);
 
@@ -1288,7 +1289,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
             });
 
-            modelBuilder.Entity<TbConteudoConteudoLocal>(entity =>
+            modelBuilder.Entity<ConteudoConteudoLocal>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoConteudoLocal);
 
@@ -1301,17 +1302,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdConteudoLocal).HasColumnName("id_conteudo_local");
 
                 entity.HasOne(d => d.IdConteudoNavigation)
-                    .WithMany(p => p.TbConteudoConteudoLocal)
+                    .WithMany(p => p.ConteudoConteudoLocal)
                     .HasForeignKey(d => d.IdConteudo)
                     .HasConstraintName("FK_tb_conteudo_conteudo_local_tb_conteudo");
 
                 entity.HasOne(d => d.IdConteudoLocalNavigation)
-                    .WithMany(p => p.TbConteudoConteudoLocal)
+                    .WithMany(p => p.ConteudoConteudoLocal)
                     .HasForeignKey(d => d.IdConteudoLocal)
                     .HasConstraintName("FK_tb_conteudo_conteudo_local_tb_conteudo_local");
             });
 
-            modelBuilder.Entity<TbConteudoLocal>(entity =>
+            modelBuilder.Entity<ConteudoLocal>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoLocal);
 
@@ -1326,7 +1327,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbConteudoSeo>(entity =>
+            modelBuilder.Entity<ConteudoSeo>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoSeo);
 
@@ -1352,12 +1353,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdConteudo).HasColumnName("id_conteudo");
 
                 entity.HasOne(d => d.IdConteudoNavigation)
-                    .WithMany(p => p.TbConteudoSeo)
+                    .WithMany(p => p.ConteudoSeo)
                     .HasForeignKey(d => d.IdConteudo)
                     .HasConstraintName("FK_tb_conteudo_seo_tb_conteudo");
             });
 
-            modelBuilder.Entity<TbConteudoTarget>(entity =>
+            modelBuilder.Entity<ConteudoTarget>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoTarget);
 
@@ -1372,7 +1373,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbConteudoTipo>(entity =>
+            modelBuilder.Entity<ConteudoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdConteudoTipo);
 
@@ -1590,7 +1591,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
             });
 
-            modelBuilder.Entity<TbDeparaClientesVfarma>(entity =>
+            modelBuilder.Entity<DeparaClientesVfarma>(entity =>
             {
                 entity.HasKey(e => e.IdDeparaClientesVfarma);
 
@@ -1616,7 +1617,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbDeparaFmp>(entity =>
+            modelBuilder.Entity<DeparaFmp>(entity =>
             {
                 entity.HasKey(e => e.IdDepara);
 
@@ -1637,7 +1638,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbDiaSemana>(entity =>
+            modelBuilder.Entity<DiaSemana>(entity =>
             {
                 entity.HasKey(e => e.IdDiaSemana);
 
@@ -1652,7 +1653,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbEanListaTmp>(entity =>
+            modelBuilder.Entity<EanListaTmp>(entity =>
             {
                 entity.ToTable("tb_ean_lista_tmp");
 
@@ -1664,7 +1665,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbEbit>(entity =>
+            modelBuilder.Entity<Ebit>(entity =>
             {
                 entity.HasKey(e => e.IdEbit);
 
@@ -1685,7 +1686,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.FlAtivo).HasColumnName("fl_ativo");
             });
 
-            modelBuilder.Entity<TbEmail>(entity =>
+            modelBuilder.Entity<Email>(entity =>
             {
                 entity.HasKey(e => e.IdEmail);
 
@@ -1726,18 +1727,18 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdEmailTipoNavigation)
-                    .WithMany(p => p.TbEmail)
+                    .WithMany(p => p.Email)
                     .HasForeignKey(d => d.IdEmailTipo)
                     .HasConstraintName("FK_tb_email_tb_email_tipo");
 
                 entity.HasOne(d => d.IdPedidoStatusNavigation)
-                    .WithMany(p => p.TbEmail)
+                    .WithMany(p => p.Email)
                     .HasForeignKey(d => d.IdPedidoStatus)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_email_tb_pedido_status");
             });
 
-            modelBuilder.Entity<TbEmailTag>(entity =>
+            modelBuilder.Entity<EmailTag>(entity =>
             {
                 entity.HasKey(e => e.IdTag)
                     .HasName("PK_tb_tag");
@@ -1759,7 +1760,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbEmailTipo>(entity =>
+            modelBuilder.Entity<EmailTipo>(entity =>
             {
                 entity.HasKey(e => e.IdEmailTipo);
 
@@ -1774,7 +1775,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbEspecificacao>(entity =>
+            modelBuilder.Entity<Especificacao>(entity =>
             {
                 entity.HasKey(e => e.IdEspecificacao);
 
@@ -1809,12 +1810,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdEspecificacaoTipoNavigation)
-                    .WithMany(p => p.TbEspecificacao)
+                    .WithMany(p => p.Especificacao)
                     .HasForeignKey(d => d.IdEspecificacaoTipo)
                     .HasConstraintName("FK_tb_especificacao_tb_especificacao_tipo");
             });
 
-            modelBuilder.Entity<TbEspecificacaoTipo>(entity =>
+            modelBuilder.Entity<EspecificacaoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdEspecificacaoTipo);
 
@@ -1834,7 +1835,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbEtiqueta>(entity =>
+            modelBuilder.Entity<Etiqueta>(entity =>
             {
                 entity.HasKey(e => e.IdEtiqueta);
 
@@ -1866,12 +1867,12 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdEtiquetaTipoNavigation)
-                    .WithMany(p => p.TbEtiqueta)
+                    .WithMany(p => p.Etiqueta)
                     .HasForeignKey(d => d.IdEtiquetaTipo)
                     .HasConstraintName("FK_tb_etiqueta_tb_etiqueta_tipo");
             });
 
-            modelBuilder.Entity<TbEtiquetaTipo>(entity =>
+            modelBuilder.Entity<EtiquetaTipo>(entity =>
             {
                 entity.HasKey(e => e.IdEtiquetaTipo);
 
@@ -1886,7 +1887,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbFaq>(entity =>
+            modelBuilder.Entity<Faq>(entity =>
             {
                 entity.HasKey(e => e.IdFaq);
 
@@ -1910,12 +1911,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdFaqCategoriaNavigation)
-                    .WithMany(p => p.TbFaq)
+                    .WithMany(p => p.Faq)
                     .HasForeignKey(d => d.IdFaqCategoria)
                     .HasConstraintName("FK_tb_faq_tb_faq_categoria");
             });
 
-            modelBuilder.Entity<TbFaqCategoria>(entity =>
+            modelBuilder.Entity<FaqCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdFaqCategoria);
 
@@ -1932,7 +1933,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbFiltro>(entity =>
+            modelBuilder.Entity<Filtro>(entity =>
             {
                 entity.HasKey(e => e.IdFiltro);
 
@@ -1962,12 +1963,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdFiltroTipoNavigation)
-                    .WithMany(p => p.TbFiltro)
+                    .WithMany(p => p.Filtro)
                     .HasForeignKey(d => d.IdFiltroTipo)
                     .HasConstraintName("FK_tb_filtro_tb_filtro_tipo");
             });
 
-            modelBuilder.Entity<TbFiltroTipo>(entity =>
+            modelBuilder.Entity<FiltroTipo>(entity =>
             {
                 entity.HasKey(e => e.IdFiltroTipo);
 
@@ -1989,7 +1990,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbFiltroTipoCategoria>(entity =>
+            modelBuilder.Entity<FiltroTipoCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdFiltroTipoCategoria);
 
@@ -2008,12 +2009,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdSubcategoria).HasColumnName("id_subcategoria");
 
                 entity.HasOne(d => d.IdFiltroTipoNavigation)
-                    .WithMany(p => p.TbFiltroTipoCategoria)
+                    .WithMany(p => p.FiltroTipoCategoria)
                     .HasForeignKey(d => d.IdFiltroTipo)
                     .HasConstraintName("FK_tb_filtro_tipo_categoria_tb_filtro_tipo");
             });
 
-            modelBuilder.Entity<TbFormaPagamento>(entity =>
+            modelBuilder.Entity<FormaPagamento>(entity =>
             {
                 entity.HasKey(e => e.IdFormaPagamento);
 
@@ -2037,12 +2038,12 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdFormaPagamentoTipoNavigation)
-                    .WithMany(p => p.TbFormaPagamento)
+                    .WithMany(p => p.FormaPagamento)
                     .HasForeignKey(d => d.IdFormaPagamentoTipo)
                     .HasConstraintName("FK_tb_forma_pagamento_tb_forma_pagamento_tipo");
             });
 
-            modelBuilder.Entity<TbFormaPagamentoTipo>(entity =>
+            modelBuilder.Entity<FormaPagamentoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdFormaPagamentoTipo);
 
@@ -2057,7 +2058,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbGateway>(entity =>
+            modelBuilder.Entity<Gateway>(entity =>
             {
                 entity.HasKey(e => e.IdGateway);
 
@@ -2090,12 +2091,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdGatewayTipo).HasColumnName("id_gateway_tipo");
 
                 entity.HasOne(d => d.IdGatewayTipoNavigation)
-                    .WithMany(p => p.TbGateway)
+                    .WithMany(p => p.Gateway)
                     .HasForeignKey(d => d.IdGatewayTipo)
                     .HasConstraintName("FK_tb_gateway_tb_gateway_tipo");
             });
 
-            modelBuilder.Entity<TbGatewayPraca>(entity =>
+            modelBuilder.Entity<GatewayPraca>(entity =>
             {
                 entity.HasKey(e => e.IdGatewayPraca);
 
@@ -2108,17 +2109,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPraca).HasColumnName("id_praca");
 
                 entity.HasOne(d => d.IdGatewayNavigation)
-                    .WithMany(p => p.TbGatewayPraca)
+                    .WithMany(p => p.GatewayPraca)
                     .HasForeignKey(d => d.IdGateway)
                     .HasConstraintName("FK_tb_gateway_praca_tb_gateway");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbGatewayPraca)
+                    .WithMany(p => p.GatewayPraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_gateway_praca_tb_praca");
             });
 
-            modelBuilder.Entity<TbGatewayTipo>(entity =>
+            modelBuilder.Entity<GatewayTipo>(entity =>
             {
                 entity.HasKey(e => e.IdGatewayTipo);
 
@@ -2134,7 +2135,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbGatewayTipoFormaPagamento>(entity =>
+            modelBuilder.Entity<GatewayTipoFormaPagamento>(entity =>
             {
                 entity.HasKey(e => e.IdGatewayTipoFormaPagamento);
 
@@ -2150,17 +2151,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdGatewayTipo).HasColumnName("id_gateway_tipo");
 
                 entity.HasOne(d => d.IdFormaPagamentoNavigation)
-                    .WithMany(p => p.TbGatewayTipoFormaPagamento)
+                    .WithMany(p => p.GatewayTipoFormaPagamento)
                     .HasForeignKey(d => d.IdFormaPagamento)
                     .HasConstraintName("FK_tb_gateway_tipo_forma_pagamento_tb_forma_pagamento");
 
                 entity.HasOne(d => d.IdGatewayTipoNavigation)
-                    .WithMany(p => p.TbGatewayTipoFormaPagamento)
+                    .WithMany(p => p.GatewayTipoFormaPagamento)
                     .HasForeignKey(d => d.IdGatewayTipo)
                     .HasConstraintName("FK_tb_gateway_tipo_forma_pagamento_tb_gateway_tipo");
             });
 
-            modelBuilder.Entity<TbGondola>(entity =>
+            modelBuilder.Entity<Gondola>(entity =>
             {
                 entity.HasKey(e => e.IdGondola);
 
@@ -2192,7 +2193,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbGondolaProdutoSku>(entity =>
+            modelBuilder.Entity<GondolaProdutoSku>(entity =>
             {
                 entity.HasKey(e => e.IdGondolaProdutoSku);
 
@@ -2205,12 +2206,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbGondolaProdutoSku)
+                    .WithMany(p => p.GondolaProdutoSku)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_gondola_produto_sku_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbGraficoCockpit>(entity =>
+            modelBuilder.Entity<GraficoCockpit>(entity =>
             {
                 entity.HasKey(e => e.IdGraficoCockpit);
 
@@ -2225,17 +2226,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdAplicativoNavigation)
-                    .WithMany(p => p.TbGraficoCockpit)
+                    .WithMany(p => p.GraficoCockpit)
                     .HasForeignKey(d => d.IdAplicativo)
                     .HasConstraintName("FK_tb_grafico_cockpit_tb_aplicativo");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbGraficoCockpit)
+                    .WithMany(p => p.GraficoCockpit)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_grafico_cockpit_tb_usuario");
             });
 
-            modelBuilder.Entity<TbImpAtualizaEstoquePreco>(entity =>
+            modelBuilder.Entity<ImpAtualizaEstoquePreco>(entity =>
             {
                 entity.HasKey(e => e.IdImportacao);
 
@@ -2274,7 +2275,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
             });
 
-            modelBuilder.Entity<TbImpAtualizaTitleMeta>(entity =>
+            modelBuilder.Entity<ImpAtualizaTitleMeta>(entity =>
             {
                 entity.ToTable("tb_imp_atualiza_title_meta");
 
@@ -2310,7 +2311,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbLayout>(entity =>
+            modelBuilder.Entity<Layout>(entity =>
             {
                 entity.HasKey(e => e.IdLayout);
 
@@ -2330,7 +2331,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbLayoutPosicao>(entity =>
+            modelBuilder.Entity<LayoutPosicao>(entity =>
             {
                 entity.HasKey(e => e.IdLayoutPosicao);
 
@@ -2347,17 +2348,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuLargura).HasColumnName("nu_largura");
 
                 entity.HasOne(d => d.IdLayoutNavigation)
-                    .WithMany(p => p.TbLayoutPosicao)
+                    .WithMany(p => p.LayoutPosicao)
                     .HasForeignKey(d => d.IdLayout)
                     .HasConstraintName("FK_tb_layout_posicao_tb_layout");
 
                 entity.HasOne(d => d.IdPosicaoNavigation)
-                    .WithMany(p => p.TbLayoutPosicao)
+                    .WithMany(p => p.LayoutPosicao)
                     .HasForeignKey(d => d.IdPosicao)
                     .HasConstraintName("FK_tb_layout_posicao_tb_posicao");
             });
 
-            modelBuilder.Entity<TbListaDesejo>(entity =>
+            modelBuilder.Entity<ListaDesejo>(entity =>
             {
                 entity.HasKey(e => e.IdListaDesejo);
 
@@ -2378,17 +2379,17 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbListaDesejo)
+                    .WithMany(p => p.ListaDesejo)
                     .HasForeignKey(d => d.IdCliente)
                     .HasConstraintName("FK_tb_lista_desejo_tb_cliente");
 
                 entity.HasOne(d => d.IdListaDesejoPeriodoNavigation)
-                    .WithMany(p => p.TbListaDesejo)
+                    .WithMany(p => p.ListaDesejo)
                     .HasForeignKey(d => d.IdListaDesejoPeriodo)
                     .HasConstraintName("FK_tb_lista_desejo_tb_lista_desejo_periodo");
             });
 
-            modelBuilder.Entity<TbListaDesejoPeriodo>(entity =>
+            modelBuilder.Entity<ListaDesejoPeriodo>(entity =>
             {
                 entity.HasKey(e => e.IdListaDesejoPeriodo);
 
@@ -2407,7 +2408,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuPeriodo).HasColumnName("nu_periodo");
             });
 
-            modelBuilder.Entity<TbListaDesejoProdutoSku>(entity =>
+            modelBuilder.Entity<ListaDesejoProdutoSku>(entity =>
             {
                 entity.HasKey(e => e.IdListaDesejoProdutoSku);
 
@@ -2420,17 +2421,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdListaDesejoNavigation)
-                    .WithMany(p => p.TbListaDesejoProdutoSku)
+                    .WithMany(p => p.ListaDesejoProdutoSku)
                     .HasForeignKey(d => d.IdListaDesejo)
                     .HasConstraintName("FK_tb_lista_desejo_produto_sku_tb_lista_desejo");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbListaDesejoProdutoSku)
+                    .WithMany(p => p.ListaDesejoProdutoSku)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_lista_desejo_produto_sku_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbLog>(entity =>
+            modelBuilder.Entity<Log>(entity =>
             {
                 entity.ToTable("tb_log");
 
@@ -2476,7 +2477,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbLogProcedure>(entity =>
+            modelBuilder.Entity<LogProcedure>(entity =>
             {
                 entity.HasKey(e => e.IdLog);
 
@@ -2493,7 +2494,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("datetime");
             });
 
-            modelBuilder.Entity<TbLogTelevendas>(entity =>
+            modelBuilder.Entity<LogTelevendas>(entity =>
             {
                 entity.HasKey(e => e.IdLogTelevendas);
 
@@ -2514,12 +2515,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuarioTelevendas).HasColumnName("id_usuario_televendas");
 
                 entity.HasOne(d => d.IdUsuarioTelevendasNavigation)
-                    .WithMany(p => p.TbLogTelevendas)
+                    .WithMany(p => p.LogTelevendas)
                     .HasForeignKey(d => d.IdUsuarioTelevendas)
                     .HasConstraintName("FK_tb_log_televendas_tb_usuario_televedas");
             });
 
-            modelBuilder.Entity<TbLojaEspecial>(entity =>
+            modelBuilder.Entity<LojaEspecial>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecial);
 
@@ -2579,7 +2580,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
             });
 
-            modelBuilder.Entity<TbLojaEspecialBanner>(entity =>
+            modelBuilder.Entity<LojaEspecialBanner>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialBanner);
 
@@ -2618,17 +2619,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialNavigation)
-                    .WithMany(p => p.TbLojaEspecialBanner)
+                    .WithMany(p => p.LojaEspecialBanner)
                     .HasForeignKey(d => d.IdLojaEspecial)
                     .HasConstraintName("FK_tb_loja_especial_banner_tb_loja_especial");
 
                 entity.HasOne(d => d.IdLojaEspecialPosicaoNavigation)
-                    .WithMany(p => p.TbLojaEspecialBanner)
+                    .WithMany(p => p.LojaEspecialBanner)
                     .HasForeignKey(d => d.IdLojaEspecialPosicao)
                     .HasConstraintName("FK_tb_loja_especial_banner_tb_loja_especial_posicao");
             });
 
-            modelBuilder.Entity<TbLojaEspecialCategoria>(entity =>
+            modelBuilder.Entity<LojaEspecialCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialCategoria);
 
@@ -2649,12 +2650,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialSecaoNavigation)
-                    .WithMany(p => p.TbLojaEspecialCategoria)
+                    .WithMany(p => p.LojaEspecialCategoria)
                     .HasForeignKey(d => d.IdLojaEspecialSecao)
                     .HasConstraintName("FK_tb_loja_especial_categoria_tb_loja_especial_secao");
             });
 
-            modelBuilder.Entity<TbLojaEspecialDepartamento>(entity =>
+            modelBuilder.Entity<LojaEspecialDepartamento>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialDepartamento);
 
@@ -2675,12 +2676,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialNavigation)
-                    .WithMany(p => p.TbLojaEspecialDepartamento)
+                    .WithMany(p => p.LojaEspecialDepartamento)
                     .HasForeignKey(d => d.IdLojaEspecial)
                     .HasConstraintName("FK_tb_loja_especial_departamento_tb_loja_especial");
             });
 
-            modelBuilder.Entity<TbLojaEspecialMarca>(entity =>
+            modelBuilder.Entity<LojaEspecialMarca>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialMarca);
 
@@ -2693,17 +2694,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdMarca).HasColumnName("id_marca");
 
                 entity.HasOne(d => d.IdLojaEspecialNavigation)
-                    .WithMany(p => p.TbLojaEspecialMarca)
+                    .WithMany(p => p.LojaEspecialMarca)
                     .HasForeignKey(d => d.IdLojaEspecial)
                     .HasConstraintName("FK_tb_loja_especial_marca_tb_loja_especial");
 
                 entity.HasOne(d => d.IdMarcaNavigation)
-                    .WithMany(p => p.TbLojaEspecialMarca)
+                    .WithMany(p => p.LojaEspecialMarca)
                     .HasForeignKey(d => d.IdMarca)
                     .HasConstraintName("FK_tb_loja_especial_marca_tb_marca");
             });
 
-            modelBuilder.Entity<TbLojaEspecialPosicao>(entity =>
+            modelBuilder.Entity<LojaEspecialPosicao>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialPosicao);
 
@@ -2722,7 +2723,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuLargura).HasColumnName("nu_largura");
             });
 
-            modelBuilder.Entity<TbLojaEspecialProduto>(entity =>
+            modelBuilder.Entity<LojaEspecialProduto>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialProduto);
 
@@ -2741,34 +2742,34 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
 
                 entity.HasOne(d => d.IdLojaEspecialNavigation)
-                    .WithMany(p => p.TbLojaEspecialProduto)
+                    .WithMany(p => p.LojaEspecialProduto)
                     .HasForeignKey(d => d.IdLojaEspecial)
                     .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial");
 
                 entity.HasOne(d => d.IdLojaEspecialCategoriaNavigation)
-                    .WithMany(p => p.TbLojaEspecialProduto)
+                    .WithMany(p => p.LojaEspecialProduto)
                     .HasForeignKey(d => d.IdLojaEspecialCategoria)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_categoria");
 
                 entity.HasOne(d => d.IdLojaEspecialDepartamentoNavigation)
-                    .WithMany(p => p.TbLojaEspecialProduto)
+                    .WithMany(p => p.LojaEspecialProduto)
                     .HasForeignKey(d => d.IdLojaEspecialDepartamento)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_departamento");
 
                 entity.HasOne(d => d.IdLojaEspecialSecaoNavigation)
-                    .WithMany(p => p.TbLojaEspecialProduto)
+                    .WithMany(p => p.LojaEspecialProduto)
                     .HasForeignKey(d => d.IdLojaEspecialSecao)
                     .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_secao");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbLojaEspecialProduto)
+                    .WithMany(p => p.LojaEspecialProduto)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_loja_especial_produto_tb_produto");
             });
 
-            modelBuilder.Entity<TbLojaEspecialSecao>(entity =>
+            modelBuilder.Entity<LojaEspecialSecao>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialSecao);
 
@@ -2789,13 +2790,13 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialDepartamentoNavigation)
-                    .WithMany(p => p.TbLojaEspecialSecao)
+                    .WithMany(p => p.LojaEspecialSecao)
                     .HasForeignKey(d => d.IdLojaEspecialDepartamento)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_loja_especial_secao_tb_loja_especial_departamento");
             });
 
-            modelBuilder.Entity<TbLojaEspecialVitrine>(entity =>
+            modelBuilder.Entity<LojaEspecialVitrine>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialVitrine);
 
@@ -2816,12 +2817,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialNavigation)
-                    .WithMany(p => p.TbLojaEspecialVitrine)
+                    .WithMany(p => p.LojaEspecialVitrine)
                     .HasForeignKey(d => d.IdLojaEspecial)
                     .HasConstraintName("FK_tb_loja_especial_vitrine_tb_loja_especial");
             });
 
-            modelBuilder.Entity<TbLojaEspecialVitrineProduto>(entity =>
+            modelBuilder.Entity<LojaEspecialVitrineProduto>(entity =>
             {
                 entity.HasKey(e => e.IdLojaEspecialVitrineProduto);
 
@@ -2836,17 +2837,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdLojaEspecialVitrineNavigation)
-                    .WithMany(p => p.TbLojaEspecialVitrineProduto)
+                    .WithMany(p => p.LojaEspecialVitrineProduto)
                     .HasForeignKey(d => d.IdLojaEspecialVitrine)
                     .HasConstraintName("FK_tb_loja_especial_vitrine_produto_tb_loja_especial_vitrine");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbLojaEspecialVitrineProduto)
+                    .WithMany(p => p.LojaEspecialVitrineProduto)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_loja_especial_vitrine_produto_tb_produto");
             });
 
-            modelBuilder.Entity<TbLojaFisica>(entity =>
+            modelBuilder.Entity<LojaFisica>(entity =>
             {
                 entity.HasKey(e => e.IdLojaFisica);
 
@@ -2919,7 +2920,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
             });
 
-            modelBuilder.Entity<TbMapeamentoUrl>(entity =>
+            modelBuilder.Entity<MapeamentoUrl>(entity =>
             {
                 entity.HasKey(e => e.IdMapeamento);
 
@@ -2952,7 +2953,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.FlStatus).HasColumnName("fl_status");
             });
 
-            modelBuilder.Entity<TbMarca>(entity =>
+            modelBuilder.Entity<Marca>(entity =>
             {
                 entity.HasKey(e => e.IdMarca);
 
@@ -2988,7 +2989,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbMensagem>(entity =>
+            modelBuilder.Entity<Mensagem>(entity =>
             {
                 entity.HasKey(e => e.IdMensagem);
 
@@ -3023,7 +3024,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.FlStatus).HasColumnName("fl_status");
             });
 
-            modelBuilder.Entity<TbMensagemCategoria>(entity =>
+            modelBuilder.Entity<MensagemCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemCategoria);
 
@@ -3044,18 +3045,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdMensagem).HasColumnName("id_mensagem");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbMensagemCategoria)
+                    .WithMany(p => p.MensagemCategoria)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_mensagem_categoria_tb_categoria2");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemCategoria)
+                    .WithMany(p => p.MensagemCategoria)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_categoria_tb_mensagem");
             });
 
-            modelBuilder.Entity<TbMensagemMarca>(entity =>
+            modelBuilder.Entity<MensagemMarca>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemMarca);
 
@@ -3068,17 +3069,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdMensagem).HasColumnName("id_mensagem");
 
                 entity.HasOne(d => d.IdMarcaNavigation)
-                    .WithMany(p => p.TbMensagemMarca)
+                    .WithMany(p => p.MensagemMarca)
                     .HasForeignKey(d => d.IdMarca)
                     .HasConstraintName("FK_tb_mensagem_marca_tb_marca");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemMarca)
+                    .WithMany(p => p.MensagemMarca)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_marca_tb_mensagem");
             });
 
-            modelBuilder.Entity<TbMensagemPrincipioAtivo>(entity =>
+            modelBuilder.Entity<MensagemPrincipioAtivo>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemPrincipioAtivo);
 
@@ -3091,17 +3092,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPrincipioAtivo).HasColumnName("id_principio_ativo");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemPrincipioAtivo)
+                    .WithMany(p => p.MensagemPrincipioAtivo)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_principio_ativo_tb_mensagem");
 
                 entity.HasOne(d => d.IdPrincipioAtivoNavigation)
-                    .WithMany(p => p.TbMensagemPrincipioAtivo)
+                    .WithMany(p => p.MensagemPrincipioAtivo)
                     .HasForeignKey(d => d.IdPrincipioAtivo)
                     .HasConstraintName("FK_tb_mensagem_principio_ativo_tb_principio_ativo");
             });
 
-            modelBuilder.Entity<TbMensagemProdutoControle>(entity =>
+            modelBuilder.Entity<MensagemProdutoControle>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemProdutoControle);
 
@@ -3114,17 +3115,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoControle).HasColumnName("id_produto_controle");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemProdutoControle)
+                    .WithMany(p => p.MensagemProdutoControle)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_produto_controle_tb_mensagem");
 
                 entity.HasOne(d => d.IdProdutoControleNavigation)
-                    .WithMany(p => p.TbMensagemProdutoControle)
+                    .WithMany(p => p.MensagemProdutoControle)
                     .HasForeignKey(d => d.IdProdutoControle)
                     .HasConstraintName("FK_tb_mensagem_produto_controle_tb_produto_controle");
             });
 
-            modelBuilder.Entity<TbMensagemProdutoFamilia>(entity =>
+            modelBuilder.Entity<MensagemProdutoFamilia>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemProdutoFamilia);
 
@@ -3137,17 +3138,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoFamilia).HasColumnName("id_produto_familia");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemProdutoFamilia)
+                    .WithMany(p => p.MensagemProdutoFamilia)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_produto_familia_tb_mensagem");
 
                 entity.HasOne(d => d.IdProdutoFamiliaNavigation)
-                    .WithMany(p => p.TbMensagemProdutoFamilia)
+                    .WithMany(p => p.MensagemProdutoFamilia)
                     .HasForeignKey(d => d.IdProdutoFamilia)
                     .HasConstraintName("FK_tb_mensagem_produto_familia_tb_produto_familia");
             });
 
-            modelBuilder.Entity<TbMensagemProdutoTipo>(entity =>
+            modelBuilder.Entity<MensagemProdutoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdMensagemProdutoTipo);
 
@@ -3160,17 +3161,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoTipo).HasColumnName("id_produto_tipo");
 
                 entity.HasOne(d => d.IdMensagemNavigation)
-                    .WithMany(p => p.TbMensagemProdutoTipo)
+                    .WithMany(p => p.MensagemProdutoTipo)
                     .HasForeignKey(d => d.IdMensagem)
                     .HasConstraintName("FK_tb_mensagem_produto_tipo_tb_mensagem");
 
                 entity.HasOne(d => d.IdProdutoTipoNavigation)
-                    .WithMany(p => p.TbMensagemProdutoTipo)
+                    .WithMany(p => p.MensagemProdutoTipo)
                     .HasForeignKey(d => d.IdProdutoTipo)
                     .HasConstraintName("FK_tb_mensagem_produto_tipo_tb_produto_tipo");
             });
 
-            modelBuilder.Entity<TbModalidadeEntrega>(entity =>
+            modelBuilder.Entity<ModalidadeEntrega>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntrega);
 
@@ -3264,19 +3265,19 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbModalidadeEntrega)
+                    .WithMany(p => p.ModalidadeEntrega)
                     .HasForeignKey(d => d.IdPraca)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("fk_modalidade_praca");
 
                 entity.HasOne(d => d.IdServicoCorreiosNavigation)
-                    .WithMany(p => p.TbModalidadeEntrega)
+                    .WithMany(p => p.ModalidadeEntrega)
                     .HasForeignKey(d => d.IdServicoCorreios)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK__tb_modali__id_se__15C52FC4");
             });
 
-            modelBuilder.Entity<TbModalidadeEntregaAgenda>(entity =>
+            modelBuilder.Entity<ModalidadeEntregaAgenda>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntregaAgenda);
 
@@ -3301,17 +3302,17 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdDiaSemanaNavigation)
-                    .WithMany(p => p.TbModalidadeEntregaAgenda)
+                    .WithMany(p => p.ModalidadeEntregaAgenda)
                     .HasForeignKey(d => d.IdDiaSemana)
                     .HasConstraintName("FK_tb_modalidade_entrega_agenda_tb_dia_semana");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbModalidadeEntregaAgenda)
+                    .WithMany(p => p.ModalidadeEntregaAgenda)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_modalidade_entrega_agenda_tb_modalidade_entrega");
             });
 
-            modelBuilder.Entity<TbModalidadeEntregaCep>(entity =>
+            modelBuilder.Entity<ModalidadeEntregaCep>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntregaCep);
 
@@ -3375,12 +3376,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbModalidadeEntregaCep)
+                    .WithMany(p => p.ModalidadeEntregaCep)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_modalidade_entrega_cep_tb_modalidade_entrega");
             });
 
-            modelBuilder.Entity<TbModalidadeEntregaLoja>(entity =>
+            modelBuilder.Entity<ModalidadeEntregaLoja>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntregaLoja);
 
@@ -3439,12 +3440,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdModalidadeEntrega).HasColumnName("id_modalidade_entrega");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbModalidadeEntregaLoja)
+                    .WithMany(p => p.ModalidadeEntregaLoja)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_modalidade_entrega_loja_tb_modalidade_entrega");
             });
 
-            modelBuilder.Entity<TbModalidadeEntregaRestricao>(entity =>
+            modelBuilder.Entity<ModalidadeEntregaRestricao>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntregaRestricao);
 
@@ -3493,12 +3494,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbModalidadeEntregaRestricao)
+                    .WithMany(p => p.ModalidadeEntregaRestricao)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_modalidade_entrega_restricao_tb_modalidade_entrega");
             });
 
-            modelBuilder.Entity<TbModalidadeEntregaTipo>(entity =>
+            modelBuilder.Entity<ModalidadeEntregaTipo>(entity =>
             {
                 entity.HasKey(e => e.IdModalidadeEntregaTipo);
 
@@ -3518,7 +3519,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbNewsletter>(entity =>
+            modelBuilder.Entity<Newsletter>(entity =>
             {
                 entity.HasKey(e => e.IdNewsletter);
 
@@ -3548,7 +3549,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbOfertaEspecial>(entity =>
+            modelBuilder.Entity<OfertaEspecial>(entity =>
             {
                 entity.HasKey(e => e.IdOfertaEspecial);
 
@@ -3561,12 +3562,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbOfertaEspecial)
+                    .WithMany(p => p.OfertaEspecial)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_oferta_especial_tb_produto");
             });
 
-            modelBuilder.Entity<TbPagamento>(entity =>
+            modelBuilder.Entity<Pagamento>(entity =>
             {
                 entity.HasKey(e => e.IdPagamento);
 
@@ -3596,12 +3597,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdFormaPagamentoNavigation)
-                    .WithMany(p => p.TbPagamento)
+                    .WithMany(p => p.Pagamento)
                     .HasForeignKey(d => d.IdFormaPagamento)
                     .HasConstraintName("FK_tb_pagamento_tb_forma_pagamento");
             });
 
-            modelBuilder.Entity<TbPagamentoGateway>(entity =>
+            modelBuilder.Entity<PagamentoGateway>(entity =>
             {
                 entity.HasKey(e => e.IdPagamentoGateway);
 
@@ -3614,17 +3615,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPagamento).HasColumnName("id_pagamento");
 
                 entity.HasOne(d => d.IdGatewayNavigation)
-                    .WithMany(p => p.TbPagamentoGateway)
+                    .WithMany(p => p.PagamentoGateway)
                     .HasForeignKey(d => d.IdGateway)
                     .HasConstraintName("FK_tb_pagamento_gateway_tb_gateway");
 
                 entity.HasOne(d => d.IdPagamentoNavigation)
-                    .WithMany(p => p.TbPagamentoGateway)
+                    .WithMany(p => p.PagamentoGateway)
                     .HasForeignKey(d => d.IdPagamento)
                     .HasConstraintName("FK_tb_pagamento_gateway_tb_pagamento");
             });
 
-            modelBuilder.Entity<TbPagamentoParcela>(entity =>
+            modelBuilder.Entity<PagamentoParcela>(entity =>
             {
                 entity.HasKey(e => e.IdPagamentoParcela);
 
@@ -3655,12 +3656,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdPagamentoNavigation)
-                    .WithMany(p => p.TbPagamentoParcela)
+                    .WithMany(p => p.PagamentoParcela)
                     .HasForeignKey(d => d.IdPagamento)
                     .HasConstraintName("FK_tb_pagamento_parcela_tb_pagamento");
             });
 
-            modelBuilder.Entity<TbParceiro>(entity =>
+            modelBuilder.Entity<Parceiro>(entity =>
             {
                 entity.HasKey(e => e.IdParceiro);
 
@@ -3708,7 +3709,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQtdeProdutoSku).HasColumnName("nu_qtde_produto_sku");
             });
 
-            modelBuilder.Entity<TbParceiroXmlProduto>(entity =>
+            modelBuilder.Entity<ParceiroXmlProduto>(entity =>
             {
                 entity.HasKey(e => e.IdParceiroXmlProduto);
 
@@ -3721,12 +3722,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdParceiroNavigation)
-                    .WithMany(p => p.TbParceiroXmlProduto)
+                    .WithMany(p => p.ParceiroXmlProduto)
                     .HasForeignKey(d => d.IdParceiro)
                     .HasConstraintName("FK_tb_parceiro_xml_produto_tb_parceiro");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbParceiroXmlProduto)
+                    .WithMany(p => p.ParceiroXmlProduto)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_parceiro_xml_produto_tb_produto_sku");
             });
@@ -3985,13 +3986,13 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoEntrega)
+                    .WithMany(p => p.PedidoEntrega)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_entrega_tb_pedido");
             });
 
-            modelBuilder.Entity<TbPedidoGestaoRisco>(entity =>
+            modelBuilder.Entity<PedidoGestaoRisco>(entity =>
             {
                 entity.HasKey(e => e.IdGestaoRisco);
 
@@ -4048,7 +4049,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPedido).HasColumnName("id_pedido");
             });
 
-            modelBuilder.Entity<TbPedidoHistorico>(entity =>
+            modelBuilder.Entity<PedidoHistorico>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoHistorico);
 
@@ -4071,19 +4072,19 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoHistorico)
+                    .WithMany(p => p.PedidoHistorico)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_historico_tb_pedido");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbPedidoHistorico)
+                    .WithMany(p => p.PedidoHistorico)
                     .HasForeignKey(d => d.IdUsuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_historico_tb_usuario");
             });
 
-            modelBuilder.Entity<TbPedidoLog>(entity =>
+            modelBuilder.Entity<PedidoLog>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoLog);
 
@@ -4110,30 +4111,30 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoLog)
+                    .WithMany(p => p.PedidoLog)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_log_tb_pedido");
 
                 entity.HasOne(d => d.IdPedidoStatusAnteriorNavigation)
-                    .WithMany(p => p.TbPedidoLogIdPedidoStatusAnteriorNavigation)
+                    .WithMany(p => p.PedidoLogIdPedidoStatusAnteriorNavigation)
                     .HasForeignKey(d => d.IdPedidoStatusAnterior)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_log_tb_pedido_status");
 
                 entity.HasOne(d => d.IdPedidoStatusAtualNavigation)
-                    .WithMany(p => p.TbPedidoLogIdPedidoStatusAtualNavigation)
+                    .WithMany(p => p.PedidoLogIdPedidoStatusAtualNavigation)
                     .HasForeignKey(d => d.IdPedidoStatusAtual)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_log_tb_pedido_status1");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbPedidoLog)
+                    .WithMany(p => p.PedidoLog)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_pedido_log_tb_usuario1");
             });
 
-            modelBuilder.Entity<TbPedidoOrigem>(entity =>
+            modelBuilder.Entity<PedidoOrigem>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoOrigem);
 
@@ -4279,7 +4280,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdPagamentoNavigation)
-                    .WithMany(p => p.TbPedidoPagamento)
+                    .WithMany(p => p.PedidoPagamento)
                     .HasForeignKey(d => d.IdPagamento)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_pagamento_tb_pagamento");
@@ -4291,7 +4292,7 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_pedido_pagamento_tb_pedido");
             });
 
-            modelBuilder.Entity<TbPedidoPagamentoLog>(entity =>
+            modelBuilder.Entity<PedidoPagamentoLog>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoPagamentoLog);
 
@@ -4319,13 +4320,13 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoPagamentoLog)
+                    .WithMany(p => p.PedidoPagamentoLog)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_pagamento_log_tb_pedido");
             });
 
-            modelBuilder.Entity<TbPedidoProdutoKit>(entity =>
+            modelBuilder.Entity<PedidoProdutoKit>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoProdutoKit);
 
@@ -4340,13 +4341,13 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQuantidade).HasColumnName("nu_quantidade");
 
                 entity.HasOne(d => d.IdPedidoProdutoSkuNavigation)
-                    .WithMany(p => p.TbPedidoProdutoKit)
+                    .WithMany(p => p.PedidoProdutoKit)
                     .HasForeignKey(d => d.IdPedidoProdutoSku)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_produto_kit_tb_pedido_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoItemNavigation)
-                    .WithMany(p => p.TbPedidoProdutoKit)
+                    .WithMany(p => p.PedidoProdutoKit)
                     .HasForeignKey(d => d.IdProdutoItem)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_produto_kit_tb_produto_sku");
@@ -4425,13 +4426,13 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_pedido_produto_sku_tb_pedido");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbPedidoProdutoSku)
+                    .WithMany(p => p.PedidoProdutoSku)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_pedido_produto_sku_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbPedidoSevenpdv>(entity =>
+            modelBuilder.Entity<PedidoSevenpdv>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoSevenpdv)
                     .HasName("PK__tb_pedid__09E15CF271C95D1E");
@@ -4468,12 +4469,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPedido).HasColumnName("id_pedido");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPedidoSevenpdv)
+                    .WithMany(p => p.PedidoSevenpdv)
                     .HasForeignKey(d => d.IdPedido)
                     .HasConstraintName("tb_pedido_sevenpdv_fk_tb_pedido");
             });
 
-            modelBuilder.Entity<TbPedidoStatus>(entity =>
+            modelBuilder.Entity<PedidoStatus>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoStatus);
 
@@ -4497,7 +4498,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbPedidoStatusPbm>(entity =>
+            modelBuilder.Entity<PedidoStatusPbm>(entity =>
             {
                 entity.HasKey(e => e.IdPedidoStatusPbm);
 
@@ -4527,7 +4528,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdAutorizador).HasColumnName("id_autorizador");
             });
 
-            modelBuilder.Entity<TbPosicao>(entity =>
+            modelBuilder.Entity<Posicao>(entity =>
             {
                 entity.HasKey(e => e.IdPosicao);
 
@@ -4647,7 +4648,7 @@ namespace Core.Data.EF.Context
                     .HasConstraintName("FK_tb_praca_tb_praca");
             });
 
-            modelBuilder.Entity<TbPracaCep>(entity =>
+            modelBuilder.Entity<PracaCep>(entity =>
             {
                 entity.HasKey(e => e.IdPracaCep);
 
@@ -4691,12 +4692,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPraca).HasColumnName("id_praca");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbPracaCep)
+                    .WithMany(p => p.PracaCep)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_praca_cep_tb_praca");
             });
 
-            modelBuilder.Entity<TbPrincipioAtivo>(entity =>
+            modelBuilder.Entity<PrincipioAtivo>(entity =>
             {
                 entity.HasKey(e => e.IdPrincipioAtivo);
 
@@ -4717,7 +4718,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPrincipioAtivoVannon).HasColumnName("id_principio_ativo_vannon");
             });
 
-            modelBuilder.Entity<TbProduto>(entity =>
+            modelBuilder.Entity<Produto>(entity =>
             {
                 entity.HasKey(e => e.IdProduto);
 
@@ -4812,28 +4813,28 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuClick).HasColumnName("nu_click");
 
                 entity.HasOne(d => d.IdMarcaNavigation)
-                    .WithMany(p => p.TbProduto)
+                    .WithMany(p => p.Produto)
                     .HasForeignKey(d => d.IdMarca)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_tb_marca");
 
                 entity.HasOne(d => d.IdProdutoControleNavigation)
-                    .WithMany(p => p.TbProduto)
+                    .WithMany(p => p.Produto)
                     .HasForeignKey(d => d.IdProdutoControle)
                     .HasConstraintName("FK_tb_produto_tb_produto_controle");
 
                 entity.HasOne(d => d.IdProdutoFamiliaNavigation)
-                    .WithMany(p => p.TbProduto)
+                    .WithMany(p => p.Produto)
                     .HasForeignKey(d => d.IdProdutoFamilia)
                     .HasConstraintName("FK_tb_produto_tb_produto_familia");
 
                 entity.HasOne(d => d.IdProdutoTipoNavigation)
-                    .WithMany(p => p.TbProduto)
+                    .WithMany(p => p.Produto)
                     .HasForeignKey(d => d.IdProdutoTipo)
                     .HasConstraintName("FK_tb_produto_tb_produto_tipo");
             });
 
-            modelBuilder.Entity<TbProdutoAtrStagging>(entity =>
+            modelBuilder.Entity<ProdutoAtrStagging>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoAtrStagging)
                     .HasName("PK_tb_atr_stagging");
@@ -4863,7 +4864,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuProfundidade).HasColumnName("nu_profundidade");
             });
 
-            modelBuilder.Entity<TbProdutoAvaliacao>(entity =>
+            modelBuilder.Entity<ProdutoAvaliacao>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoAvaliacao);
 
@@ -4903,17 +4904,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuAvaliacao).HasColumnName("nu_avaliacao");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbProdutoAvaliacao)
+                    .WithMany(p => p.ProdutoAvaliacao)
                     .HasForeignKey(d => d.IdCliente)
                     .HasConstraintName("FK_tb_produto_avaliacao_tb_cliente");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoAvaliacao)
+                    .WithMany(p => p.ProdutoAvaliacao)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_avaliacao_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutoCategoria>(entity =>
+            modelBuilder.Entity<ProdutoCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoCategoria);
 
@@ -4940,33 +4941,33 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdSubcategoria).HasColumnName("id_subcategoria");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbProdutoCategoriaIdCategoriaNavigation)
+                    .WithMany(p => p.ProdutoCategoriaIdCategoriaNavigation)
                     .HasForeignKey(d => d.IdCategoria)
                     .HasConstraintName("FK_tb_produto_categoria_tb_categoria2");
 
                 entity.HasOne(d => d.IdDepartamentoNavigation)
-                    .WithMany(p => p.TbProdutoCategoriaIdDepartamentoNavigation)
+                    .WithMany(p => p.ProdutoCategoriaIdDepartamentoNavigation)
                     .HasForeignKey(d => d.IdDepartamento)
                     .HasConstraintName("FK_tb_produto_categoria_tb_categoria");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoCategoria)
+                    .WithMany(p => p.ProdutoCategoria)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_categoria_tb_produto");
 
                 entity.HasOne(d => d.IdSecaoNavigation)
-                    .WithMany(p => p.TbProdutoCategoriaIdSecaoNavigation)
+                    .WithMany(p => p.ProdutoCategoriaIdSecaoNavigation)
                     .HasForeignKey(d => d.IdSecao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_categoria_tb_categoria1");
 
                 entity.HasOne(d => d.IdSubcategoriaNavigation)
-                    .WithMany(p => p.TbProdutoCategoriaIdSubcategoriaNavigation)
+                    .WithMany(p => p.ProdutoCategoriaIdSubcategoriaNavigation)
                     .HasForeignKey(d => d.IdSubcategoria)
                     .HasConstraintName("FK_tb_produto_categoria_tb_categoria3");
             });
 
-            modelBuilder.Entity<TbProdutoControle>(entity =>
+            modelBuilder.Entity<ProdutoControle>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoControle);
 
@@ -4981,7 +4982,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbProdutoControleStagging>(entity =>
+            modelBuilder.Entity<ProdutoControleStagging>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoControleStagging);
 
@@ -4996,7 +4997,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoControle).HasColumnName("id_produto_controle");
             });
 
-            modelBuilder.Entity<TbProdutoDescricao>(entity =>
+            modelBuilder.Entity<ProdutoDescricao>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoDescricao);
 
@@ -5020,17 +5021,17 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoDescricao)
+                    .WithMany(p => p.ProdutoDescricao)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_descricao_tb_produto");
 
                 entity.HasOne(d => d.IdProdutoDescricaoTipoNavigation)
-                    .WithMany(p => p.TbProdutoDescricao)
+                    .WithMany(p => p.ProdutoDescricao)
                     .HasForeignKey(d => d.IdProdutoDescricaoTipo)
                     .HasConstraintName("FK_tb_produto_descricao_tb_produto_descricao_tipo");
             });
 
-            modelBuilder.Entity<TbProdutoDescricaoTipo>(entity =>
+            modelBuilder.Entity<ProdutoDescricaoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoDescricaoTipo);
 
@@ -5052,7 +5053,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbProdutoEtiqueta>(entity =>
+            modelBuilder.Entity<ProdutoEtiqueta>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoEtiqueta);
 
@@ -5075,23 +5076,23 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdEtiquetaNavigation)
-                    .WithMany(p => p.TbProdutoEtiqueta)
+                    .WithMany(p => p.ProdutoEtiqueta)
                     .HasForeignKey(d => d.IdEtiqueta)
                     .HasConstraintName("FK_tb_produto_etiqueta_tb_etiqueta");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoEtiqueta)
+                    .WithMany(p => p.ProdutoEtiqueta)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_etiqueta_tb_produto");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbProdutoEtiqueta)
+                    .WithMany(p => p.ProdutoEtiqueta)
                     .HasForeignKey(d => d.IdPromocao)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_produto_etiqueta_tb_promocao");
             });
 
-            modelBuilder.Entity<TbProdutoFamilia>(entity =>
+            modelBuilder.Entity<ProdutoFamilia>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoFamilia);
 
@@ -5111,7 +5112,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbProdutoFamiliaModalidade>(entity =>
+            modelBuilder.Entity<ProdutoFamiliaModalidade>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoFamiliaModalidade);
 
@@ -5132,17 +5133,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoFamilia).HasColumnName("id_produto_familia");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbProdutoFamiliaModalidade)
+                    .WithMany(p => p.ProdutoFamiliaModalidade)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_produto_familia_modalidade_tb_modalidade_entrega");
 
                 entity.HasOne(d => d.IdProdutoFamiliaNavigation)
-                    .WithMany(p => p.TbProdutoFamiliaModalidade)
+                    .WithMany(p => p.ProdutoFamiliaModalidade)
                     .HasForeignKey(d => d.IdProdutoFamilia)
                     .HasConstraintName("FK_tb_produto_familia_modalidade_tb_produto_familia");
             });
 
-            modelBuilder.Entity<TbProdutoFamiliaStagging>(entity =>
+            modelBuilder.Entity<ProdutoFamiliaStagging>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoFamiliaStagging);
 
@@ -5157,7 +5158,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoFamilia).HasColumnName("id_produto_familia");
             });
 
-            modelBuilder.Entity<TbProdutoKit>(entity =>
+            modelBuilder.Entity<ProdutoKit>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoKit);
 
@@ -5172,17 +5173,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQuantidade).HasColumnName("nu_quantidade");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoKit)
+                    .WithMany(p => p.ProdutoKit)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_kit_tb_produto");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoKit)
+                    .WithMany(p => p.ProdutoKit)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_kit_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoLancamento>(entity =>
+            modelBuilder.Entity<ProdutoLancamento>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoLancamento);
 
@@ -5201,12 +5202,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoLancamento)
+                    .WithMany(p => p.ProdutoLancamento)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_lancamento_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutoLog>(entity =>
+            modelBuilder.Entity<ProdutoLog>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoLog);
 
@@ -5232,17 +5233,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoLog)
+                    .WithMany(p => p.ProdutoLog)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_log_tb_produto");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbProdutoLog)
+                    .WithMany(p => p.ProdutoLog)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_produto_log_tb_usuario");
             });
 
-            modelBuilder.Entity<TbProdutoPrincipioAtivo>(entity =>
+            modelBuilder.Entity<ProdutoPrincipioAtivo>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoPrincipioAtivo);
 
@@ -5257,17 +5258,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
 
                 entity.HasOne(d => d.IdPrincipioAtivoNavigation)
-                    .WithMany(p => p.TbProdutoPrincipioAtivo)
+                    .WithMany(p => p.ProdutoPrincipioAtivo)
                     .HasForeignKey(d => d.IdPrincipioAtivo)
                     .HasConstraintName("FK_tb_produto_principio_ativo_tb_principio_ativo");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoPrincipioAtivo)
+                    .WithMany(p => p.ProdutoPrincipioAtivo)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_principio_ativo_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutoPrincipioAtivoBkp20191018>(entity =>
+            modelBuilder.Entity<ProdutoPrincipioAtivoBkp20191018>(entity =>
             {
                 entity.HasNoKey();
 
@@ -5284,7 +5285,7 @@ namespace Core.Data.EF.Context
                     .ValueGeneratedOnAdd();
             });
 
-            modelBuilder.Entity<TbProdutoSeo>(entity =>
+            modelBuilder.Entity<ProdutoSeo>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSeo);
 
@@ -5313,7 +5314,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoSeo)
+                    .WithMany(p => p.ProdutoSeo)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_seo_tb_produto");
             });
@@ -5379,13 +5380,13 @@ namespace Core.Data.EF.Context
                     .HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoSku)
+                    .WithMany(p => p.ProdutoSku)
                     .HasForeignKey(d => d.IdProduto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_sku_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutoSkuAviseMe>(entity =>
+            modelBuilder.Entity<ProdutoSkuAviseMe>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuAviseMe);
 
@@ -5416,12 +5417,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuAviseMe)
+                    .WithMany(p => p.ProdutoSkuAviseMe)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_avise_me_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuEspecificacao>(entity =>
+            modelBuilder.Entity<ProdutoSkuEspecificacao>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuEspecificacao);
 
@@ -5436,22 +5437,22 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdEspecificacao1Navigation)
-                    .WithMany(p => p.TbProdutoSkuEspecificacaoIdEspecificacao1Navigation)
+                    .WithMany(p => p.ProdutoSkuEspecificacaoIdEspecificacao1Navigation)
                     .HasForeignKey(d => d.IdEspecificacao1)
                     .HasConstraintName("FK_tb_produto_sku_especificacao_tb_especificacao");
 
                 entity.HasOne(d => d.IdEspecificacao2Navigation)
-                    .WithMany(p => p.TbProdutoSkuEspecificacaoIdEspecificacao2Navigation)
+                    .WithMany(p => p.ProdutoSkuEspecificacaoIdEspecificacao2Navigation)
                     .HasForeignKey(d => d.IdEspecificacao2)
                     .HasConstraintName("FK_tb_produto_sku_especificacao_tb_especificacao1");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuEspecificacao)
+                    .WithMany(p => p.ProdutoSkuEspecificacao)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_especificacao_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuFiltro>(entity =>
+            modelBuilder.Entity<ProdutoSkuFiltro>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuFiltro);
 
@@ -5464,17 +5465,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdFiltroNavigation)
-                    .WithMany(p => p.TbProdutoSkuFiltro)
+                    .WithMany(p => p.ProdutoSkuFiltro)
                     .HasForeignKey(d => d.IdFiltro)
                     .HasConstraintName("FK_tb_produto_sku_filtro_tb_filtro");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuFiltro)
+                    .WithMany(p => p.ProdutoSkuFiltro)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_filtro_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuGenerico>(entity =>
+            modelBuilder.Entity<ProdutoSkuGenerico>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuGenerico);
 
@@ -5487,18 +5488,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdMedicamento).HasColumnName("id_medicamento");
 
                 entity.HasOne(d => d.IdGenericoNavigation)
-                    .WithMany(p => p.TbProdutoSkuGenericoIdGenericoNavigation)
+                    .WithMany(p => p.ProdutoSkuGenericoIdGenericoNavigation)
                     .HasForeignKey(d => d.IdGenerico)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_sku_generico_tb_produto_sku1");
 
                 entity.HasOne(d => d.IdMedicamentoNavigation)
-                    .WithMany(p => p.TbProdutoSkuGenericoIdMedicamentoNavigation)
+                    .WithMany(p => p.ProdutoSkuGenericoIdMedicamentoNavigation)
                     .HasForeignKey(d => d.IdMedicamento)
                     .HasConstraintName("FK_tb_produto_sku_generico_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuImagem>(entity =>
+            modelBuilder.Entity<ProdutoSkuImagem>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuImagem);
 
@@ -5529,13 +5530,13 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSku).HasColumnName("id_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuImagem)
+                    .WithMany(p => p.ProdutoSkuImagem)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_sku_imagem_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuOutrasOrigens>(entity =>
+            modelBuilder.Entity<ProdutoSkuOutrasOrigens>(entity =>
             {
                 entity.HasNoKey();
 
@@ -5589,7 +5590,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("numeric(18, 2)");
             });
 
-            modelBuilder.Entity<TbProdutoSkuPraca>(entity =>
+            modelBuilder.Entity<ProdutoSkuPraca>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuPraca);
 
@@ -5650,17 +5651,17 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbProdutoSkuPraca)
+                    .WithMany(p => p.ProdutoSkuPraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_produto_sku_praca_tb_praca");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuPraca)
+                    .WithMany(p => p.ProdutoSkuPraca)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_praca_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbProdutoSkuRelacionado>(entity =>
+            modelBuilder.Entity<ProdutoSkuRelacionado>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuRelacionado);
 
@@ -5676,18 +5677,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoSkuRelacao).HasColumnName("id_produto_sku_relacao");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuRelacionadoIdProdutoSkuNavigation)
+                    .WithMany(p => p.ProdutoSkuRelacionadoIdProdutoSkuNavigation)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_relacionado_tb_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuRelacaoNavigation)
-                    .WithMany(p => p.TbProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation)
+                    .WithMany(p => p.ProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation)
                     .HasForeignKey(d => d.IdProdutoSkuRelacao)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_sku_relacionado_tb_produto_sku1");
             });
 
-            modelBuilder.Entity<TbProdutoSkuSemImagens>(entity =>
+            modelBuilder.Entity<ProdutoSkuSemImagens>(entity =>
             {
                 entity.HasNoKey();
 
@@ -5725,7 +5726,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.SkuVfarma).HasColumnName("sku_vfarma");
             });
 
-            modelBuilder.Entity<TbProdutoSkuVendaCasada>(entity =>
+            modelBuilder.Entity<ProdutoSkuVendaCasada>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuVendaCasada);
 
@@ -5752,18 +5753,18 @@ namespace Core.Data.EF.Context
                     .HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProdutoSkuVendaCasadaIdProdutoSkuNavigation)
+                    .WithMany(p => p.ProdutoSkuVendaCasadaIdProdutoSkuNavigation)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_produto_sku_venda_casada_tb_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuCasadoNavigation)
-                    .WithMany(p => p.TbProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation)
+                    .WithMany(p => p.ProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation)
                     .HasForeignKey(d => d.IdProdutoSkuCasado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_produto_sku_venda_casada_tb_produto_sku1");
             });
 
-            modelBuilder.Entity<TbProdutoTipo>(entity =>
+            modelBuilder.Entity<ProdutoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoTipo);
 
@@ -5778,7 +5779,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbProdutoTipoStagging>(entity =>
+            modelBuilder.Entity<ProdutoTipoStagging>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoFamiliaStagging);
 
@@ -5793,7 +5794,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProdutoTipo).HasColumnName("id_produto_tipo");
             });
 
-            modelBuilder.Entity<TbProdutoVideo>(entity =>
+            modelBuilder.Entity<ProdutoVideo>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoVideo);
 
@@ -5821,12 +5822,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbProdutoVideo)
+                    .WithMany(p => p.ProdutoVideo)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_produto_video_tb_produto");
             });
 
-            modelBuilder.Entity<TbProdutosAtualizados>(entity =>
+            modelBuilder.Entity<ProdutosAtualizados>(entity =>
             {
                 entity.HasNoKey();
 
@@ -5845,7 +5846,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdProduto).HasColumnName("id_produto");
             });
 
-            modelBuilder.Entity<TbPrograma>(entity =>
+            modelBuilder.Entity<Programa>(entity =>
             {
                 entity.HasKey(e => e.IdPrograma);
 
@@ -5875,7 +5876,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbProgramaProduto>(entity =>
+            modelBuilder.Entity<ProgramaProduto>(entity =>
             {
                 entity.HasKey(e => e.IdProgramaProduto);
 
@@ -5902,17 +5903,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPrograma).HasColumnName("id_programa");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbProgramaProduto)
+                    .WithMany(p => p.ProgramaProduto)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_programa_produto_tb_produto_sku");
 
                 entity.HasOne(d => d.IdProgramaNavigation)
-                    .WithMany(p => p.TbProgramaProduto)
+                    .WithMany(p => p.ProgramaProduto)
                     .HasForeignKey(d => d.IdPrograma)
                     .HasConstraintName("FK_tb_programa_produto_tb_programa");
             });
 
-            modelBuilder.Entity<TbPromocao>(entity =>
+            modelBuilder.Entity<Promocao>(entity =>
             {
                 entity.HasKey(e => e.IdPromocao);
 
@@ -5964,27 +5965,27 @@ namespace Core.Data.EF.Context
                     .HasDefaultValueSql("((0))");
 
                 entity.HasOne(d => d.IdEtiquetaNavigation)
-                    .WithMany(p => p.TbPromocao)
+                    .WithMany(p => p.Promocao)
                     .HasForeignKey(d => d.IdEtiqueta)
                     .HasConstraintName("FK_tb_promocao_tb_etiqueta");
 
                 entity.HasOne(d => d.IdPromocaoAcaoNavigation)
-                    .WithMany(p => p.TbPromocao)
+                    .WithMany(p => p.Promocao)
                     .HasForeignKey(d => d.IdPromocaoAcao)
                     .HasConstraintName("FK_tb_promocao_tb_promocao_acao");
 
                 entity.HasOne(d => d.IdPromocaoBeneficioNavigation)
-                    .WithMany(p => p.TbPromocao)
+                    .WithMany(p => p.Promocao)
                     .HasForeignKey(d => d.IdPromocaoBeneficio)
                     .HasConstraintName("FK_tb_promocao_tb_promocao_beneficio");
 
                 entity.HasOne(d => d.IdPromocaoTipoNavigation)
-                    .WithMany(p => p.TbPromocao)
+                    .WithMany(p => p.Promocao)
                     .HasForeignKey(d => d.IdPromocaoTipo)
                     .HasConstraintName("FK_tb_promocao_tb_promocao_tipo");
             });
 
-            modelBuilder.Entity<TbPromocaoAcao>(entity =>
+            modelBuilder.Entity<PromocaoAcao>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoAcao);
 
@@ -5999,7 +6000,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbPromocaoBeneficio>(entity =>
+            modelBuilder.Entity<PromocaoBeneficio>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoBeneficio);
 
@@ -6014,7 +6015,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbPromocaoCategoria>(entity =>
+            modelBuilder.Entity<PromocaoCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoCategoria);
 
@@ -6033,34 +6034,34 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdSubcategoria).HasColumnName("id_subcategoria");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbPromocaoCategoriaIdCategoriaNavigation)
+                    .WithMany(p => p.PromocaoCategoriaIdCategoriaNavigation)
                     .HasForeignKey(d => d.IdCategoria)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_promocao_categoria_tb_categoria");
 
                 entity.HasOne(d => d.IdDepartamentoNavigation)
-                    .WithMany(p => p.TbPromocaoCategoriaIdDepartamentoNavigation)
+                    .WithMany(p => p.PromocaoCategoriaIdDepartamentoNavigation)
                     .HasForeignKey(d => d.IdDepartamento)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_promocao_categoria_tb_categoria1");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoCategoria)
+                    .WithMany(p => p.PromocaoCategoria)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_categoria_tb_promocao");
 
                 entity.HasOne(d => d.IdSecaoNavigation)
-                    .WithMany(p => p.TbPromocaoCategoriaIdSecaoNavigation)
+                    .WithMany(p => p.PromocaoCategoriaIdSecaoNavigation)
                     .HasForeignKey(d => d.IdSecao)
                     .HasConstraintName("FK_tb_promocao_categoria_tb_categoria2");
 
                 entity.HasOne(d => d.IdSubcategoriaNavigation)
-                    .WithMany(p => p.TbPromocaoCategoriaIdSubcategoriaNavigation)
+                    .WithMany(p => p.PromocaoCategoriaIdSubcategoriaNavigation)
                     .HasForeignKey(d => d.IdSubcategoria)
                     .HasConstraintName("FK_tb_promocao_categoria_tb_categoria3");
             });
 
-            modelBuilder.Entity<TbPromocaoCep>(entity =>
+            modelBuilder.Entity<PromocaoCep>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoCep);
 
@@ -6100,12 +6101,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoCep)
+                    .WithMany(p => p.PromocaoCep)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_cep_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoCliente>(entity =>
+            modelBuilder.Entity<PromocaoCliente>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoCliente);
 
@@ -6118,17 +6119,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbPromocaoCliente)
+                    .WithMany(p => p.PromocaoCliente)
                     .HasForeignKey(d => d.IdCliente)
                     .HasConstraintName("FK_tb_promocao_cliente_tb_cliente");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoCliente)
+                    .WithMany(p => p.PromocaoCliente)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_cliente_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoCupom>(entity =>
+            modelBuilder.Entity<PromocaoCupom>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoCupom);
 
@@ -6160,12 +6161,12 @@ namespace Core.Data.EF.Context
                     .HasDefaultValueSql("((1))");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoCupom)
+                    .WithMany(p => p.PromocaoCupom)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_cupom_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoCupomUtilizado>(entity =>
+            modelBuilder.Entity<PromocaoCupomUtilizado>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoCupomUtilizado);
 
@@ -6184,24 +6185,24 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocaoCupom).HasColumnName("id_promocao_cupom");
 
                 entity.HasOne(d => d.IdClienteNavigation)
-                    .WithMany(p => p.TbPromocaoCupomUtilizado)
+                    .WithMany(p => p.PromocaoCupomUtilizado)
                     .HasForeignKey(d => d.IdCliente)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_cliente");
 
                 entity.HasOne(d => d.IdPedidoNavigation)
-                    .WithMany(p => p.TbPromocaoCupomUtilizado)
+                    .WithMany(p => p.PromocaoCupomUtilizado)
                     .HasForeignKey(d => d.IdPedido)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_pedido");
 
                 entity.HasOne(d => d.IdPromocaoCupomNavigation)
-                    .WithMany(p => p.TbPromocaoCupomUtilizado)
+                    .WithMany(p => p.PromocaoCupomUtilizado)
                     .HasForeignKey(d => d.IdPromocaoCupom)
                     .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_promocao_cupom");
             });
 
-            modelBuilder.Entity<TbPromocaoMarca>(entity =>
+            modelBuilder.Entity<PromocaoMarca>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoMarca);
 
@@ -6214,17 +6215,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdMarcaNavigation)
-                    .WithMany(p => p.TbPromocaoMarca)
+                    .WithMany(p => p.PromocaoMarca)
                     .HasForeignKey(d => d.IdMarca)
                     .HasConstraintName("FK_tb_promocao_marca_tb_marca");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoMarca)
+                    .WithMany(p => p.PromocaoMarca)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_marca_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoModalidade>(entity =>
+            modelBuilder.Entity<PromocaoModalidade>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoModalidade);
 
@@ -6237,17 +6238,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdModalidadeEntregaNavigation)
-                    .WithMany(p => p.TbPromocaoModalidade)
+                    .WithMany(p => p.PromocaoModalidade)
                     .HasForeignKey(d => d.IdModalidadeEntrega)
                     .HasConstraintName("FK_tb_promocao_modalidade_tb_modalidade_entrega");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoModalidade)
+                    .WithMany(p => p.PromocaoModalidade)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_modalidade_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoPagamento>(entity =>
+            modelBuilder.Entity<PromocaoPagamento>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoPagamento);
 
@@ -6260,18 +6261,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdFormaPagamentoNavigation)
-                    .WithMany(p => p.TbPromocaoPagamento)
+                    .WithMany(p => p.PromocaoPagamento)
                     .HasForeignKey(d => d.IdFormaPagamento)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_promocao_pagamento_tb_forma_pagamento");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoPagamento)
+                    .WithMany(p => p.PromocaoPagamento)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_pagamento_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoPraca>(entity =>
+            modelBuilder.Entity<PromocaoPraca>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoPraca);
 
@@ -6284,17 +6285,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbPromocaoPraca)
+                    .WithMany(p => p.PromocaoPraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_promocao_praca_tb_praca");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoPraca)
+                    .WithMany(p => p.PromocaoPraca)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_praca_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoProduto>(entity =>
+            modelBuilder.Entity<PromocaoProduto>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoProduto);
 
@@ -6307,17 +6308,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocao).HasColumnName("id_promocao");
 
                 entity.HasOne(d => d.IdProdutoNavigation)
-                    .WithMany(p => p.TbPromocaoProduto)
+                    .WithMany(p => p.PromocaoProduto)
                     .HasForeignKey(d => d.IdProduto)
                     .HasConstraintName("FK_tb_promocao_produto_tb_produto");
 
                 entity.HasOne(d => d.IdPromocaoNavigation)
-                    .WithMany(p => p.TbPromocaoProduto)
+                    .WithMany(p => p.PromocaoProduto)
                     .HasForeignKey(d => d.IdPromocao)
                     .HasConstraintName("FK_tb_promocao_produto_tb_promocao");
             });
 
-            modelBuilder.Entity<TbPromocaoTipo>(entity =>
+            modelBuilder.Entity<PromocaoTipo>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoTipo);
 
@@ -6332,7 +6333,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbPromocaoTipoAcao>(entity =>
+            modelBuilder.Entity<PromocaoTipoAcao>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoTipoAcao);
 
@@ -6345,17 +6346,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocaoTipo).HasColumnName("id_promocao_tipo");
 
                 entity.HasOne(d => d.IdPromocaoAcaoNavigation)
-                    .WithMany(p => p.TbPromocaoTipoAcao)
+                    .WithMany(p => p.PromocaoTipoAcao)
                     .HasForeignKey(d => d.IdPromocaoAcao)
                     .HasConstraintName("FK_tb_promocao_tipo_acao_tb_promocao_acao");
 
                 entity.HasOne(d => d.IdPromocaoTipoNavigation)
-                    .WithMany(p => p.TbPromocaoTipoAcao)
+                    .WithMany(p => p.PromocaoTipoAcao)
                     .HasForeignKey(d => d.IdPromocaoTipo)
                     .HasConstraintName("FK_tb_promocao_tipo_acao_tb_promocao_tipo");
             });
 
-            modelBuilder.Entity<TbPromocaoTipoBeneficio>(entity =>
+            modelBuilder.Entity<PromocaoTipoBeneficio>(entity =>
             {
                 entity.HasKey(e => e.IdPromocaoTipoBeneficio);
 
@@ -6368,17 +6369,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdPromocaoTipo).HasColumnName("id_promocao_tipo");
 
                 entity.HasOne(d => d.IdPromocaoBeneficioNavigation)
-                    .WithMany(p => p.TbPromocaoTipoBeneficio)
+                    .WithMany(p => p.PromocaoTipoBeneficio)
                     .HasForeignKey(d => d.IdPromocaoBeneficio)
                     .HasConstraintName("FK_tb_promocao_tipo_beneficio_tb_promocao_beneficio");
 
                 entity.HasOne(d => d.IdPromocaoTipoNavigation)
-                    .WithMany(p => p.TbPromocaoTipoBeneficio)
+                    .WithMany(p => p.PromocaoTipoBeneficio)
                     .HasForeignKey(d => d.IdPromocaoTipo)
                     .HasConstraintName("FK_tb_promocao_tipo_beneficio_tb_promocao_tipo");
             });
 
-            modelBuilder.Entity<TbQuemComprouComprouTambem>(entity =>
+            modelBuilder.Entity<QuemComprouComprouTambem>(entity =>
             {
                 entity.HasKey(e => e.IdQuemComprouComprouTambem);
 
@@ -6396,12 +6397,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQuantidade).HasColumnName("nu_quantidade");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbQuemComprouComprouTambem)
+                    .WithMany(p => p.QuemComprouComprouTambem)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_quem_comprou_comprou_tambem_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbQuemViuComprou>(entity =>
+            modelBuilder.Entity<QuemViuComprou>(entity =>
             {
                 entity.HasKey(e => e.IdQuemViuComprou);
 
@@ -6419,18 +6420,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQuantidade).HasColumnName("nu_quantidade");
 
                 entity.HasOne(d => d.IdProdutoSkuCompradoNavigation)
-                    .WithMany(p => p.TbQuemViuComprouIdProdutoSkuCompradoNavigation)
+                    .WithMany(p => p.QuemViuComprouIdProdutoSkuCompradoNavigation)
                     .HasForeignKey(d => d.IdProdutoSkuComprado)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_quem_viu_comprou_tb_produto_sku1");
 
                 entity.HasOne(d => d.IdProdutoSkuVistoNavigation)
-                    .WithMany(p => p.TbQuemViuComprouIdProdutoSkuVistoNavigation)
+                    .WithMany(p => p.QuemViuComprouIdProdutoSkuVistoNavigation)
                     .HasForeignKey(d => d.IdProdutoSkuVisto)
                     .HasConstraintName("FK_tb_quem_viu_comprou_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbQuemViuViuTambem>(entity =>
+            modelBuilder.Entity<QuemViuViuTambem>(entity =>
             {
                 entity.HasKey(e => e.IdQuemViuViuTambem);
 
@@ -6445,18 +6446,18 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuQuantidade).HasColumnName("nu_quantidade");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbQuemViuViuTambemIdProdutoSkuNavigation)
+                    .WithMany(p => p.QuemViuViuTambemIdProdutoSkuNavigation)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_quem_viu_viu_tambem_tb_produto_sku");
 
                 entity.HasOne(d => d.IdProdutoSkuVistoNavigation)
-                    .WithMany(p => p.TbQuemViuViuTambemIdProdutoSkuVistoNavigation)
+                    .WithMany(p => p.QuemViuViuTambemIdProdutoSkuVistoNavigation)
                     .HasForeignKey(d => d.IdProdutoSkuVisto)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_quem_viu_viu_tambem_tb_produto_sku1");
             });
 
-            modelBuilder.Entity<TbRedeSocial>(entity =>
+            modelBuilder.Entity<RedeSocial>(entity =>
             {
                 entity.HasNoKey();
 
@@ -6489,7 +6490,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
             });
 
-            modelBuilder.Entity<TbRodape>(entity =>
+            modelBuilder.Entity<Rodape>(entity =>
             {
                 entity.HasKey(e => e.IdRodape);
 
@@ -6511,12 +6512,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbRodape)
+                    .WithMany(p => p.Rodape)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_rodape_tb_praca");
             });
 
-            modelBuilder.Entity<TbSecApps>(entity =>
+            modelBuilder.Entity<SecApps>(entity =>
             {
                 entity.HasKey(e => e.AppName)
                     .HasName("PK__tb_sec_a__A5AEA8370B0A0C34");
@@ -6539,7 +6540,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSecGroups>(entity =>
+            modelBuilder.Entity<SecGroups>(entity =>
             {
                 entity.HasKey(e => e.GroupId)
                     .HasName("PK__tb_sec_g__D57795A00EDA9D18");
@@ -6560,7 +6561,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSecGroupsApps>(entity =>
+            modelBuilder.Entity<SecGroupsApps>(entity =>
             {
                 entity.HasKey(e => new { e.GroupId, e.AppName })
                     .HasName("PK__tb_sec_g__BF2D7F2319582B8B");
@@ -6605,17 +6606,17 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
 
                 entity.HasOne(d => d.AppNameNavigation)
-                    .WithMany(p => p.TbSecGroupsApps)
+                    .WithMany(p => p.SecGroupsApps)
                     .HasForeignKey(d => d.AppName)
                     .HasConstraintName("FK_tb_sec_groups_apps_tb_sec_apps");
 
                 entity.HasOne(d => d.Group)
-                    .WithMany(p => p.TbSecGroupsApps)
+                    .WithMany(p => p.SecGroupsApps)
                     .HasForeignKey(d => d.GroupId)
                     .HasConstraintName("FK_tb_sec_groups_apps_tb_sec_groups");
             });
 
-            modelBuilder.Entity<TbSecLogged>(entity =>
+            modelBuilder.Entity<SecLogged>(entity =>
             {
                 entity.HasKey(e => e.Login);
 
@@ -6634,7 +6635,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSecUsers>(entity =>
+            modelBuilder.Entity<SecUsers>(entity =>
             {
                 entity.HasKey(e => e.Login)
                     .HasName("PK_tb_sec_users_1");
@@ -6680,7 +6681,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSecUsersGroups>(entity =>
+            modelBuilder.Entity<SecUsersGroups>(entity =>
             {
                 entity.HasKey(e => new { e.Login, e.GroupId })
                     .HasName("PK__tb_sec_u__656F8B2915879AA7");
@@ -6695,17 +6696,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.GroupId).HasColumnName("group_id");
 
                 entity.HasOne(d => d.Group)
-                    .WithMany(p => p.TbSecUsersGroups)
+                    .WithMany(p => p.SecUsersGroups)
                     .HasForeignKey(d => d.GroupId)
                     .HasConstraintName("FK_tb_sec_users_groups_tb_sec_groups");
 
                 entity.HasOne(d => d.LoginNavigation)
-                    .WithMany(p => p.TbSecUsersGroups)
+                    .WithMany(p => p.SecUsersGroups)
                     .HasForeignKey(d => d.Login)
                     .HasConstraintName("FK_tb_sec_users_groups_tb_sec_users");
             });
 
-            modelBuilder.Entity<TbServicoCorreios>(entity =>
+            modelBuilder.Entity<ServicoCorreios>(entity =>
             {
                 entity.HasKey(e => e.IdServicoCorreios);
 
@@ -6726,7 +6727,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbServicoTotalexpress>(entity =>
+            modelBuilder.Entity<ServicoTotalexpress>(entity =>
             {
                 entity.HasKey(e => e.IdServicoTotalexpress)
                     .HasName("PK__tb_servi__5DE56E4322E659CF");
@@ -6754,7 +6755,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSevenpdvLogon>(entity =>
+            modelBuilder.Entity<SevenpdvLogon>(entity =>
             {
                 entity.HasKey(e => e.IdSevenpdvLogon);
 
@@ -6789,7 +6790,7 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdOrigem).HasColumnName("id_origem");
             });
 
-            modelBuilder.Entity<TbSevenpdvSessao>(entity =>
+            modelBuilder.Entity<SevenpdvSessao>(entity =>
             {
                 entity.HasKey(e => e.IdSevenpdvSessao)
                     .HasName("PK__tb_seven__97CFC634153CB68D");
@@ -6835,13 +6836,13 @@ namespace Core.Data.EF.Context
                     .HasColumnType("text");
 
                 entity.HasOne(d => d.IdSevenpdvLogonNavigation)
-                    .WithMany(p => p.TbSevenpdvSessao)
+                    .WithMany(p => p.SevenpdvSessao)
                     .HasForeignKey(d => d.IdSevenpdvLogon)
                     .OnDelete(DeleteBehavior.Cascade)
                     .HasConstraintName("FK_tb_sevenpdv_sessao_tb_sevenpdv_logon");
             });
 
-            modelBuilder.Entity<TbSkuPracaMovimentacao>(entity =>
+            modelBuilder.Entity<SkuPracaMovimentacao>(entity =>
             {
                 entity.HasKey(e => e.IdProdutoSkuPraca)
                     .HasName("PK_tb_sku_praca_movimentacao_1");
@@ -6873,12 +6874,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("money");
 
                 entity.HasOne(d => d.IdProdutoSkuPracaNavigation)
-                    .WithOne(p => p.TbSkuPracaMovimentacao)
-                    .HasForeignKey<TbSkuPracaMovimentacao>(d => d.IdProdutoSkuPraca)
+                    .WithOne(p => p.SkuPracaMovimentacao)
+                    .HasForeignKey<SkuPracaMovimentacao>(d => d.IdProdutoSkuPraca)
                     .HasConstraintName("FK_tb_sku_praca_movimentacao_tb_produto_sku_praca1");
             });
 
-            modelBuilder.Entity<TbSli>(entity =>
+            modelBuilder.Entity<Sli>(entity =>
             {
                 entity.HasKey(e => e.IdSli);
 
@@ -6902,7 +6903,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbSuperDesconto>(entity =>
+            modelBuilder.Entity<SuperDesconto>(entity =>
             {
                 entity.HasKey(e => e.IdSuperDesconto);
 
@@ -6926,12 +6927,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbSuperDesconto)
+                    .WithMany(p => p.SuperDesconto)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .HasConstraintName("FK_tb_super_desconto_tb_produto_sku");
             });
 
-            modelBuilder.Entity<TbUploadImagem>(entity =>
+            modelBuilder.Entity<UploadImagem>(entity =>
             {
                 entity.HasKey(e => e.IdUploadImagem);
 
@@ -6952,7 +6953,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbUsuario>(entity =>
+            modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.HasKey(e => e.IdUsuario);
 
@@ -7011,12 +7012,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.IdUsuarioGrupoNavigation)
-                    .WithMany(p => p.TbUsuario)
+                    .WithMany(p => p.Usuario)
                     .HasForeignKey(d => d.IdUsuarioGrupo)
                     .HasConstraintName("FK_tb_usuario_tb_usuario_grupo");
             });
 
-            modelBuilder.Entity<TbUsuarioGrupo>(entity =>
+            modelBuilder.Entity<UsuarioGrupo>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioGrupo);
 
@@ -7038,7 +7039,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbUsuarioGrupoAcesso>(entity =>
+            modelBuilder.Entity<UsuarioGrupoAcesso>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioGrupoAcesso);
 
@@ -7059,17 +7060,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuarioGrupo).HasColumnName("id_usuario_grupo");
 
                 entity.HasOne(d => d.IdAcessoNavigation)
-                    .WithMany(p => p.TbUsuarioGrupoAcesso)
+                    .WithMany(p => p.UsuarioGrupoAcesso)
                     .HasForeignKey(d => d.IdAcesso)
                     .HasConstraintName("FK_tb_usuario_grupo_acesso_tb_acesso");
 
                 entity.HasOne(d => d.IdUsuarioGrupoNavigation)
-                    .WithMany(p => p.TbUsuarioGrupoAcesso)
+                    .WithMany(p => p.UsuarioGrupoAcesso)
                     .HasForeignKey(d => d.IdUsuarioGrupo)
                     .HasConstraintName("FK_tb_usuario_grupo_acesso_tb_usuario_grupo");
             });
 
-            modelBuilder.Entity<TbUsuarioGrupoTelevendas>(entity =>
+            modelBuilder.Entity<UsuarioGrupoTelevendas>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioGrupoTelevendas);
 
@@ -7084,7 +7085,7 @@ namespace Core.Data.EF.Context
                     .IsUnicode(false);
             });
 
-            modelBuilder.Entity<TbUsuarioIp>(entity =>
+            modelBuilder.Entity<UsuarioIp>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioIp);
 
@@ -7101,12 +7102,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbUsuarioIp)
+                    .WithMany(p => p.UsuarioIp)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_usuario_ip_tb_usuario");
             });
 
-            modelBuilder.Entity<TbUsuarioPraca>(entity =>
+            modelBuilder.Entity<UsuarioPraca>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioPraca);
 
@@ -7119,17 +7120,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdUsuario).HasColumnName("id_usuario");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbUsuarioPraca)
+                    .WithMany(p => p.UsuarioPraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_usuario_praca_tb_praca");
 
                 entity.HasOne(d => d.IdUsuarioNavigation)
-                    .WithMany(p => p.TbUsuarioPraca)
+                    .WithMany(p => p.UsuarioPraca)
                     .HasForeignKey(d => d.IdUsuario)
                     .HasConstraintName("FK_tb_usuario_praca_tb_usuario");
             });
 
-            modelBuilder.Entity<TbUsuarioRecuperacao>(entity =>
+            modelBuilder.Entity<UsuarioRecuperacao>(entity =>
             {
                 entity.ToTable("tb_usuario_recuperacao");
 
@@ -7151,7 +7152,7 @@ namespace Core.Data.EF.Context
                     .HasColumnType("datetime");
             });
 
-            modelBuilder.Entity<TbUsuarioTelevendas>(entity =>
+            modelBuilder.Entity<UsuarioTelevendas>(entity =>
             {
                 entity.HasKey(e => e.IdUsuarioTelevendas)
                     .HasName("PK_tb_usuario_televedas");
@@ -7193,12 +7194,12 @@ namespace Core.Data.EF.Context
                     .HasColumnType("decimal(18, 2)");
 
                 entity.HasOne(d => d.IdUsuarioGrupoTelevendasNavigation)
-                    .WithMany(p => p.TbUsuarioTelevendas)
+                    .WithMany(p => p.UsuarioTelevendas)
                     .HasForeignKey(d => d.IdUsuarioGrupoTelevendas)
                     .HasConstraintName("FK_tb_usuario_televedas_tb_usuario_grupo_televendas");
             });
 
-            modelBuilder.Entity<TbVitrine>(entity =>
+            modelBuilder.Entity<Vitrine>(entity =>
             {
                 entity.HasKey(e => e.IdVitrine);
 
@@ -7237,12 +7238,12 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdVitrineTipoNavigation)
-                    .WithMany(p => p.TbVitrine)
+                    .WithMany(p => p.Vitrine)
                     .HasForeignKey(d => d.IdVitrineTipo)
                     .HasConstraintName("FK_tb_vitrine_tb_vitrine_tipo");
             });
 
-            modelBuilder.Entity<TbVitrineCategoria>(entity =>
+            modelBuilder.Entity<VitrineCategoria>(entity =>
             {
                 entity.HasKey(e => e.IdVitrineCategoria);
 
@@ -7260,17 +7261,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdCategoriaNavigation)
-                    .WithMany(p => p.TbVitrineCategoria)
+                    .WithMany(p => p.VitrineCategoria)
                     .HasForeignKey(d => d.IdCategoria)
                     .HasConstraintName("FK_tb_vitrine_categoria_tb_categoria");
 
                 entity.HasOne(d => d.IdVitrineNavigation)
-                    .WithMany(p => p.TbVitrineCategoria)
+                    .WithMany(p => p.VitrineCategoria)
                     .HasForeignKey(d => d.IdVitrine)
                     .HasConstraintName("FK_tb_vitrine_categoria_tb_vitrine");
             });
 
-            modelBuilder.Entity<TbVitrinePraca>(entity =>
+            modelBuilder.Entity<VitrinePraca>(entity =>
             {
                 entity.HasKey(e => e.IdVitrinePraca);
 
@@ -7286,17 +7287,17 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.IdVitrine).HasColumnName("id_vitrine");
 
                 entity.HasOne(d => d.IdPracaNavigation)
-                    .WithMany(p => p.TbVitrinePraca)
+                    .WithMany(p => p.VitrinePraca)
                     .HasForeignKey(d => d.IdPraca)
                     .HasConstraintName("FK_tb_vitrine_praca_tb_praca");
 
                 entity.HasOne(d => d.IdVitrineNavigation)
-                    .WithMany(p => p.TbVitrinePraca)
+                    .WithMany(p => p.VitrinePraca)
                     .HasForeignKey(d => d.IdVitrine)
                     .HasConstraintName("FK_tb_vitrine_praca_tb_vitrine");
             });
 
-            modelBuilder.Entity<TbVitrineProdutoSku>(entity =>
+            modelBuilder.Entity<VitrineProdutoSku>(entity =>
             {
                 entity.HasKey(e => e.IdVitrineProdutoSku);
 
@@ -7314,19 +7315,19 @@ namespace Core.Data.EF.Context
                 entity.Property(e => e.NuOrdem).HasColumnName("nu_ordem");
 
                 entity.HasOne(d => d.IdProdutoSkuNavigation)
-                    .WithMany(p => p.TbVitrineProdutoSku)
+                    .WithMany(p => p.VitrineProdutoSku)
                     .HasForeignKey(d => d.IdProdutoSku)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_vitrine_produto_sku_tb_produto_sku");
 
                 entity.HasOne(d => d.IdVitrineNavigation)
-                    .WithMany(p => p.TbVitrineProdutoSku)
+                    .WithMany(p => p.VitrineProdutoSku)
                     .HasForeignKey(d => d.IdVitrine)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_tb_vitrine_produto_sku_tb_vitrine");
             });
 
-            modelBuilder.Entity<TbVitrineTipo>(entity =>
+            modelBuilder.Entity<VitrineTipo>(entity =>
             {
                 entity.HasKey(e => e.IdVitrineTipo);
 

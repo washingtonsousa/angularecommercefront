@@ -7,32 +7,32 @@ namespace Core.Domain.EF.Entities
     {
         public ProdutoSku()
         {
-            TbCategoria = new HashSet<Categoria>();
-            TbGondolaProdutoSku = new HashSet<TbGondolaProdutoSku>();
-            TbListaDesejoProdutoSku = new HashSet<TbListaDesejoProdutoSku>();
-            TbParceiroXmlProduto = new HashSet<TbParceiroXmlProduto>();
-            TbPedidoProdutoKit = new HashSet<TbPedidoProdutoKit>();
-            TbPedidoProdutoSku = new HashSet<PedidoProdutoSku>();
-            TbProdutoKit = new HashSet<TbProdutoKit>();
-            TbProdutoSkuAviseMe = new HashSet<TbProdutoSkuAviseMe>();
-            TbProdutoSkuEspecificacao = new HashSet<TbProdutoSkuEspecificacao>();
-            TbProdutoSkuFiltro = new HashSet<TbProdutoSkuFiltro>();
-            TbProdutoSkuGenericoIdGenericoNavigation = new HashSet<TbProdutoSkuGenerico>();
-            TbProdutoSkuGenericoIdMedicamentoNavigation = new HashSet<TbProdutoSkuGenerico>();
-            TbProdutoSkuImagem = new HashSet<TbProdutoSkuImagem>();
-            TbProdutoSkuPraca = new HashSet<TbProdutoSkuPraca>();
-            TbProdutoSkuRelacionadoIdProdutoSkuNavigation = new HashSet<TbProdutoSkuRelacionado>();
-            TbProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation = new HashSet<TbProdutoSkuRelacionado>();
-            TbProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation = new HashSet<TbProdutoSkuVendaCasada>();
-            TbProdutoSkuVendaCasadaIdProdutoSkuNavigation = new HashSet<TbProdutoSkuVendaCasada>();
-            TbProgramaProduto = new HashSet<TbProgramaProduto>();
-            TbQuemComprouComprouTambem = new HashSet<TbQuemComprouComprouTambem>();
-            TbQuemViuComprouIdProdutoSkuCompradoNavigation = new HashSet<TbQuemViuComprou>();
-            TbQuemViuComprouIdProdutoSkuVistoNavigation = new HashSet<TbQuemViuComprou>();
-            TbQuemViuViuTambemIdProdutoSkuNavigation = new HashSet<TbQuemViuViuTambem>();
-            TbQuemViuViuTambemIdProdutoSkuVistoNavigation = new HashSet<TbQuemViuViuTambem>();
-            TbSuperDesconto = new HashSet<TbSuperDesconto>();
-            TbVitrineProdutoSku = new HashSet<TbVitrineProdutoSku>();
+            Categoria = new HashSet<Categoria>();
+            GondolaProdutoSku = new HashSet<GondolaProdutoSku>();
+            ListaDesejoProdutoSku = new HashSet<ListaDesejoProdutoSku>();
+            ParceiroXmlProduto = new HashSet<ParceiroXmlProduto>();
+            PedidoProdutoKit = new HashSet<PedidoProdutoKit>();
+            PedidoProdutoSku = new HashSet<PedidoProdutoSku>();
+            ProdutoKit = new HashSet<ProdutoKit>();
+            ProdutoSkuAviseMe = new HashSet<ProdutoSkuAviseMe>();
+            ProdutoSkuEspecificacao = new HashSet<ProdutoSkuEspecificacao>();
+            ProdutoSkuFiltro = new HashSet<ProdutoSkuFiltro>();
+            ProdutoSkuGenericoIdGenericoNavigation = new HashSet<ProdutoSkuGenerico>();
+            ProdutoSkuGenericoIdMedicamentoNavigation = new HashSet<ProdutoSkuGenerico>();
+            ProdutoSkuImagem = new HashSet<ProdutoSkuImagem>();
+            ProdutoSkuPraca = new HashSet<ProdutoSkuPraca>();
+            ProdutoSkuRelacionadoIdProdutoSkuNavigation = new HashSet<ProdutoSkuRelacionado>();
+            ProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation = new HashSet<ProdutoSkuRelacionado>();
+            ProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation = new HashSet<ProdutoSkuVendaCasada>();
+            ProdutoSkuVendaCasadaIdProdutoSkuNavigation = new HashSet<ProdutoSkuVendaCasada>();
+            ProgramaProduto = new HashSet<ProgramaProduto>();
+            QuemComprouComprouTambem = new HashSet<QuemComprouComprouTambem>();
+            QuemViuComprouIdProdutoSkuCompradoNavigation = new HashSet<QuemViuComprou>();
+            QuemViuComprouIdProdutoSkuVistoNavigation = new HashSet<QuemViuComprou>();
+            QuemViuViuTambemIdProdutoSkuNavigation = new HashSet<QuemViuViuTambem>();
+            QuemViuViuTambemIdProdutoSkuVistoNavigation = new HashSet<QuemViuViuTambem>();
+            SuperDesconto = new HashSet<SuperDesconto>();
+            VitrineProdutoSku = new HashSet<VitrineProdutoSku>();
         }
 
         public int IdProdutoSku { get; set; }
@@ -51,32 +51,32 @@ namespace Core.Domain.EF.Entities
         public bool FlExibirIndividualmente { get; set; }
         public string IdProdutoSap { get; set; }
 
-        public virtual TbProduto IdProdutoNavigation { get; set; }
-        public virtual ICollection<Categoria> TbCategoria { get; set; }
-        public virtual ICollection<TbGondolaProdutoSku> TbGondolaProdutoSku { get; set; }
-        public virtual ICollection<TbListaDesejoProdutoSku> TbListaDesejoProdutoSku { get; set; }
-        public virtual ICollection<TbParceiroXmlProduto> TbParceiroXmlProduto { get; set; }
-        public virtual ICollection<TbPedidoProdutoKit> TbPedidoProdutoKit { get; set; }
-        public virtual ICollection<PedidoProdutoSku> TbPedidoProdutoSku { get; set; }
-        public virtual ICollection<TbProdutoKit> TbProdutoKit { get; set; }
-        public virtual ICollection<TbProdutoSkuAviseMe> TbProdutoSkuAviseMe { get; set; }
-        public virtual ICollection<TbProdutoSkuEspecificacao> TbProdutoSkuEspecificacao { get; set; }
-        public virtual ICollection<TbProdutoSkuFiltro> TbProdutoSkuFiltro { get; set; }
-        public virtual ICollection<TbProdutoSkuGenerico> TbProdutoSkuGenericoIdGenericoNavigation { get; set; }
-        public virtual ICollection<TbProdutoSkuGenerico> TbProdutoSkuGenericoIdMedicamentoNavigation { get; set; }
-        public virtual ICollection<TbProdutoSkuImagem> TbProdutoSkuImagem { get; set; }
-        public virtual ICollection<TbProdutoSkuPraca> TbProdutoSkuPraca { get; set; }
-        public virtual ICollection<TbProdutoSkuRelacionado> TbProdutoSkuRelacionadoIdProdutoSkuNavigation { get; set; }
-        public virtual ICollection<TbProdutoSkuRelacionado> TbProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation { get; set; }
-        public virtual ICollection<TbProdutoSkuVendaCasada> TbProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation { get; set; }
-        public virtual ICollection<TbProdutoSkuVendaCasada> TbProdutoSkuVendaCasadaIdProdutoSkuNavigation { get; set; }
-        public virtual ICollection<TbProgramaProduto> TbProgramaProduto { get; set; }
-        public virtual ICollection<TbQuemComprouComprouTambem> TbQuemComprouComprouTambem { get; set; }
-        public virtual ICollection<TbQuemViuComprou> TbQuemViuComprouIdProdutoSkuCompradoNavigation { get; set; }
-        public virtual ICollection<TbQuemViuComprou> TbQuemViuComprouIdProdutoSkuVistoNavigation { get; set; }
-        public virtual ICollection<TbQuemViuViuTambem> TbQuemViuViuTambemIdProdutoSkuNavigation { get; set; }
-        public virtual ICollection<TbQuemViuViuTambem> TbQuemViuViuTambemIdProdutoSkuVistoNavigation { get; set; }
-        public virtual ICollection<TbSuperDesconto> TbSuperDesconto { get; set; }
-        public virtual ICollection<TbVitrineProdutoSku> TbVitrineProdutoSku { get; set; }
+        public virtual Produto IdProdutoNavigation { get; set; }
+        public virtual ICollection<Categoria> Categoria { get; set; }
+        public virtual ICollection<GondolaProdutoSku> GondolaProdutoSku { get; set; }
+        public virtual ICollection<ListaDesejoProdutoSku> ListaDesejoProdutoSku { get; set; }
+        public virtual ICollection<ParceiroXmlProduto> ParceiroXmlProduto { get; set; }
+        public virtual ICollection<PedidoProdutoKit> PedidoProdutoKit { get; set; }
+        public virtual ICollection<PedidoProdutoSku> PedidoProdutoSku { get; set; }
+        public virtual ICollection<ProdutoKit> ProdutoKit { get; set; }
+        public virtual ICollection<ProdutoSkuAviseMe> ProdutoSkuAviseMe { get; set; }
+        public virtual ICollection<ProdutoSkuEspecificacao> ProdutoSkuEspecificacao { get; set; }
+        public virtual ICollection<ProdutoSkuFiltro> ProdutoSkuFiltro { get; set; }
+        public virtual ICollection<ProdutoSkuGenerico> ProdutoSkuGenericoIdGenericoNavigation { get; set; }
+        public virtual ICollection<ProdutoSkuGenerico> ProdutoSkuGenericoIdMedicamentoNavigation { get; set; }
+        public virtual ICollection<ProdutoSkuImagem> ProdutoSkuImagem { get; set; }
+        public virtual ICollection<ProdutoSkuPraca> ProdutoSkuPraca { get; set; }
+        public virtual ICollection<ProdutoSkuRelacionado> ProdutoSkuRelacionadoIdProdutoSkuNavigation { get; set; }
+        public virtual ICollection<ProdutoSkuRelacionado> ProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation { get; set; }
+        public virtual ICollection<ProdutoSkuVendaCasada> ProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation { get; set; }
+        public virtual ICollection<ProdutoSkuVendaCasada> ProdutoSkuVendaCasadaIdProdutoSkuNavigation { get; set; }
+        public virtual ICollection<ProgramaProduto> ProgramaProduto { get; set; }
+        public virtual ICollection<QuemComprouComprouTambem> QuemComprouComprouTambem { get; set; }
+        public virtual ICollection<QuemViuComprou> QuemViuComprouIdProdutoSkuCompradoNavigation { get; set; }
+        public virtual ICollection<QuemViuComprou> QuemViuComprouIdProdutoSkuVistoNavigation { get; set; }
+        public virtual ICollection<QuemViuViuTambem> QuemViuViuTambemIdProdutoSkuNavigation { get; set; }
+        public virtual ICollection<QuemViuViuTambem> QuemViuViuTambemIdProdutoSkuVistoNavigation { get; set; }
+        public virtual ICollection<SuperDesconto> SuperDesconto { get; set; }
+        public virtual ICollection<VitrineProdutoSku> VitrineProdutoSku { get; set; }
     }
 }

@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Core.Data.Repository
 {
-  public class ClienteRepository : RepositoryTemplate, IClienteRepository
+  public class ClienteRepository : RepositoryTemplate<Cliente>, IClienteRepository
   {
     public ClienteRepository(MainContext context) : base(context)
     {

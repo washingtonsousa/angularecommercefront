@@ -1,10 +1,14 @@
-using System;
-using System.Collections.Generic;
-using System.Text;
+using AutoMapper;
+using Core.Application.Abstractions;
+
 
 namespace Core.Application
 {
-  public class ProdutoAppService
+  public class ProdutoAppService : ApplicationService
   {
+
+
+
+
   }
 }

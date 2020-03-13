@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core.Data.Repository
 {
-  public class PracaRepository : RepositoryTemplate, IPracaRepository
+  public class PracaRepository : RepositoryTemplate<Praca>, IPracaRepository
   {
     public PracaRepository(MainContext context) : base(context)
     {

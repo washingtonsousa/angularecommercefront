@@ -53,6 +53,7 @@ namespace Core.Infrastructure
       services.AddTransient<IClienteRepository, ClienteRepository>();
       services.AddTransient<IPracaRepository, PracaRepository>();
       services.AddTransient<IApplicationModuleRepository, ApplicationModuleRepository>();
+      services.AddTransient<IProdutoSkuPracaRepository, ProdutoSkuPracaRepository>();
     }
 
     public static void InjectDomainSpecifications(this IServiceCollection services)

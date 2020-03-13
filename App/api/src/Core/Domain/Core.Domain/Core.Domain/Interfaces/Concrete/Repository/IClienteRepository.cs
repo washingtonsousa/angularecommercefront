@@ -8,9 +8,9 @@ namespace Core.Domain.Repository.Interfaces.Concrete
   {
 
     Task<Cliente> GetForAuthentication(string UserName, string Password);
-    Task<Cliente> GetByUsername(string UserName);
+    Task<Cliente> GeyUsername(string UserName);
     Task<bool> CheckIfExists(string DsEmail, string DsCpfCnpj);
-    Task<Cliente> GetByEmailOrDocument(string DsEmail, string DsCpfCnpj);
+    Task<Cliente> GeyEmailOrDocument(string DsEmail, string DsCpfCnpj);
 
 
   }

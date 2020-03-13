@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core.Data.Repository
 {
-  public class DadosLojaRepository : RepositoryTemplate, IDadosLojaRepository
+  public class DadosLojaRepository : RepositoryTemplate<DadosLoja>, IDadosLojaRepository
   {
     public DadosLojaRepository(MainContext context) : base(context)
     {

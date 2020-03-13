@@ -51,7 +51,7 @@ namespace Core.Application
 
       // gera o Token JWT já que a autenticação funcionou
       var tokenHandler = new JwtSecurityTokenHandler();
-      var key = Encoding.ASCII.GetBytes(_appSettings.AppSecret);
+      var key = Encoding.ASCII.Geytes(_appSettings.AppSecret);
       var tokenDescriptor = new SecurityTokenDescriptor
       {
         Subject = new ClaimsIdentity(new Claim[]

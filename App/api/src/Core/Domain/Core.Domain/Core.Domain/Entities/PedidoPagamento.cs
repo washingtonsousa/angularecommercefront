@@ -33,7 +33,7 @@ namespace Core.Domain.EF.Entities
         public string DsBandeiraMaquineta { get; set; }
         public string DsChaveCobranca { get; set; }
 
-        public virtual TbPagamento IdPagamentoNavigation { get; set; }
+        public virtual Pagamento IdPagamentoNavigation { get; set; }
         public virtual Pedido IdPedidoNavigation { get; set; }
     }
 }

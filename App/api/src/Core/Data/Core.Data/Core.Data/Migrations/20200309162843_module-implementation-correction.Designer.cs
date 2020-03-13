@@ -1384,7 +1384,7 @@ namespace Core.Data.Migrations
                     b.ToTable("sc_log");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAcesso", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Acesso", b =>
                 {
                     b.Property<int>("IdAcesso")
                         .ValueGeneratedOnAdd()
@@ -1404,7 +1404,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_acesso");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAcessoAplicativo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.AcessoAplicativo", b =>
                 {
                     b.Property<int>("IdAcessoAplicativo")
                         .ValueGeneratedOnAdd()
@@ -1427,7 +1427,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_acesso_aplicativo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAplicativo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Aplicativo", b =>
                 {
                     b.Property<int>("IdAplicativo")
                         .ValueGeneratedOnAdd()
@@ -1460,7 +1460,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_aplicativo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAuditFrete", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.AuditFrete", b =>
                 {
                     b.Property<int>("IdAuditFrete")
                         .ValueGeneratedOnAdd()
@@ -1501,7 +1501,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_audit_frete");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAuditPedido", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.AuditPedido", b =>
                 {
                     b.Property<int>("IdAuditPedido")
                         .ValueGeneratedOnAdd()
@@ -1562,7 +1562,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_audit_pedido");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAutorizador", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Autorizador", b =>
                 {
                     b.Property<int>("IdAutorizador")
                         .ValueGeneratedOnAdd()
@@ -1597,7 +1597,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_autorizador");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBackofficeSessao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BackofficeSessao", b =>
                 {
                     b.Property<string>("IdSessao")
                         .HasColumnName("id_sessao")
@@ -1620,7 +1620,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_backoffice_sessao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBanner", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Banner", b =>
                 {
                     b.Property<int>("IdBanner")
                         .ValueGeneratedOnAdd()
@@ -1728,7 +1728,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerBusca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerBusca", b =>
                 {
                     b.Property<int>("IdBannerBusca")
                         .ValueGeneratedOnAdd()
@@ -1754,7 +1754,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_busca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerCategoria", b =>
                 {
                     b.Property<int>("IdBannerCategoria")
                         .ValueGeneratedOnAdd()
@@ -1779,7 +1779,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerPraca", b =>
                 {
                     b.Property<int>("IdBannerPraca")
                         .ValueGeneratedOnAdd()
@@ -1804,7 +1804,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerProduto", b =>
                 {
                     b.Property<int>("IdBannerProduto")
                         .ValueGeneratedOnAdd()
@@ -1829,7 +1829,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerTarget", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerTarget", b =>
                 {
                     b.Property<int>("IdBannerTarget")
                         .ValueGeneratedOnAdd()
@@ -1849,7 +1849,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_target");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerVitrine", b =>
                 {
                     b.Property<int>("IdBannerVitrine")
                         .ValueGeneratedOnAdd()
@@ -1874,7 +1874,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_banner_vitrine");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBusca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Busca", b =>
                 {
                     b.Property<int>("IdBusca")
                         .ValueGeneratedOnAdd()
@@ -1902,7 +1902,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_busca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbCartaoClientePbm", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.CartaoClientePbm", b =>
                 {
                     b.Property<int>("IdCartaoClientePbm")
                         .ValueGeneratedOnAdd()
@@ -1937,7 +1937,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cartao_cliente_pbm");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbCategoriaSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.CategoriaSeo", b =>
                 {
                     b.Property<int>("IdCategoriaSeo")
                         .ValueGeneratedOnAdd()
@@ -1974,7 +1974,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_categoria_seo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteEndereco", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteEndereco", b =>
                 {
                     b.Property<int>("IdClienteEndereco")
                         .ValueGeneratedOnAdd()
@@ -2070,7 +2070,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cliente_endereco");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteEnderecoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteEnderecoTipo", b =>
                 {
                     b.Property<int>("IdClienteEnderecoTipo")
                         .ValueGeneratedOnAdd()
@@ -2090,7 +2090,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cliente_endereco_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteObservacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteObservacao", b =>
                 {
                     b.Property<int>("IdClienteObservacao")
                         .ValueGeneratedOnAdd()
@@ -2128,7 +2128,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cliente_observacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteToken", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteToken", b =>
                 {
                     b.Property<int>("IdClienteToken")
                         .ValueGeneratedOnAdd()
@@ -2167,7 +2167,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cliente_token");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConexao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Conexao", b =>
                 {
                     b.Property<int>("IdConexao")
                         .ValueGeneratedOnAdd()
@@ -2194,7 +2194,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conexao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConexaoPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConexaoPraca", b =>
                 {
                     b.Property<int>("IdConexaoPraca")
                         .ValueGeneratedOnAdd()
@@ -2215,7 +2215,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conexao_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Conteudo", b =>
                 {
                     b.Property<int>("IdConteudo")
                         .ValueGeneratedOnAdd()
@@ -2304,7 +2304,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoCategoria", b =>
                 {
                     b.Property<int>("IdConteudoCategoria")
                         .ValueGeneratedOnAdd()
@@ -2332,7 +2332,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoConteudoLocal", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoConteudoLocal", b =>
                 {
                     b.Property<int>("IdConteudoConteudoLocal")
                         .ValueGeneratedOnAdd()
@@ -2357,7 +2357,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_conteudo_local");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoLocal", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoLocal", b =>
                 {
                     b.Property<int>("IdConteudoLocal")
                         .ValueGeneratedOnAdd()
@@ -2377,7 +2377,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_local");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoSeo", b =>
                 {
                     b.Property<int>("IdConteudoSeo")
                         .ValueGeneratedOnAdd()
@@ -2414,7 +2414,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_seo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoTarget", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoTarget", b =>
                 {
                     b.Property<int>("IdConteudoTarget")
                         .ValueGeneratedOnAdd()
@@ -2434,7 +2434,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_target");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoTipo", b =>
                 {
                     b.Property<int>("IdConteudoTipo")
                         .ValueGeneratedOnAdd()
@@ -2454,7 +2454,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_conteudo_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbDeparaClientesVfarma", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.DeparaClientesVfarma", b =>
                 {
                     b.Property<int>("IdDeparaClientesVfarma")
                         .ValueGeneratedOnAdd()
@@ -2492,7 +2492,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_depara_clientes_vfarma");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbDeparaFmp", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.DeparaFmp", b =>
                 {
                     b.Property<int>("IdDepara")
                         .ValueGeneratedOnAdd()
@@ -2524,7 +2524,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_depara_fmp");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbDiaSemana", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.DiaSemana", b =>
                 {
                     b.Property<int>("IdDiaSemana")
                         .ValueGeneratedOnAdd()
@@ -2544,7 +2544,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_dia_semana");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEanListaTmp", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.EanListaTmp", b =>
                 {
                     b.Property<int>("Id")
                         .HasColumnType("int");
@@ -2560,7 +2560,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_ean_lista_tmp");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEbit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Ebit", b =>
                 {
                     b.Property<int>("IdEbit")
                         .ValueGeneratedOnAdd()
@@ -2589,7 +2589,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_ebit");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEmail", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Email", b =>
                 {
                     b.Property<int>("IdEmail")
                         .ValueGeneratedOnAdd()
@@ -2646,7 +2646,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_email");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEmailTag", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.EmailTag", b =>
                 {
                     b.Property<int>("IdTag")
                         .ValueGeneratedOnAdd()
@@ -2674,7 +2674,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_email_tag");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEmailTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.EmailTipo", b =>
                 {
                     b.Property<int>("IdEmailTipo")
                         .ValueGeneratedOnAdd()
@@ -2694,7 +2694,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_email_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEspecificacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Especificacao", b =>
                 {
                     b.Property<int>("IdEspecificacao")
                         .ValueGeneratedOnAdd()
@@ -2743,7 +2743,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_especificacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEspecificacaoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.EspecificacaoTipo", b =>
                 {
                     b.Property<int>("IdEspecificacaoTipo")
                         .ValueGeneratedOnAdd()
@@ -2769,7 +2769,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_especificacao_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEtiqueta", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Etiqueta", b =>
                 {
                     b.Property<int>("IdEtiqueta")
                         .ValueGeneratedOnAdd()
@@ -2813,7 +2813,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_etiqueta");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEtiquetaTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.EtiquetaTipo", b =>
                 {
                     b.Property<int>("IdEtiquetaTipo")
                         .ValueGeneratedOnAdd()
@@ -2833,7 +2833,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_etiqueta_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFaq", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Faq", b =>
                 {
                     b.Property<int>("IdFaq")
                         .ValueGeneratedOnAdd()
@@ -2868,7 +2868,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_faq");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFaqCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FaqCategoria", b =>
                 {
                     b.Property<int>("IdFaqCategoria")
                         .ValueGeneratedOnAdd()
@@ -2892,7 +2892,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_faq_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFiltro", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Filtro", b =>
                 {
                     b.Property<int>("IdFiltro")
                         .ValueGeneratedOnAdd()
@@ -2940,7 +2940,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_filtro");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFiltroTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FiltroTipo", b =>
                 {
                     b.Property<int>("IdFiltroTipo")
                         .ValueGeneratedOnAdd()
@@ -2970,7 +2970,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_filtro_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFiltroTipoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FiltroTipoCategoria", b =>
                 {
                     b.Property<int>("IdFiltroTipoCategoria")
                         .ValueGeneratedOnAdd()
@@ -3005,7 +3005,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_filtro_tipo_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFormaPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FormaPagamento", b =>
                 {
                     b.Property<int>("IdFormaPagamento")
                         .HasColumnName("id_forma_pagamento")
@@ -3035,7 +3035,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_forma_pagamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFormaPagamentoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FormaPagamentoTipo", b =>
                 {
                     b.Property<int>("IdFormaPagamentoTipo")
                         .ValueGeneratedOnAdd()
@@ -3055,7 +3055,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_forma_pagamento_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGateway", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Gateway", b =>
                 {
                     b.Property<int>("IdGateway")
                         .ValueGeneratedOnAdd()
@@ -3105,7 +3105,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gateway");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGatewayPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GatewayPraca", b =>
                 {
                     b.Property<int>("IdGatewayPraca")
                         .ValueGeneratedOnAdd()
@@ -3130,7 +3130,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gateway_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGatewayTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GatewayTipo", b =>
                 {
                     b.Property<int>("IdGatewayTipo")
                         .HasColumnName("id_gateway_tipo")
@@ -3147,7 +3147,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gateway_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGatewayTipoFormaPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GatewayTipoFormaPagamento", b =>
                 {
                     b.Property<int>("IdGatewayTipoFormaPagamento")
                         .ValueGeneratedOnAdd()
@@ -3175,7 +3175,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gateway_tipo_forma_pagamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGondola", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Gondola", b =>
                 {
                     b.Property<int>("IdGondola")
                         .ValueGeneratedOnAdd()
@@ -3217,7 +3217,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gondola");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGondolaProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GondolaProdutoSku", b =>
                 {
                     b.Property<int>("IdGondolaProdutoSku")
                         .ValueGeneratedOnAdd()
@@ -3240,7 +3240,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_gondola_produto_sku");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGraficoCockpit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GraficoCockpit", b =>
                 {
                     b.Property<int>("IdGraficoCockpit")
                         .ValueGeneratedOnAdd()
@@ -3269,7 +3269,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_grafico_cockpit");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbImpAtualizaEstoquePreco", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ImpAtualizaEstoquePreco", b =>
                 {
                     b.Property<int>("IdImportacao")
                         .ValueGeneratedOnAdd()
@@ -3320,7 +3320,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_imp_atualiza_estoque_preco");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbImpAtualizaTitleMeta", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ImpAtualizaTitleMeta", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -3367,7 +3367,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_imp_atualiza_title_meta");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLayout", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Layout", b =>
                 {
                     b.Property<int>("IdLayout")
                         .ValueGeneratedOnAdd()
@@ -3393,7 +3393,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_layout");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLayoutPosicao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LayoutPosicao", b =>
                 {
                     b.Property<int>("IdLayoutPosicao")
                         .ValueGeneratedOnAdd()
@@ -3426,7 +3426,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_layout_posicao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbListaDesejo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ListaDesejo", b =>
                 {
                     b.Property<int>("IdListaDesejo")
                         .ValueGeneratedOnAdd()
@@ -3462,7 +3462,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_lista_desejo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbListaDesejoPeriodo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ListaDesejoPeriodo", b =>
                 {
                     b.Property<int>("IdListaDesejoPeriodo")
                         .ValueGeneratedOnAdd()
@@ -3490,7 +3490,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_lista_desejo_periodo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbListaDesejoProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ListaDesejoProdutoSku", b =>
                 {
                     b.Property<int>("IdListaDesejoProdutoSku")
                         .ValueGeneratedOnAdd()
@@ -3515,7 +3515,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_lista_desejo_produto_sku");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Log", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -3572,7 +3572,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_log");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLogProcedure", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LogProcedure", b =>
                 {
                     b.Property<int>("IdLog")
                         .ValueGeneratedOnAdd()
@@ -3594,7 +3594,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_log_procedure");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLogTelevendas", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LogTelevendas", b =>
                 {
                     b.Property<int>("IdLogTelevendas")
                         .ValueGeneratedOnAdd()
@@ -3624,7 +3624,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_log_televendas");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecial", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecial", b =>
                 {
                     b.Property<int>("IdLojaEspecial")
                         .ValueGeneratedOnAdd()
@@ -3703,7 +3703,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialBanner", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialBanner", b =>
                 {
                     b.Property<int>("IdLojaEspecialBanner")
                         .ValueGeneratedOnAdd()
@@ -3762,7 +3762,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_banner");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialCategoria", b =>
                 {
                     b.Property<int>("IdLojaEspecialCategoria")
                         .ValueGeneratedOnAdd()
@@ -3796,7 +3796,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialDepartamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialDepartamento", b =>
                 {
                     b.Property<int>("IdLojaEspecialDepartamento")
                         .ValueGeneratedOnAdd()
@@ -3830,7 +3830,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_departamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialMarca", b =>
                 {
                     b.Property<int>("IdLojaEspecialMarca")
                         .ValueGeneratedOnAdd()
@@ -3855,7 +3855,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_marca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialPosicao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialPosicao", b =>
                 {
                     b.Property<int>("IdLojaEspecialPosicao")
                         .ValueGeneratedOnAdd()
@@ -3883,7 +3883,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_posicao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialProduto", b =>
                 {
                     b.Property<int>("IdLojaEspecialProduto")
                         .ValueGeneratedOnAdd()
@@ -3926,7 +3926,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialSecao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialSecao", b =>
                 {
                     b.Property<int>("IdLojaEspecialSecao")
                         .ValueGeneratedOnAdd()
@@ -3960,7 +3960,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_secao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialVitrine", b =>
                 {
                     b.Property<int>("IdLojaEspecialVitrine")
                         .ValueGeneratedOnAdd()
@@ -3994,7 +3994,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_vitrine");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialVitrineProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialVitrineProduto", b =>
                 {
                     b.Property<int>("IdLojaEspecialVitrineProduto")
                         .ValueGeneratedOnAdd()
@@ -4023,7 +4023,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_especial_vitrine_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaFisica", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaFisica", b =>
                 {
                     b.Property<int>("IdLojaFisica")
                         .ValueGeneratedOnAdd()
@@ -4112,7 +4112,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_loja_fisica");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMapeamentoUrl", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MapeamentoUrl", b =>
                 {
                     b.Property<int>("IdMapeamento")
                         .ValueGeneratedOnAdd()
@@ -4155,7 +4155,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mapeamento_url");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Marca", b =>
                 {
                     b.Property<int>("IdMarca")
                         .ValueGeneratedOnAdd()
@@ -4205,7 +4205,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_marca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Mensagem", b =>
                 {
                     b.Property<int>("IdMensagem")
                         .ValueGeneratedOnAdd()
@@ -4249,7 +4249,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemCategoria", b =>
                 {
                     b.Property<int>("IdMensagemCategoria")
                         .ValueGeneratedOnAdd()
@@ -4290,7 +4290,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemMarca", b =>
                 {
                     b.Property<int>("IdMensagemMarca")
                         .ValueGeneratedOnAdd()
@@ -4315,7 +4315,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_marca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemPrincipioAtivo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemPrincipioAtivo", b =>
                 {
                     b.Property<int>("IdMensagemPrincipioAtivo")
                         .ValueGeneratedOnAdd()
@@ -4340,7 +4340,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_principio_ativo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoControle", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoControle", b =>
                 {
                     b.Property<int>("IdMensagemProdutoControle")
                         .ValueGeneratedOnAdd()
@@ -4365,7 +4365,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_produto_controle");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoFamilia", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoFamilia", b =>
                 {
                     b.Property<int>("IdMensagemProdutoFamilia")
                         .ValueGeneratedOnAdd()
@@ -4390,7 +4390,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_produto_familia");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoTipo", b =>
                 {
                     b.Property<int>("IdMensagemProdutoTipo")
                         .ValueGeneratedOnAdd()
@@ -4415,7 +4415,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_mensagem_produto_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntrega", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntrega", b =>
                 {
                     b.Property<int>("IdModalidadeEntrega")
                         .ValueGeneratedOnAdd()
@@ -4551,7 +4551,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaAgenda", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaAgenda", b =>
                 {
                     b.Property<int>("IdModalidadeEntregaAgenda")
                         .ValueGeneratedOnAdd()
@@ -4588,7 +4588,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega_agenda");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaCep", b =>
                 {
                     b.Property<int>("IdModalidadeEntregaCep")
                         .ValueGeneratedOnAdd()
@@ -4668,7 +4668,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega_cep");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaLoja", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaLoja", b =>
                 {
                     b.Property<int>("IdModalidadeEntregaLoja")
                         .ValueGeneratedOnAdd()
@@ -4743,7 +4743,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega_loja");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaRestricao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaRestricao", b =>
                 {
                     b.Property<int>("IdModalidadeEntregaRestricao")
                         .ValueGeneratedOnAdd()
@@ -4809,7 +4809,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega_restricao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaTipo", b =>
                 {
                     b.Property<int>("IdModalidadeEntregaTipo")
                         .ValueGeneratedOnAdd()
@@ -4835,7 +4835,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_modalidade_entrega_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbNewsletter", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Newsletter", b =>
                 {
                     b.Property<int>("IdNewsletter")
                         .ValueGeneratedOnAdd()
@@ -4873,7 +4873,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_newsletter");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbOfertaEspecial", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.OfertaEspecial", b =>
                 {
                     b.Property<int>("IdOfertaEspecial")
                         .ValueGeneratedOnAdd()
@@ -4896,7 +4896,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_oferta_especial");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Pagamento", b =>
                 {
                     b.Property<int>("IdPagamento")
                         .ValueGeneratedOnAdd()
@@ -4940,7 +4940,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pagamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamentoGateway", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PagamentoGateway", b =>
                 {
                     b.Property<int>("IdPagamentoGateway")
                         .ValueGeneratedOnAdd()
@@ -4965,7 +4965,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pagamento_gateway");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamentoParcela", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PagamentoParcela", b =>
                 {
                     b.Property<int>("IdPagamentoParcela")
                         .ValueGeneratedOnAdd()
@@ -5007,7 +5007,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pagamento_parcela");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbParceiro", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Parceiro", b =>
                 {
                     b.Property<int>("IdParceiro")
                         .ValueGeneratedOnAdd()
@@ -5069,7 +5069,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_parceiro");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbParceiroXmlProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ParceiroXmlProduto", b =>
                 {
                     b.Property<int>("IdParceiroXmlProduto")
                         .ValueGeneratedOnAdd()
@@ -5094,7 +5094,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_parceiro_xml_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoGestaoRisco", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoGestaoRisco", b =>
                 {
                     b.Property<int>("IdGestaoRisco")
                         .ValueGeneratedOnAdd()
@@ -5168,7 +5168,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_gestao_risco");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoHistorico", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoHistorico", b =>
                 {
                     b.Property<int>("IdPedidoHistorico")
                         .ValueGeneratedOnAdd()
@@ -5204,7 +5204,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_historico");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoLog", b =>
                 {
                     b.Property<int>("IdPedidoLog")
                         .ValueGeneratedOnAdd()
@@ -5252,7 +5252,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_log");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoOrigem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoOrigem", b =>
                 {
                     b.Property<int>("IdPedidoOrigem")
                         .ValueGeneratedOnAdd()
@@ -5272,7 +5272,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_origem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoPagamentoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamentoLog", b =>
                 {
                     b.Property<int>("IdPedidoPagamentoLog")
                         .ValueGeneratedOnAdd()
@@ -5311,7 +5311,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_pagamento_log");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoProdutoKit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoKit", b =>
                 {
                     b.Property<int>("IdPedidoProdutoKit")
                         .ValueGeneratedOnAdd()
@@ -5340,7 +5340,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_produto_kit");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoSevenpdv", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoSevenpdv", b =>
                 {
                     b.Property<int>("IdPedidoSevenpdv")
                         .ValueGeneratedOnAdd()
@@ -5391,7 +5391,7 @@ namespace Core.Data.Migrations
                     b.HasComment("Tabela que guardas as requisições da sevenpdv");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoStatus", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoStatus", b =>
                 {
                     b.Property<int>("IdPedidoStatus")
                         .HasColumnName("id_pedido_status")
@@ -5419,7 +5419,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_status");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoStatusPbm", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoStatusPbm", b =>
                 {
                     b.Property<int>("IdPedidoStatusPbm")
                         .ValueGeneratedOnAdd()
@@ -5458,7 +5458,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_status_pbm");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPosicao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Posicao", b =>
                 {
                     b.Property<int>("IdPosicao")
                         .ValueGeneratedOnAdd()
@@ -5478,7 +5478,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_posicao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPracaCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PracaCep", b =>
                 {
                     b.Property<int>("IdPracaCep")
                         .ValueGeneratedOnAdd()
@@ -5536,7 +5536,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_praca_cep");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPrincipioAtivo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PrincipioAtivo", b =>
                 {
                     b.Property<int>("IdPrincipioAtivo")
                         .ValueGeneratedOnAdd()
@@ -5565,7 +5565,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_principio_ativo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Produto", b =>
                 {
                     b.Property<int>("IdProduto")
                         .ValueGeneratedOnAdd()
@@ -5701,7 +5701,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoAtrStagging", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoAtrStagging", b =>
                 {
                     b.Property<int>("IdProdutoAtrStagging")
                         .ValueGeneratedOnAdd()
@@ -5751,7 +5751,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_atr_stagging");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoAvaliacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoAvaliacao", b =>
                 {
                     b.Property<int>("IdProdutoAvaliacao")
                         .ValueGeneratedOnAdd()
@@ -5809,7 +5809,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_avaliacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoCategoria", b =>
                 {
                     b.Property<int>("IdProdutoCategoria")
                         .ValueGeneratedOnAdd()
@@ -5860,7 +5860,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoControle", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoControle", b =>
                 {
                     b.Property<int>("IdProdutoControle")
                         .ValueGeneratedOnAdd()
@@ -5880,7 +5880,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_controle");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoControleStagging", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoControleStagging", b =>
                 {
                     b.Property<int>("IdProdutoControleStagging")
                         .ValueGeneratedOnAdd()
@@ -5905,7 +5905,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_controle_stagging");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoDescricao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoDescricao", b =>
                 {
                     b.Property<int>("IdProdutoDescricao")
                         .ValueGeneratedOnAdd()
@@ -5947,7 +5947,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_descricao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoDescricaoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoDescricaoTipo", b =>
                 {
                     b.Property<int>("IdProdutoDescricaoTipo")
                         .ValueGeneratedOnAdd()
@@ -5977,7 +5977,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_descricao_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoEtiqueta", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoEtiqueta", b =>
                 {
                     b.Property<int>("IdProdutoEtiqueta")
                         .ValueGeneratedOnAdd()
@@ -6016,7 +6016,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_etiqueta");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoFamilia", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoFamilia", b =>
                 {
                     b.Property<int>("IdProdutoFamilia")
                         .ValueGeneratedOnAdd()
@@ -6042,7 +6042,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_familia");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoFamiliaModalidade", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoFamiliaModalidade", b =>
                 {
                     b.Property<int>("IdProdutoFamiliaModalidade")
                         .ValueGeneratedOnAdd()
@@ -6074,7 +6074,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_familia_modalidade");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoFamiliaStagging", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoFamiliaStagging", b =>
                 {
                     b.Property<int>("IdProdutoFamiliaStagging")
                         .ValueGeneratedOnAdd()
@@ -6099,7 +6099,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_familia_stagging");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoKit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoKit", b =>
                 {
                     b.Property<int>("IdProdutoKit")
                         .ValueGeneratedOnAdd()
@@ -6128,7 +6128,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_kit");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoLancamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoLancamento", b =>
                 {
                     b.Property<int>("IdProdutoLancamento")
                         .ValueGeneratedOnAdd()
@@ -6155,7 +6155,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_lancamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoLog", b =>
                 {
                     b.Property<int>("IdProdutoLog")
                         .HasColumnName("id_produto_log")
@@ -6190,7 +6190,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_log");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoPrincipioAtivo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoPrincipioAtivo", b =>
                 {
                     b.Property<int>("IdProdutoPrincipioAtivo")
                         .ValueGeneratedOnAdd()
@@ -6219,7 +6219,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_principio_ativo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoPrincipioAtivoBkp20191018", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoPrincipioAtivoBkp20191018", b =>
                 {
                     b.Property<bool?>("FlPrincipal")
                         .HasColumnName("fl_principal")
@@ -6242,7 +6242,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_principio_ativo_bkp_20191018");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSeo", b =>
                 {
                     b.Property<int>("IdProdutoSeo")
                         .ValueGeneratedOnAdd()
@@ -6282,7 +6282,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_seo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuAviseMe", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuAviseMe", b =>
                 {
                     b.Property<int>("IdProdutoSkuAviseMe")
                         .ValueGeneratedOnAdd()
@@ -6327,7 +6327,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_avise_me");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuEspecificacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuEspecificacao", b =>
                 {
                     b.Property<int>("IdProdutoSkuEspecificacao")
                         .ValueGeneratedOnAdd()
@@ -6358,7 +6358,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_especificacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuFiltro", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuFiltro", b =>
                 {
                     b.Property<int>("IdProdutoSkuFiltro")
                         .ValueGeneratedOnAdd()
@@ -6383,7 +6383,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_filtro");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuGenerico", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuGenerico", b =>
                 {
                     b.Property<int>("IdProdutoSkuGenerico")
                         .ValueGeneratedOnAdd()
@@ -6408,7 +6408,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_generico");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuImagem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuImagem", b =>
                 {
                     b.Property<int>("IdProdutoSkuImagem")
                         .ValueGeneratedOnAdd()
@@ -6455,7 +6455,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_imagem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuOutrasOrigens", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuOutrasOrigens", b =>
                 {
                     b.Property<string>("CdBarras")
                         .HasColumnName("cd_barras")
@@ -6526,7 +6526,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_outras_origens");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuPraca", b =>
                 {
                     b.Property<int>("IdProdutoSkuPraca")
                         .ValueGeneratedOnAdd()
@@ -6609,7 +6609,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuRelacionado", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuRelacionado", b =>
                 {
                     b.Property<int>("IdProdutoSkuRelacionado")
                         .ValueGeneratedOnAdd()
@@ -6635,7 +6635,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_relacionado");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuSemImagens", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuSemImagens", b =>
                 {
                     b.Property<string>("CdBarras")
                         .HasColumnName("cd_barras")
@@ -6684,7 +6684,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_sem_imagens");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuVendaCasada", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuVendaCasada", b =>
                 {
                     b.Property<int>("IdProdutoSkuVendaCasada")
                         .ValueGeneratedOnAdd()
@@ -6725,7 +6725,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_sku_venda_casada");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoTipo", b =>
                 {
                     b.Property<int>("IdProdutoTipo")
                         .ValueGeneratedOnAdd()
@@ -6745,7 +6745,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoTipoStagging", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoTipoStagging", b =>
                 {
                     b.Property<int>("IdProdutoFamiliaStagging")
                         .ValueGeneratedOnAdd()
@@ -6770,7 +6770,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_tipo_stagging");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoVideo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoVideo", b =>
                 {
                     b.Property<int>("IdProdutoVideo")
                         .ValueGeneratedOnAdd()
@@ -6810,7 +6810,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produto_video");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutosAtualizados", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutosAtualizados", b =>
                 {
                     b.Property<string>("CdBarras")
                         .HasColumnName("cd_barras")
@@ -6831,7 +6831,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_produtos_atualizados");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPrograma", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Programa", b =>
                 {
                     b.Property<int>("IdPrograma")
                         .ValueGeneratedOnAdd()
@@ -6868,7 +6868,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_programa");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProgramaProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProgramaProduto", b =>
                 {
                     b.Property<int>("IdProgramaProduto")
                         .ValueGeneratedOnAdd()
@@ -6907,7 +6907,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_programa_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Promocao", b =>
                 {
                     b.Property<int>("IdPromocao")
                         .ValueGeneratedOnAdd()
@@ -6986,7 +6986,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoAcao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoAcao", b =>
                 {
                     b.Property<int>("IdPromocaoAcao")
                         .ValueGeneratedOnAdd()
@@ -7006,7 +7006,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_acao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoBeneficio", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoBeneficio", b =>
                 {
                     b.Property<int>("IdPromocaoBeneficio")
                         .ValueGeneratedOnAdd()
@@ -7026,7 +7026,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_beneficio");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCategoria", b =>
                 {
                     b.Property<int>("IdPromocaoCategoria")
                         .ValueGeneratedOnAdd()
@@ -7069,7 +7069,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCep", b =>
                 {
                     b.Property<int>("IdPromocaoCep")
                         .ValueGeneratedOnAdd()
@@ -7122,7 +7122,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_cep");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCliente", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCliente", b =>
                 {
                     b.Property<int>("IdPromocaoCliente")
                         .ValueGeneratedOnAdd()
@@ -7147,7 +7147,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_cliente");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCupom", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCupom", b =>
                 {
                     b.Property<int>("IdPromocaoCupom")
                         .ValueGeneratedOnAdd()
@@ -7193,7 +7193,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_cupom");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCupomUtilizado", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCupomUtilizado", b =>
                 {
                     b.Property<int>("IdPromocaoCupomUtilizado")
                         .ValueGeneratedOnAdd()
@@ -7228,7 +7228,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_cupom_utilizado");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoMarca", b =>
                 {
                     b.Property<int>("IdPromocaoMarca")
                         .ValueGeneratedOnAdd()
@@ -7253,7 +7253,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_marca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoModalidade", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoModalidade", b =>
                 {
                     b.Property<int>("IdPromocaoModalidade")
                         .ValueGeneratedOnAdd()
@@ -7278,7 +7278,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_modalidade");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoPagamento", b =>
                 {
                     b.Property<int>("IdPromocaoPagamento")
                         .ValueGeneratedOnAdd()
@@ -7303,7 +7303,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_pagamento");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoPraca", b =>
                 {
                     b.Property<int>("IdPromocaoPraca")
                         .ValueGeneratedOnAdd()
@@ -7328,7 +7328,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoProduto", b =>
                 {
                     b.Property<int>("IdPromocaoProduto")
                         .ValueGeneratedOnAdd()
@@ -7353,7 +7353,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_produto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoTipo", b =>
                 {
                     b.Property<int>("IdPromocaoTipo")
                         .ValueGeneratedOnAdd()
@@ -7373,7 +7373,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoTipoAcao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoTipoAcao", b =>
                 {
                     b.Property<int>("IdPromocaoTipoAcao")
                         .ValueGeneratedOnAdd()
@@ -7398,7 +7398,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_tipo_acao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoTipoBeneficio", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoTipoBeneficio", b =>
                 {
                     b.Property<int>("IdPromocaoTipoBeneficio")
                         .ValueGeneratedOnAdd()
@@ -7423,7 +7423,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_promocao_tipo_beneficio");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemComprouComprouTambem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemComprouComprouTambem", b =>
                 {
                     b.Property<int>("IdQuemComprouComprouTambem")
                         .ValueGeneratedOnAdd()
@@ -7451,7 +7451,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_quem_comprou_comprou_tambem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemViuComprou", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemViuComprou", b =>
                 {
                     b.Property<int>("IdQuemViuComprou")
                         .ValueGeneratedOnAdd()
@@ -7481,7 +7481,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_quem_viu_comprou");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemViuViuTambem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemViuViuTambem", b =>
                 {
                     b.Property<int>("IdQuemViuViuTambem")
                         .ValueGeneratedOnAdd()
@@ -7510,7 +7510,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_quem_viu_viu_tambem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbRedeSocial", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.RedeSocial", b =>
                 {
                     b.Property<string>("DsLink")
                         .IsRequired()
@@ -7546,7 +7546,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_rede_social");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbRodape", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Rodape", b =>
                 {
                     b.Property<int>("IdRodape")
                         .ValueGeneratedOnAdd()
@@ -7577,7 +7577,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_rodape");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecApps", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecApps", b =>
                 {
                     b.Property<string>("AppName")
                         .HasColumnName("app_name")
@@ -7603,7 +7603,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_apps");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecGroups", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecGroups", b =>
                 {
                     b.Property<int>("GroupId")
                         .HasColumnName("group_id")
@@ -7626,7 +7626,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_groups");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecGroupsApps", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecGroupsApps", b =>
                 {
                     b.Property<int>("GroupId")
                         .HasColumnName("group_id")
@@ -7682,7 +7682,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_groups_apps");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecLogged", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecLogged", b =>
                 {
                     b.Property<string>("Login")
                         .HasColumnName("login")
@@ -7705,7 +7705,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_logged");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecUsers", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecUsers", b =>
                 {
                     b.Property<string>("Login")
                         .HasColumnName("login")
@@ -7758,7 +7758,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_users");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecUsersGroups", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecUsersGroups", b =>
                 {
                     b.Property<string>("Login")
                         .HasColumnName("login")
@@ -7778,7 +7778,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sec_users_groups");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbServicoCorreios", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ServicoCorreios", b =>
                 {
                     b.Property<int>("IdServicoCorreios")
                         .ValueGeneratedOnAdd()
@@ -7805,7 +7805,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_servico_correios");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbServicoTotalexpress", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ServicoTotalexpress", b =>
                 {
                     b.Property<int>("IdServicoTotalexpress")
                         .ValueGeneratedOnAdd()
@@ -7839,7 +7839,7 @@ namespace Core.Data.Migrations
                     b.HasComment("Serviços da Total Express");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSevenpdvLogon", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SevenpdvLogon", b =>
                 {
                     b.Property<int>("IdSevenpdvLogon")
                         .ValueGeneratedOnAdd()
@@ -7892,7 +7892,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sevenpdv_logon");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSevenpdvSessao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SevenpdvSessao", b =>
                 {
                     b.Property<int>("IdSevenpdvSessao")
                         .ValueGeneratedOnAdd()
@@ -7960,7 +7960,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sevenpdv_sessao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSkuPracaMovimentacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SkuPracaMovimentacao", b =>
                 {
                     b.Property<int>("IdProdutoSkuPraca")
                         .HasColumnName("id_produto_sku_praca")
@@ -8000,7 +8000,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sku_praca_movimentacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSli", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Sli", b =>
                 {
                     b.Property<int>("IdSli")
                         .ValueGeneratedOnAdd()
@@ -8031,7 +8031,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_sli");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSuperDesconto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SuperDesconto", b =>
                 {
                     b.Property<int>("IdSuperDesconto")
                         .ValueGeneratedOnAdd()
@@ -8065,7 +8065,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_super_desconto");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUploadImagem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UploadImagem", b =>
                 {
                     b.Property<int>("IdUploadImagem")
                         .ValueGeneratedOnAdd()
@@ -8092,7 +8092,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_upload_imagem");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuario", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Usuario", b =>
                 {
                     b.Property<int>("IdUsuario")
                         .ValueGeneratedOnAdd()
@@ -8170,7 +8170,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioGrupo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioGrupo", b =>
                 {
                     b.Property<int>("IdUsuarioGrupo")
                         .ValueGeneratedOnAdd()
@@ -8200,7 +8200,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_grupo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioGrupoAcesso", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioGrupoAcesso", b =>
                 {
                     b.Property<int>("IdUsuarioGrupoAcesso")
                         .ValueGeneratedOnAdd()
@@ -8241,7 +8241,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_grupo_acesso");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioGrupoTelevendas", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioGrupoTelevendas", b =>
                 {
                     b.Property<int>("IdUsuarioGrupoTelevendas")
                         .ValueGeneratedOnAdd()
@@ -8261,7 +8261,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_grupo_televendas");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioIp", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioIp", b =>
                 {
                     b.Property<int>("IdUsuarioIp")
                         .ValueGeneratedOnAdd()
@@ -8287,7 +8287,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_ip");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioPraca", b =>
                 {
                     b.Property<int>("IdUsuarioPraca")
                         .ValueGeneratedOnAdd()
@@ -8312,7 +8312,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioRecuperacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioRecuperacao", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -8342,7 +8342,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_recuperacao");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioTelevendas", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioTelevendas", b =>
                 {
                     b.Property<int>("IdUsuarioTelevendas")
                         .ValueGeneratedOnAdd()
@@ -8400,7 +8400,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_televendas");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Vitrine", b =>
                 {
                     b.Property<int>("IdVitrine")
                         .ValueGeneratedOnAdd()
@@ -8452,7 +8452,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_vitrine");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrineCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrineCategoria", b =>
                 {
                     b.Property<int>("IdVitrineCategoria")
                         .ValueGeneratedOnAdd()
@@ -8482,7 +8482,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_vitrine_categoria");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrinePraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrinePraca", b =>
                 {
                     b.Property<int>("IdVitrinePraca")
                         .ValueGeneratedOnAdd()
@@ -8508,7 +8508,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_vitrine_praca");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrineProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrineProdutoSku", b =>
                 {
                     b.Property<int>("IdVitrineProdutoSku")
                         .ValueGeneratedOnAdd()
@@ -8540,7 +8540,7 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_vitrine_produto_sku");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrineTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrineTipo", b =>
                 {
                     b.Property<int>("IdVitrineTipo")
                         .ValueGeneratedOnAdd()
@@ -8643,7 +8643,7 @@ namespace Core.Data.Migrations
                         .OnDelete(DeleteBehavior.NoAction);
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuDestaqueNavigation")
-                        .WithMany("TbCategoria")
+                        .WithMany("Categoria")
                         .HasForeignKey("IdProdutoSkuDestaque")
                         .HasConstraintName("FK_tb_categoria_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade);
@@ -8652,7 +8652,7 @@ namespace Core.Data.Migrations
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoEntrega", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPedidoEntrega")
+                        .WithMany("PedidoEntrega")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("FK_tb_pedido_entrega_tb_pedido")
                         .IsRequired();
@@ -8660,8 +8660,8 @@ namespace Core.Data.Migrations
 
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPagamento", "IdPagamentoNavigation")
-                        .WithMany("TbPedidoPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.Pagamento", "IdPagamentoNavigation")
+                        .WithMany("PedidoPagamento")
                         .HasForeignKey("IdPagamento")
                         .HasConstraintName("FK_tb_pedido_pagamento_tb_pagamento")
                         .IsRequired();
@@ -8682,7 +8682,7 @@ namespace Core.Data.Migrations
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbPedidoProdutoSku")
+                        .WithMany("PedidoProdutoSku")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_pedido_produto_sku_tb_produto_sku")
                         .IsRequired();
@@ -8698,1687 +8698,1687 @@ namespace Core.Data.Migrations
 
             modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSku", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoSku")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoSku")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_sku_tb_produto")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbAcessoAplicativo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.AcessoAplicativo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbAplicativo", "IdAplicativoNavigation")
-                        .WithMany("TbAcessoAplicativo")
+                    b.HasOne("Core.Domain.EF.Entities.Aplicativo", "IdAplicativoNavigation")
+                        .WithMany("AcessoAplicativo")
                         .HasForeignKey("IdAplicativo")
                         .HasConstraintName("FK_tb_acesso_aplicativo_tb_aplicativo")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBackofficeSessao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BackofficeSessao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbBackofficeSessao")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("BackofficeSessao")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_backoffice_sessao_tb_usuario")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBanner", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Banner", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBannerTarget", "IdBannerTargetNavigation")
-                        .WithMany("TbBanner")
+                    b.HasOne("Core.Domain.EF.Entities.BannerTarget", "IdBannerTargetNavigation")
+                        .WithMany("Banner")
                         .HasForeignKey("IdBannerTarget")
                         .HasConstraintName("FK_tb_banner_tb_banner_target")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbLayoutPosicao", "IdLayoutPosicaoNavigation")
-                        .WithMany("TbBanner")
+                    b.HasOne("Core.Domain.EF.Entities.LayoutPosicao", "IdLayoutPosicaoNavigation")
+                        .WithMany("Banner")
                         .HasForeignKey("IdLayoutPosicao")
                         .HasConstraintName("FK_tb_banner_tb_layout_posicao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerBusca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerBusca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBanner", "IdBannerNavigation")
-                        .WithMany("TbBannerBusca")
+                    b.HasOne("Core.Domain.EF.Entities.Banner", "IdBannerNavigation")
+                        .WithMany("BannerBusca")
                         .HasForeignKey("IdBanner")
                         .HasConstraintName("FK_tb_banner_busca_tb_banner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerCategoria", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBanner", "IdBannerNavigation")
-                        .WithMany("TbBannerCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.Banner", "IdBannerNavigation")
+                        .WithMany("BannerCategoria")
                         .HasForeignKey("IdBanner")
                         .HasConstraintName("FK_tb_banner_categoria_tb_banner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbBannerCategoria")
+                        .WithMany("BannerCategoria")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_banner_categoria_tb_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerPraca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBanner", "IdBannerNavigation")
-                        .WithMany("TbBannerPraca")
+                    b.HasOne("Core.Domain.EF.Entities.Banner", "IdBannerNavigation")
+                        .WithMany("BannerPraca")
                         .HasForeignKey("IdBanner")
                         .HasConstraintName("FK_tb_banner_praca_tb_banner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbBannerPraca")
+                        .WithMany("BannerPraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_banner_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerProduto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBanner", "IdBannerNavigation")
-                        .WithMany("TbBannerProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Banner", "IdBannerNavigation")
+                        .WithMany("BannerProduto")
                         .HasForeignKey("IdBanner")
                         .HasConstraintName("FK_tb_banner_produto_tb_banner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbBannerProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("BannerProduto")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_banner_produto_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbBannerVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.BannerVitrine", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbBanner", "IdBannerNavigation")
-                        .WithMany("TbBannerVitrine")
+                    b.HasOne("Core.Domain.EF.Entities.Banner", "IdBannerNavigation")
+                        .WithMany("BannerVitrine")
                         .HasForeignKey("IdBanner")
                         .HasConstraintName("FK_tb_banner_vitrine_tb_banner")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbVitrine", "IdVitrineNavigation")
-                        .WithMany("TbBannerVitrine")
+                    b.HasOne("Core.Domain.EF.Entities.Vitrine", "IdVitrineNavigation")
+                        .WithMany("BannerVitrine")
                         .HasForeignKey("IdVitrine")
                         .HasConstraintName("FK_tb_banner_vitrine_tb_vitrine")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbCategoriaSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.CategoriaSeo", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbCategoriaSeo")
+                        .WithMany("CategoriaSeo")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_categoria_seo_tb_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteEndereco", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteEndereco", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbClienteEndereco")
+                        .WithMany("ClienteEndereco")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_cliente_endereco_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbClienteEnderecoTipo", "IdClienteEnderecoTipoNavigation")
-                        .WithMany("TbClienteEndereco")
+                    b.HasOne("Core.Domain.EF.Entities.ClienteEnderecoTipo", "IdClienteEnderecoTipoNavigation")
+                        .WithMany("ClienteEndereco")
                         .HasForeignKey("IdClienteEnderecoTipo")
                         .HasConstraintName("FK_tb_cliente_endereco_tb_cliente_endereco_tipo")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbClienteObservacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ClienteObservacao", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbClienteObservacao")
+                        .WithMany("ClienteObservacao")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_cliente_observacao_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbClienteObservacao")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("ClienteObservacao")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_cliente_observacao_tb_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Conteudo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudoCategoria", "IdConteudoCategoriaNavigation")
-                        .WithMany("TbConteudo")
+                    b.HasOne("Core.Domain.EF.Entities.ConteudoCategoria", "IdConteudoCategoriaNavigation")
+                        .WithMany("Conteudo")
                         .HasForeignKey("IdConteudoCategoria")
                         .HasConstraintName("FK_tb_conteudo_tb_conteudo_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudoTarget", "IdConteudoTargetNavigation")
-                        .WithMany("TbConteudo")
+                    b.HasOne("Core.Domain.EF.Entities.ConteudoTarget", "IdConteudoTargetNavigation")
+                        .WithMany("Conteudo")
                         .HasForeignKey("IdConteudoTarget")
                         .HasConstraintName("FK_tb_conteudo_tb_conteudo_target")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudoTipo", "IdConteudoTipoNavigation")
-                        .WithMany("TbConteudo")
+                    b.HasOne("Core.Domain.EF.Entities.ConteudoTipo", "IdConteudoTipoNavigation")
+                        .WithMany("Conteudo")
                         .HasForeignKey("IdConteudoTipo")
                         .HasConstraintName("FK_tb_conteudo_tb_conteudo_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoConteudoLocal", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoConteudoLocal", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudo", "IdConteudoNavigation")
-                        .WithMany("TbConteudoConteudoLocal")
+                    b.HasOne("Core.Domain.EF.Entities.Conteudo", "IdConteudoNavigation")
+                        .WithMany("ConteudoConteudoLocal")
                         .HasForeignKey("IdConteudo")
                         .HasConstraintName("FK_tb_conteudo_conteudo_local_tb_conteudo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudoLocal", "IdConteudoLocalNavigation")
-                        .WithMany("TbConteudoConteudoLocal")
+                    b.HasOne("Core.Domain.EF.Entities.ConteudoLocal", "IdConteudoLocalNavigation")
+                        .WithMany("ConteudoConteudoLocal")
                         .HasForeignKey("IdConteudoLocal")
                         .HasConstraintName("FK_tb_conteudo_conteudo_local_tb_conteudo_local")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbConteudoSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ConteudoSeo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbConteudo", "IdConteudoNavigation")
-                        .WithMany("TbConteudoSeo")
+                    b.HasOne("Core.Domain.EF.Entities.Conteudo", "IdConteudoNavigation")
+                        .WithMany("ConteudoSeo")
                         .HasForeignKey("IdConteudo")
                         .HasConstraintName("FK_tb_conteudo_seo_tb_conteudo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEmail", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Email", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEmailTipo", "IdEmailTipoNavigation")
-                        .WithMany("TbEmail")
+                    b.HasOne("Core.Domain.EF.Entities.EmailTipo", "IdEmailTipoNavigation")
+                        .WithMany("Email")
                         .HasForeignKey("IdEmailTipo")
                         .HasConstraintName("FK_tb_email_tb_email_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPedidoStatus", "IdPedidoStatusNavigation")
-                        .WithMany("TbEmail")
+                    b.HasOne("Core.Domain.EF.Entities.PedidoStatus", "IdPedidoStatusNavigation")
+                        .WithMany("Email")
                         .HasForeignKey("IdPedidoStatus")
                         .HasConstraintName("FK_tb_email_tb_pedido_status")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEspecificacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Especificacao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEspecificacaoTipo", "IdEspecificacaoTipoNavigation")
-                        .WithMany("TbEspecificacao")
+                    b.HasOne("Core.Domain.EF.Entities.EspecificacaoTipo", "IdEspecificacaoTipoNavigation")
+                        .WithMany("Especificacao")
                         .HasForeignKey("IdEspecificacaoTipo")
                         .HasConstraintName("FK_tb_especificacao_tb_especificacao_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbEtiqueta", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Etiqueta", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEtiquetaTipo", "IdEtiquetaTipoNavigation")
-                        .WithMany("TbEtiqueta")
+                    b.HasOne("Core.Domain.EF.Entities.EtiquetaTipo", "IdEtiquetaTipoNavigation")
+                        .WithMany("Etiqueta")
                         .HasForeignKey("IdEtiquetaTipo")
                         .HasConstraintName("FK_tb_etiqueta_tb_etiqueta_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFaq", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Faq", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFaqCategoria", "IdFaqCategoriaNavigation")
-                        .WithMany("TbFaq")
+                    b.HasOne("Core.Domain.EF.Entities.FaqCategoria", "IdFaqCategoriaNavigation")
+                        .WithMany("Faq")
                         .HasForeignKey("IdFaqCategoria")
                         .HasConstraintName("FK_tb_faq_tb_faq_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFiltro", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Filtro", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFiltroTipo", "IdFiltroTipoNavigation")
-                        .WithMany("TbFiltro")
+                    b.HasOne("Core.Domain.EF.Entities.FiltroTipo", "IdFiltroTipoNavigation")
+                        .WithMany("Filtro")
                         .HasForeignKey("IdFiltroTipo")
                         .HasConstraintName("FK_tb_filtro_tb_filtro_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFiltroTipoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FiltroTipoCategoria", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFiltroTipo", "IdFiltroTipoNavigation")
-                        .WithMany("TbFiltroTipoCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.FiltroTipo", "IdFiltroTipoNavigation")
+                        .WithMany("FiltroTipoCategoria")
                         .HasForeignKey("IdFiltroTipo")
                         .HasConstraintName("FK_tb_filtro_tipo_categoria_tb_filtro_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbFormaPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.FormaPagamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFormaPagamentoTipo", "IdFormaPagamentoTipoNavigation")
-                        .WithMany("TbFormaPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.FormaPagamentoTipo", "IdFormaPagamentoTipoNavigation")
+                        .WithMany("FormaPagamento")
                         .HasForeignKey("IdFormaPagamentoTipo")
                         .HasConstraintName("FK_tb_forma_pagamento_tb_forma_pagamento_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGateway", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Gateway", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbGatewayTipo", "IdGatewayTipoNavigation")
-                        .WithMany("TbGateway")
+                    b.HasOne("Core.Domain.EF.Entities.GatewayTipo", "IdGatewayTipoNavigation")
+                        .WithMany("Gateway")
                         .HasForeignKey("IdGatewayTipo")
                         .HasConstraintName("FK_tb_gateway_tb_gateway_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGatewayPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GatewayPraca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbGateway", "IdGatewayNavigation")
-                        .WithMany("TbGatewayPraca")
+                    b.HasOne("Core.Domain.EF.Entities.Gateway", "IdGatewayNavigation")
+                        .WithMany("GatewayPraca")
                         .HasForeignKey("IdGateway")
                         .HasConstraintName("FK_tb_gateway_praca_tb_gateway")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbGatewayPraca")
+                        .WithMany("GatewayPraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_gateway_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGatewayTipoFormaPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GatewayTipoFormaPagamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFormaPagamento", "IdFormaPagamentoNavigation")
-                        .WithMany("TbGatewayTipoFormaPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.FormaPagamento", "IdFormaPagamentoNavigation")
+                        .WithMany("GatewayTipoFormaPagamento")
                         .HasForeignKey("IdFormaPagamento")
                         .HasConstraintName("FK_tb_gateway_tipo_forma_pagamento_tb_forma_pagamento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbGatewayTipo", "IdGatewayTipoNavigation")
-                        .WithMany("TbGatewayTipoFormaPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.GatewayTipo", "IdGatewayTipoNavigation")
+                        .WithMany("GatewayTipoFormaPagamento")
                         .HasForeignKey("IdGatewayTipo")
                         .HasConstraintName("FK_tb_gateway_tipo_forma_pagamento_tb_gateway_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGondolaProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GondolaProdutoSku", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbGondolaProdutoSku")
+                        .WithMany("GondolaProdutoSku")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_gondola_produto_sku_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbGraficoCockpit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.GraficoCockpit", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbAplicativo", "IdAplicativoNavigation")
-                        .WithMany("TbGraficoCockpit")
+                    b.HasOne("Core.Domain.EF.Entities.Aplicativo", "IdAplicativoNavigation")
+                        .WithMany("GraficoCockpit")
                         .HasForeignKey("IdAplicativo")
                         .HasConstraintName("FK_tb_grafico_cockpit_tb_aplicativo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbGraficoCockpit")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("GraficoCockpit")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_grafico_cockpit_tb_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLayoutPosicao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LayoutPosicao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLayout", "IdLayoutNavigation")
-                        .WithMany("TbLayoutPosicao")
+                    b.HasOne("Core.Domain.EF.Entities.Layout", "IdLayoutNavigation")
+                        .WithMany("LayoutPosicao")
                         .HasForeignKey("IdLayout")
                         .HasConstraintName("FK_tb_layout_posicao_tb_layout")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPosicao", "IdPosicaoNavigation")
-                        .WithMany("TbLayoutPosicao")
+                    b.HasOne("Core.Domain.EF.Entities.Posicao", "IdPosicaoNavigation")
+                        .WithMany("LayoutPosicao")
                         .HasForeignKey("IdPosicao")
                         .HasConstraintName("FK_tb_layout_posicao_tb_posicao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbListaDesejo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ListaDesejo", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbListaDesejo")
+                        .WithMany("ListaDesejo")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_lista_desejo_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbListaDesejoPeriodo", "IdListaDesejoPeriodoNavigation")
-                        .WithMany("TbListaDesejo")
+                    b.HasOne("Core.Domain.EF.Entities.ListaDesejoPeriodo", "IdListaDesejoPeriodoNavigation")
+                        .WithMany("ListaDesejo")
                         .HasForeignKey("IdListaDesejoPeriodo")
                         .HasConstraintName("FK_tb_lista_desejo_tb_lista_desejo_periodo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbListaDesejoProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ListaDesejoProdutoSku", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbListaDesejo", "IdListaDesejoNavigation")
-                        .WithMany("TbListaDesejoProdutoSku")
+                    b.HasOne("Core.Domain.EF.Entities.ListaDesejo", "IdListaDesejoNavigation")
+                        .WithMany("ListaDesejoProdutoSku")
                         .HasForeignKey("IdListaDesejo")
                         .HasConstraintName("FK_tb_lista_desejo_produto_sku_tb_lista_desejo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbListaDesejoProdutoSku")
+                        .WithMany("ListaDesejoProdutoSku")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_lista_desejo_produto_sku_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLogTelevendas", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LogTelevendas", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuarioTelevendas", "IdUsuarioTelevendasNavigation")
-                        .WithMany("TbLogTelevendas")
+                    b.HasOne("Core.Domain.EF.Entities.UsuarioTelevendas", "IdUsuarioTelevendasNavigation")
+                        .WithMany("LogTelevendas")
                         .HasForeignKey("IdUsuarioTelevendas")
                         .HasConstraintName("FK_tb_log_televendas_tb_usuario_televedas")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialBanner", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialBanner", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecial", "IdLojaEspecialNavigation")
-                        .WithMany("TbLojaEspecialBanner")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecial", "IdLojaEspecialNavigation")
+                        .WithMany("LojaEspecialBanner")
                         .HasForeignKey("IdLojaEspecial")
                         .HasConstraintName("FK_tb_loja_especial_banner_tb_loja_especial")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialPosicao", "IdLojaEspecialPosicaoNavigation")
-                        .WithMany("TbLojaEspecialBanner")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialPosicao", "IdLojaEspecialPosicaoNavigation")
+                        .WithMany("LojaEspecialBanner")
                         .HasForeignKey("IdLojaEspecialPosicao")
                         .HasConstraintName("FK_tb_loja_especial_banner_tb_loja_especial_posicao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialCategoria", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialSecao", "IdLojaEspecialSecaoNavigation")
-                        .WithMany("TbLojaEspecialCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialSecao", "IdLojaEspecialSecaoNavigation")
+                        .WithMany("LojaEspecialCategoria")
                         .HasForeignKey("IdLojaEspecialSecao")
                         .HasConstraintName("FK_tb_loja_especial_categoria_tb_loja_especial_secao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialDepartamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialDepartamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecial", "IdLojaEspecialNavigation")
-                        .WithMany("TbLojaEspecialDepartamento")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecial", "IdLojaEspecialNavigation")
+                        .WithMany("LojaEspecialDepartamento")
                         .HasForeignKey("IdLojaEspecial")
                         .HasConstraintName("FK_tb_loja_especial_departamento_tb_loja_especial")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialMarca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecial", "IdLojaEspecialNavigation")
-                        .WithMany("TbLojaEspecialMarca")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecial", "IdLojaEspecialNavigation")
+                        .WithMany("LojaEspecialMarca")
                         .HasForeignKey("IdLojaEspecial")
                         .HasConstraintName("FK_tb_loja_especial_marca_tb_loja_especial")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbMarca", "IdMarcaNavigation")
-                        .WithMany("TbLojaEspecialMarca")
+                    b.HasOne("Core.Domain.EF.Entities.Marca", "IdMarcaNavigation")
+                        .WithMany("LojaEspecialMarca")
                         .HasForeignKey("IdMarca")
                         .HasConstraintName("FK_tb_loja_especial_marca_tb_marca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialProduto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecial", "IdLojaEspecialNavigation")
-                        .WithMany("TbLojaEspecialProduto")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecial", "IdLojaEspecialNavigation")
+                        .WithMany("LojaEspecialProduto")
                         .HasForeignKey("IdLojaEspecial")
                         .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialCategoria", "IdLojaEspecialCategoriaNavigation")
-                        .WithMany("TbLojaEspecialProduto")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialCategoria", "IdLojaEspecialCategoriaNavigation")
+                        .WithMany("LojaEspecialProduto")
                         .HasForeignKey("IdLojaEspecialCategoria")
                         .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_categoria")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialDepartamento", "IdLojaEspecialDepartamentoNavigation")
-                        .WithMany("TbLojaEspecialProduto")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialDepartamento", "IdLojaEspecialDepartamentoNavigation")
+                        .WithMany("LojaEspecialProduto")
                         .HasForeignKey("IdLojaEspecialDepartamento")
                         .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_departamento")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialSecao", "IdLojaEspecialSecaoNavigation")
-                        .WithMany("TbLojaEspecialProduto")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialSecao", "IdLojaEspecialSecaoNavigation")
+                        .WithMany("LojaEspecialProduto")
                         .HasForeignKey("IdLojaEspecialSecao")
                         .HasConstraintName("FK_tb_loja_especial_produto_tb_loja_especial_secao");
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbLojaEspecialProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("LojaEspecialProduto")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_loja_especial_produto_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialSecao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialSecao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialDepartamento", "IdLojaEspecialDepartamentoNavigation")
-                        .WithMany("TbLojaEspecialSecao")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialDepartamento", "IdLojaEspecialDepartamentoNavigation")
+                        .WithMany("LojaEspecialSecao")
                         .HasForeignKey("IdLojaEspecialDepartamento")
                         .HasConstraintName("FK_tb_loja_especial_secao_tb_loja_especial_departamento")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialVitrine", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecial", "IdLojaEspecialNavigation")
-                        .WithMany("TbLojaEspecialVitrine")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecial", "IdLojaEspecialNavigation")
+                        .WithMany("LojaEspecialVitrine")
                         .HasForeignKey("IdLojaEspecial")
                         .HasConstraintName("FK_tb_loja_especial_vitrine_tb_loja_especial")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbLojaEspecialVitrineProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.LojaEspecialVitrineProduto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbLojaEspecialVitrine", "IdLojaEspecialVitrineNavigation")
-                        .WithMany("TbLojaEspecialVitrineProduto")
+                    b.HasOne("Core.Domain.EF.Entities.LojaEspecialVitrine", "IdLojaEspecialVitrineNavigation")
+                        .WithMany("LojaEspecialVitrineProduto")
                         .HasForeignKey("IdLojaEspecialVitrine")
                         .HasConstraintName("FK_tb_loja_especial_vitrine_produto_tb_loja_especial_vitrine")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbLojaEspecialVitrineProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("LojaEspecialVitrineProduto")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_loja_especial_vitrine_produto_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemCategoria", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbMensagemCategoria")
+                        .WithMany("MensagemCategoria")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_mensagem_categoria_tb_categoria2")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemCategoria")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_categoria_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemMarca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMarca", "IdMarcaNavigation")
-                        .WithMany("TbMensagemMarca")
+                    b.HasOne("Core.Domain.EF.Entities.Marca", "IdMarcaNavigation")
+                        .WithMany("MensagemMarca")
                         .HasForeignKey("IdMarca")
                         .HasConstraintName("FK_tb_mensagem_marca_tb_marca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemMarca")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemMarca")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_marca_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemPrincipioAtivo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemPrincipioAtivo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemPrincipioAtivo")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemPrincipioAtivo")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_principio_ativo_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPrincipioAtivo", "IdPrincipioAtivoNavigation")
-                        .WithMany("TbMensagemPrincipioAtivo")
+                    b.HasOne("Core.Domain.EF.Entities.PrincipioAtivo", "IdPrincipioAtivoNavigation")
+                        .WithMany("MensagemPrincipioAtivo")
                         .HasForeignKey("IdPrincipioAtivo")
                         .HasConstraintName("FK_tb_mensagem_principio_ativo_tb_principio_ativo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoControle", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoControle", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemProdutoControle")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemProdutoControle")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_produto_controle_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoControle", "IdProdutoControleNavigation")
-                        .WithMany("TbMensagemProdutoControle")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoControle", "IdProdutoControleNavigation")
+                        .WithMany("MensagemProdutoControle")
                         .HasForeignKey("IdProdutoControle")
                         .HasConstraintName("FK_tb_mensagem_produto_controle_tb_produto_controle")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoFamilia", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoFamilia", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemProdutoFamilia")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemProdutoFamilia")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_produto_familia_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoFamilia", "IdProdutoFamiliaNavigation")
-                        .WithMany("TbMensagemProdutoFamilia")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoFamilia", "IdProdutoFamiliaNavigation")
+                        .WithMany("MensagemProdutoFamilia")
                         .HasForeignKey("IdProdutoFamilia")
                         .HasConstraintName("FK_tb_mensagem_produto_familia_tb_produto_familia")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbMensagemProdutoTipo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.MensagemProdutoTipo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMensagem", "IdMensagemNavigation")
-                        .WithMany("TbMensagemProdutoTipo")
+                    b.HasOne("Core.Domain.EF.Entities.Mensagem", "IdMensagemNavigation")
+                        .WithMany("MensagemProdutoTipo")
                         .HasForeignKey("IdMensagem")
                         .HasConstraintName("FK_tb_mensagem_produto_tipo_tb_mensagem")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoTipo", "IdProdutoTipoNavigation")
-                        .WithMany("TbMensagemProdutoTipo")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoTipo", "IdProdutoTipoNavigation")
+                        .WithMany("MensagemProdutoTipo")
                         .HasForeignKey("IdProdutoTipo")
                         .HasConstraintName("FK_tb_mensagem_produto_tipo_tb_produto_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntrega", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntrega", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbModalidadeEntrega")
+                        .WithMany("ModalidadeEntrega")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("fk_modalidade_praca")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Core.Domain.EF.Entities.TbServicoCorreios", "IdServicoCorreiosNavigation")
-                        .WithMany("TbModalidadeEntrega")
+                    b.HasOne("Core.Domain.EF.Entities.ServicoCorreios", "IdServicoCorreiosNavigation")
+                        .WithMany("ModalidadeEntrega")
                         .HasForeignKey("IdServicoCorreios")
                         .HasConstraintName("FK__tb_modali__id_se__15C52FC4")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaAgenda", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaAgenda", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbDiaSemana", "IdDiaSemanaNavigation")
-                        .WithMany("TbModalidadeEntregaAgenda")
+                    b.HasOne("Core.Domain.EF.Entities.DiaSemana", "IdDiaSemanaNavigation")
+                        .WithMany("ModalidadeEntregaAgenda")
                         .HasForeignKey("IdDiaSemana")
                         .HasConstraintName("FK_tb_modalidade_entrega_agenda_tb_dia_semana")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbModalidadeEntregaAgenda")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("ModalidadeEntregaAgenda")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_modalidade_entrega_agenda_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaCep", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbModalidadeEntregaCep")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("ModalidadeEntregaCep")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_modalidade_entrega_cep_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaLoja", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaLoja", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbModalidadeEntregaLoja")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("ModalidadeEntregaLoja")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_modalidade_entrega_loja_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbModalidadeEntregaRestricao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ModalidadeEntregaRestricao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbModalidadeEntregaRestricao")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("ModalidadeEntregaRestricao")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_modalidade_entrega_restricao_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbOfertaEspecial", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.OfertaEspecial", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbOfertaEspecial")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("OfertaEspecial")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_oferta_especial_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Pagamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFormaPagamento", "IdFormaPagamentoNavigation")
-                        .WithMany("TbPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.FormaPagamento", "IdFormaPagamentoNavigation")
+                        .WithMany("Pagamento")
                         .HasForeignKey("IdFormaPagamento")
                         .HasConstraintName("FK_tb_pagamento_tb_forma_pagamento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamentoGateway", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PagamentoGateway", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbGateway", "IdGatewayNavigation")
-                        .WithMany("TbPagamentoGateway")
+                    b.HasOne("Core.Domain.EF.Entities.Gateway", "IdGatewayNavigation")
+                        .WithMany("PagamentoGateway")
                         .HasForeignKey("IdGateway")
                         .HasConstraintName("FK_tb_pagamento_gateway_tb_gateway")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPagamento", "IdPagamentoNavigation")
-                        .WithMany("TbPagamentoGateway")
+                    b.HasOne("Core.Domain.EF.Entities.Pagamento", "IdPagamentoNavigation")
+                        .WithMany("PagamentoGateway")
                         .HasForeignKey("IdPagamento")
                         .HasConstraintName("FK_tb_pagamento_gateway_tb_pagamento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPagamentoParcela", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PagamentoParcela", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPagamento", "IdPagamentoNavigation")
-                        .WithMany("TbPagamentoParcela")
+                    b.HasOne("Core.Domain.EF.Entities.Pagamento", "IdPagamentoNavigation")
+                        .WithMany("PagamentoParcela")
                         .HasForeignKey("IdPagamento")
                         .HasConstraintName("FK_tb_pagamento_parcela_tb_pagamento")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbParceiroXmlProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ParceiroXmlProduto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbParceiro", "IdParceiroNavigation")
-                        .WithMany("TbParceiroXmlProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Parceiro", "IdParceiroNavigation")
+                        .WithMany("ParceiroXmlProduto")
                         .HasForeignKey("IdParceiro")
                         .HasConstraintName("FK_tb_parceiro_xml_produto_tb_parceiro")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbParceiroXmlProduto")
+                        .WithMany("ParceiroXmlProduto")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_parceiro_xml_produto_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoHistorico", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoHistorico", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPedidoHistorico")
+                        .WithMany("PedidoHistorico")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("FK_tb_pedido_historico_tb_pedido")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbPedidoHistorico")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("PedidoHistorico")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_pedido_historico_tb_usuario")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoLog", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPedidoLog")
+                        .WithMany("PedidoLog")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("FK_tb_pedido_log_tb_pedido")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPedidoStatus", "IdPedidoStatusAnteriorNavigation")
-                        .WithMany("TbPedidoLogIdPedidoStatusAnteriorNavigation")
+                    b.HasOne("Core.Domain.EF.Entities.PedidoStatus", "IdPedidoStatusAnteriorNavigation")
+                        .WithMany("PedidoLogIdPedidoStatusAnteriorNavigation")
                         .HasForeignKey("IdPedidoStatusAnterior")
                         .HasConstraintName("FK_tb_pedido_log_tb_pedido_status")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPedidoStatus", "IdPedidoStatusAtualNavigation")
-                        .WithMany("TbPedidoLogIdPedidoStatusAtualNavigation")
+                    b.HasOne("Core.Domain.EF.Entities.PedidoStatus", "IdPedidoStatusAtualNavigation")
+                        .WithMany("PedidoLogIdPedidoStatusAtualNavigation")
                         .HasForeignKey("IdPedidoStatusAtual")
                         .HasConstraintName("FK_tb_pedido_log_tb_pedido_status1")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbPedidoLog")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("PedidoLog")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_pedido_log_tb_usuario1");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoPagamentoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamentoLog", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPedidoPagamentoLog")
+                        .WithMany("PedidoPagamentoLog")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("FK_tb_pedido_pagamento_log_tb_pedido")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoProdutoKit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoKit", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.PedidoProdutoSku", "IdPedidoProdutoSkuNavigation")
-                        .WithMany("TbPedidoProdutoKit")
+                        .WithMany("PedidoProdutoKit")
                         .HasForeignKey("IdPedidoProdutoSku")
                         .HasConstraintName("FK_tb_pedido_produto_kit_tb_pedido_produto_sku")
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoItemNavigation")
-                        .WithMany("TbPedidoProdutoKit")
+                        .WithMany("PedidoProdutoKit")
                         .HasForeignKey("IdProdutoItem")
                         .HasConstraintName("FK_tb_pedido_produto_kit_tb_produto_sku")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPedidoSevenpdv", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoSevenpdv", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPedidoSevenpdv")
+                        .WithMany("PedidoSevenpdv")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("tb_pedido_sevenpdv_fk_tb_pedido")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPracaCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PracaCep", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbPracaCep")
+                        .WithMany("PracaCep")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_praca_cep_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Produto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMarca", "IdMarcaNavigation")
-                        .WithMany("TbProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Marca", "IdMarcaNavigation")
+                        .WithMany("Produto")
                         .HasForeignKey("IdMarca")
                         .HasConstraintName("FK_tb_produto_tb_marca")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoControle", "IdProdutoControleNavigation")
-                        .WithMany("TbProduto")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoControle", "IdProdutoControleNavigation")
+                        .WithMany("Produto")
                         .HasForeignKey("IdProdutoControle")
                         .HasConstraintName("FK_tb_produto_tb_produto_controle");
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoFamilia", "IdProdutoFamiliaNavigation")
-                        .WithMany("TbProduto")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoFamilia", "IdProdutoFamiliaNavigation")
+                        .WithMany("Produto")
                         .HasForeignKey("IdProdutoFamilia")
                         .HasConstraintName("FK_tb_produto_tb_produto_familia");
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoTipo", "IdProdutoTipoNavigation")
-                        .WithMany("TbProduto")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoTipo", "IdProdutoTipoNavigation")
+                        .WithMany("Produto")
                         .HasForeignKey("IdProdutoTipo")
                         .HasConstraintName("FK_tb_produto_tb_produto_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoAvaliacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoAvaliacao", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbProdutoAvaliacao")
+                        .WithMany("ProdutoAvaliacao")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_produto_avaliacao_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoAvaliacao")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoAvaliacao")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_avaliacao_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoCategoria", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbProdutoCategoriaIdCategoriaNavigation")
+                        .WithMany("ProdutoCategoriaIdCategoriaNavigation")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_produto_categoria_tb_categoria2");
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdDepartamentoNavigation")
-                        .WithMany("TbProdutoCategoriaIdDepartamentoNavigation")
+                        .WithMany("ProdutoCategoriaIdDepartamentoNavigation")
                         .HasForeignKey("IdDepartamento")
                         .HasConstraintName("FK_tb_produto_categoria_tb_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoCategoria")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_categoria_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdSecaoNavigation")
-                        .WithMany("TbProdutoCategoriaIdSecaoNavigation")
+                        .WithMany("ProdutoCategoriaIdSecaoNavigation")
                         .HasForeignKey("IdSecao")
                         .HasConstraintName("FK_tb_produto_categoria_tb_categoria1")
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdSubcategoriaNavigation")
-                        .WithMany("TbProdutoCategoriaIdSubcategoriaNavigation")
+                        .WithMany("ProdutoCategoriaIdSubcategoriaNavigation")
                         .HasForeignKey("IdSubcategoria")
                         .HasConstraintName("FK_tb_produto_categoria_tb_categoria3");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoDescricao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoDescricao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoDescricao")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoDescricao")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_descricao_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoDescricaoTipo", "IdProdutoDescricaoTipoNavigation")
-                        .WithMany("TbProdutoDescricao")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoDescricaoTipo", "IdProdutoDescricaoTipoNavigation")
+                        .WithMany("ProdutoDescricao")
                         .HasForeignKey("IdProdutoDescricaoTipo")
                         .HasConstraintName("FK_tb_produto_descricao_tb_produto_descricao_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoEtiqueta", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoEtiqueta", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEtiqueta", "IdEtiquetaNavigation")
-                        .WithMany("TbProdutoEtiqueta")
+                    b.HasOne("Core.Domain.EF.Entities.Etiqueta", "IdEtiquetaNavigation")
+                        .WithMany("ProdutoEtiqueta")
                         .HasForeignKey("IdEtiqueta")
                         .HasConstraintName("FK_tb_produto_etiqueta_tb_etiqueta")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoEtiqueta")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoEtiqueta")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_etiqueta_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbProdutoEtiqueta")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("ProdutoEtiqueta")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_produto_etiqueta_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoFamiliaModalidade", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoFamiliaModalidade", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbProdutoFamiliaModalidade")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("ProdutoFamiliaModalidade")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_produto_familia_modalidade_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoFamilia", "IdProdutoFamiliaNavigation")
-                        .WithMany("TbProdutoFamiliaModalidade")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoFamilia", "IdProdutoFamiliaNavigation")
+                        .WithMany("ProdutoFamiliaModalidade")
                         .HasForeignKey("IdProdutoFamilia")
                         .HasConstraintName("FK_tb_produto_familia_modalidade_tb_produto_familia")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoKit", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoKit", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoKit")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoKit")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_kit_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoKit")
+                        .WithMany("ProdutoKit")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_kit_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoLancamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoLancamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoLancamento")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoLancamento")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_lancamento_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoLog", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoLog", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoLog")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoLog")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_log_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbProdutoLog")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("ProdutoLog")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_produto_log_tb_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoPrincipioAtivo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoPrincipioAtivo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPrincipioAtivo", "IdPrincipioAtivoNavigation")
-                        .WithMany("TbProdutoPrincipioAtivo")
+                    b.HasOne("Core.Domain.EF.Entities.PrincipioAtivo", "IdPrincipioAtivoNavigation")
+                        .WithMany("ProdutoPrincipioAtivo")
                         .HasForeignKey("IdPrincipioAtivo")
                         .HasConstraintName("FK_tb_produto_principio_ativo_tb_principio_ativo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoPrincipioAtivo")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoPrincipioAtivo")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_principio_ativo_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSeo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSeo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoSeo")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoSeo")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_seo_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuAviseMe", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuAviseMe", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuAviseMe")
+                        .WithMany("ProdutoSkuAviseMe")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_avise_me_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuEspecificacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuEspecificacao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEspecificacao", "IdEspecificacao1Navigation")
-                        .WithMany("TbProdutoSkuEspecificacaoIdEspecificacao1Navigation")
+                    b.HasOne("Core.Domain.EF.Entities.Especificacao", "IdEspecificacao1Navigation")
+                        .WithMany("ProdutoSkuEspecificacaoIdEspecificacao1Navigation")
                         .HasForeignKey("IdEspecificacao1")
                         .HasConstraintName("FK_tb_produto_sku_especificacao_tb_especificacao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbEspecificacao", "IdEspecificacao2Navigation")
-                        .WithMany("TbProdutoSkuEspecificacaoIdEspecificacao2Navigation")
+                    b.HasOne("Core.Domain.EF.Entities.Especificacao", "IdEspecificacao2Navigation")
+                        .WithMany("ProdutoSkuEspecificacaoIdEspecificacao2Navigation")
                         .HasForeignKey("IdEspecificacao2")
                         .HasConstraintName("FK_tb_produto_sku_especificacao_tb_especificacao1");
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuEspecificacao")
+                        .WithMany("ProdutoSkuEspecificacao")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_especificacao_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuFiltro", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuFiltro", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFiltro", "IdFiltroNavigation")
-                        .WithMany("TbProdutoSkuFiltro")
+                    b.HasOne("Core.Domain.EF.Entities.Filtro", "IdFiltroNavigation")
+                        .WithMany("ProdutoSkuFiltro")
                         .HasForeignKey("IdFiltro")
                         .HasConstraintName("FK_tb_produto_sku_filtro_tb_filtro")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuFiltro")
+                        .WithMany("ProdutoSkuFiltro")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_filtro_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuGenerico", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuGenerico", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdGenericoNavigation")
-                        .WithMany("TbProdutoSkuGenericoIdGenericoNavigation")
+                        .WithMany("ProdutoSkuGenericoIdGenericoNavigation")
                         .HasForeignKey("IdGenerico")
                         .HasConstraintName("FK_tb_produto_sku_generico_tb_produto_sku1")
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdMedicamentoNavigation")
-                        .WithMany("TbProdutoSkuGenericoIdMedicamentoNavigation")
+                        .WithMany("ProdutoSkuGenericoIdMedicamentoNavigation")
                         .HasForeignKey("IdMedicamento")
                         .HasConstraintName("FK_tb_produto_sku_generico_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuImagem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuImagem", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuImagem")
+                        .WithMany("ProdutoSkuImagem")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_imagem_tb_produto_sku")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuPraca", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbProdutoSkuPraca")
+                        .WithMany("ProdutoSkuPraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_produto_sku_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuPraca")
+                        .WithMany("ProdutoSkuPraca")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_praca_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuRelacionado", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuRelacionado", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuRelacionadoIdProdutoSkuNavigation")
+                        .WithMany("ProdutoSkuRelacionadoIdProdutoSkuNavigation")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_relacionado_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuRelacaoNavigation")
-                        .WithMany("TbProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation")
+                        .WithMany("ProdutoSkuRelacionadoIdProdutoSkuRelacaoNavigation")
                         .HasForeignKey("IdProdutoSkuRelacao")
                         .HasConstraintName("FK_tb_produto_sku_relacionado_tb_produto_sku1")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoSkuVendaCasada", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuVendaCasada", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProdutoSkuVendaCasadaIdProdutoSkuNavigation")
+                        .WithMany("ProdutoSkuVendaCasadaIdProdutoSkuNavigation")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_produto_sku_venda_casada_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuCasadoNavigation")
-                        .WithMany("TbProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation")
+                        .WithMany("ProdutoSkuVendaCasadaIdProdutoSkuCasadoNavigation")
                         .HasForeignKey("IdProdutoSkuCasado")
                         .HasConstraintName("FK_tb_produto_sku_venda_casada_tb_produto_sku1")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProdutoVideo", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoVideo", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbProdutoVideo")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoVideo")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_video_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbProgramaProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProgramaProduto", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbProgramaProduto")
+                        .WithMany("ProgramaProduto")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_programa_produto_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPrograma", "IdProgramaNavigation")
-                        .WithMany("TbProgramaProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Programa", "IdProgramaNavigation")
+                        .WithMany("ProgramaProduto")
                         .HasForeignKey("IdPrograma")
                         .HasConstraintName("FK_tb_programa_produto_tb_programa")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Promocao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbEtiqueta", "IdEtiquetaNavigation")
-                        .WithMany("TbPromocao")
+                    b.HasOne("Core.Domain.EF.Entities.Etiqueta", "IdEtiquetaNavigation")
+                        .WithMany("Promocao")
                         .HasForeignKey("IdEtiqueta")
                         .HasConstraintName("FK_tb_promocao_tb_etiqueta");
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoAcao", "IdPromocaoAcaoNavigation")
-                        .WithMany("TbPromocao")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoAcao", "IdPromocaoAcaoNavigation")
+                        .WithMany("Promocao")
                         .HasForeignKey("IdPromocaoAcao")
                         .HasConstraintName("FK_tb_promocao_tb_promocao_acao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoBeneficio", "IdPromocaoBeneficioNavigation")
-                        .WithMany("TbPromocao")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoBeneficio", "IdPromocaoBeneficioNavigation")
+                        .WithMany("Promocao")
                         .HasForeignKey("IdPromocaoBeneficio")
                         .HasConstraintName("FK_tb_promocao_tb_promocao_beneficio")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoTipo", "IdPromocaoTipoNavigation")
-                        .WithMany("TbPromocao")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoTipo", "IdPromocaoTipoNavigation")
+                        .WithMany("Promocao")
                         .HasForeignKey("IdPromocaoTipo")
                         .HasConstraintName("FK_tb_promocao_tb_promocao_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCategoria", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbPromocaoCategoriaIdCategoriaNavigation")
+                        .WithMany("PromocaoCategoriaIdCategoriaNavigation")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_promocao_categoria_tb_categoria")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdDepartamentoNavigation")
-                        .WithMany("TbPromocaoCategoriaIdDepartamentoNavigation")
+                        .WithMany("PromocaoCategoriaIdDepartamentoNavigation")
                         .HasForeignKey("IdDepartamento")
                         .HasConstraintName("FK_tb_promocao_categoria_tb_categoria1")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoCategoria")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_categoria_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdSecaoNavigation")
-                        .WithMany("TbPromocaoCategoriaIdSecaoNavigation")
+                        .WithMany("PromocaoCategoriaIdSecaoNavigation")
                         .HasForeignKey("IdSecao")
                         .HasConstraintName("FK_tb_promocao_categoria_tb_categoria2");
 
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdSubcategoriaNavigation")
-                        .WithMany("TbPromocaoCategoriaIdSubcategoriaNavigation")
+                        .WithMany("PromocaoCategoriaIdSubcategoriaNavigation")
                         .HasForeignKey("IdSubcategoria")
                         .HasConstraintName("FK_tb_promocao_categoria_tb_categoria3");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCep", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCep", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoCep")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoCep")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_cep_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCliente", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCliente", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbPromocaoCliente")
+                        .WithMany("PromocaoCliente")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_promocao_cliente_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoCliente")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoCliente")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_cliente_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCupom", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCupom", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoCupom")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoCupom")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_cupom_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoCupomUtilizado", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoCupomUtilizado", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Cliente", "IdClienteNavigation")
-                        .WithMany("TbPromocaoCupomUtilizado")
+                        .WithMany("PromocaoCupomUtilizado")
                         .HasForeignKey("IdCliente")
                         .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_cliente")
                         .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("TbPromocaoCupomUtilizado")
+                        .WithMany("PromocaoCupomUtilizado")
                         .HasForeignKey("IdPedido")
                         .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_pedido")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoCupom", "IdPromocaoCupomNavigation")
-                        .WithMany("TbPromocaoCupomUtilizado")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoCupom", "IdPromocaoCupomNavigation")
+                        .WithMany("PromocaoCupomUtilizado")
                         .HasForeignKey("IdPromocaoCupom")
                         .HasConstraintName("FK_tb_promocao_cupom_utilizado_tb_promocao_cupom")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoMarca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoMarca", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbMarca", "IdMarcaNavigation")
-                        .WithMany("TbPromocaoMarca")
+                    b.HasOne("Core.Domain.EF.Entities.Marca", "IdMarcaNavigation")
+                        .WithMany("PromocaoMarca")
                         .HasForeignKey("IdMarca")
                         .HasConstraintName("FK_tb_promocao_marca_tb_marca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoMarca")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoMarca")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_marca_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoModalidade", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoModalidade", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbModalidadeEntrega", "IdModalidadeEntregaNavigation")
-                        .WithMany("TbPromocaoModalidade")
+                    b.HasOne("Core.Domain.EF.Entities.ModalidadeEntrega", "IdModalidadeEntregaNavigation")
+                        .WithMany("PromocaoModalidade")
                         .HasForeignKey("IdModalidadeEntrega")
                         .HasConstraintName("FK_tb_promocao_modalidade_tb_modalidade_entrega")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoModalidade")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoModalidade")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_modalidade_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoPagamento", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoPagamento", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbFormaPagamento", "IdFormaPagamentoNavigation")
-                        .WithMany("TbPromocaoPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.FormaPagamento", "IdFormaPagamentoNavigation")
+                        .WithMany("PromocaoPagamento")
                         .HasForeignKey("IdFormaPagamento")
                         .HasConstraintName("FK_tb_promocao_pagamento_tb_forma_pagamento")
                         .OnDelete(DeleteBehavior.Cascade);
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoPagamento")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoPagamento")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_pagamento_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoPraca", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbPromocaoPraca")
+                        .WithMany("PromocaoPraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_promocao_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoPraca")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoPraca")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_praca_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoProduto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoProduto", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProduto", "IdProdutoNavigation")
-                        .WithMany("TbPromocaoProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("PromocaoProduto")
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_promocao_produto_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocao", "IdPromocaoNavigation")
-                        .WithMany("TbPromocaoProduto")
+                    b.HasOne("Core.Domain.EF.Entities.Promocao", "IdPromocaoNavigation")
+                        .WithMany("PromocaoProduto")
                         .HasForeignKey("IdPromocao")
                         .HasConstraintName("FK_tb_promocao_produto_tb_promocao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoTipoAcao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoTipoAcao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoAcao", "IdPromocaoAcaoNavigation")
-                        .WithMany("TbPromocaoTipoAcao")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoAcao", "IdPromocaoAcaoNavigation")
+                        .WithMany("PromocaoTipoAcao")
                         .HasForeignKey("IdPromocaoAcao")
                         .HasConstraintName("FK_tb_promocao_tipo_acao_tb_promocao_acao")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoTipo", "IdPromocaoTipoNavigation")
-                        .WithMany("TbPromocaoTipoAcao")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoTipo", "IdPromocaoTipoNavigation")
+                        .WithMany("PromocaoTipoAcao")
                         .HasForeignKey("IdPromocaoTipo")
                         .HasConstraintName("FK_tb_promocao_tipo_acao_tb_promocao_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbPromocaoTipoBeneficio", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.PromocaoTipoBeneficio", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoBeneficio", "IdPromocaoBeneficioNavigation")
-                        .WithMany("TbPromocaoTipoBeneficio")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoBeneficio", "IdPromocaoBeneficioNavigation")
+                        .WithMany("PromocaoTipoBeneficio")
                         .HasForeignKey("IdPromocaoBeneficio")
                         .HasConstraintName("FK_tb_promocao_tipo_beneficio_tb_promocao_beneficio")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbPromocaoTipo", "IdPromocaoTipoNavigation")
-                        .WithMany("TbPromocaoTipoBeneficio")
+                    b.HasOne("Core.Domain.EF.Entities.PromocaoTipo", "IdPromocaoTipoNavigation")
+                        .WithMany("PromocaoTipoBeneficio")
                         .HasForeignKey("IdPromocaoTipo")
                         .HasConstraintName("FK_tb_promocao_tipo_beneficio_tb_promocao_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemComprouComprouTambem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemComprouComprouTambem", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbQuemComprouComprouTambem")
+                        .WithMany("QuemComprouComprouTambem")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_quem_comprou_comprou_tambem_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemViuComprou", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemViuComprou", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuCompradoNavigation")
-                        .WithMany("TbQuemViuComprouIdProdutoSkuCompradoNavigation")
+                        .WithMany("QuemViuComprouIdProdutoSkuCompradoNavigation")
                         .HasForeignKey("IdProdutoSkuComprado")
                         .HasConstraintName("FK_tb_quem_viu_comprou_tb_produto_sku1")
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuVistoNavigation")
-                        .WithMany("TbQuemViuComprouIdProdutoSkuVistoNavigation")
+                        .WithMany("QuemViuComprouIdProdutoSkuVistoNavigation")
                         .HasForeignKey("IdProdutoSkuVisto")
                         .HasConstraintName("FK_tb_quem_viu_comprou_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbQuemViuViuTambem", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.QuemViuViuTambem", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbQuemViuViuTambemIdProdutoSkuNavigation")
+                        .WithMany("QuemViuViuTambemIdProdutoSkuNavigation")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_quem_viu_viu_tambem_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuVistoNavigation")
-                        .WithMany("TbQuemViuViuTambemIdProdutoSkuVistoNavigation")
+                        .WithMany("QuemViuViuTambemIdProdutoSkuVistoNavigation")
                         .HasForeignKey("IdProdutoSkuVisto")
                         .HasConstraintName("FK_tb_quem_viu_viu_tambem_tb_produto_sku1")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbRodape", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Rodape", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbRodape")
+                        .WithMany("Rodape")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_rodape_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecGroupsApps", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecGroupsApps", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbSecApps", "AppNameNavigation")
-                        .WithMany("TbSecGroupsApps")
+                    b.HasOne("Core.Domain.EF.Entities.SecApps", "AppNameNavigation")
+                        .WithMany("SecGroupsApps")
                         .HasForeignKey("AppName")
                         .HasConstraintName("FK_tb_sec_groups_apps_tb_sec_apps")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbSecGroups", "Group")
-                        .WithMany("TbSecGroupsApps")
+                    b.HasOne("Core.Domain.EF.Entities.SecGroups", "Group")
+                        .WithMany("SecGroupsApps")
                         .HasForeignKey("GroupId")
                         .HasConstraintName("FK_tb_sec_groups_apps_tb_sec_groups")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSecUsersGroups", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SecUsersGroups", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbSecGroups", "Group")
-                        .WithMany("TbSecUsersGroups")
+                    b.HasOne("Core.Domain.EF.Entities.SecGroups", "Group")
+                        .WithMany("SecUsersGroups")
                         .HasForeignKey("GroupId")
                         .HasConstraintName("FK_tb_sec_users_groups_tb_sec_groups")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbSecUsers", "LoginNavigation")
-                        .WithMany("TbSecUsersGroups")
+                    b.HasOne("Core.Domain.EF.Entities.SecUsers", "LoginNavigation")
+                        .WithMany("SecUsersGroups")
                         .HasForeignKey("Login")
                         .HasConstraintName("FK_tb_sec_users_groups_tb_sec_users")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSevenpdvSessao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SevenpdvSessao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbSevenpdvLogon", "IdSevenpdvLogonNavigation")
-                        .WithMany("TbSevenpdvSessao")
+                    b.HasOne("Core.Domain.EF.Entities.SevenpdvLogon", "IdSevenpdvLogonNavigation")
+                        .WithMany("SevenpdvSessao")
                         .HasForeignKey("IdSevenpdvLogon")
                         .HasConstraintName("FK_tb_sevenpdv_sessao_tb_sevenpdv_logon")
                         .OnDelete(DeleteBehavior.Cascade);
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSkuPracaMovimentacao", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SkuPracaMovimentacao", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbProdutoSkuPraca", "IdProdutoSkuPracaNavigation")
-                        .WithOne("TbSkuPracaMovimentacao")
-                        .HasForeignKey("Core.Domain.EF.Entities.TbSkuPracaMovimentacao", "IdProdutoSkuPraca")
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoSkuPraca", "IdProdutoSkuPracaNavigation")
+                        .WithOne("SkuPracaMovimentacao")
+                        .HasForeignKey("Core.Domain.EF.Entities.SkuPracaMovimentacao", "IdProdutoSkuPraca")
                         .HasConstraintName("FK_tb_sku_praca_movimentacao_tb_produto_sku_praca1")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbSuperDesconto", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.SuperDesconto", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbSuperDesconto")
+                        .WithMany("SuperDesconto")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_super_desconto_tb_produto_sku")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuario", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Usuario", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuarioGrupo", "IdUsuarioGrupoNavigation")
-                        .WithMany("TbUsuario")
+                    b.HasOne("Core.Domain.EF.Entities.UsuarioGrupo", "IdUsuarioGrupoNavigation")
+                        .WithMany("Usuario")
                         .HasForeignKey("IdUsuarioGrupo")
                         .HasConstraintName("FK_tb_usuario_tb_usuario_grupo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioGrupoAcesso", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioGrupoAcesso", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbAcesso", "IdAcessoNavigation")
-                        .WithMany("TbUsuarioGrupoAcesso")
+                    b.HasOne("Core.Domain.EF.Entities.Acesso", "IdAcessoNavigation")
+                        .WithMany("UsuarioGrupoAcesso")
                         .HasForeignKey("IdAcesso")
                         .HasConstraintName("FK_tb_usuario_grupo_acesso_tb_acesso")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuarioGrupo", "IdUsuarioGrupoNavigation")
-                        .WithMany("TbUsuarioGrupoAcesso")
+                    b.HasOne("Core.Domain.EF.Entities.UsuarioGrupo", "IdUsuarioGrupoNavigation")
+                        .WithMany("UsuarioGrupoAcesso")
                         .HasForeignKey("IdUsuarioGrupo")
                         .HasConstraintName("FK_tb_usuario_grupo_acesso_tb_usuario_grupo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioIp", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioIp", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbUsuarioIp")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("UsuarioIp")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_usuario_ip_tb_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioPraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioPraca", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbUsuarioPraca")
+                        .WithMany("UsuarioPraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_usuario_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuario", "IdUsuarioNavigation")
-                        .WithMany("TbUsuarioPraca")
+                    b.HasOne("Core.Domain.EF.Entities.Usuario", "IdUsuarioNavigation")
+                        .WithMany("UsuarioPraca")
                         .HasForeignKey("IdUsuario")
                         .HasConstraintName("FK_tb_usuario_praca_tb_usuario")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbUsuarioTelevendas", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.UsuarioTelevendas", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbUsuarioGrupoTelevendas", "IdUsuarioGrupoTelevendasNavigation")
-                        .WithMany("TbUsuarioTelevendas")
+                    b.HasOne("Core.Domain.EF.Entities.UsuarioGrupoTelevendas", "IdUsuarioGrupoTelevendasNavigation")
+                        .WithMany("UsuarioTelevendas")
                         .HasForeignKey("IdUsuarioGrupoTelevendas")
                         .HasConstraintName("FK_tb_usuario_televedas_tb_usuario_grupo_televendas")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrine", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.Vitrine", b =>
                 {
-                    b.HasOne("Core.Domain.EF.Entities.TbVitrineTipo", "IdVitrineTipoNavigation")
-                        .WithMany("TbVitrine")
+                    b.HasOne("Core.Domain.EF.Entities.VitrineTipo", "IdVitrineTipoNavigation")
+                        .WithMany("Vitrine")
                         .HasForeignKey("IdVitrineTipo")
                         .HasConstraintName("FK_tb_vitrine_tb_vitrine_tipo")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrineCategoria", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrineCategoria", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Categoria", "IdCategoriaNavigation")
-                        .WithMany("TbVitrineCategoria")
+                        .WithMany("VitrineCategoria")
                         .HasForeignKey("IdCategoria")
                         .HasConstraintName("FK_tb_vitrine_categoria_tb_categoria")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbVitrine", "IdVitrineNavigation")
-                        .WithMany("TbVitrineCategoria")
+                    b.HasOne("Core.Domain.EF.Entities.Vitrine", "IdVitrineNavigation")
+                        .WithMany("VitrineCategoria")
                         .HasForeignKey("IdVitrine")
                         .HasConstraintName("FK_tb_vitrine_categoria_tb_vitrine")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrinePraca", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrinePraca", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaNavigation")
-                        .WithMany("TbVitrinePraca")
+                        .WithMany("VitrinePraca")
                         .HasForeignKey("IdPraca")
                         .HasConstraintName("FK_tb_vitrine_praca_tb_praca")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbVitrine", "IdVitrineNavigation")
-                        .WithMany("TbVitrinePraca")
+                    b.HasOne("Core.Domain.EF.Entities.Vitrine", "IdVitrineNavigation")
+                        .WithMany("VitrinePraca")
                         .HasForeignKey("IdVitrine")
                         .HasConstraintName("FK_tb_vitrine_praca_tb_vitrine")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.TbVitrineProdutoSku", b =>
+            modelBuilder.Entity("Core.Domain.EF.Entities.VitrineProdutoSku", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("TbVitrineProdutoSku")
+                        .WithMany("VitrineProdutoSku")
                         .HasForeignKey("IdProdutoSku")
                         .HasConstraintName("FK_tb_vitrine_produto_sku_tb_produto_sku")
                         .IsRequired();
 
-                    b.HasOne("Core.Domain.EF.Entities.TbVitrine", "IdVitrineNavigation")
-                        .WithMany("TbVitrineProdutoSku")
+                    b.HasOne("Core.Domain.EF.Entities.Vitrine", "IdVitrineNavigation")
+                        .WithMany("VitrineProdutoSku")
                         .HasForeignKey("IdVitrine")
                         .HasConstraintName("FK_tb_vitrine_produto_sku_tb_vitrine")
                         .IsRequired();

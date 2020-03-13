@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Core.Domain.Repository
 {
-  public class CategoriaRepository : RepositoryTemplate, ICategoriaRepository
+  public class CategoriaRepository : RepositoryTemplate<Categoria>, ICategoriaRepository
   {
     public CategoriaRepository(MainContext context) : base(context)
     {

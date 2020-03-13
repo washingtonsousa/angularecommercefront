@@ -7,12 +7,12 @@ namespace Core.Domain.EF.Entities
     {
         public Cliente()
         {
-            TbClienteEndereco = new HashSet<TbClienteEndereco>();
-            TbClienteObservacao = new HashSet<TbClienteObservacao>();
-            TbListaDesejo = new HashSet<TbListaDesejo>();
-            TbProdutoAvaliacao = new HashSet<TbProdutoAvaliacao>();
-            TbPromocaoCliente = new HashSet<TbPromocaoCliente>();
-            TbPromocaoCupomUtilizado = new HashSet<TbPromocaoCupomUtilizado>();
+            ClienteEndereco = new HashSet<ClienteEndereco>();
+            ClienteObservacao = new HashSet<ClienteObservacao>();
+            ListaDesejo = new HashSet<ListaDesejo>();
+            ProdutoAvaliacao = new HashSet<ProdutoAvaliacao>();
+            PromocaoCliente = new HashSet<PromocaoCliente>();
+            PromocaoCupomUtilizado = new HashSet<PromocaoCupomUtilizado>();
         }
 
         public int IdCliente { get; set; }
@@ -45,12 +45,12 @@ namespace Core.Domain.EF.Entities
         public bool FlMarketing { get; set; }
         public DateTime? DtMarketingImp { get; set; }
 
-        public virtual ICollection<TbClienteEndereco> TbClienteEndereco { get; set; }
-        public virtual ICollection<TbClienteObservacao> TbClienteObservacao { get; set; }
-        public virtual ICollection<TbListaDesejo> TbListaDesejo { get; set; }
-        public virtual ICollection<TbProdutoAvaliacao> TbProdutoAvaliacao { get; set; }
-        public virtual ICollection<TbPromocaoCliente> TbPromocaoCliente { get; set; }
-        public virtual ICollection<TbPromocaoCupomUtilizado> TbPromocaoCupomUtilizado { get; set; }
+        public virtual ICollection<ClienteEndereco> ClienteEndereco { get; set; }
+        public virtual ICollection<ClienteObservacao> ClienteObservacao { get; set; }
+        public virtual ICollection<ListaDesejo> ListaDesejo { get; set; }
+        public virtual ICollection<ProdutoAvaliacao> ProdutoAvaliacao { get; set; }
+        public virtual ICollection<PromocaoCliente> PromocaoCliente { get; set; }
+        public virtual ICollection<PromocaoCupomUtilizado> PromocaoCupomUtilizado { get; set; }
 
     /// <summary>
     /// Método de Domínio - Atualização

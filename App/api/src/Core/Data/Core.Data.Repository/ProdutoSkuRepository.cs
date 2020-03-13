@@ -3,24 +3,40 @@ using Core.Domain.EF.Entities;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Core.Domain.Repository.Abstractions;
+using Core.Data.EF.Context;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Core.Domain.Repository
 {
-  public class ProdutoSkuRepository : IProdutoSkuRepository
+  public class ProdutoSkuRepository : RepositoryTemplate<ProdutoSku>, IProdutoSkuRepository
   {
-    public Task<ProdutoSku> Get(int Id)
+    public ProdutoSkuRepository(MainContext context) : base(context)
     {
-      throw new NotImplementedException();
     }
 
-    public Task<IList<ProdutoSku>> Get()
+
+
+ 
+    public async Task<ProdutoSku> Get(int Id)
     {
-      throw new NotImplementedException();
+      return await Context.ProdutoSku.Include(u => u.IdProdutoNavigation).Include(p => p.ProdutoSkuImagem).FirstOrDefaultAsync(p => p.IdProdutoSku == Id);
     }
 
-    public Task<ProdutoSku> GetFirstRecord()
+    public async Task<IList<ProdutoSku>> Get()
     {
-      throw new NotImplementedException();
+      return await
+
+        Context.ProdutoSku
+        .Include(u => u.IdProdutoNavigation)
+        .Include(p => p.ProdutoSkuImagem)
+        .ToListAsync();
+    }
+
+    public async Task<ProdutoSku> GetFirstRecord()
+    {
+      return await Context.ProdutoSku.Include(u => u.IdProdutoNavigation).Include(p => p.ProdutoSkuImagem).FirstOrDefaultAsync();
     }
   }
 }

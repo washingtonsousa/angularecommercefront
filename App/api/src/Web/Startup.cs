@@ -95,6 +95,7 @@ namespace FarmaciaMaisProxima
 
       app.UseEndpoints(end =>
       {
+        end.MapControllers();
         end.MapControllerRoute("default", "v1/{controller}/{action}/{id?}");
       });
 

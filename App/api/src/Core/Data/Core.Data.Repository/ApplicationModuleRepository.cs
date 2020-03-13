@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Core.Data.Repository
 {
-  public class ApplicationModuleRepository : RepositoryTemplate, IApplicationModuleRepository
+  public class ApplicationModuleRepository : RepositoryTemplate<ApplicationModule>, IApplicationModuleRepository
   {
     public ApplicationModuleRepository(MainContext context) : base(context)
     {

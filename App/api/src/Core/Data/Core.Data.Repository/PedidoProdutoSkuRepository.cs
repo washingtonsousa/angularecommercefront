@@ -7,7 +7,7 @@ using Core.Domain.Repository.Abstractions;
 
 namespace Core.Data.Repository
 {
-  public class PedidoProdutoSkuRepository : RepositoryTemplate, IPedidoProdutoSkuRepository
+  public class PedidoProdutoSkuRepository : RepositoryTemplate<PedidoProdutoSku>, IPedidoProdutoSkuRepository
   {
     public PedidoProdutoSkuRepository(MainContext context) : base(context)
     {
