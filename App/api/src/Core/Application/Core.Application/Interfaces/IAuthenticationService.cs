@@ -8,6 +8,6 @@ namespace Core.Application.Interfaces
 {
   public interface IAuthenticationService
   {
-    Task<ClienteViewModel> Authenticate(string userName, string password);
+    Task<ClienteViewModel> AuthenticateCliente(string userName, string password);
   }
 }

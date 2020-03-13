@@ -17,7 +17,7 @@ namespace Core.Domain.Repository
 
     public async Task<Categoria> GetCategoriaDepartamento(int Id)
     {
-      return await Context.Categoria.Include(c => c.TbProdutoCategoriaIdCategoriaNavigation).Where(c => c.FlStatus == true && c.IdCategoriaPai == null).FirstOrDefaultAsync(c => c.IdCategoria == Id);
+      return await Context.Categoria.Include(c => c.ProdutoCategoriaIdCategoriaNavigation).Where(c => c.FlStatus == true && c.IdCategoriaPai == null).FirstOrDefaultAsync(c => c.IdCategoria == Id);
     }
 
     public async Task<IList<Categoria>> GetCategoriaDepartamentos()

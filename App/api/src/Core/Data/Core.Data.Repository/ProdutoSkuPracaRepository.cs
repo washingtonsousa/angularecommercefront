@@ -71,11 +71,11 @@ namespace Core.Data.Repository
 
       /// Caso parametro de departamento seja preenchido filtra o departamento
       if (departamentoId != null)
-        query = query.Where(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.TbProdutoCategoria.Any(c => c.IdDepartamento == departamentoId.Value)).AsQueryable();
+        query = query.Where(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.ProdutoCategoria.Any(c => c.IdDepartamento == departamentoId.Value)).AsQueryable();
 
       /// Caso parametro de sessao preenchido filtra a sessao
       if (sessaoId != null)
-        query = query.Where(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.TbProdutoCategoria.Any(c => c.IdSecao == sessaoId.Value)).AsQueryable();
+        query = query.Where(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.ProdutoCategoria.Any(c => c.IdSecao == sessaoId.Value)).AsQueryable();
 
       return query;
     }
@@ -90,9 +90,9 @@ namespace Core.Data.Repository
         .AsNoTracking()
         .Include(p => p.IdProdutoSkuNavigation)
         .Include(p => p.IdProdutoSkuNavigation.IdProdutoNavigation)
-        .Include(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.TbProdutoCategoria)
+        .Include(p => p.IdProdutoSkuNavigation.IdProdutoNavigation.ProdutoCategoria)
         .ThenInclude(c => c.IdSecaoNavigation)
-        .ThenInclude(c => c.TbProdutoCategoriaIdDepartamentoNavigation)
+        .ThenInclude(c => c.ProdutoCategoriaIdDepartamentoNavigation)
         .AsQueryable();
   }
 }

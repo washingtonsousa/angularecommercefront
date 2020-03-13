@@ -12,6 +12,7 @@ using Core.Domain.Specification;
 using Core.Shared.Kernel.Interfaces;
 using Microsoft.Extensions.DependencyInjection;
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 
 
@@ -33,9 +34,15 @@ namespace Core.Application
       _clienteRepository = clienteRepository;
     }
 
+    /// <summary>
+    /// Cadastra novo cliente
+    /// </summary>
+    /// <param name="cliente"></param>
+    /// <returns></returns>
     public async Task SubscribeCliente(ClienteViewModel cliente)
     {
-      Cliente clienteDomain = _mapper.Map<Cliente>(cliente);
+
+      Cliente clienteDomain = _mapper.Map<Cliente>(cliente).PrepareForSubscription();
 
       if (!((clienteDomain.FlTipoPessoa != "J") ? clienteDomain.ValidateForSubscription() : clienteDomain.ValidateEnterpriseForSubscription()))
         return;
@@ -43,7 +50,7 @@ namespace Core.Application
       if (await _clienteService.CheckIfExists(clienteDomain.DsEmail, clienteDomain.DsCpfCnpj))
         return;
 
-      await _clienteRepository.Add(_mapper.Map<Cliente>(cliente));
+      await _clienteRepository.Add(clienteDomain);
 
       await _unityOfWork.CommitAsync();
 
@@ -54,16 +61,29 @@ namespace Core.Application
 
     }
 
+    /// <summary>
+    /// Atualiza cliente logado
+    /// </summary>
+    /// <param name="cliente"></param>
+    /// <returns></returns>
     public async Task UpdateCliente(ClienteViewModel cliente)
     {
-      Cliente clienteForUpdate = await _clienteService.CheckIfNotExists(cliente.DsEmail, cliente.DsCpfCnpj);
+     
+
+      Cliente clienteForUpdate = await _clienteService.CheckIfNotExists(cliente.IdCliente);
       Cliente clienteFromModel = _mapper.Map<Cliente>(cliente);
 
       if (clienteForUpdate == null)
         return;
+
+      if (clienteFromModel.ValidateLoggedInUser(ObterIdClienteLogado()))
+        return;
+
       //Se PJ valida dados de PJ se PF valida dados de PF
       if (!((clienteForUpdate.FlTipoPessoa != "J") ? clienteFromModel.ValidateForUpdate() : clienteFromModel.ValidateEnterpriseForUpdate()))
         return;
+      //Valida se usuário logado é o que está para ser atualizado
+  
 
       clienteForUpdate.Update(clienteFromModel);
 
@@ -71,6 +91,23 @@ namespace Core.Application
 
       await _unityOfWork.CommitAsync();
 
+    }
+
+    public async Task<ClienteViewModel> ObterClienteLogado() =>  _mapper.Map<ClienteViewModel>( await ObterClienteLogadoDomain() );
+
+    private async Task<Cliente> ObterClienteLogadoDomain() =>  await _clienteRepository.Get(ObterIdClienteLogado());
+
+    /// <summary>
+    /// Obtem Id do cliente logado no ato da request - é necessário que esteja em uma rota de contexto em que o app precisa fornecer o token
+    /// </summary>
+    /// <returns>Id do cliente logado</returns>
+    private int ObterIdClienteLogado()
+    {
+      var context = _applicationContextManager.getContext().GetAwaiter().GetResult();
+      var claim = context.UserInContext.Claims.Where(c => c.Type == "Id").FirstOrDefault();
+      string primitiveId = (claim != null) ? claim.Value : "0";
+      int.TryParse(primitiveId, out int Id);
+      return Id;
     }
   }
 }

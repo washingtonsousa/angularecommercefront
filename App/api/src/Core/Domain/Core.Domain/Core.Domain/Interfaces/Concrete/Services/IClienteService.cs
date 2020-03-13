@@ -11,7 +11,7 @@ namespace Core.Domain.Interfaces.Concrete.Services
     Task<bool> CheckIfExists(string dsEmail, string dsCpfCnpj);
     Task<Cliente> Authenticate(string userName, string password);
 
-    Task<Cliente> CheckIfNotExists(string dsEmail, string dsCpfCnpj);
+    Task<Cliente> CheckIfNotExists(int idCliente);
 
   }
 }

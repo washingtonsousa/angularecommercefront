@@ -16,4 +16,10 @@
     <ProjectReference Include="..\..\..\Shared\SharedKernel\Shared.Kernel\Core.Shared.Kernel.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="Encryption">
+      <HintPath>..\..\..\..\..\..\..\..\Encryption.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>

@@ -42,7 +42,6 @@ namespace Core.Domain.Specification
         AssertionConcern.AssertNotEmpty(cliente.DsCelularDdd, "DDD Celular é obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.DsSenha, "Senha não pode ser núlo"),
         AssertionConcern.AssertNotNull(cliente.DtNascimento, "Data de nascimento é obrigatória"),
-        AssertionConcern.AssertNotEmpty(cliente.FlSexo, "Sexo é obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.FlTipoPessoa, "Tipo de pessoa é obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.DsRazaoSocial, "Razão social obrigatória")
 
@@ -71,10 +70,25 @@ namespace Core.Domain.Specification
 
         AssertionConcern.AssertNotEmpty(cliente.DsCelular, "Celular obrigatório"),
         AssertionConcern.AssertNotEmpty(cliente.DsCelularDdd, "DDD Celular é obrigatório"),
-        AssertionConcern.AssertNotNull(cliente.DtNascimento, "Data de nascimento é obrigatória"),
-        AssertionConcern.AssertNotEmpty(cliente.FlSexo, "Sexo é obrigatório")
+        AssertionConcern.AssertNotNull(cliente.DtNascimento, "Data de nascimento é obrigatória")
 
         );
     }
+
+
+    /// <summary>
+    /// Valida se cliente Logado corresponde ao cliente fornecido
+    /// </summary>
+    /// <param name="cliente"></param>
+    /// <param name="Id"></param>
+    /// <returns></returns>
+    public static bool ValidateLoggedInUser(this Cliente cliente, int Id)
+    {
+      return AssertionConcern.IsSatisfiedBy(
+
+           AssertionConcern.AssertFalse((cliente.IdCliente != Id), "Ação não permitida")
+      );
+    }
+
   }
 }

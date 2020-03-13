@@ -1,3 +1,4 @@
+using Encryption;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -36,12 +37,19 @@ namespace Core.BaseWeb.ViewModel
     public string NomeSocial { get; set; }
 
 
-    public ClienteViewModel GetWithoutPassWord { get
+    public ClienteViewModel GetWithoutPassWord
+    {
+      get
       {
         var obj = this;
         obj.DsSenha = null;
         return obj;
-      } }
+      }
+    }
+
+    
+
+    
 
   }
 }

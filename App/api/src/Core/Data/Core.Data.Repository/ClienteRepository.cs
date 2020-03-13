@@ -81,5 +81,11 @@ namespace Core.Data.Repository
     {
       Context.UpdateRange(item);
     }
+
+    public Task<Cliente> GeyUsername(string UserName)
+    {
+      throw new NotImplementedException();
+    }
+
   }
 }

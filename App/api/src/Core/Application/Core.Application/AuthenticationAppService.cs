@@ -2,11 +2,9 @@ using AutoMapper;
 using Core.Application.Abstractions;
 using Core.Application.Interfaces;
 using Core.BaseWeb.ViewModel;
-using Core.Domain.Repository.Interfaces.Concrete;
 using Core.Domain.EF.Entities;
 using Core.Domain.Repository.Interfaces;
 using Core.Shared.Data.Models;
-using Core.Shared.Kernel.Interfaces;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -38,7 +36,7 @@ namespace Core.Application
       _clienteService = clienteService;
     }
 
-    public async Task<ClienteViewModel> Authenticate(string userName, string password)
+    public async Task<ClienteViewModel> AuthenticateCliente(string userName, string password)
     {
   
       Cliente clienteFromDomain = await _clienteService.Authenticate(userName, password);
@@ -51,14 +49,16 @@ namespace Core.Application
 
       // gera o Token JWT já que a autenticação funcionou
       var tokenHandler = new JwtSecurityTokenHandler();
-      var key = Encoding.ASCII.Geytes(_appSettings.AppSecret);
+      var key = Encoding.ASCII.GetBytes(_appSettings.AppSecret);
       var tokenDescriptor = new SecurityTokenDescriptor
       {
         Subject = new ClaimsIdentity(new Claim[]
           {
                     new Claim(ClaimTypes.NameIdentifier, cliente.IdCliente.ToString()),
+                    new Claim("Id", cliente.IdCliente.ToString()),
                     new Claim(ClaimTypes.Name, cliente.NmCliente),
-                    new Claim(ClaimTypes.Email, cliente.DsEmail)
+                    new Claim(ClaimTypes.Email, cliente.DsEmail),
+                    new Claim(ClaimTypes.Role, "Cliente")
           }),
         Expires = DateTime.UtcNow.AddDays(1),
         SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)

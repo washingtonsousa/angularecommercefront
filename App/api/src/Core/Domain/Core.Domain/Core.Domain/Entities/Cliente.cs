@@ -1,3 +1,4 @@
+using Encryption;
 using System;
 using System.Collections.Generic;
 
@@ -67,5 +68,14 @@ namespace Core.Domain.EF.Entities
       DtNascimento = cliente.DtNascimento;
       FlAceitaMailing = cliente.FlAceitaMailing;
     }
+
+    public Cliente PrepareForSubscription() {
+
+      DsSenha = Crypto.ActionEncrypt(DsSenha);
+
+        return this;
+
+    }
+
   }
 }

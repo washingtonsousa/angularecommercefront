@@ -49,5 +49,7 @@ namespace Core.Shared.Data
        return BinFileList.Where(p => p.IsModuleDll()).ToList();
       }
     }
+
+    public  const  string CustomerRole = "Cliente";
   }
 }

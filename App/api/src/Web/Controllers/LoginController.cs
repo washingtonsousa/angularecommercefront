@@ -1,6 +1,7 @@
 using Core.Application.Interfaces;
 using Core.BaseWeb.Controllers.Abstractions;
 using Core.BaseWeb.ViewModel;
+using Core.Shared.Data;
 using Core.Shared.Kernel.Events;
 using Core.Shared.Kernel.Interfaces;
 using Microsoft.AspNetCore.Authorization;
@@ -29,7 +30,7 @@ namespace ApiWeb.Controllers
       if (model == null)
         return Forbid();
 
-      var cliente = await _authenticationService.Authenticate(model.UserName, model.Password);
+      var cliente = await _authenticationService.AuthenticateCliente(model.UserName, model.Password);
       return ResponseWithAllNotifications(cliente, "Autenticado com sucesso!");
 
     }
@@ -54,6 +55,7 @@ namespace ApiWeb.Controllers
     /// <param name="model"></param>
     /// <returns></returns>
     [HttpPut]
+    [Authorize(Roles = Constants.CustomerRole)]
     public async Task<IActionResult> Update([FromBody] ClienteViewModel model)
     {
 

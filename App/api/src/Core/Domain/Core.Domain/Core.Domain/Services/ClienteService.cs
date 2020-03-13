@@ -32,9 +32,9 @@ namespace Core.Domain.Services
 
     }
 
-    public async Task<Cliente> CheckIfNotExists(string dsEmail, string dsCpfCnpj)
+    public async Task<Cliente> CheckIfNotExists(int idCliente)
     {
-      Cliente cliente = await _clienteRepository.GeyEmailOrDocument(dsEmail, dsCpfCnpj);
+      Cliente cliente = await _clienteRepository.Get(idCliente);
 
       if (!AssertionConcern.IsSatisfiedBy(AssertionConcern.AssertNotNull(cliente, "Cliente não encontrado")))
         return null;
