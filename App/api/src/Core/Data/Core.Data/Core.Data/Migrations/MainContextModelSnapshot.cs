@@ -19,1369 +19,6 @@ namespace Core.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.Categoria", b =>
-                {
-                    b.Property<int>("IdCategoria")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_categoria")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdExterno")
-                        .HasColumnName("cd_externo")
-                        .HasColumnType("varchar(15)")
-                        .HasMaxLength(15)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsHexadecimal")
-                        .HasColumnName("ds_hexadecimal")
-                        .HasColumnType("varchar(7)")
-                        .HasMaxLength(7)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsImagemDestaque")
-                        .HasColumnName("ds_imagem_destaque")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime>("DtCadastro")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("dt_cadastro")
-                        .HasColumnType("smalldatetime")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<bool>("FlStatus")
-                        .HasColumnName("fl_status")
-                        .HasColumnType("bit")
-                        .HasComment("0 - Inativo / 1 - Ativo");
-
-                    b.Property<int?>("IdCategoriaPai")
-                        .HasColumnName("id_categoria_pai")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdCategoriaVannon")
-                        .HasColumnName("id_categoria_vannon")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdProdutoSkuDestaque")
-                        .HasColumnName("id_produto_sku_destaque")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NmCategoria")
-                        .IsRequired()
-                        .HasColumnName("nm_categoria")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<int>("NuOrdem")
-                        .HasColumnName("nu_ordem")
-                        .HasColumnType("int");
-
-                    b.HasKey("IdCategoria");
-
-                    b.HasIndex("IdCategoriaPai");
-
-                    b.HasIndex("IdProdutoSkuDestaque");
-
-                    b.HasIndex("CdExterno", "IdCategoria", "NmCategoria", "FlStatus", "IdCategoriaPai", "NuOrdem")
-                        .HasName("idx_categoria_filhas");
-
-                    b.ToTable("tb_categoria");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.Cliente", b =>
-                {
-                    b.Property<int>("IdCliente")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_cliente")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdExterno")
-                        .HasColumnName("cd_externo")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsApelido")
-                        .HasColumnName("ds_apelido")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCelular")
-                        .HasColumnName("ds_celular")
-                        .HasColumnType("varchar(9)")
-                        .HasMaxLength(9)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCelularDdd")
-                        .HasColumnName("ds_celular_ddd")
-                        .HasColumnType("char(2)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(2)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCpfCnpj")
-                        .IsRequired()
-                        .HasColumnName("ds_cpf_cnpj")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEmail")
-                        .HasColumnName("ds_email")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsInscricaoEstadual")
-                        .HasColumnName("ds_inscricao_estadual")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsRazaoSocial")
-                        .HasColumnName("ds_razao_social")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsResponsavel")
-                        .HasColumnName("ds_responsavel")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsRg")
-                        .HasColumnName("ds_rg")
-                        .HasColumnType("varchar(12)")
-                        .HasMaxLength(12)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSenha")
-                        .HasColumnName("ds_senha")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSobrenome")
-                        .HasColumnName("ds_sobrenome")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTelefone")
-                        .HasColumnName("ds_telefone")
-                        .HasColumnType("varchar(11)")
-                        .HasMaxLength(11)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTelefoneDdd")
-                        .HasColumnName("ds_telefone_ddd")
-                        .HasColumnType("char(2)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(2)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime>("DtCadastro")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("dt_cadastro")
-                        .HasColumnType("smalldatetime")
-                        .HasDefaultValueSql("(getdate())");
-
-                    b.Property<DateTime?>("DtMarketingImp")
-                        .HasColumnName("dt_marketing_imp")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<DateTime?>("DtNascimento")
-                        .HasColumnName("dt_nascimento")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<bool>("FlAceitaMailing")
-                        .HasColumnName("fl_aceita_mailing")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlAceitaSms")
-                        .HasColumnName("fl_aceita_sms")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("FlIeIsento")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("fl_ie_isento")
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("((0))");
-
-                    b.Property<string>("FlIntegracao")
-                        .HasColumnName("fl_integracao")
-                        .HasColumnType("char(1)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(1)
-                        .IsUnicode(false);
-
-                    b.Property<bool>("FlMarketing")
-                        .HasColumnName("fl_marketing")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlNovo")
-                        .HasColumnName("fl_novo")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FlSexo")
-                        .HasColumnName("fl_sexo")
-                        .HasColumnType("char(1)")
-                        .IsFixedLength(true)
-                        .HasComment("F - Feminino / M - Masculino")
-                        .HasMaxLength(1)
-                        .IsUnicode(false);
-
-                    b.Property<bool>("FlStatus")
-                        .HasColumnName("fl_status")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FlTipoPessoa")
-                        .IsRequired()
-                        .HasColumnName("fl_tipo_pessoa")
-                        .HasColumnType("char(1)")
-                        .IsFixedLength(true)
-                        .HasComment("0 - Pessoa Física / 1 - Pessoa Juridica")
-                        .HasMaxLength(1)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NmCliente")
-                        .IsRequired()
-                        .HasColumnName("nm_cliente")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NomeSocial")
-                        .HasColumnName("nome_social")
-                        .HasColumnType("varchar(255)")
-                        .HasComment("Para SAP Marketing Apenas")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.HasKey("IdCliente");
-
-                    b.ToTable("tb_cliente");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.DadosLoja", b =>
-                {
-                    b.Property<int>("IdDadosLoja")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_dados_loja")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdGoogleAnalytics")
-                        .HasColumnName("cd_google_analytics")
-                        .HasColumnType("varchar(30)")
-                        .HasMaxLength(30)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsArquivoLogo")
-                        .HasColumnName("ds_arquivo_logo")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsBairro")
-                        .HasColumnName("ds_bairro")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCelular")
-                        .HasColumnName("ds_celular")
-                        .HasColumnType("varchar(11)")
-                        .HasMaxLength(11)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCep")
-                        .HasColumnName("ds_cep")
-                        .HasColumnType("varchar(8)")
-                        .HasMaxLength(8)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCidade")
-                        .HasColumnName("ds_cidade")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsClearSaleEntityCode")
-                        .HasColumnName("ds_clear_sale_entity_code")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCnpjCpf")
-                        .HasColumnName("ds_cnpj_cpf")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsComplemento")
-                        .HasColumnName("ds_complemento")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCopyright")
-                        .HasColumnName("ds_copyright")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCriptografiaSmtp")
-                        .HasColumnName("ds_criptografia_smtp")
-                        .HasColumnType("varchar(4)")
-                        .HasMaxLength(4)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsDominio")
-                        .HasColumnName("ds_dominio")
-                        .HasColumnType("varchar(220)")
-                        .HasMaxLength(220)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEmailContato")
-                        .HasColumnName("ds_email_contato")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEndereco")
-                        .HasColumnName("ds_endereco")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEstado")
-                        .HasColumnName("ds_estado")
-                        .HasColumnType("char(2)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(2)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsHorarioAtendimento")
-                        .HasColumnName("ds_horario_atendimento")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsLoginSmtp")
-                        .HasColumnName("ds_login_smtp")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsNumero")
-                        .HasColumnName("ds_numero")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsRoiHero")
-                        .HasColumnName("ds_roi_hero")
-                        .HasColumnType("varchar(max)")
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSenhaSmtp")
-                        .HasColumnName("ds_senha_smtp")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSeoDescription")
-                        .HasColumnName("ds_seo_description")
-                        .HasColumnType("varchar(500)")
-                        .HasMaxLength(500)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSeoKeywords")
-                        .HasColumnName("ds_seo_keywords")
-                        .HasColumnType("varchar(500)")
-                        .HasMaxLength(500)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsSmtp")
-                        .HasColumnName("ds_smtp")
-                        .HasColumnType("varchar(80)")
-                        .HasMaxLength(80)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTelefone")
-                        .HasColumnName("ds_telefone")
-                        .HasColumnType("varchar(10)")
-                        .HasMaxLength(10)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTelefoneAtendimento")
-                        .HasColumnName("ds_telefone_atendimento")
-                        .HasColumnType("varchar(34)")
-                        .HasMaxLength(34)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTitulo")
-                        .HasColumnName("ds_titulo")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsToken")
-                        .HasColumnName("ds_token")
-                        .HasColumnType("varchar(500)")
-                        .HasMaxLength(500)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsUrlLoja")
-                        .HasColumnName("ds_url_loja")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<bool?>("FlAutocomplete")
-                        .HasColumnName("fl_autocomplete")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("FlFarmacia")
-                        .HasColumnName("fl_farmacia")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("FlTipoPessoa")
-                        .HasColumnName("fl_tipo_pessoa")
-                        .HasColumnType("char(1)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(1)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NmCliente")
-                        .HasColumnName("nm_cliente")
-                        .HasColumnType("varchar(150)")
-                        .HasMaxLength(150)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NmContato")
-                        .HasColumnName("nm_contato")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<int>("NuAlturaAmpliada")
-                        .HasColumnName("nu_altura_ampliada")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuAlturaCarrossel")
-                        .HasColumnName("nu_altura_carrossel")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuAlturaMini")
-                        .HasColumnName("nu_altura_mini")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuAlturaNormal")
-                        .HasColumnName("nu_altura_normal")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuAlturaSuper")
-                        .HasColumnName("nu_altura_super")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuAlturaVariacao")
-                        .HasColumnName("nu_altura_variacao")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraAmpliada")
-                        .HasColumnName("nu_largura_ampliada")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraCarrossel")
-                        .HasColumnName("nu_largura_carrossel")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraMini")
-                        .HasColumnName("nu_largura_mini")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraNormal")
-                        .HasColumnName("nu_largura_normal")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraSuper")
-                        .HasColumnName("nu_largura_super")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLarguraVariacao")
-                        .HasColumnName("nu_largura_variacao")
-                        .HasColumnType("int");
-
-                    b.Property<short?>("NuPorta")
-                        .HasColumnName("nu_porta")
-                        .HasColumnType("smallint");
-
-                    b.Property<decimal?>("VlMaximo")
-                        .HasColumnName("vl_maximo")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlMinimo")
-                        .HasColumnName("vl_minimo")
-                        .HasColumnType("money");
-
-                    b.HasKey("IdDadosLoja");
-
-                    b.ToTable("tb_dados_loja");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.Pedido", b =>
-                {
-                    b.Property<int>("IdPedido")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_pedido")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdAdministradoraPbm")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("cd_administradora_pbm")
-                        .HasColumnType("varchar(3)")
-                        .HasDefaultValueSql("(' ')")
-                        .HasMaxLength(3)
-                        .IsUnicode(false);
-
-                    b.Property<string>("CdRastreamento")
-                        .HasColumnName("cd_rastreamento")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("CdVendedor")
-                        .HasColumnName("CD_VENDEDOR")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCep")
-                        .HasColumnName("ds_cep")
-                        .HasColumnType("char(8)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(8)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsComprovantePbm")
-                        .HasColumnName("ds_comprovante_pbm")
-                        .HasColumnType("varchar(300)")
-                        .HasMaxLength(300)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsDescricao")
-                        .HasColumnName("ds_descricao")
-                        .HasColumnType("varchar(300)")
-                        .HasMaxLength(300)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsFingerPrintSessionId")
-                        .HasColumnName("ds_finger_print_session_id")
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsIp")
-                        .IsRequired()
-                        .HasColumnName("ds_ip")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsMensagemEntrega")
-                        .HasColumnName("ds_mensagem_entrega")
-                        .HasColumnType("varchar(250)")
-                        .HasMaxLength(250)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsNavegador")
-                        .IsRequired()
-                        .HasColumnName("ds_navegador")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsStatusAntifraude")
-                        .HasColumnName("ds_status_antifraude")
-                        .HasColumnType("char(3)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(3)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime>("DtExpiracao")
-                        .HasColumnName("dt_expiracao")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<DateTime>("DtPedido")
-                        .HasColumnName("dt_pedido")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<bool?>("FlImpresso")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("fl_impresso")
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("((0))");
-
-                    b.Property<string>("FlIntegracao")
-                        .HasColumnName("fl_integracao")
-                        .HasColumnType("char(1)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(1)
-                        .IsUnicode(false);
-
-                    b.Property<bool?>("FlMarketingCarrinhoVerificado")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("fl_marketing_carrinho_verificado")
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("((0))");
-
-                    b.Property<bool?>("FlNfPaulista")
-                        .HasColumnName("fl_nf_paulista")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlRetornoEstoque")
-                        .HasColumnName("fl_retorno_estoque")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("IdCliente")
-                        .HasColumnName("id_cliente")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdModalidadeEntrega")
-                        .HasColumnName("id_modalidade_entrega")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdParceiro")
-                        .HasColumnName("id_parceiro")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPedidoOrigem")
-                        .HasColumnName("id_pedido_origem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPedidoStatus")
-                        .HasColumnName("id_pedido_status")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdPedidoStatusPbm")
-                        .HasColumnName("id_pedido_status_pbm")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdPraca")
-                        .HasColumnName("id_praca")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdUsuarioTelevendas")
-                        .HasColumnName("id_usuario_televendas")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NmModalidadeEntrega")
-                        .HasColumnName("nm_modalidade_entrega")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<long>("NrCartaoclientePbm")
-                        .HasColumnName("nr_cartaocliente_pbm")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("NrCentralPbm")
-                        .HasColumnName("nr_central_pbm")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("NrCpfclientePbm")
-                        .HasColumnName("nr_cpfcliente_pbm")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("NrCupomFiscal")
-                        .HasColumnName("nr_cupom_fiscal")
-                        .HasColumnType("bigint");
-
-                    b.Property<string>("NuPedido")
-                        .HasColumnName("nu_pedido")
-                        .HasColumnType("varchar(12)")
-                        .HasMaxLength(12)
-                        .IsUnicode(false);
-
-                    b.Property<int?>("NuPrazoEntrega")
-                        .HasColumnName("nu_prazo_entrega")
-                        .HasColumnType("int");
-
-                    b.Property<decimal?>("VlDesconto")
-                        .HasColumnName("vl_desconto")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoCarrinho")
-                        .HasColumnName("vl_desconto_carrinho")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoCliente")
-                        .HasColumnName("vl_desconto_cliente")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoCupom")
-                        .HasColumnName("vl_desconto_cupom")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoFrete")
-                        .HasColumnName("vl_desconto_frete")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoPagamento")
-                        .HasColumnName("vl_desconto_pagamento")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoPrimeiraCompra")
-                        .HasColumnName("vl_desconto_primeira_compra")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoProduto")
-                        .HasColumnName("vl_desconto_produto")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlFrete")
-                        .HasColumnName("vl_frete")
-                        .HasColumnType("money");
-
-                    b.Property<decimal>("VlTotal")
-                        .HasColumnName("vl_total")
-                        .HasColumnType("money");
-
-                    b.HasKey("IdPedido");
-
-                    b.HasIndex("VlTotal", "IdPraca", "NmModalidadeEntrega", "NuPedido", "FlIntegracao", "IdCliente", "IdPedido", "DsStatusAntifraude", "DtPedido", "IdPedidoStatus")
-                        .HasName("idx_pedido_id_pedido_status");
-
-                    b.HasIndex("DtPedido", "DtExpiracao", "IdCliente", "IdPedido", "DsIp", "DsNavegador", "VlDesconto", "VlTotal", "VlDescontoFrete", "VlFrete", "IdPedidoStatus")
-                        .HasName("rel_carrinho_cliente");
-
-                    b.ToTable("tb_pedido");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoEntrega", b =>
-                {
-                    b.Property<int>("IdPedidoEntrega")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_pedido_entrega")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("DsBairro")
-                        .IsRequired()
-                        .HasColumnName("ds_bairro")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCep")
-                        .IsRequired()
-                        .HasColumnName("ds_cep")
-                        .HasColumnType("char(8)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(8)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCidade")
-                        .IsRequired()
-                        .HasColumnName("ds_cidade")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsComplemento")
-                        .HasColumnName("ds_complemento")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsDestinatario")
-                        .HasColumnName("ds_destinatario")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEndereco")
-                        .IsRequired()
-                        .HasColumnName("ds_endereco")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEstado")
-                        .IsRequired()
-                        .HasColumnName("ds_estado")
-                        .HasColumnType("char(2)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(2)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsReferencia")
-                        .HasColumnName("ds_referencia")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<int?>("IdClienteEndereco")
-                        .HasColumnName("id_cliente_endereco")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPedido")
-                        .HasColumnName("id_pedido")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NmTipoEndereco")
-                        .HasColumnName("nm_tipo_endereco")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuEndereco")
-                        .IsRequired()
-                        .HasColumnName("nu_endereco")
-                        .HasColumnType("varchar(10)")
-                        .HasMaxLength(10)
-                        .IsUnicode(false);
-
-                    b.HasKey("IdPedidoEntrega");
-
-                    b.HasIndex("IdPedido")
-                        .HasName("idx_pedido_entrega");
-
-                    b.HasIndex("DsCep", "IdClienteEndereco", "NmTipoEndereco")
-                        .HasName("NonClusteredIndex-20181010-162155");
-
-                    b.ToTable("tb_pedido_entrega");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamento", b =>
-                {
-                    b.Property<int>("IdPedidoPagamento")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_pedido_pagamento")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdBarra")
-                        .HasColumnName("cd_barra")
-                        .HasColumnType("varchar(80)")
-                        .HasMaxLength(80)
-                        .IsUnicode(false);
-
-                    b.Property<string>("CdSeguranca")
-                        .HasColumnName("cd_seguranca")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsBandeiraMaquineta")
-                        .HasColumnName("ds_bandeira_maquineta")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsChaveCobranca")
-                        .HasColumnName("ds_chave_cobranca")
-                        .HasColumnType("varchar(40)")
-                        .HasMaxLength(40)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsChavePedido")
-                        .HasColumnName("ds_chave_pedido")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsChaveTransacao")
-                        .HasColumnName("ds_chave_transacao")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsReciboCliente")
-                        .HasColumnName("ds_recibo_cliente")
-                        .HasColumnType("varchar(max)")
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsReciboEmpresa")
-                        .HasColumnName("ds_recibo_empresa")
-                        .HasColumnType("varchar(max)")
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsUrlBoleto")
-                        .HasColumnName("ds_url_boleto")
-                        .HasColumnType("varchar(max)")
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsUrlTransferencia")
-                        .HasColumnName("ds_url_transferencia")
-                        .HasColumnType("varchar(max)")
-                        .IsUnicode(false);
-
-                    b.Property<string>("DtValidadeCartao")
-                        .HasColumnName("dt_validade_cartao")
-                        .HasColumnType("varchar(7)")
-                        .HasMaxLength(7)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime?>("DtVencimento")
-                        .HasColumnName("dt_vencimento")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<int>("IdPagamento")
-                        .HasColumnName("id_pagamento")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdPedido")
-                        .HasColumnName("id_pedido")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NmCartao")
-                        .HasColumnName("nm_cartao")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NossoNumero")
-                        .HasColumnName("nosso_numero")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("Nsu")
-                        .HasColumnName("nsu")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuBinCartao")
-                        .HasColumnName("nu_bin_cartao")
-                        .HasColumnType("varchar(20)")
-                        .HasMaxLength(20)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuCartao")
-                        .HasColumnName("nu_cartao")
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuComprovante")
-                        .HasColumnName("nu_comprovante")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuNit")
-                        .HasColumnName("nu_nit")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<int>("NuParcela")
-                        .HasColumnName("nu_parcela")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NuTransacao")
-                        .HasColumnName("nu_transacao")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<decimal?>("VlDinheiro")
-                        .HasColumnName("vl_dinheiro")
-                        .HasColumnType("money");
-
-                    b.Property<decimal>("VlParcela")
-                        .HasColumnName("vl_parcela")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlTroco")
-                        .HasColumnName("vl_troco")
-                        .HasColumnType("money");
-
-                    b.HasKey("IdPedidoPagamento");
-
-                    b.HasIndex("IdPagamento");
-
-                    b.HasIndex("IdPedido")
-                        .HasName("IndiceIDPedido");
-
-                    b.HasIndex("IdPedidoPagamento")
-                        .HasName("IndiceIDPagamento");
-
-                    b.HasIndex("IdPedido", "IdPagamento", "NuParcela")
-                        .HasName("index_tb_pedido_pagamento_pedidosql");
-
-                    b.ToTable("tb_pedido_pagamento");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoSku", b =>
-                {
-                    b.Property<int>("IdPedidoProdutoSku")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_pedido_produto_sku")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdProgramaPbm")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("cd_programa_pbm")
-                        .HasColumnType("varchar(100)")
-                        .HasDefaultValueSql("(' ')")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<bool>("FlBrinde")
-                        .HasColumnName("fl_brinde")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlEncomenda")
-                        .HasColumnName("fl_encomenda")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("FlEstoqueDisponivel")
-                        .IsRequired()
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("fl_estoque_disponivel")
-                        .HasColumnType("bit")
-                        .HasDefaultValueSql("((1))");
-
-                    b.Property<bool>("FlPbm")
-                        .HasColumnName("fl_pbm")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("IdPedido")
-                        .HasColumnName("id_pedido")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("IdProdutoCasado")
-                        .HasColumnName("id_produto_casado")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdProdutoSku")
-                        .HasColumnName("id_produto_sku")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuQuantidade")
-                        .HasColumnName("nu_quantidade")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("PcDescontoPbm")
-                        .HasColumnName("pc_desconto_pbm")
-                        .HasColumnType("decimal(4, 2)");
-
-                    b.Property<decimal>("VlDesconto")
-                        .HasColumnName("vl_desconto")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlDescontoCasada")
-                        .HasColumnName("vl_desconto_casada")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlEmbalagem")
-                        .HasColumnName("vl_embalagem")
-                        .HasColumnType("money");
-
-                    b.Property<decimal>("VlProduto")
-                        .HasColumnName("vl_produto")
-                        .HasColumnType("money");
-
-                    b.Property<decimal?>("VlProdutoDe")
-                        .HasColumnName("vl_produto_de")
-                        .HasColumnType("money");
-
-                    b.HasKey("IdPedidoProdutoSku");
-
-                    b.HasIndex("IdPedido")
-                        .HasName("idx_pedido_produto_sku");
-
-                    b.HasIndex("IdProdutoSku")
-                        .HasName("idx_produto_sku");
-
-                    b.HasIndex("VlEmbalagem", "IdPedido")
-                        .HasName("index_tb_pedido_produto_sku_pedidosql");
-
-                    b.ToTable("tb_pedido_produto_sku");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.Praca", b =>
-                {
-                    b.Property<int>("IdPraca")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_praca")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdExterno")
-                        .HasColumnName("cd_externo")
-                        .HasColumnType("varchar(10)")
-                        .HasMaxLength(10)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsAlias")
-                        .HasColumnName("ds_alias")
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsArquivoLogo")
-                        .HasColumnName("ds_arquivo_logo")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsBairro")
-                        .HasColumnName("ds_bairro")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCep")
-                        .HasColumnName("ds_cep")
-                        .HasColumnType("varchar(8)")
-                        .HasMaxLength(8)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsCidade")
-                        .HasColumnName("ds_cidade")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsComplemento")
-                        .HasColumnName("ds_complemento")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEmail")
-                        .HasColumnName("ds_email")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEndereco")
-                        .HasColumnName("ds_endereco")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsEstado")
-                        .HasColumnName("ds_estado")
-                        .HasColumnType("char(2)")
-                        .IsFixedLength(true)
-                        .HasMaxLength(2)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsHorarioAtendimento")
-                        .HasColumnName("ds_horario_atendimento")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsTelefone")
-                        .HasColumnName("ds_telefone")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("DsWhatsapp")
-                        .HasColumnName("ds_whatsapp")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime?>("DtUltimoPedido")
-                        .HasColumnName("dt_ultimo_pedido")
-                        .HasColumnType("smalldatetime");
-
-                    b.Property<bool>("FlAtivo")
-                        .HasColumnName("fl_ativo")
-                        .HasColumnType("bit");
-
-                    b.Property<bool?>("FlExibeFrontend")
-                        .HasColumnName("fl_exibe_frontend")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlInicial")
-                        .HasColumnName("fl_inicial")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlPadrao")
-                        .HasColumnName("fl_padrao")
-                        .HasColumnType("bit");
-
-                    b.Property<int?>("IdPracaPadrao")
-                        .HasColumnName("id_praca_padrao")
-                        .HasColumnType("int");
-
-                    b.Property<string>("NmPraca")
-                        .IsRequired()
-                        .HasColumnName("nm_praca")
-                        .HasColumnType("varchar(50)")
-                        .HasMaxLength(50)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NuEndereco")
-                        .HasColumnName("nu_endereco")
-                        .HasColumnType("varchar(10)")
-                        .HasMaxLength(10)
-                        .IsUnicode(false);
-
-                    b.HasKey("IdPraca");
-
-                    b.HasIndex("IdPracaPadrao");
-
-                    b.ToTable("tb_praca");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSku", b =>
-                {
-                    b.Property<int>("IdProdutoSku")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id_produto_sku")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("CdBarras")
-                        .HasColumnName("cd_barras")
-                        .HasColumnType("varchar(30)")
-                        .HasMaxLength(30)
-                        .IsUnicode(false);
-
-                    b.Property<string>("CdExterno")
-                        .HasColumnName("cd_externo")
-                        .HasColumnType("varchar(15)")
-                        .HasMaxLength(15)
-                        .IsUnicode(false);
-
-                    b.Property<string>("CdMs")
-                        .HasColumnName("cd_ms")
-                        .HasColumnType("varchar(100)")
-                        .HasMaxLength(100)
-                        .IsUnicode(false);
-
-                    b.Property<DateTime?>("DtCadastro")
-                        .HasColumnName("dt_cadastro")
-                        .HasColumnType("datetime");
-
-                    b.Property<bool>("FlBrinde")
-                        .HasColumnName("fl_brinde")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("FlExibirIndividualmente")
-                        .HasColumnName("fl_exibir_individualmente")
-                        .HasColumnType("bit");
-
-                    b.Property<int>("IdProduto")
-                        .HasColumnName("id_produto")
-                        .HasColumnType("int");
-
-                    b.Property<string>("IdProdutoSap")
-                        .HasColumnName("id_produto_sap")
-                        .HasColumnType("varchar(255)")
-                        .HasMaxLength(255)
-                        .IsUnicode(false);
-
-                    b.Property<string>("NmProdutoSku")
-                        .HasColumnName("nm_produto_sku")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<int>("NuAltura")
-                        .HasColumnName("nu_altura")
-                        .HasColumnType("int");
-
-                    b.Property<int>("NuLargura")
-                        .HasColumnName("nu_largura")
-                        .HasColumnType("int");
-
-                    b.Property<decimal>("NuPeso")
-                        .HasColumnName("nu_peso")
-                        .HasColumnType("decimal(10, 3)");
-
-                    b.Property<int>("NuProfundidade")
-                        .HasColumnName("nu_profundidade")
-                        .HasColumnType("int");
-
-                    b.Property<decimal?>("PcDescontoAtendente")
-                        .HasColumnName("pc_desconto_atendente")
-                        .HasColumnType("decimal(18, 2)");
-
-                    b.HasKey("IdProdutoSku");
-
-                    b.HasIndex("IdProduto", "FlBrinde")
-                        .HasName("IX_produto");
-
-                    b.ToTable("tb_produto_sku");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.ScLog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnName("id")
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Action")
-                        .IsRequired()
-                        .HasColumnName("action")
-                        .HasColumnType("varchar(30)")
-                        .HasMaxLength(30)
-                        .IsUnicode(false);
-
-                    b.Property<string>("Application")
-                        .IsRequired()
-                        .HasColumnName("application")
-                        .HasColumnType("varchar(200)")
-                        .HasMaxLength(200)
-                        .IsUnicode(false);
-
-                    b.Property<string>("Creator")
-                        .IsRequired()
-                        .HasColumnName("creator")
-                        .HasColumnType("varchar(30)")
-                        .HasMaxLength(30)
-                        .IsUnicode(false);
-
-                    b.Property<string>("Description")
-                        .HasColumnName("description")
-                        .HasColumnType("text");
-
-                    b.Property<DateTime>("InsertedDate")
-                        .HasColumnName("inserted_date")
-                        .HasColumnType("datetime");
-
-                    b.Property<string>("IpUser")
-                        .IsRequired()
-                        .HasColumnName("ip_user")
-                        .HasColumnType("varchar(32)")
-                        .HasMaxLength(32)
-                        .IsUnicode(false);
-
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasColumnName("username")
-                        .HasColumnType("varchar(90)")
-                        .HasMaxLength(90)
-                        .IsUnicode(false);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("sc_log");
-                });
-
             modelBuilder.Entity("Core.Domain.EF.Entities.Acesso", b =>
                 {
                     b.Property<int>("IdAcesso")
@@ -1935,6 +572,78 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_cartao_cliente_pbm");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.Categoria", b =>
+                {
+                    b.Property<int>("IdCategoria")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_categoria")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdExterno")
+                        .HasColumnName("cd_externo")
+                        .HasColumnType("varchar(15)")
+                        .HasMaxLength(15)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsHexadecimal")
+                        .HasColumnName("ds_hexadecimal")
+                        .HasColumnType("varchar(7)")
+                        .HasMaxLength(7)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsImagemDestaque")
+                        .HasColumnName("ds_imagem_destaque")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime>("DtCadastro")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("dt_cadastro")
+                        .HasColumnType("smalldatetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<bool>("FlStatus")
+                        .HasColumnName("fl_status")
+                        .HasColumnType("bit")
+                        .HasComment("0 - Inativo / 1 - Ativo");
+
+                    b.Property<int?>("IdCategoriaPai")
+                        .HasColumnName("id_categoria_pai")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdCategoriaVannon")
+                        .HasColumnName("id_categoria_vannon")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdProdutoSkuDestaque")
+                        .HasColumnName("id_produto_sku_destaque")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NmCategoria")
+                        .IsRequired()
+                        .HasColumnName("nm_categoria")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<int>("NuOrdem")
+                        .HasColumnName("nu_ordem")
+                        .HasColumnType("int");
+
+                    b.HasKey("IdCategoria");
+
+                    b.HasIndex("IdCategoriaPai");
+
+                    b.HasIndex("IdProdutoSkuDestaque");
+
+                    b.HasIndex("CdExterno", "IdCategoria", "NmCategoria", "FlStatus", "IdCategoriaPai", "NuOrdem")
+                        .HasName("idx_categoria_filhas");
+
+                    b.ToTable("tb_categoria");
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.CategoriaSeo", b =>
                 {
                     b.Property<int>("IdCategoriaSeo")
@@ -1970,6 +679,186 @@ namespace Core.Data.Migrations
                     b.HasIndex("IdCategoria");
 
                     b.ToTable("tb_categoria_seo");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.Cliente", b =>
+                {
+                    b.Property<int>("IdCliente")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_cliente")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdExterno")
+                        .HasColumnName("cd_externo")
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsApelido")
+                        .HasColumnName("ds_apelido")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCelular")
+                        .HasColumnName("ds_celular")
+                        .HasColumnType("varchar(9)")
+                        .HasMaxLength(9)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCelularDdd")
+                        .HasColumnName("ds_celular_ddd")
+                        .HasColumnType("char(2)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(2)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCpfCnpj")
+                        .IsRequired()
+                        .HasColumnName("ds_cpf_cnpj")
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEmail")
+                        .HasColumnName("ds_email")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsInscricaoEstadual")
+                        .HasColumnName("ds_inscricao_estadual")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsRazaoSocial")
+                        .HasColumnName("ds_razao_social")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsResponsavel")
+                        .HasColumnName("ds_responsavel")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsRg")
+                        .HasColumnName("ds_rg")
+                        .HasColumnType("varchar(12)")
+                        .HasMaxLength(12)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSenha")
+                        .HasColumnName("ds_senha")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSobrenome")
+                        .HasColumnName("ds_sobrenome")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTelefone")
+                        .HasColumnName("ds_telefone")
+                        .HasColumnType("varchar(11)")
+                        .HasMaxLength(11)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTelefoneDdd")
+                        .HasColumnName("ds_telefone_ddd")
+                        .HasColumnType("char(2)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(2)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime>("DtCadastro")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("dt_cadastro")
+                        .HasColumnType("smalldatetime")
+                        .HasDefaultValueSql("(getdate())");
+
+                    b.Property<DateTime?>("DtMarketingImp")
+                        .HasColumnName("dt_marketing_imp")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<DateTime?>("DtNascimento")
+                        .HasColumnName("dt_nascimento")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<bool>("FlAceitaMailing")
+                        .HasColumnName("fl_aceita_mailing")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlAceitaSms")
+                        .HasColumnName("fl_aceita_sms")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("FlIeIsento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("fl_ie_isento")
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("((0))");
+
+                    b.Property<string>("FlIntegracao")
+                        .HasColumnName("fl_integracao")
+                        .HasColumnType("char(1)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(1)
+                        .IsUnicode(false);
+
+                    b.Property<bool>("FlMarketing")
+                        .HasColumnName("fl_marketing")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlNovo")
+                        .HasColumnName("fl_novo")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FlSexo")
+                        .HasColumnName("fl_sexo")
+                        .HasColumnType("char(1)")
+                        .IsFixedLength(true)
+                        .HasComment("F - Feminino / M - Masculino")
+                        .HasMaxLength(1)
+                        .IsUnicode(false);
+
+                    b.Property<bool>("FlStatus")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("fl_status")
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("((1))");
+
+                    b.Property<string>("FlTipoPessoa")
+                        .IsRequired()
+                        .HasColumnName("fl_tipo_pessoa")
+                        .HasColumnType("char(1)")
+                        .IsFixedLength(true)
+                        .HasComment("0 - Pessoa Física / 1 - Pessoa Juridica")
+                        .HasMaxLength(1)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NmCliente")
+                        .IsRequired()
+                        .HasColumnName("nm_cliente")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NomeSocial")
+                        .HasColumnName("nome_social")
+                        .HasColumnType("varchar(255)")
+                        .HasComment("Para SAP Marketing Apenas")
+                        .HasMaxLength(255)
+                        .IsUnicode(false);
+
+                    b.HasKey("IdCliente");
+
+                    b.ToTable("tb_cliente");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.ClienteEndereco", b =>
@@ -2450,6 +1339,274 @@ namespace Core.Data.Migrations
                     b.HasKey("IdConteudoTipo");
 
                     b.ToTable("tb_conteudo_tipo");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.DadosLoja", b =>
+                {
+                    b.Property<int>("IdDadosLoja")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_dados_loja")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdGoogleAnalytics")
+                        .HasColumnName("cd_google_analytics")
+                        .HasColumnType("varchar(30)")
+                        .HasMaxLength(30)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsArquivoLogo")
+                        .HasColumnName("ds_arquivo_logo")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsBairro")
+                        .HasColumnName("ds_bairro")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCelular")
+                        .HasColumnName("ds_celular")
+                        .HasColumnType("varchar(11)")
+                        .HasMaxLength(11)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCep")
+                        .HasColumnName("ds_cep")
+                        .HasColumnType("varchar(8)")
+                        .HasMaxLength(8)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCidade")
+                        .HasColumnName("ds_cidade")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsClearSaleEntityCode")
+                        .HasColumnName("ds_clear_sale_entity_code")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCnpjCpf")
+                        .HasColumnName("ds_cnpj_cpf")
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsComplemento")
+                        .HasColumnName("ds_complemento")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCopyright")
+                        .HasColumnName("ds_copyright")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCriptografiaSmtp")
+                        .HasColumnName("ds_criptografia_smtp")
+                        .HasColumnType("varchar(4)")
+                        .HasMaxLength(4)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsDominio")
+                        .HasColumnName("ds_dominio")
+                        .HasColumnType("varchar(220)")
+                        .HasMaxLength(220)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEmailContato")
+                        .HasColumnName("ds_email_contato")
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEndereco")
+                        .HasColumnName("ds_endereco")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEstado")
+                        .HasColumnName("ds_estado")
+                        .HasColumnType("char(2)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(2)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsHorarioAtendimento")
+                        .HasColumnName("ds_horario_atendimento")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsLoginSmtp")
+                        .HasColumnName("ds_login_smtp")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsNumero")
+                        .HasColumnName("ds_numero")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsRoiHero")
+                        .HasColumnName("ds_roi_hero")
+                        .HasColumnType("varchar(max)")
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSenhaSmtp")
+                        .HasColumnName("ds_senha_smtp")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSeoDescription")
+                        .HasColumnName("ds_seo_description")
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSeoKeywords")
+                        .HasColumnName("ds_seo_keywords")
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsSmtp")
+                        .HasColumnName("ds_smtp")
+                        .HasColumnType("varchar(80)")
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTelefone")
+                        .HasColumnName("ds_telefone")
+                        .HasColumnType("varchar(10)")
+                        .HasMaxLength(10)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTelefoneAtendimento")
+                        .HasColumnName("ds_telefone_atendimento")
+                        .HasColumnType("varchar(34)")
+                        .HasMaxLength(34)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTitulo")
+                        .HasColumnName("ds_titulo")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsToken")
+                        .HasColumnName("ds_token")
+                        .HasColumnType("varchar(500)")
+                        .HasMaxLength(500)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsUrlLoja")
+                        .HasColumnName("ds_url_loja")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<bool?>("FlAutocomplete")
+                        .HasColumnName("fl_autocomplete")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("FlFarmacia")
+                        .HasColumnName("fl_farmacia")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("FlTipoPessoa")
+                        .HasColumnName("fl_tipo_pessoa")
+                        .HasColumnType("char(1)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(1)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NmCliente")
+                        .HasColumnName("nm_cliente")
+                        .HasColumnType("varchar(150)")
+                        .HasMaxLength(150)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NmContato")
+                        .HasColumnName("nm_contato")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<int>("NuAlturaAmpliada")
+                        .HasColumnName("nu_altura_ampliada")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuAlturaCarrossel")
+                        .HasColumnName("nu_altura_carrossel")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuAlturaMini")
+                        .HasColumnName("nu_altura_mini")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuAlturaNormal")
+                        .HasColumnName("nu_altura_normal")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuAlturaSuper")
+                        .HasColumnName("nu_altura_super")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuAlturaVariacao")
+                        .HasColumnName("nu_altura_variacao")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraAmpliada")
+                        .HasColumnName("nu_largura_ampliada")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraCarrossel")
+                        .HasColumnName("nu_largura_carrossel")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraMini")
+                        .HasColumnName("nu_largura_mini")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraNormal")
+                        .HasColumnName("nu_largura_normal")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraSuper")
+                        .HasColumnName("nu_largura_super")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLarguraVariacao")
+                        .HasColumnName("nu_largura_variacao")
+                        .HasColumnType("int");
+
+                    b.Property<short?>("NuPorta")
+                        .HasColumnName("nu_porta")
+                        .HasColumnType("smallint");
+
+                    b.Property<decimal?>("VlMaximo")
+                        .HasColumnName("vl_maximo")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlMinimo")
+                        .HasColumnName("vl_minimo")
+                        .HasColumnType("money");
+
+                    b.HasKey("IdDadosLoja");
+
+                    b.ToTable("tb_dados_loja");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.DeparaClientesVfarma", b =>
@@ -5092,6 +4249,331 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_parceiro_xml_produto");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.Pedido", b =>
+                {
+                    b.Property<int>("IdPedido")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_pedido")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdAdministradoraPbm")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("cd_administradora_pbm")
+                        .HasColumnType("varchar(3)")
+                        .HasDefaultValueSql("(' ')")
+                        .HasMaxLength(3)
+                        .IsUnicode(false);
+
+                    b.Property<string>("CdRastreamento")
+                        .HasColumnName("cd_rastreamento")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("CdVendedor")
+                        .HasColumnName("CD_VENDEDOR")
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCep")
+                        .HasColumnName("ds_cep")
+                        .HasColumnType("char(8)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(8)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsComprovantePbm")
+                        .HasColumnName("ds_comprovante_pbm")
+                        .HasColumnType("varchar(300)")
+                        .HasMaxLength(300)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsDescricao")
+                        .HasColumnName("ds_descricao")
+                        .HasColumnType("varchar(300)")
+                        .HasMaxLength(300)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsFingerPrintSessionId")
+                        .HasColumnName("ds_finger_print_session_id")
+                        .HasColumnType("varchar(255)")
+                        .HasMaxLength(255)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsIp")
+                        .IsRequired()
+                        .HasColumnName("ds_ip")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsMensagemEntrega")
+                        .HasColumnName("ds_mensagem_entrega")
+                        .HasColumnType("varchar(250)")
+                        .HasMaxLength(250)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsNavegador")
+                        .IsRequired()
+                        .HasColumnName("ds_navegador")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsStatusAntifraude")
+                        .HasColumnName("ds_status_antifraude")
+                        .HasColumnType("char(3)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(3)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime>("DtExpiracao")
+                        .HasColumnName("dt_expiracao")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<DateTime>("DtPedido")
+                        .HasColumnName("dt_pedido")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<bool?>("FlImpresso")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("fl_impresso")
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("((0))");
+
+                    b.Property<string>("FlIntegracao")
+                        .HasColumnName("fl_integracao")
+                        .HasColumnType("char(1)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(1)
+                        .IsUnicode(false);
+
+                    b.Property<bool?>("FlMarketingCarrinhoVerificado")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("fl_marketing_carrinho_verificado")
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("((0))");
+
+                    b.Property<bool?>("FlNfPaulista")
+                        .HasColumnName("fl_nf_paulista")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlRetornoEstoque")
+                        .HasColumnName("fl_retorno_estoque")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("IdCliente")
+                        .HasColumnName("id_cliente")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdModalidadeEntrega")
+                        .HasColumnName("id_modalidade_entrega")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdParceiro")
+                        .HasColumnName("id_parceiro")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPedidoOrigem")
+                        .HasColumnName("id_pedido_origem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPedidoStatus")
+                        .HasColumnName("id_pedido_status")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdPedidoStatusPbm")
+                        .HasColumnName("id_pedido_status_pbm")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdPraca")
+                        .HasColumnName("id_praca")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdUsuarioTelevendas")
+                        .HasColumnName("id_usuario_televendas")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NmModalidadeEntrega")
+                        .HasColumnName("nm_modalidade_entrega")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<long>("NrCartaoclientePbm")
+                        .HasColumnName("nr_cartaocliente_pbm")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("NrCentralPbm")
+                        .HasColumnName("nr_central_pbm")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("NrCpfclientePbm")
+                        .HasColumnName("nr_cpfcliente_pbm")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("NrCupomFiscal")
+                        .HasColumnName("nr_cupom_fiscal")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("NuPedido")
+                        .HasColumnName("nu_pedido")
+                        .HasColumnType("varchar(12)")
+                        .HasMaxLength(12)
+                        .IsUnicode(false);
+
+                    b.Property<int?>("NuPrazoEntrega")
+                        .HasColumnName("nu_prazo_entrega")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("VlDesconto")
+                        .HasColumnName("vl_desconto")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoCarrinho")
+                        .HasColumnName("vl_desconto_carrinho")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoCliente")
+                        .HasColumnName("vl_desconto_cliente")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoCupom")
+                        .HasColumnName("vl_desconto_cupom")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoFrete")
+                        .HasColumnName("vl_desconto_frete")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoPagamento")
+                        .HasColumnName("vl_desconto_pagamento")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoPrimeiraCompra")
+                        .HasColumnName("vl_desconto_primeira_compra")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoProduto")
+                        .HasColumnName("vl_desconto_produto")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlFrete")
+                        .HasColumnName("vl_frete")
+                        .HasColumnType("money");
+
+                    b.Property<decimal>("VlTotal")
+                        .HasColumnName("vl_total")
+                        .HasColumnType("money");
+
+                    b.HasKey("IdPedido");
+
+                    b.HasIndex("VlTotal", "IdPraca", "NmModalidadeEntrega", "NuPedido", "FlIntegracao", "IdCliente", "IdPedido", "DsStatusAntifraude", "DtPedido", "IdPedidoStatus")
+                        .HasName("idx_pedido_id_pedido_status");
+
+                    b.HasIndex("DtPedido", "DtExpiracao", "IdCliente", "IdPedido", "DsIp", "DsNavegador", "VlDesconto", "VlTotal", "VlDescontoFrete", "VlFrete", "IdPedidoStatus")
+                        .HasName("rel_carrinho_cliente");
+
+                    b.ToTable("tb_pedido");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoEntrega", b =>
+                {
+                    b.Property<int>("IdPedidoEntrega")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_pedido_entrega")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("DsBairro")
+                        .IsRequired()
+                        .HasColumnName("ds_bairro")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCep")
+                        .IsRequired()
+                        .HasColumnName("ds_cep")
+                        .HasColumnType("char(8)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(8)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCidade")
+                        .IsRequired()
+                        .HasColumnName("ds_cidade")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsComplemento")
+                        .HasColumnName("ds_complemento")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsDestinatario")
+                        .HasColumnName("ds_destinatario")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEndereco")
+                        .IsRequired()
+                        .HasColumnName("ds_endereco")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEstado")
+                        .IsRequired()
+                        .HasColumnName("ds_estado")
+                        .HasColumnType("char(2)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(2)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsReferencia")
+                        .HasColumnName("ds_referencia")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<int?>("IdClienteEndereco")
+                        .HasColumnName("id_cliente_endereco")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPedido")
+                        .HasColumnName("id_pedido")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NmTipoEndereco")
+                        .HasColumnName("nm_tipo_endereco")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuEndereco")
+                        .IsRequired()
+                        .HasColumnName("nu_endereco")
+                        .HasColumnType("varchar(10)")
+                        .HasMaxLength(10)
+                        .IsUnicode(false);
+
+                    b.HasKey("IdPedidoEntrega");
+
+                    b.HasIndex("IdPedido")
+                        .HasName("idx_pedido_entrega");
+
+                    b.HasIndex("DsCep", "IdClienteEndereco", "NmTipoEndereco")
+                        .HasName("NonClusteredIndex-20181010-162155");
+
+                    b.ToTable("tb_pedido_entrega");
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoGestaoRisco", b =>
                 {
                     b.Property<int>("IdGestaoRisco")
@@ -5270,6 +4752,168 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_pedido_origem");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamento", b =>
+                {
+                    b.Property<int>("IdPedidoPagamento")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_pedido_pagamento")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdBarra")
+                        .HasColumnName("cd_barra")
+                        .HasColumnType("varchar(80)")
+                        .HasMaxLength(80)
+                        .IsUnicode(false);
+
+                    b.Property<string>("CdSeguranca")
+                        .HasColumnName("cd_seguranca")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsBandeiraMaquineta")
+                        .HasColumnName("ds_bandeira_maquineta")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsChaveCobranca")
+                        .HasColumnName("ds_chave_cobranca")
+                        .HasColumnType("varchar(40)")
+                        .HasMaxLength(40)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsChavePedido")
+                        .HasColumnName("ds_chave_pedido")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsChaveTransacao")
+                        .HasColumnName("ds_chave_transacao")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsReciboCliente")
+                        .HasColumnName("ds_recibo_cliente")
+                        .HasColumnType("varchar(max)")
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsReciboEmpresa")
+                        .HasColumnName("ds_recibo_empresa")
+                        .HasColumnType("varchar(max)")
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsUrlBoleto")
+                        .HasColumnName("ds_url_boleto")
+                        .HasColumnType("varchar(max)")
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsUrlTransferencia")
+                        .HasColumnName("ds_url_transferencia")
+                        .HasColumnType("varchar(max)")
+                        .IsUnicode(false);
+
+                    b.Property<string>("DtValidadeCartao")
+                        .HasColumnName("dt_validade_cartao")
+                        .HasColumnType("varchar(7)")
+                        .HasMaxLength(7)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime?>("DtVencimento")
+                        .HasColumnName("dt_vencimento")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<int>("IdPagamento")
+                        .HasColumnName("id_pagamento")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdPedido")
+                        .HasColumnName("id_pedido")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NmCartao")
+                        .HasColumnName("nm_cartao")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NossoNumero")
+                        .HasColumnName("nosso_numero")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Nsu")
+                        .HasColumnName("nsu")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuBinCartao")
+                        .HasColumnName("nu_bin_cartao")
+                        .HasColumnType("varchar(20)")
+                        .HasMaxLength(20)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuCartao")
+                        .HasColumnName("nu_cartao")
+                        .HasColumnType("varchar(255)")
+                        .HasMaxLength(255)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuComprovante")
+                        .HasColumnName("nu_comprovante")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuNit")
+                        .HasColumnName("nu_nit")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<int>("NuParcela")
+                        .HasColumnName("nu_parcela")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NuTransacao")
+                        .HasColumnName("nu_transacao")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<decimal?>("VlDinheiro")
+                        .HasColumnName("vl_dinheiro")
+                        .HasColumnType("money");
+
+                    b.Property<decimal>("VlParcela")
+                        .HasColumnName("vl_parcela")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlTroco")
+                        .HasColumnName("vl_troco")
+                        .HasColumnType("money");
+
+                    b.HasKey("IdPedidoPagamento");
+
+                    b.HasIndex("IdPagamento");
+
+                    b.HasIndex("IdPedido")
+                        .HasName("IndiceIDPedido");
+
+                    b.HasIndex("IdPedidoPagamento")
+                        .HasName("IndiceIDPagamento");
+
+                    b.HasIndex("IdPedido", "IdPagamento", "NuParcela")
+                        .HasName("index_tb_pedido_pagamento_pedidosql");
+
+                    b.ToTable("tb_pedido_pagamento");
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamentoLog", b =>
                 {
                     b.Property<int>("IdPedidoPagamentoLog")
@@ -5336,6 +4980,95 @@ namespace Core.Data.Migrations
                     b.HasIndex("IdProdutoItem");
 
                     b.ToTable("tb_pedido_produto_kit");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoSku", b =>
+                {
+                    b.Property<int>("IdPedidoProdutoSku")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_pedido_produto_sku")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdProgramaPbm")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("cd_programa_pbm")
+                        .HasColumnType("varchar(100)")
+                        .HasDefaultValueSql("(' ')")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<bool>("FlBrinde")
+                        .HasColumnName("fl_brinde")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlEncomenda")
+                        .HasColumnName("fl_encomenda")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("FlEstoqueDisponivel")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("fl_estoque_disponivel")
+                        .HasColumnType("bit")
+                        .HasDefaultValueSql("((1))");
+
+                    b.Property<bool>("FlPbm")
+                        .HasColumnName("fl_pbm")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("IdPedido")
+                        .HasColumnName("id_pedido")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IdProdutoCasado")
+                        .HasColumnName("id_produto_casado")
+                        .HasColumnType("int");
+
+                    b.Property<int>("IdProdutoSku")
+                        .HasColumnName("id_produto_sku")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuQuantidade")
+                        .HasColumnName("nu_quantidade")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("PcDescontoPbm")
+                        .HasColumnName("pc_desconto_pbm")
+                        .HasColumnType("decimal(4, 2)");
+
+                    b.Property<decimal>("VlDesconto")
+                        .HasColumnName("vl_desconto")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlDescontoCasada")
+                        .HasColumnName("vl_desconto_casada")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlEmbalagem")
+                        .HasColumnName("vl_embalagem")
+                        .HasColumnType("money");
+
+                    b.Property<decimal>("VlProduto")
+                        .HasColumnName("vl_produto")
+                        .HasColumnType("money");
+
+                    b.Property<decimal?>("VlProdutoDe")
+                        .HasColumnName("vl_produto_de")
+                        .HasColumnType("money");
+
+                    b.HasKey("IdPedidoProdutoSku");
+
+                    b.HasIndex("IdPedido")
+                        .HasName("idx_pedido_produto_sku");
+
+                    b.HasIndex("IdProdutoSku")
+                        .HasName("idx_produto_sku");
+
+                    b.HasIndex("VlEmbalagem", "IdPedido")
+                        .HasName("index_tb_pedido_produto_sku_pedidosql");
+
+                    b.ToTable("tb_pedido_produto_sku");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoSevenpdv", b =>
@@ -5474,6 +5207,137 @@ namespace Core.Data.Migrations
                     b.HasKey("IdPosicao");
 
                     b.ToTable("tb_posicao");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.Praca", b =>
+                {
+                    b.Property<int>("IdPraca")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_praca")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdExterno")
+                        .HasColumnName("cd_externo")
+                        .HasColumnType("varchar(10)")
+                        .HasMaxLength(10)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsAlias")
+                        .HasColumnName("ds_alias")
+                        .HasColumnType("varchar(255)")
+                        .HasMaxLength(255)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsArquivoLogo")
+                        .HasColumnName("ds_arquivo_logo")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsBairro")
+                        .HasColumnName("ds_bairro")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCep")
+                        .HasColumnName("ds_cep")
+                        .HasColumnType("varchar(8)")
+                        .HasMaxLength(8)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsCidade")
+                        .HasColumnName("ds_cidade")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsComplemento")
+                        .HasColumnName("ds_complemento")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEmail")
+                        .HasColumnName("ds_email")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEndereco")
+                        .HasColumnName("ds_endereco")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsEstado")
+                        .HasColumnName("ds_estado")
+                        .HasColumnType("char(2)")
+                        .IsFixedLength(true)
+                        .HasMaxLength(2)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsHorarioAtendimento")
+                        .HasColumnName("ds_horario_atendimento")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsTelefone")
+                        .HasColumnName("ds_telefone")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("DsWhatsapp")
+                        .HasColumnName("ds_whatsapp")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime?>("DtUltimoPedido")
+                        .HasColumnName("dt_ultimo_pedido")
+                        .HasColumnType("smalldatetime");
+
+                    b.Property<bool>("FlAtivo")
+                        .HasColumnName("fl_ativo")
+                        .HasColumnType("bit");
+
+                    b.Property<bool?>("FlExibeFrontend")
+                        .HasColumnName("fl_exibe_frontend")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlInicial")
+                        .HasColumnName("fl_inicial")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlPadrao")
+                        .HasColumnName("fl_padrao")
+                        .HasColumnType("bit");
+
+                    b.Property<int?>("IdPracaPadrao")
+                        .HasColumnName("id_praca_padrao")
+                        .HasColumnType("int");
+
+                    b.Property<string>("NmPraca")
+                        .IsRequired()
+                        .HasColumnName("nm_praca")
+                        .HasColumnType("varchar(50)")
+                        .HasMaxLength(50)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NuEndereco")
+                        .HasColumnName("nu_endereco")
+                        .HasColumnType("varchar(10)")
+                        .HasMaxLength(10)
+                        .IsUnicode(false);
+
+                    b.HasKey("IdPraca");
+
+                    b.HasIndex("IdPracaPadrao");
+
+                    b.ToTable("tb_praca");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.PracaCep", b =>
@@ -6278,6 +6142,88 @@ namespace Core.Data.Migrations
                         .HasName("idx_produto_seo");
 
                     b.ToTable("tb_produto_seo");
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSku", b =>
+                {
+                    b.Property<int>("IdProdutoSku")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id_produto_sku")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CdBarras")
+                        .HasColumnName("cd_barras")
+                        .HasColumnType("varchar(30)")
+                        .HasMaxLength(30)
+                        .IsUnicode(false);
+
+                    b.Property<string>("CdExterno")
+                        .HasColumnName("cd_externo")
+                        .HasColumnType("varchar(15)")
+                        .HasMaxLength(15)
+                        .IsUnicode(false);
+
+                    b.Property<string>("CdMs")
+                        .HasColumnName("cd_ms")
+                        .HasColumnType("varchar(100)")
+                        .HasMaxLength(100)
+                        .IsUnicode(false);
+
+                    b.Property<DateTime?>("DtCadastro")
+                        .HasColumnName("dt_cadastro")
+                        .HasColumnType("datetime");
+
+                    b.Property<bool>("FlBrinde")
+                        .HasColumnName("fl_brinde")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("FlExibirIndividualmente")
+                        .HasColumnName("fl_exibir_individualmente")
+                        .HasColumnType("bit");
+
+                    b.Property<int>("IdProduto")
+                        .HasColumnName("id_produto")
+                        .HasColumnType("int");
+
+                    b.Property<string>("IdProdutoSap")
+                        .HasColumnName("id_produto_sap")
+                        .HasColumnType("varchar(255)")
+                        .HasMaxLength(255)
+                        .IsUnicode(false);
+
+                    b.Property<string>("NmProdutoSku")
+                        .HasColumnName("nm_produto_sku")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<int>("NuAltura")
+                        .HasColumnName("nu_altura")
+                        .HasColumnType("int");
+
+                    b.Property<int>("NuLargura")
+                        .HasColumnName("nu_largura")
+                        .HasColumnType("int");
+
+                    b.Property<decimal>("NuPeso")
+                        .HasColumnName("nu_peso")
+                        .HasColumnType("decimal(10, 3)");
+
+                    b.Property<int>("NuProfundidade")
+                        .HasColumnName("nu_profundidade")
+                        .HasColumnType("int");
+
+                    b.Property<decimal?>("PcDescontoAtendente")
+                        .HasColumnName("pc_desconto_atendente")
+                        .HasColumnType("decimal(18, 2)");
+
+                    b.HasKey("IdProdutoSku");
+
+                    b.HasIndex("IdProduto", "FlBrinde")
+                        .HasName("IX_produto");
+
+                    b.ToTable("tb_produto_sku");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSkuAviseMe", b =>
@@ -7575,6 +7521,62 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_rodape");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.ScLog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("id")
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnName("action")
+                        .HasColumnType("varchar(30)")
+                        .HasMaxLength(30)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Application")
+                        .IsRequired()
+                        .HasColumnName("application")
+                        .HasColumnType("varchar(200)")
+                        .HasMaxLength(200)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Creator")
+                        .IsRequired()
+                        .HasColumnName("creator")
+                        .HasColumnType("varchar(30)")
+                        .HasMaxLength(30)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Description")
+                        .HasColumnName("description")
+                        .HasColumnType("text");
+
+                    b.Property<DateTime>("InsertedDate")
+                        .HasColumnName("inserted_date")
+                        .HasColumnType("datetime");
+
+                    b.Property<string>("IpUser")
+                        .IsRequired()
+                        .HasColumnName("ip_user")
+                        .HasColumnType("varchar(32)")
+                        .HasMaxLength(32)
+                        .IsUnicode(false);
+
+                    b.Property<string>("Username")
+                        .IsRequired()
+                        .HasColumnName("username")
+                        .HasColumnType("varchar(90)")
+                        .HasMaxLength(90)
+                        .IsUnicode(false);
+
+                    b.HasKey("Id");
+
+                    b.ToTable("sc_log");
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.SecApps", b =>
                 {
                     b.Property<string>("AppName")
@@ -8398,6 +8400,42 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_usuario_televendas");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.Vannonline", b =>
+                {
+                    b.Property<string>("Assunto")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<DateTime?>("Data")
+                        .HasColumnName("data")
+                        .HasColumnType("date");
+
+                    b.Property<string>("Id")
+                        .HasColumnName("id")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Organizacao")
+                        .HasColumnName("organizacao")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Satisfacao")
+                        .HasColumnName("satisfacao")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Solicitante")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.Property<string>("Status")
+                        .HasColumnType("nvarchar(255)")
+                        .HasMaxLength(255);
+
+                    b.ToTable("vannonline");
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.Vitrine", b =>
                 {
                     b.Property<int>("IdVitrine")
@@ -8558,42 +8596,6 @@ namespace Core.Data.Migrations
                     b.ToTable("tb_vitrine_tipo");
                 });
 
-            modelBuilder.Entity("Core.Domain.EF.Entities.Vannonline", b =>
-                {
-                    b.Property<string>("Assunto")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<DateTime?>("Data")
-                        .HasColumnName("data")
-                        .HasColumnType("date");
-
-                    b.Property<string>("Id")
-                        .HasColumnName("id")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("Organizacao")
-                        .HasColumnName("organizacao")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("Satisfacao")
-                        .HasColumnName("satisfacao")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("Solicitante")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.Property<string>("Status")
-                        .HasColumnType("nvarchar(255)")
-                        .HasMaxLength(255);
-
-                    b.ToTable("vannonline");
-                });
-
             modelBuilder.Entity("Core.Domain.Entities.ApplicationModule", b =>
                 {
                     b.Property<int>("IdModule")
@@ -8628,77 +8630,6 @@ namespace Core.Data.Migrations
                     b.HasKey("IdModule");
 
                     b.ToTable("tb_module");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.Categoria", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Categoria", "DepartamentoNavigation")
-                        .WithMany("SessoesNavigation")
-                        .HasForeignKey("IdCategoriaPai")
-                        .HasConstraintName("FK_tb_categoria_tb_categoria")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuDestaqueNavigation")
-                        .WithMany("Categoria")
-                        .HasForeignKey("IdProdutoSkuDestaque")
-                        .HasConstraintName("FK_tb_categoria_tb_produto_sku")
-                        .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoEntrega", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("PedidoEntrega")
-                        .HasForeignKey("IdPedido")
-                        .HasConstraintName("FK_tb_pedido_entrega_tb_pedido")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamento", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Pagamento", "IdPagamentoNavigation")
-                        .WithMany("PedidoPagamento")
-                        .HasForeignKey("IdPagamento")
-                        .HasConstraintName("FK_tb_pedido_pagamento_tb_pagamento")
-                        .IsRequired();
-
-                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("PedidoPagamento")
-                        .HasForeignKey("IdPedido")
-                        .HasConstraintName("FK_tb_pedido_pagamento_tb_pedido")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoSku", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
-                        .WithMany("PedidoProdutosSku")
-                        .HasForeignKey("IdPedido")
-                        .HasConstraintName("FK_tb_pedido_produto_sku_tb_pedido")
-                        .IsRequired();
-
-                    b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
-                        .WithMany("PedidoProdutoSku")
-                        .HasForeignKey("IdProdutoSku")
-                        .HasConstraintName("FK_tb_pedido_produto_sku_tb_produto_sku")
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.Praca", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaPadraoNavigation")
-                        .WithMany("InverseIdPracaPadraoNavigation")
-                        .HasForeignKey("IdPracaPadrao")
-                        .HasConstraintName("FK_tb_praca_tb_praca");
-                });
-
-            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSku", b =>
-                {
-                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
-                        .WithMany("ProdutoSku")
-                        .HasForeignKey("IdProduto")
-                        .HasConstraintName("FK_tb_produto_sku_tb_produto")
-                        .IsRequired();
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.AcessoAplicativo", b =>
@@ -8812,6 +8743,21 @@ namespace Core.Data.Migrations
                         .HasConstraintName("FK_tb_banner_vitrine_tb_vitrine")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.Categoria", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Categoria", "DepartamentoNavigation")
+                        .WithMany("SessoesNavigation")
+                        .HasForeignKey("IdCategoriaPai")
+                        .HasConstraintName("FK_tb_categoria_tb_categoria")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuDestaqueNavigation")
+                        .WithMany("Categoria")
+                        .HasForeignKey("IdProdutoSkuDestaque")
+                        .HasConstraintName("FK_tb_categoria_tb_produto_sku")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.CategoriaSeo", b =>
@@ -9467,6 +9413,15 @@ namespace Core.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoEntrega", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
+                        .WithMany("PedidoEntrega")
+                        .HasForeignKey("IdPedido")
+                        .HasConstraintName("FK_tb_pedido_entrega_tb_pedido")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoHistorico", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
@@ -9508,6 +9463,21 @@ namespace Core.Data.Migrations
                         .HasConstraintName("FK_tb_pedido_log_tb_usuario1");
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamento", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Pagamento", "IdPagamentoNavigation")
+                        .WithMany("PedidoPagamento")
+                        .HasForeignKey("IdPagamento")
+                        .HasConstraintName("FK_tb_pedido_pagamento_tb_pagamento")
+                        .IsRequired();
+
+                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
+                        .WithMany("PedidoPagamento")
+                        .HasForeignKey("IdPedido")
+                        .HasConstraintName("FK_tb_pedido_pagamento_tb_pedido")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoPagamentoLog", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
@@ -9532,6 +9502,21 @@ namespace Core.Data.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Core.Domain.EF.Entities.PedidoProdutoSku", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
+                        .WithMany("PedidoProdutosSku")
+                        .HasForeignKey("IdPedido")
+                        .HasConstraintName("FK_tb_pedido_produto_sku_tb_pedido")
+                        .IsRequired();
+
+                    b.HasOne("Core.Domain.EF.Entities.ProdutoSku", "IdProdutoSkuNavigation")
+                        .WithMany("PedidoProdutoSku")
+                        .HasForeignKey("IdProdutoSku")
+                        .HasConstraintName("FK_tb_pedido_produto_sku_tb_produto_sku")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("Core.Domain.EF.Entities.PedidoSevenpdv", b =>
                 {
                     b.HasOne("Core.Domain.EF.Entities.Pedido", "IdPedidoNavigation")
@@ -9540,6 +9525,14 @@ namespace Core.Data.Migrations
                         .HasConstraintName("tb_pedido_sevenpdv_fk_tb_pedido")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.Praca", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Praca", "IdPracaPadraoNavigation")
+                        .WithMany("InverseIdPracaPadraoNavigation")
+                        .HasForeignKey("IdPracaPadrao")
+                        .HasConstraintName("FK_tb_praca_tb_praca");
                 });
 
             modelBuilder.Entity("Core.Domain.EF.Entities.PracaCep", b =>
@@ -9751,6 +9744,15 @@ namespace Core.Data.Migrations
                         .HasForeignKey("IdProduto")
                         .HasConstraintName("FK_tb_produto_seo_tb_produto")
                         .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Core.Domain.EF.Entities.ProdutoSku", b =>
+                {
+                    b.HasOne("Core.Domain.EF.Entities.Produto", "IdProdutoNavigation")
+                        .WithMany("ProdutoSku")
+                        .HasForeignKey("IdProduto")
+                        .HasConstraintName("FK_tb_produto_sku_tb_produto")
                         .IsRequired();
                 });
 

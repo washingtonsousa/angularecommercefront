@@ -44,7 +44,7 @@ namespace Core.Data.Repository
 
     public async Task<Cliente> GetForAuthentication(string UserName, string Password)
     {
-      return await Context.Cliente.Where(u => (u.DsEmail == UserName || u.DsCpfCnpj == UserName) && u.DsSenha == Password).FirstOrDefaultAsync();
+      return await Context.Cliente.Where(u => (u.DsEmail == UserName || u.DsCpfCnpj == UserName) && u.DsSenha == Password && u.FlStatus == true).FirstOrDefaultAsync();
     }
 
     public async Task<Cliente> GetByUsername(string UserName)

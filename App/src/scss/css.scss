@@ -40,3 +40,86 @@ ul li {
 .bg-gray {
   background:#ededed !important;
 }
+
+@for $i from 1 through 300 {
+
+  .lb-rounded-#{$i} {
+      border-bottom-left-radius: #{$i}px!important;
+  }
+
+  .minh-#{$i}{
+      min-height: #{$i}px !important;
+  }
+  
+  .rb-rounded-#{$i}  {
+      border-bottom-right-radius: #{$i}px!important;
+  }
+  
+  .lt-rounded-#{$i}  {
+      border-top-left-radius: #{$i}px!important;
+  }
+  
+  .rt-rounded-#{$i}  {
+      border-top-right-radius: #{$i}px!important;
+  }
+
+  .mt-#{$i} {
+      margin-top: #{$i}px!important;
+  }
+
+  .mb-#{$i} {
+      margin-bottom: #{$i}px!important;
+  }
+ 
+  .mr-#{$i} {
+      margin-right: #{$i}px!important;
+  }
+
+  .ml-#{$i} {
+      margin-left: #{$i}px!important;
+  }
+
+  .mx-#{$i} {
+      margin-left: #{$i}px!important;
+      margin-right: #{$i}px!important;
+  }
+
+  .my-#{$i} {
+      margin-top: #{$i}px!important;
+      margin-bottom: #{$i}px!important;
+  }
+
+
+  .pt-#{$i} {
+      padding-top: #{$i}px!important;
+  }
+
+  .pb-#{$i} {
+      padding-bottom: #{$i}px!important;
+  }
+
+  .pr-#{$i} {
+      padding-right: #{$i}px!important;
+  }
+
+  .pl-#{$i} {
+      padding-left: #{$i}px!important;
+  }
+  .px-#{$i} {
+      padding-left: #{$i}px!important;
+      padding-right: #{$i}px!important;
+  }
+
+  .py-#{$i} {
+      padding-top: #{$i}px!important;
+      padding-bottom: #{$i}px !important;
+  }
+
+  .p-#{$i} {
+      padding: #{$i}px!important;
+  }
+
+  .m-#{$i} {
+     margin: #{$i}px!important;
+  }
+}

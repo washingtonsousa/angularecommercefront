@@ -6,6 +6,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Cliente } from 'src/shared/models/cliente.model';
 import { ResponseModelWithResult } from 'src/shared/models/response/response-model';
+import * as jwt_decode from "jwt-decode";
+import { JwtLoggedInData } from 'src/shared/models/jwt/logged-in-data';
 
 @Injectable()
 export class LoginService extends HttpBasedService {
@@ -24,7 +26,23 @@ export class LoginService extends HttpBasedService {
             }
 
             Update(model: Cliente): Observable<ResponseModelWithResult<any>> {
-                return this._http.post<ResponseModelWithResult<any>>(this.env.apiUrl + "login/Update", model);
+                return this._http.put<ResponseModelWithResult<any>>(this.env.apiUrl + "login/Update", model);
+            }
+
+
+            setToken(Token:string) {
+                localStorage.setItem("Token", Token);
+            }
+
+            retrieveDecodeJWTData() {
+                let token: JwtLoggedInData;
+                try{
+                    return jwt_decode(localStorage.getItem("Token"));
+                }
+                catch(Error){
+                    return null;
+                }
+                
             }
 
 }

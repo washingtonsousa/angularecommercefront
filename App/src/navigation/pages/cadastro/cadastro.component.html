@@ -5,12 +5,25 @@
         <div class="row">
 
             <div class="col-xl-4">
-                
-            <login-form class="content-box">
+                <section class="content-box p-30">
+            <login-form (OnLoggedIn)="onLogin()">
 
             </login-form>
+        </section>
+            </div>
 
-        </div>
+            <div class="col-xl-8">
+
+                <section class="content-box p-30">
+
+                    <h1> Ainda não sou cliente. <i class="fa fa-user-plus"></i> </h1>
+
+                    <cadastro-form (OnSubscribe)="onSubscribe($event)"></cadastro-form>
+
+                </section>
+             
+
+            </div>
 
         </div>
 

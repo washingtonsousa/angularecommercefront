@@ -27,6 +27,7 @@
     "@nguniversal/express-engine": "^9.0.1",
     "@ngx-pwa/local-storage": "^8.2.4",
     "express": "^4.15.2",
+    "jwt-decode": "^2.2.0",
     "localforage": "^1.7.3",
     "ng2-image-hover-zoom": "^1.0.2",
     "ngforage": "^5.0.0",

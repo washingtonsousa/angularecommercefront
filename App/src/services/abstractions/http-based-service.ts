@@ -20,7 +20,8 @@ export abstract class HttpBasedService {
             this.httpHeaders = new HttpHeaders({
                 "Context-Type": "application/json",
                 "X-Pedido-Sessao" :  this._context.PedidoId.toString(),
-                "X-Loja-Id" : this._context.LojaId.toString()
+                "X-Loja-Id" : this._context.LojaId.toString(),
+                "Authorization" : "Bearer " + localStorage.getItem("Token")
             })
 
         })

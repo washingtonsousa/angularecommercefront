@@ -1,0 +1,83 @@
+<form [formGroup]="formGroup" (ngSubmit)="Submit($event)">
+
+<input-label-area [required]="true"  label="Nome Completo: " [control]="formGroup.controls['NmCliente']">
+    <input  class="form-control" formControlName="NmCliente" />
+</input-label-area>
+
+<input-label-area   label="Nome Social: " [control]="formGroup.controls['NomeSocial']">
+        <input  class="form-control" formControlName="NomeSocial" />
+</input-label-area>
+
+<div class="input-group">
+
+<input-label-area [required]="true" class="col-xl-4 col-12"  label="CPF:" [control]="formGroup.controls['DsCpfCnpj']">
+        <input  class="form-control" formControlName="DsCpfCnpj" />
+</input-label-area>
+
+<input-label-area [required]="true"   label="Nascimento: " class="col-xl-3 col-12" [control]="formGroup.controls['DtNascimento']">
+
+        <input  class="form-control" formControlName="DtNascimento" type="text" />
+
+</input-label-area>
+
+<input-label-area [required]="true"  class="col-xl-5  col-12"  label="E-mail:" [control]="formGroup.controls['DsEmail']">
+        <input  class="form-control" formControlName="DsEmail" />
+</input-label-area>
+
+</div>
+
+<div class="input-group">
+
+<input-label-area   label="Fixo: " class="col-xl-6  col-12" [control]="formGroup.controls['TelefoneCompleto']">
+        <input  class="form-control" formControlName="TelefoneCompleto" />
+</input-label-area>
+
+<input-label-area [required]="true" label="Celular: " class="col-xl-6  col-12" [control]="formGroup.controls['CelularCompleto']">
+        <input  class="form-control" formControlName="CelularCompleto" />
+</input-label-area>
+
+</div>
+
+<div class="input-group">
+
+<input-label-area  [required]="true"  label="Senha: " class="col-xl-6  col-12" [control]="formGroup.controls['DsSenha']">
+
+        <input  class="form-control" formControlName="DsSenha" type="password" />
+
+</input-label-area>
+
+
+<input-label-area  [required]="true"  label="Confirmação senha: "  class="col-xl-6 col-12"[control]="formGroup.controls['DsSenha']">
+    <input  class="form-control"  type="password"/>
+</input-label-area>
+
+</div>
+
+
+<label> </label>
+
+<input-label-area  [required]="true"  label="Sexo: "  class="col-xl-6 col-12">
+
+<input type="radio" name="FlSexo"  formControlName="FlSexo"  value="M" selected/> Masculino
+<input type="radio" name="FlSexo" formControlName="FlSexo" value="F" /> Feminino
+
+</input-label-area>
+
+
+<div *ngIf="errorMessage.length" class="alert alert-danger">
+   {{ errorMessage }}
+</div>
+
+<div class="row">
+    <div class="col-xl-6 col-12">
+    <input type="checkbox" name="FlAceitaMailing"  formControlName="FlAceitaMailing"  value="true" /> 
+    <label> Desejo receber avisos de ofertas por e-mail </label>
+</div>
+
+<div class="col-xl-6 col-12">
+    <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary btn-lg w-100">  Cadastrar </button>
+</div>
+
+</div>
+
+</form>

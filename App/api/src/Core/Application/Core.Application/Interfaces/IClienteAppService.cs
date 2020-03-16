@@ -10,7 +10,7 @@ namespace Core.Application.Interfaces
   {
     Task SubscribeCliente(ClienteViewModel cliente);
     Task UpdateCliente(ClienteViewModel cliente);
-    Task<ClienteViewModel> ObterClienteLogado();
+    Task<ClienteViewModel> GetCurrentLoggedInCliente();
 
   }
 }

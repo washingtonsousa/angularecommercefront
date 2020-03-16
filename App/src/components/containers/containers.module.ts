@@ -21,12 +21,16 @@ import { DepartamentoService } from 'src/services/departamento.service';
 import { HttpClientModule } from '@angular/common/http';
 import { ContextService } from 'src/services/storage/context.service';
 import { LoginTopoComponent } from './header/login-topo/login-topo.component';
+import { LoginService } from 'src/services/login.service';
+import { ClienteService } from 'src/services/cliente.service';
 
 @NgModule({
     providers: [PedidoService, 
         ImageUrlPipe, 
         PracaService, 
-        DepartamentoService],
+        DepartamentoService,
+        LoginService, 
+        ClienteService],
     exports: [ContainerComponent, 
         SliderComponent, 
         CarouselMarcasComponent, 

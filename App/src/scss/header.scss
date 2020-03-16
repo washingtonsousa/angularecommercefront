@@ -53,11 +53,24 @@ menu {
 #searchBox {
     display:flex;
     align-items: baseline;
+    position: relative;
+
+    .form-control {
+        padding:26px;
+        padding-right: 56px;
+        border-radius: 5px;
+    }
 
     button {
-        background: transparent;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        color: #fff;
         border:none;
-        color:$secondary-color;
+        background:$secondary-color;
+        right:16px;
+        position: absolute;
+        height:100%;
+        padding:15px;
 
         i {
             font-size: 1.2em;

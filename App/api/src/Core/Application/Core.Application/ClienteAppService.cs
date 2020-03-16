@@ -93,7 +93,7 @@ namespace Core.Application
 
     }
 
-    public async Task<ClienteViewModel> ObterClienteLogado() =>  _mapper.Map<ClienteViewModel>( await ObterClienteLogadoDomain() );
+    public async Task<ClienteViewModel> GetCurrentLoggedInCliente() =>  _mapper.Map<ClienteViewModel>( await ObterClienteLogadoDomain() );
 
     private async Task<Cliente> ObterClienteLogadoDomain() =>  await _clienteRepository.Get(ObterIdClienteLogado());
 

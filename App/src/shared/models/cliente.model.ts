@@ -1,12 +1,12 @@
 export class Cliente {
 
 Token: String;
-IdCliente: number;
+IdCliente: number = 0;
 FlStatus: boolean;
-FlTipoPessoa: string;
+FlTipoPessoa: string = "F";
 FlIeIsento: boolean;
-FlSexo: string;
-FlAceitaMailing: boolean;
+FlSexo: string = "M";
+FlAceitaMailing: boolean = false;
 FlAceitaSms: boolean;
 CdExterno: string;
 DtCadastro: string;
@@ -21,12 +21,15 @@ DsSobrenome: string;
 DsResponsavel: string;
 DsEmail: string;
 DsSenha: string;
-DsTelefoneDdd: string;
-DsTelefone: string;
-DsCelularDdd: string;
-DsCelular: string;
+DsTelefoneDdd: string =  "";
+DsTelefone: string =  "";
+DsCelularDdd: string =  "";
+DsCelular: string =  "";
 FlIntegracao: string;
 NomeSocial: string;
 
+
+TelefoneCompleto: string;
+CelularCompleto:string;
 
 }

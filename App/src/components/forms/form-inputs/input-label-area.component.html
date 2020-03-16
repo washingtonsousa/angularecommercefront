@@ -1,0 +1,15 @@
+<div class="w-100 input-label-area">
+
+<label [ngClass]="{ 'required' : required  }"  class="w-100">
+    {{ label }}
+</label>
+
+<ng-content></ng-content>
+
+<small *ngFor="let errorMessage of errors;" class="form-error"> 
+    
+    {{ errorMessage }} 
+
+</small>
+
+</div>

@@ -980,7 +980,7 @@ namespace Core.Data.EF.Context
                     .IsFixedLength()
                     .HasComment("F - Feminino / M - Masculino");
 
-                entity.Property(e => e.FlStatus).HasColumnName("fl_status");
+                entity.Property(e => e.FlStatus).HasColumnName("fl_status").HasDefaultValueSql("((1))");
 
                 entity.Property(e => e.FlTipoPessoa)
                     .IsRequired()

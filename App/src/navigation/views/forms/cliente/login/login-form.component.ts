@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter } from '@angular/core';
+import { Component, Input, EventEmitter, Output } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from 'src/services/login.service';
 import { Cliente } from 'src/shared/models/cliente.model';
@@ -6,6 +6,7 @@ import { ResponseModelWithResult } from 'src/shared/models/response/response-mod
 import { LoginAreaEmitterService } from 'src/services/emitters/login-area-emitter.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { ErrorResponseModel } from 'src/shared/models/response/error-response.model';
+import { LoadingIconService } from 'src/services/emitters/loading-icon.service';
 
 @Component({
         selector: "login-form",
@@ -14,8 +15,8 @@ import { ErrorResponseModel } from 'src/shared/models/response/error-response.mo
 export class LoginFormComponent {
 
     formGroup: FormGroup;
-    @Input() OnLoggedIn: EventEmitter<any> = new  EventEmitter<any>();
-    @Input() OnError: EventEmitter<any> = new  EventEmitter<any>();
+    @Output() OnLoggedIn: EventEmitter<any> = new  EventEmitter<any>();
+    @Output() OnError: EventEmitter<any> = new  EventEmitter<any>();
 
     constructor(private _formBuilder: FormBuilder, private _loginService:LoginService) {
 
@@ -28,17 +29,16 @@ export class LoginFormComponent {
 
     Submit(event) {
 
+        LoadingIconService.show();
         event.preventDefault();
 
         this._loginService.Auth(this.formGroup.value).subscribe((response: ResponseModelWithResult<Cliente>) => {
-
-            LoginAreaEmitterService.update(response._result);
             this.OnLoggedIn.emit(response);
-
+            this._loginService.setToken(response._result.Token.toString());
+            LoadingIconService.hide();
         }, (err:ErrorResponseModel) => {
-
+            LoadingIconService.hide();
             this.OnError.emit(err.error);
-
         });
 
     }
