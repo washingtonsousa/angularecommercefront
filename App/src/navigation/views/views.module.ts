@@ -6,13 +6,15 @@ import { LoginFormComponent } from './forms/cliente/login/login-form.component';
 import { LoginService } from 'src/services/login.service';
 import { CadastroFormComponent } from './forms/cliente/cadastro/cadastro-form.component';
 import { FormComponentsModule } from 'src/components/forms/form-components.module';
+import { NgBrazil } from 'ng-brazil';
+import { NgxMaskModule } from 'ngx-mask';
 
 @NgModule({
     providers: [LoginService],
     declarations: [LoginFormComponent, CadastroFormComponent],
     exports: [LoginFormComponent, CadastroFormComponent],
-    imports: [BrowserModule, CommonModule, ReactiveFormsModule, FormComponentsModule]
+    imports: [BrowserModule, CommonModule,      NgxMaskModule,
+        ReactiveFormsModule, FormComponentsModule, NgBrazil
+    ]
 })
-export class ViewsModule {
-
-}
+export class ViewsModule {}

@@ -1,23 +1,40 @@
-<a href="#" *ngIf="!Cliente" class="icoTopo" id="icoLogin">
 
-    <i class="fa fa-user-circle"></i>
+ <ng-template #login>
 
-    <a  [routerLink]="['/login']"> 
-    <small>
-        Entre ou
-        Cadastre-se
-    </small> 
+    <a href="#"  class="icoTopo" id="icoLogin">
+
+        <i class="fa fa-user-circle"></i>
+    
+        <a  [routerLink]="['/login']"> 
+        <small>
+            Entre ou
+            Cadastre-se
+        </small> 
+        </a>
     </a>
-</a>
+
+ </ng-template>
 
 
-<a href="#" *ngIf="Cliente" class="icoTopo" id="icoLogin">
 
-    <i class="fa fa-user-circle"></i>
+<a href="#" *ngIf="(Cliente$ | async) as Cliente; else login" class="icoTopo dropdown-menu-toggle" id="icoLogin">
 
-    <a  [routerLink]="['/central-cliente']"> 
-    <small>
-            Bem vindo! {{Cliente?.NmCliente}}
-    </small> 
-    </a>
+        <i class="fa fa-user-circle"></i>
+
+        <a  id="clienteDropDown"  > 
+
+        <small>
+                Bem vindo! {{   Cliente?.unique_name.split(" ")[0]   }}
+        </small> 
+
+        </a>
+
+        <div id="usuario-dropdown" class="dropdown-eco-menu">
+            <a class="dropdown-menu-item"  [routerLink]="['/central-cliente']"> Central do cliente  </a> 
+            <a class="dropdown-menu-item" (click)="Logout()" >
+                <small class="text-danger">   Sair </small>
+            </a>
+        </div>
+      
+    
 </a>

@@ -52,13 +52,14 @@ console.log(errors);
 export function getControlErrorsList(control: AbstractControl) {
 
 let errors: AllValidationErrors[] = getFormControlValidationErrors(control);
-let stringList: string[] = [];
+let stringList: ControlObj[] = [];
 
     for(let error of errors) {
 
           let text;
+
           switch (error.error_name) {
-            case 'required': text = `Este campo é obrigatório!`; break;
+            case 'required': text =   `Este campo é obrigatório!`; break;
             case 'pattern': text = `Formato incorreto`; break;
             case 'email': text = ` Email inválido ou preenchido incorretamente.`; break;
             case 'minlength': text = ` Mínimo de caractéres inválido! Mínimo requerido: ${error.error_value.requiredLength}`; break;
@@ -66,7 +67,7 @@ let stringList: string[] = [];
             default: text = `Esse campo não está preenchido corretamente`;
           }
 
-      stringList.push(text);
+      stringList.push( { touched: control.touched, errorMessage: text });
 
     }
 console.log(stringList);
@@ -74,3 +75,7 @@ console.log(stringList);
 }
 
 
+export class ControlObj {
+  touched: boolean = false;
+  errorMessage: string = "";
+}

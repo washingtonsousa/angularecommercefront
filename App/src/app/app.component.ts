@@ -10,18 +10,9 @@ import { ContextModel } from 'src/shared/models/context/context.model';
 })
 export class AppComponent  implements OnInit  {
   title = 'Farmácia mais próxima';
-  constructor(private router: Router, private _contextService:ContextService) { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
-
-    this._contextService.GetCurrentContext().subscribe( (result) => {
-
-          if(result == undefined || result == null) {
-            let contextModel = new ContextModel();
-            this._contextService.SetCurrentContext(contextModel).subscribe(() => {})
-          }
-
-    }) 
 
     this.router.events.subscribe((evt) => {
         if (!(evt instanceof NavigationEnd)) {

@@ -23,6 +23,8 @@ import { ContextService } from 'src/services/storage/context.service';
 import { LoginTopoComponent } from './header/login-topo/login-topo.component';
 import { LoginService } from 'src/services/login.service';
 import { ClienteService } from 'src/services/cliente.service';
+import { BsDropdownModule } from 'ngx-bootstrap';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     providers: [PedidoService, 

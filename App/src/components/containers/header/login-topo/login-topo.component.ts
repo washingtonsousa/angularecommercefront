@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Cliente } from 'src/shared/models/cliente.model';
-import {LoginAreaEmitterService} from 'src/services/emitters/login-area-emitter.service';
+import { Observable} from 'rxjs';
+import { JwtLoggedInData } from 'src/shared/models/jwt/logged-in-data';
 import { LoginService } from 'src/services/login.service';
-import { ResponseModelWithResult } from 'src/shared/models/response/response-model';
-import { ClienteService } from 'src/services/cliente.service';
 
 @Component({
     selector: "login-topo",
@@ -11,22 +9,16 @@ import { ClienteService } from 'src/services/cliente.service';
 })
 export class LoginTopoComponent implements OnInit {
 
-        Cliente: Cliente;
+        Cliente$: Observable<JwtLoggedInData>;
 
+        constructor(private _loginService:LoginService) {}
 
-        constructor(private _clienteService:ClienteService) {
-
+        Logout() {
+            this._loginService.fullLogOut();
         }
 
         ngOnInit() {
-
-            this._clienteService.GetCurrent().subscribe((response : ResponseModelWithResult<Cliente> ) => {
-                    this.Cliente = response._result;
-            }, err => {
-
-                this.Cliente = null;
-
-            });
+            this.Cliente$ = this._loginService.currentClienteLoggedIn.asObservable();
         }
 
 }

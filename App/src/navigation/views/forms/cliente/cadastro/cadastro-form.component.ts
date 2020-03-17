@@ -1,4 +1,4 @@
-import { Component, Input, EventEmitter, OnInit, ChangeDetectorRef, Renderer2, Output } from '@angular/core';
+import { Component, Input, EventEmitter, OnInit, ChangeDetectorRef, Renderer2, Output, ViewChild, ElementRef } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { LoginService } from 'src/services/login.service';
 import { Cliente } from 'src/shared/models/cliente.model';
@@ -6,6 +6,7 @@ import { ResponseModelWithResult } from 'src/shared/models/response/response-mod
 import { ErrorResponseModel } from 'src/shared/models/response/error-response.model';
 import { FormComponentTemplate } from '../../abstractions/form-component-template';
 import {LoadingIconService} from 'src/services/emitters/loading-icon.service';
+import { ClienteService } from 'src/services/cliente.service';
 
 @Component({
     selector: "cadastro-form",
@@ -18,8 +19,18 @@ export class CadastroFormComponent extends FormComponentTemplate implements OnIn
     @Input() model: Cliente = new Cliente();
     errorMessage: string = "";
 
+    @ViewChild("senha", { static:true  }) senhaInput : ElementRef;
+    @ViewChild("senhaConfirmacao", { static:true  }) senhaConfirmacaoInput : ElementRef;
+
+    get senhasConferem() : boolean {
+
+        return (this.senhaInput.nativeElement.value == this.senhaConfirmacaoInput.nativeElement.value);
+
+    }
+
     constructor(private _formBuilder: FormBuilder, 
         private _loginService:LoginService, 
+ 
         protected cdRef: ChangeDetectorRef,
         protected renderer: Renderer2) {
 
@@ -39,18 +50,18 @@ export class CadastroFormComponent extends FormComponentTemplate implements OnIn
                     FlTipoPessoa: [this.model.FlTipoPessoa, [Validators.required]],
                     FlSexo: [this.model.FlSexo, [Validators.required]],
                     FlAceitaMailing: [this.model.FlAceitaMailing],
-                    DtNascimento: [this.model.DtNascimento, [Validators.required]],
+                    DtNascimento: [this.model.DtNascimento, [Validators.required, Validators.pattern("([0-9])([0-9])/([0-9])([0-9])/([0-9])([0-9])([0-9])([0-9])")]],
                     NmCliente: [this.model.NmCliente, [Validators.required]],
-                    DsCpfCnpj: [this.model.DsCpfCnpj, [Validators.required]],
+                    DsCpfCnpj: [this.model.DsCpfCnpj, [Validators.required, Validators.pattern("([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])")]],
                     DsEmail: [this.model.DsEmail, [Validators.required, Validators.email]],
-                    DsSenha: [this.model.DsSenha, [Validators.required]],
+                    DsSenha: [this.model.DsSenha, [Validators.required, Validators.minLength(6)]],
                     DsTelefoneDdd: [this.model.DsTelefoneDdd, []],
                     DsCelularDdd: [this.model.DsCelularDdd, []],
                     DsTelefone: [this.model.DsTelefone, []],
                     DsCelular: [ this.model.DsCelular, []],
                     TelefoneCompleto: [this.model.DsTelefoneDdd + this.model.DsTelefone, [Validators.pattern("([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])")]],
                     CelularCompleto: [ this.model.DsCelularDdd + this.model.DsCelular, [Validators.required, Validators.pattern("([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])([0-9])")]],
-                    NomeSocial: [this.model.NomeSocial]
+                    NomeSocial: [this.model.NomeSocial, Validators.minLength(3)]
     
             });
 

@@ -7,7 +7,13 @@ import * as routing from "../shared/routing";
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { ModalModule, TabsModule } from 'ngx-bootstrap';
 import { MaterialModule } from 'src/components/material/material.module';
-import { ContextService } from 'src/services/storage/context.service';
+import { NgBrazil } from 'ng-brazil';
+import { NgxMaskModule, IConfig } from 'ngx-mask'
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { TokenInterceptor } from 'src/services/interceptors/jwt-interceptor';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+export var options: Partial<IConfig> | (() => Partial<IConfig>);
 
 @NgModule({
   declarations: [
@@ -20,11 +26,18 @@ import { ContextService } from 'src/services/storage/context.service';
     ModalModule.forRoot(),
     TooltipModule.forRoot(),
     TabsModule.forRoot(),
-    RouterModule.forRoot(routing.appRoutes, { enableTracing: true, initialNavigation: 'enabled' } // <-- debugging purposes only
+    BrowserAnimationsModule,
+    NgxMaskModule.forRoot(options),
+    NgBrazil,
+    RouterModule.forRoot(routing.appRoutes, { enableTracing: false, initialNavigation: 'enabled' } // <-- debugging purposes only
 ),
     NavigationModule
   ],
-  providers: [ContextService],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: TokenInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

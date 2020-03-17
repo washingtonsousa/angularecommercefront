@@ -12,7 +12,7 @@ export class InputLabelAreaComponent implements OnInit, OnChanges {
     @Input() label:string = "";
     @Input() control: AbstractControl;
     ValidationErrorsHelper = ValidationErrorsHelper;
-    errors: string[] = [];
+    errors: ValidationErrorsHelper.ControlObj[] = [];
     @Input() required: boolean = false;
 
     constructor(private cdRef: ChangeDetectorRef) {}
@@ -29,16 +29,14 @@ export class InputLabelAreaComponent implements OnInit, OnChanges {
 
         if(this.control != undefined)
         this.control.statusChanges.subscribe((val) => {
-
             this.errors = ValidationErrorsHelper.getControlErrorsList(this.control);
-
         });
 
+        if(this.control != undefined)
         this.control.valueChanges.subscribe((val) => {
-
             this.errors = ValidationErrorsHelper.getControlErrorsList(this.control);
-
         });
 
     }
 }
+

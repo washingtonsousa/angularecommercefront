@@ -10,17 +10,22 @@
 
 <div class="input-group">
 
-<input-label-area [required]="true" class="col-xl-4 col-12"  label="CPF:" [control]="formGroup.controls['DsCpfCnpj']">
-        <input  class="form-control" formControlName="DsCpfCnpj" />
+<input-label-area [required]="true" class="col-xl-6 col-12"  label="CPF:" [control]="formGroup.controls['DsCpfCnpj']">
+        <input  class="form-control" mask="000.000.000-00" formControlName="DsCpfCnpj" />
 </input-label-area>
 
-<input-label-area [required]="true"   label="Nascimento: " class="col-xl-3 col-12" [control]="formGroup.controls['DtNascimento']">
+<input-label-area [required]="true"   label="Nascimento: " class="col-xl-6 col-12" [control]="formGroup.controls['DtNascimento']">
 
-        <input  class="form-control" formControlName="DtNascimento" type="text" />
+        <input  class="form-control" [dropSpecialCharacters]="false"mask="00/00/0000" formControlName="DtNascimento" type="text" />
 
 </input-label-area>
 
-<input-label-area [required]="true"  class="col-xl-5  col-12"  label="E-mail:" [control]="formGroup.controls['DsEmail']">
+</div>
+
+
+<div class="input-group">
+
+<input-label-area [required]="true"  class="col-12"  label="E-mail:" [control]="formGroup.controls['DsEmail']">
         <input  class="form-control" formControlName="DsEmail" />
 </input-label-area>
 
@@ -29,11 +34,11 @@
 <div class="input-group">
 
 <input-label-area   label="Fixo: " class="col-xl-6  col-12" [control]="formGroup.controls['TelefoneCompleto']">
-        <input  class="form-control" formControlName="TelefoneCompleto" />
+        <input  class="form-control" mask="(00) 0000-0000" formControlName="TelefoneCompleto" />
 </input-label-area>
 
 <input-label-area [required]="true" label="Celular: " class="col-xl-6  col-12" [control]="formGroup.controls['CelularCompleto']">
-        <input  class="form-control" formControlName="CelularCompleto" />
+        <input  class="form-control" mask="(00) 00000-0000"  formControlName="CelularCompleto" />
 </input-label-area>
 
 </div>
@@ -42,14 +47,31 @@
 
 <input-label-area  [required]="true"  label="Senha: " class="col-xl-6  col-12" [control]="formGroup.controls['DsSenha']">
 
-        <input  class="form-control" formControlName="DsSenha" type="password" />
+        <input  class="form-control" #senha formControlName="DsSenha" type="password" />
 
 </input-label-area>
 
 
-<input-label-area  [required]="true"  label="Confirmação senha: "  class="col-xl-6 col-12"[control]="formGroup.controls['DsSenha']">
-    <input  class="form-control"  type="password"/>
+<input-label-area  [required]="true"   label="Confirmação senha: "  class="col-xl-6 col-12">
+
+    <input  class="form-control"  #senhaConfirmacao type="password"/>
+
 </input-label-area>
+
+<div class="w-100">
+        <small *ngIf="!senhasConferem" class="form-error">
+
+                Senhas não conferem
+               
+        </small>
+</div>
+
+<small>
+
+     A senha deve ter no  mínimo de 6 caractéres, recomendamos utilizar letras e números para uma senha mais segura
+
+</small>
+
 
 </div>
 
@@ -75,7 +97,7 @@
 </div>
 
 <div class="col-xl-6 col-12">
-    <button [disabled]="formGroup.invalid" type="submit" class="btn btn-primary btn-lg w-100">  Cadastrar </button>
+    <button [disabled]="formGroup.invalid || !senhasConferem" type="submit" class="btn btn-primary btn-lg w-100">  Cadastrar </button>
 </div>
 
 </div>

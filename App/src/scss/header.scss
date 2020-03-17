@@ -253,7 +253,7 @@ z-index: 99999;
             //font-size: $top-right-icons-size;
             display: flex;
             align-items:center;
-            max-width:120px;
+            
 
             small {
                 font-weight: bold;
@@ -418,5 +418,35 @@ z-index: 99999;
 .navItems .nav-item:hover .nav-topo-dropdown {
 
     height:auto;
+
+}
+
+.dropdown-menu-toggle  {
+    position: relative;
+    &:hover .dropdown-eco-menu {
+        display: flex;
+    }
+    z-index:999997;
+}
+
+.dropdown-eco-menu 
+{
+    min-width: 180px;
+    z-index:999997;
+    position: absolute;
+    top:100%;
+    display:flex;
+    flex-direction: column;
+    padding:4px;
+    background-color: #fff;
+    display: none;
+
+    @include box-shadow-gen(#ccc, 0px, 0px, 3px);
+
+    .dropdown-menu-item {
+        padding:4px;
+        width:100%;
+        text-align: center;
+    }
 
 }

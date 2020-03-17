@@ -6,9 +6,9 @@
 
 <ng-content></ng-content>
 
-<small *ngFor="let errorMessage of errors;" class="form-error"> 
+<small *ngFor="let control of errors;" class="form-error"> 
     
-    {{ errorMessage }} 
+   <span *ngIf="control.touched">  {{ control.errorMessage }}   </span>
 
 </small>
 

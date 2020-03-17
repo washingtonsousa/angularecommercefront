@@ -22,6 +22,7 @@ using Core.Domain.Interfaces;
 using System.Threading.Tasks;
 using ApiWeb;
 using Core.Shared.Data;
+using System.Globalization;
 
 namespace FarmaciaMaisProxima
 {
@@ -71,7 +72,12 @@ namespace FarmaciaMaisProxima
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
     {
-     
+
+      var cultureInfo = new CultureInfo("pt-BR");
+      cultureInfo.NumberFormat.CurrencySymbol = "R$";
+
+      CultureInfo.DefaultThreadCurrentCulture = cultureInfo;
+      CultureInfo.DefaultThreadCurrentUICulture = cultureInfo;
 
       if (env.IsDevelopment())
       {
