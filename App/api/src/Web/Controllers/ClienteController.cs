@@ -31,7 +31,7 @@ namespace ApiWeb.Controllers
     public async Task<IActionResult> GetCurrent()
     {
 
-      var cliente = await _clienteAppService.GetCurrentLoggedInCliente();
+     var cliente = await _clienteAppService.GetCurrentLoggedInCliente();
 
       return ResponseWithAllNotifications(cliente.GetWithoutPassWord, "Operação concluída com  sucesso!");
 
