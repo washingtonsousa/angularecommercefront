@@ -68,6 +68,7 @@ namespace Core.Infrastructure
       services.AddTransient<ILojaAppService, LojaAppService>();
       services.AddTransient<IPedidoAppService, PedidoAppService>();
       services.AddTransient<IClienteAppService, ClienteAppService>();
+      services.AddTransient<ITokenService, TokenService>();
     }
 
     public static void InjectDomainServices(this IServiceCollection services)

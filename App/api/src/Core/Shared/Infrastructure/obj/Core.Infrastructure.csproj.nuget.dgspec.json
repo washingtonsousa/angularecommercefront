@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj": {}
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj",
         "projectName": "Core.Application",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,23 +22,22 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }
@@ -84,21 +83,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
         "projectName": "Core.BaseWeb",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\Core.BaseWeb.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.BaseWeb\\BaseWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -106,17 +105,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }
@@ -154,21 +152,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj",
         "projectName": "Core.Data.Repository",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -176,17 +174,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
               }
             }
           }
@@ -214,21 +211,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj",
         "projectName": "Core.Data",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -236,17 +233,16 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj"
               }
             }
           }
@@ -312,21 +308,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj",
         "projectName": "Core.Domain",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\Core.Domain.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Domain\\Core.Domain\\Core.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -334,14 +330,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }
@@ -379,21 +374,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj",
         "projectName": "Core.Shared.Data",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\Core.Shared.Data.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Data\\Core.Shared.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -401,14 +396,13 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }
@@ -442,21 +436,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
         "projectName": "Core.Infrastructure",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Infrastructure\\Core.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -464,23 +458,22 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Application\\Core.Application\\Core.Application.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data.Repository\\Core.Data.Repository.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Data\\Core.Data\\Core.Data\\Core.Data.csproj"
               },
-              "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
-                "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
+              "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+                "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj"
               }
             }
           }
@@ -514,21 +507,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
+    "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj",
+        "projectUniqueName": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj",
         "projectName": "Core.Shared.Kernel",
-        "projectPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj",
-        "packagesPath": "C:\\Users\\Washington de Sousa\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Washington de Sousa\\Desktop\\FarmaciaMaisProxima\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\obj\\",
+        "projectPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\Core.Shared.Kernel.csproj",
+        "packagesPath": "C:\\Users\\Washington\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Washington\\Desktop\\angularecommercefront\\App\\api\\src\\Core\\Shared\\SharedKernel\\Shared.Kernel\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Washington de Sousa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Washington\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -536,7 +529,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "http://192.168.0.101:9987/Nuget": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -577,7 +569,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -37,8 +37,6 @@ namespace Core.Application.Abstractions
       _applicationContextManager = applicationContextManager;
     }
 
-    public ApplicationService()
-    {
-    }
+
   }
 }

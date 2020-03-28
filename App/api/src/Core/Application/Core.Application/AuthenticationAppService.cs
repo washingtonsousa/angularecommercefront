@@ -21,17 +21,21 @@ namespace Core.Application
 {
   public class AuthenticationAppService : ApplicationService, IAuthenticationService
   {
+    private readonly ITokenService _tokenService;
     private readonly AppSettings _appSettings;
     IClienteService _clienteService;
 
     public AuthenticationAppService(IOptions<AppSettings> appSettings,
     IClienteService clienteService,
     IMapper mapper,
+    ITokenService tokenService,
     IUnityOfWork unityOfWork,
     IApplicationContextManager applicationContextManager,
     IServiceProvider serviceProvider)
     : base(mapper, unityOfWork,  applicationContextManager, serviceProvider)
     {
+
+      _tokenService = tokenService;
       _appSettings = appSettings.Value;
       _clienteService = clienteService;
     }
@@ -47,27 +51,9 @@ namespace Core.Application
 
       ClienteViewModel cliente = _mapper.Map<ClienteViewModel>(clienteFromDomain);
 
-      // gera o Token JWT já que a autenticação funcionou
-      var tokenHandler = new JwtSecurityTokenHandler();
-      var key = Encoding.ASCII.GetBytes(_appSettings.AppSecret);
-      var tokenDescriptor = new SecurityTokenDescriptor
-      {
-        Subject = new ClaimsIdentity(new Claim[]
-          {
-                    new Claim(ClaimTypes.NameIdentifier, cliente.IdCliente.ToString()),
-                    new Claim("Id", cliente.IdCliente.ToString()),
-                    new Claim(ClaimTypes.Name, cliente.NmCliente),
-                    new Claim(ClaimTypes.Email, cliente.DsEmail),
-                    new Claim(ClaimTypes.Role, "Cliente")
-          }),
-        Expires = DateTime.UtcNow.AddDays(1),
-        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-      };
+      cliente.Token = _tokenService.GerarTokenCliente(clienteFromDomain);
 
-      var token = tokenHandler.CreateToken(tokenDescriptor);
-      cliente.Token = tokenHandler.WriteToken(token);
-
-      foreach(var service in _serviceProvider.GetServices<IClienteAoLogar>())
+      foreach (var service in _serviceProvider.GetServices<IClienteAoLogar>())
       {
         service.hookClienteAoLogar(clienteFromDomain);
       }
